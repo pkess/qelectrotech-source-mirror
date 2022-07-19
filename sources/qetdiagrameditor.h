@@ -205,6 +205,7 @@ class QETDiagramEditor : public QETMainWindow
 		*m_rotate_selection,		///< Rotate selected elements and text items by 90 degrees
 		*m_rotate_texts,		///< Direct selected text items to a specific angle
 		*m_find_element,		///< Find the selected element in the panel
+		*m_update_element,              ///< Replace the element with library version
 		*m_group_selected_texts = nullptr,
 		*m_close_file,			///< Close current project file
 		*m_save_file,			///< Save current project
