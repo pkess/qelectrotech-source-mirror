@@ -39,6 +39,7 @@
 #include "ui/diagrampropertieseditordockwidget.h"
 #include "ui/dialogwaiting.h"
 #include "undocommand/addelementtextcommand.h"
+#include "undocommand/replaceqgraphicsitemcommand.h"
 #include "undocommand/rotateselectioncommand.h"
 #include "undocommand/rotatetextscommand.h"
 #include "diagram.h"
@@ -1472,6 +1473,10 @@ void QETDiagramEditor::selectionGroupTriggered(QAction *action)
 		diagram->undoStack().push(new RotateTextsCommand(diagram));
 	else if (value == "find_selected_element" && currentElement())
 		findElementInPanel(currentElement()->location());
+	else if (value == "replace_selected_element")
+	{
+		diagram->undoStack().push(new ReplaceQGraphicsItemCommand(diagram, dc));
+	}
 	else if (value == "edit_selected_element")
 		dv->editSelection();
 	else if (value == "group_selected_texts")
