@@ -20,9 +20,14 @@
 
 #include "../diagramcontent.h"
 
+#include <QHash>
 #include <QUndoCommand>
 
 class Diagram;
+class ElementTextItemGroup;
+class Terminal;
+class QetGraphicsTableItem;
+class QGraphicsScene;
 
 class ReplaceQGraphicsItemCommand : public QUndoCommand
 {
@@ -39,6 +44,7 @@ class ReplaceQGraphicsItemCommand : public QUndoCommand
 
 		// attributes
 	private:
+                //DiagramContent m_replaced_contents;
                 Diagram *m_diagram;
 };
 

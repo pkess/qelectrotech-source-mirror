@@ -1475,7 +1475,10 @@ void QETDiagramEditor::selectionGroupTriggered(QAction *action)
 		findElementInPanel(currentElement()->location());
 	else if (value == "replace_selected_element")
 	{
+		QList<Element *> selected_elements = DiagramContent(dv->diagram()).m_elements;
 		diagram->undoStack().push(new ReplaceQGraphicsItemCommand(diagram, dc));
+		// TODO: select from library
+		qDebug() << selected_elements.first()->location();
 	}
 	else if (value == "edit_selected_element")
 		dv->editSelection();

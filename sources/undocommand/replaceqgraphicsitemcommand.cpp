@@ -18,7 +18,16 @@
 #include "replaceqgraphicsitemcommand.h"
 
 #include "../diagram.h"
-
+#include "addgraphicsobjectcommand.h"
+#include "../qetdiagrameditor.h"
+#include "../qetgraphicsitem/ViewItem/qetgraphicstableitem.h"
+#include "../qetgraphicsitem/conductor.h"
+#include "../qetgraphicsitem/conductortextitem.h"
+#include "../qetgraphicsitem/dynamicelementtextitem.h"
+#include "../qetgraphicsitem/element.h"
+#include "../qetgraphicsitem/elementtextitemgroup.h"
+#include "../qetgraphicsitem/terminal.h"
+#include "addelementtextcommand.h"
 
 /**
 	@brief ReplaceQGraphicsItemCommand::ReplaceQGraphicsItemCommand
@@ -36,12 +45,13 @@ ReplaceQGraphicsItemCommand::ReplaceQGraphicsItemCommand(
 {
     setText(QString(QObject::tr(
                             "replace %1",
-							"undo caption - %1 is a sentence listing the replaced content"))
+                            "undo caption - %1 is a sentence listing the removed content"))
             .arg(content.sentence(DiagramContent::All)));
 }
 
 ReplaceQGraphicsItemCommand::~ReplaceQGraphicsItemCommand()
 {
+        //m_diagram->qgiManager().release(m_replaced_contents.items(DiagramContent::All));
 }
 
 /**
@@ -50,6 +60,35 @@ ReplaceQGraphicsItemCommand::~ReplaceQGraphicsItemCommand()
 */
 void ReplaceQGraphicsItemCommand::undo()
 {
+//	m_diagram->showMe();
+/*
+	for(QGraphicsItem *item : m_removed_contents.items())
+		m_diagram->addItem(item);
+
+		//We relink element after every element was added to diagram
+	for(Element *e : m_removed_contents.m_elements)
+		for(Element *elmt : m_link_hash[e])
+				e->linkToElement(elmt);
+
+	for(DynamicElementTextItem *deti : m_removed_contents.m_element_texts)
+	{
+		if(m_elmt_text_hash.keys().contains(deti))
+			m_elmt_text_hash.value(deti)->addDynamicTextItem(deti);
+		else if (m_grp_texts_hash.keys().contains(deti))
+		{
+			Element *elmt = m_grp_texts_hash.value(deti)->parentElement();
+			elmt->addDynamicTextItem(deti);
+			elmt->addTextToGroup(deti, m_grp_texts_hash.value(deti));
+		}
+	}
+
+	for (auto table : m_table_scene_hash.keys())
+	{
+		if (!m_table_scene_hash.value(table).isNull()) {
+			m_table_scene_hash.value(table)->addItem(table);
+		}
+	}
+*/
 	QUndoCommand::undo();
 }
 
@@ -59,5 +98,48 @@ void ReplaceQGraphicsItemCommand::undo()
 */
 void ReplaceQGraphicsItemCommand::redo()
 {
+//	m_diagram -> showMe();
+/*
+	for(Conductor *c : m_removed_contents.conductors(DiagramContent::AnyConductor))
+	{
+			//If option one text per folio is enable, and the text item of
+			//current conductor is visible (that mean the conductor have the single displayed text)
+			//We call adjustTextItemPosition to other conductor at the same potential to keep
+			//a visible text on this potential.
+		if (m_diagram -> defaultConductorProperties.m_one_text_per_folio && c -> textItem() -> isVisible())
+		{
+			QList <Conductor *> conductor_list;
+			conductor_list << c -> relatedPotentialConductors(false).values();
+			if (conductor_list.count())
+				conductor_list.first() -> calculateTextItemPosition();
+		}
+	}
+
+	for(Element *e : m_removed_contents.m_elements)
+	{
+			//Get linked element, for relink it at undo
+		if (!e->linkedElements().isEmpty())
+			m_link_hash.insert(e, e->linkedElements());
+	}
+
+	for(DynamicElementTextItem *deti : m_removed_contents.m_element_texts)
+	{
+		if(deti->parentGroup() && deti->parentGroup()->parentElement())
+			deti->parentGroup()->parentElement()->removeTextFromGroup(deti, deti->parentGroup());
+
+		deti->parentElement()->removeDynamicTextItem(deti);
+		deti->setParentItem(nullptr);
+	}
+
+	for (auto table : m_table_scene_hash.keys())
+	{
+		if (!m_table_scene_hash.value(table).isNull()) {
+			m_table_scene_hash.value(table)->removeItem(table);
+		}
+	}
+
+	for(QGraphicsItem *item : m_removed_contents.items())
+		m_diagram->removeItem(item);
+*/
 	QUndoCommand::redo();
 }
