@@ -19,6 +19,7 @@
 
 #include "../diagram.h"
 #include "addgraphicsobjectcommand.h"
+#include "../factory/elementfactory.h"
 #include "../qetdiagrameditor.h"
 #include "../qetgraphicsitem/ViewItem/qetgraphicstableitem.h"
 #include "../qetgraphicsitem/conductor.h"
@@ -39,19 +40,41 @@ ReplaceQGraphicsItemCommand::ReplaceQGraphicsItemCommand(
 		Diagram *diagram,
 		const DiagramContent &content,
 		QUndoCommand *parent) :
-        QUndoCommand(parent),
-        //m_replaced_contents(content),
+	QUndoCommand(parent),
+	m_replaced_contents(content),
         m_diagram(diagram)
 {
-    setText(QString(QObject::tr(
+		m_replaced_contents.m_text_fields.clear();
+		m_replaced_contents.m_images.clear();
+		m_replaced_contents.m_shapes.clear();
+		m_replaced_contents.m_conductors_to_update.clear();
+		m_replaced_contents.m_conductors_to_move.clear();
+		m_replaced_contents.m_other_conductors.clear();
+		m_replaced_contents.m_potential_conductors.clear();
+		m_replaced_contents.m_element_texts.clear();
+		m_replaced_contents.m_texts_groups.clear();
+		m_replaced_contents.m_selected_items.clear();
+		m_replaced_contents.m_tables.clear();
+	setText(QString(QObject::tr(
                             "replace %1",
                             "undo caption - %1 is a sentence listing the removed content"))
-            .arg(content.sentence(DiagramContent::All)));
+			.arg(m_replaced_contents.sentence()));
+
+	int state;
+	auto m_element = m_replaced_contents.m_elements.first();
+	auto element = ElementFactory::Instance()->createElement(m_element->location(), nullptr, &state);
+
+		//We must add item to scene (even if addItemCommand do this)
+		//for create the autoconnection below
+	element->setPos(m_element->pos());
+	element->setRotation(m_element->rotation());
+	m_new_contents.m_elements.append(element);
+	m_diagram->qgiManager().manage(m_replaced_contents.items(DiagramContent::All));
 }
 
 ReplaceQGraphicsItemCommand::~ReplaceQGraphicsItemCommand()
 {
-        //m_diagram->qgiManager().release(m_replaced_contents.items(DiagramContent::All));
+		m_diagram->qgiManager().release(m_replaced_contents.items(DiagramContent::All));
 }
 
 /**
@@ -60,17 +83,22 @@ ReplaceQGraphicsItemCommand::~ReplaceQGraphicsItemCommand()
 */
 void ReplaceQGraphicsItemCommand::undo()
 {
-//	m_diagram->showMe();
+	auto m_item = m_new_contents.m_elements.first();
+	if (m_item)
+	{
+		m_diagram->showMe();
+		m_diagram->removeItem(m_item);
+	}
 /*
-	for(QGraphicsItem *item : m_removed_contents.items())
+	for(QGraphicsItem *item : m_replaced_contents.items())
 		m_diagram->addItem(item);
 
-		//We relink element after every element was added to diagram
-	for(Element *e : m_removed_contents.m_elements)
+		//We relink element after every element wakkkkkkkkkkkks added to diagram
+	for(Element *e : m_replaced_contents.m_elements)
 		for(Element *elmt : m_link_hash[e])
 				e->linkToElement(elmt);
 
-	for(DynamicElementTextItem *deti : m_removed_contents.m_element_texts)
+	for(DynamicElementTextItem *deti : m_replaced_contents.m_element_texts)
 	{
 		if(m_elmt_text_hash.keys().contains(deti))
 			m_elmt_text_hash.value(deti)->addDynamicTextItem(deti);
@@ -98,9 +126,20 @@ void ReplaceQGraphicsItemCommand::undo()
 */
 void ReplaceQGraphicsItemCommand::redo()
 {
-//	m_diagram -> showMe();
+	m_diagram->showMe();
+	auto m_old_item = m_replaced_contents.m_elements.first();
+	auto m_new_item = m_new_contents.m_elements.first();
+	if (m_new_item && m_new_item)
+	{
+			m_diagram->addItem(m_new_item);
+			m_new_item->setPos(m_old_item->pos());
+		/*
+		m_diagram->removeItem(m_old_item);
+		*/
+	}
+
 /*
-	for(Conductor *c : m_removed_contents.conductors(DiagramContent::AnyConductor))
+	for(Conductor *c : m_replaced_contents.conductors(DiagramContent::AnyConductor))
 	{
 			//If option one text per folio is enable, and the text item of
 			//current conductor is visible (that mean the conductor have the single displayed text)
@@ -115,14 +154,14 @@ void ReplaceQGraphicsItemCommand::redo()
 		}
 	}
 
-	for(Element *e : m_removed_contents.m_elements)
+	for(Element *e : m_replaced_contents.m_elements)
 	{
 			//Get linked element, for relink it at undo
 		if (!e->linkedElements().isEmpty())
 			m_link_hash.insert(e, e->linkedElements());
 	}
 
-	for(DynamicElementTextItem *deti : m_removed_contents.m_element_texts)
+	for(DynamicElementTextItem *deti : m_replaced_contents.m_element_texts)
 	{
 		if(deti->parentGroup() && deti->parentGroup()->parentElement())
 			deti->parentGroup()->parentElement()->removeTextFromGroup(deti, deti->parentGroup());
@@ -138,7 +177,7 @@ void ReplaceQGraphicsItemCommand::redo()
 		}
 	}
 
-	for(QGraphicsItem *item : m_removed_contents.items())
+	for(QGraphicsItem *item : m_replaced_contents.items())
 		m_diagram->removeItem(item);
 */
 	QUndoCommand::redo();

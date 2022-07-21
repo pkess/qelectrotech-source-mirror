@@ -21,13 +21,16 @@
 #include "../diagramcontent.h"
 
 #include <QHash>
+#include <QPointer>
 #include <QUndoCommand>
+#include <QGraphicsObject>
 
 class Diagram;
 class ElementTextItemGroup;
 class Terminal;
 class QetGraphicsTableItem;
 class QGraphicsScene;
+class QPointF;
 
 class ReplaceQGraphicsItemCommand : public QUndoCommand
 {
@@ -44,8 +47,9 @@ class ReplaceQGraphicsItemCommand : public QUndoCommand
 
 		// attributes
 	private:
-                //DiagramContent m_replaced_contents;
-                Diagram *m_diagram;
+		DiagramContent m_replaced_contents;
+		DiagramContent m_new_contents;
+		Diagram *m_diagram;
 };
 
 #endif // REPLACEQGRAPHICSITEMCOMMAND_H
