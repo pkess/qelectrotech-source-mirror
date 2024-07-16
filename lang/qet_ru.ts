@@ -946,7 +946,6 @@ Note: These options DO NOT allow or block Auto Numberings, only their Update Pol
         <translation>нейтраль</translation>
     </message>
     <message>
-    <message>
         <location filename="../sources/ui/conductorpropertieswidget.ui" line="251"/>
         <source>Formule du texte :</source>
         <translation>Формула текста:</translation>
@@ -1802,7 +1801,6 @@ Note: These options DO NOT allow or block Auto Numberings, only their Update Pol
 <context>
     <name>ElementInfoPartWidget</name>
     <message>
-    <message>
         <location filename="../sources/ui/elementinfopartwidget.ui" line="51"/>
         <source>TextLabel</source>
         <translation>Текстовая метка</translation>
@@ -1815,7 +1813,6 @@ Note: These options DO NOT allow or block Auto Numberings, only their Update Pol
 </context>
 <context>
     <name>ElementInfoWidget</name>
-    <message>
     <message>
         <location filename="../sources/ui/elementinfowidget.h" line="51"/>
         <source>Informations</source>

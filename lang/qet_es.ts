@@ -758,7 +758,6 @@ Nota: Estas opciones NO permiten o bloquean las Numeraciones automáticas, solo 
         <translation>Filas:</translation>
     </message>
     <message>
-    <message>
         <location filename="../sources/ui/borderpropertieswidget.ui" line="17"/>
         <source>Dimensions du folio</source>
         <translation>Tamaño del folio</translation>
@@ -1524,7 +1523,6 @@ Nota: Estas opciones NO permiten o bloquean las Numeraciones automáticas, solo 
 </context>
 <context>
     <name>DynamicTextFieldEditor</name>
-    <message>
     <message>
         <location filename="../sources/editor/ui/dynamictextfieldeditor.ui" line="122"/>
         <source>Source du texte</source>

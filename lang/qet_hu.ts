@@ -735,7 +735,6 @@ Megjegyzés: ezek a lehetőségek NEM engedélyezik, vagy blokkolják az Automat
 <context>
     <name>BorderPropertiesWidget</name>
     <message>
-    <message>
         <location filename="../sources/ui/borderpropertieswidget.ui" line="17"/>
         <source>Dimensions du folio</source>
         <translatorcomment>oszlopok és sorok száma</translatorcomment>
