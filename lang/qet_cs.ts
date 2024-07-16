@@ -12748,10 +12748,6 @@ Les autres champs ne sont pas utilisés.</source>
         <translation>Správce svorkovnic</translation>
     </message>
     <message>
-        <source>toolBar</source>
-        <translation type="vanished">Pruh s nástroji</translation>
-    </message>
-    <message>
         <location filename="../sources/TerminalStrip/ui/terminalstripeditorwindow.ui" line="58"/>
         <source>Ajouter un bornier</source>
         <translation>Přidat svorkovnici</translation>
