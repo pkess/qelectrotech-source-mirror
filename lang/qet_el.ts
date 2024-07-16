@@ -12768,10 +12768,6 @@ Les autres champs ne sont pas utilisés.</source>
 <context>
     <name>TerminalStripLayoutEditor</name>
     <message>
-        <source>Form</source>
-        <translation type="obsolete">Φόρμα</translation>
-    </message>
-    <message>
         <location filename="../sources/TerminalStrip/ui/terminalstriplayouteditor.ui" line="20"/>
         <source>Borne niveau 0 :</source>
         <translation type="unfinished"></translation>
@@ -12989,10 +12985,6 @@ Les autres champs ne sont pas utilisés.</source>
         <location filename="../sources/editor/ui/texteditor.cpp" line="214"/>
         <source>Déplacer un champ texte</source>
         <translation>Μετακίνηση ενός πεδίου κειμένου</translation>
-    </message>
-    <message>
-        <source>Form</source>
-        <translation type="obsolete">Φόρμα</translation>
     </message>
     <message>
         <location filename="../sources/editor/ui/texteditor.cpp" line="305"/>

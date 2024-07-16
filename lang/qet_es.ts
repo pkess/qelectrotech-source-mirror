@@ -12447,10 +12447,6 @@ Les autres champs ne sont pas utilisés.</source>
 <context>
     <name>SummaryQueryWidget</name>
     <message>
-        <source>Form</source>
-        <translation type="obsolete">Formulario</translation>
-    </message>
-    <message>
         <location filename="../sources/dataBase/ui/summaryquerywidget.ui" line="35"/>
         <source>Informations disponibles</source>
         <translation type="unfinished">Información disponible</translation>
@@ -12533,10 +12529,6 @@ Les autres champs ne sont pas utilisés.</source>
         <source>Déplacer une borne</source>
         <translatorcomment>Mover un borne</translatorcomment>
         <translation>Mover un borne</translation>
-    </message>
-    <message>
-        <source>Form</source>
-        <translation type="obsolete">Formulario</translation>
     </message>
     <message>
         <location filename="../sources/editor/ui/terminaleditor.ui" line="17"/>
@@ -12623,10 +12615,6 @@ Les autres champs ne sont pas utilisés.</source>
         <location filename="../sources/TerminalStrip/ui/terminalstripeditor.ui" line="84"/>
         <source>Type :</source>
         <translation type="unfinished">Tipo:</translation>
-    </message>
-    <message>
-        <source>Form</source>
-        <translation type="obsolete">Formulario</translation>
     </message>
     <message>
         <location filename="../sources/TerminalStrip/ui/terminalstripeditor.ui" line="21"/>
@@ -12803,10 +12791,6 @@ Les autres champs ne sont pas utilisés.</source>
 </context>
 <context>
     <name>TerminalStripLayoutEditor</name>
-    <message>
-        <source>Form</source>
-        <translation type="obsolete">Formulario</translation>
-    </message>
     <message>
         <location filename="../sources/TerminalStrip/ui/terminalstriplayouteditor.ui" line="20"/>
         <source>Borne niveau 0 :</source>

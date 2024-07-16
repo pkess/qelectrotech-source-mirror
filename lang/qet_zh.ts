@@ -12764,10 +12764,6 @@ Les autres champs ne sont pas utilisés.</source>
 <context>
     <name>TerminalStripLayoutEditor</name>
     <message>
-        <source>Form</source>
-        <translation type="obsolete">窗体</translation>
-    </message>
-    <message>
         <location filename="../sources/TerminalStrip/ui/terminalstriplayouteditor.ui" line="20"/>
         <source>Borne niveau 0 :</source>
         <translation type="unfinished"></translation>

@@ -667,10 +667,6 @@ Note: These options DO NOT allow or block Auto Numberings, only their Update Pol
 <context>
     <name>BOMExportDialog</name>
     <message>
-        <source>Dialog</source>
-        <translation type="obsolete">ダイアログ</translation>
-    </message>
-    <message>
         <location filename="../sources/ui/bomexportdialog.ui" line="17"/>
         <source>Mise en page</source>
         <translation>レイアウト</translation>
@@ -1115,10 +1111,6 @@ Note: These options DO NOT allow or block Auto Numberings, only their Update Pol
 </context>
 <context>
     <name>DiagramEditorHandlerSizeWidget</name>
-    <message>
-        <source>Form</source>
-        <translation type="obsolete">フォーム</translation>
-    </message>
     <message>
         <location filename="../sources/ui/diagrameditorhandlersizewidget.ui" line="17"/>
         <source>Poignées :</source>
@@ -2725,10 +2717,6 @@ Tout les éléments et les dossier contenus dans ce dossier seront supprimés.</
 <context>
     <name>EllipseEditor</name>
     <message>
-        <source>Form</source>
-        <translation type="obsolete">フォーム</translation>
-    </message>
-    <message>
         <location filename="../sources/editor/ui/ellipseeditor.ui" line="20"/>
         <source>Centre :</source>
         <translation type="unfinished"></translation>
@@ -3092,10 +3080,6 @@ that you create. Text and number inputs are
 </context>
 <context>
     <name>FreeTerminalEditor</name>
-    <message>
-        <source>Form</source>
-        <translation type="obsolete">フォーム</translation>
-    </message>
     <message>
         <location filename="../sources/TerminalStrip/ui/freeterminaleditor.ui" line="17"/>
         <source>Déplacer dans :</source>
@@ -4185,10 +4169,6 @@ Veuillez utiliser l&apos;éditeur avancé pour cela.</source>
         <location filename="../sources/editor/ui/lineeditor.cpp" line="356"/>
         <source>Modifier une ligne</source>
         <translation>線を変更</translation>
-    </message>
-    <message>
-        <source>Form</source>
-        <translation type="obsolete">フォーム</translation>
     </message>
     <message>
         <location filename="../sources/editor/ui/lineeditor.ui" line="49"/>
@@ -12515,10 +12495,6 @@ Les autres champs ne sont pas utilisés.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Form</source>
-        <translation type="obsolete">フォーム</translation>
-    </message>
-    <message>
         <location filename="../sources/editor/ui/terminaleditor.ui" line="17"/>
         <source>y :</source>
         <translation type="unfinished"></translation>
@@ -12639,10 +12615,6 @@ Les autres champs ne sont pas utilisés.</source>
         <location filename="../sources/TerminalStrip/ui/terminalstripeditor.ui" line="184"/>
         <source>Générique</source>
         <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Form</source>
-        <translation type="obsolete">フォーム</translation>
     </message>
     <message>
         <location filename="../sources/TerminalStrip/ui/terminalstripeditor.ui" line="57"/>
@@ -12783,10 +12755,6 @@ Les autres champs ne sont pas utilisés.</source>
 </context>
 <context>
     <name>TerminalStripLayoutEditor</name>
-    <message>
-        <source>Form</source>
-        <translation type="obsolete">フォーム</translation>
-    </message>
     <message>
         <location filename="../sources/TerminalStrip/ui/terminalstriplayouteditor.ui" line="20"/>
         <source>Borne niveau 0 :</source>

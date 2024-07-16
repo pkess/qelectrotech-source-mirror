@@ -12635,10 +12635,6 @@ Les autres champs ne sont pas utilisés.</source>
         <translation type="unfinished">Generico</translation>
     </message>
     <message>
-        <source>Form</source>
-        <translation type="obsolete">Forma</translation>
-    </message>
-    <message>
         <location filename="../sources/TerminalStrip/ui/terminalstripeditor.ui" line="57"/>
         <source>Effectuer le déplacement</source>
         <translation type="unfinished">Effettuare il piazzamento</translation>
@@ -12725,10 +12721,6 @@ Les autres champs ne sont pas utilisés.</source>
         <location filename="../sources/TerminalStrip/ui/terminalstripeditorwindow.ui" line="14"/>
         <source>Gestionnaire de borniers</source>
         <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>toolBar</source>
-        <translation type="obsolete">toolBar</translation>
     </message>
     <message>
         <location filename="../sources/TerminalStrip/ui/terminalstripeditorwindow.ui" line="58"/>

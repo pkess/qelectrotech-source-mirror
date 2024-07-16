@@ -12747,10 +12747,6 @@ Les autres champs ne sont pas utilisés.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>toolBar</source>
-        <translation type="obsolete">Werkbalk</translation>
-    </message>
-    <message>
         <location filename="../sources/TerminalStrip/ui/terminalstripeditorwindow.ui" line="58"/>
         <source>Ajouter un bornier</source>
         <translation type="unfinished"></translation>

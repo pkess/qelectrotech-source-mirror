@@ -670,10 +670,6 @@ Anmerkning: Disse opsjonene endrer IKKE den automatiske nummereringen, bare dens
 <context>
     <name>BOMExportDialog</name>
     <message>
-        <source>Dialog</source>
-        <translation type="obsolete">Dialog</translation>
-    </message>
-    <message>
         <location filename="../sources/ui/bomexportdialog.ui" line="17"/>
         <source>Mise en page</source>
         <translation>Side layout</translation>

@@ -13004,10 +13004,6 @@ Les autres champs ne sont pas utilisés.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Form</source>
-        <translation type="vanished">Formular</translation>
-    </message>
-    <message>
         <location filename="../sources/editor/ui/texteditor.cpp" line="305"/>
         <source>Y :</source>
         <translation>Y:</translation>
