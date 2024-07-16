@@ -1,5 +1,5 @@
 /*
-	Copyright 2006-2021 The QElectroTech Team
+	Copyright 2006-2024 The QElectroTech Team
 	This file is part of QElectroTech.
 	
 	QElectroTech is free software: you can redistribute it and/or modify
@@ -159,18 +159,9 @@ class BorderTitleBlock : public QObject
 		DiagramPosition convertPosition(const QPointF &);
 		
 		// methods to set title block basic data
-		void setAuthor(const QString &author);
-		void setDate(const QDate &date);
-		void setTitle(const QString &title);
 		void setFolio(const QString &folio);
 		void setFolioData(int, int, const QString& = nullptr,
 				  const DiagramContext & = DiagramContext());
-		void setPlant(const QString &plant);
-		void setLocMach(const QString &locmach);
-		void setIndicerev(const QString &indexrev);
-		void setFileName(const QString &filename);
-		void setVersion(const QString &version);
-		void setAutoPageNum(const QString &auto_page_num);
 		void setPreviousFolioNum(const QString &previous);
 		void setNextFolioNum(const QString &next);
 		
@@ -199,7 +190,6 @@ class BorderTitleBlock : public QObject
 		void displayColumns(bool);
 		void displayRows(bool);
 		void displayBorder(bool);
-		void slot_setAutoPageNum (QString);
 	
 	private:
 		void updateRectangles();
@@ -220,11 +210,6 @@ class BorderTitleBlock : public QObject
 			Signal emitted after display options have changed
 		*/
 		void displayChanged();
-		/**
-			@brief diagramTitleChanged
-			Signal emitted after the title has changed
-		*/
-		void diagramTitleChanged(const QString &);
 		/**
 			@brief titleBlockFolioChanged
 			Signal emitted after Folio has changed

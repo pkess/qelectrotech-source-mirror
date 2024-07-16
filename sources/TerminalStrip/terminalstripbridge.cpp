@@ -1,5 +1,5 @@
 /*
-	Copyright 2006-2021 The QElectroTech Team
+	Copyright 2006-2024 The QElectroTech Team
 	This file is part of QElectroTech.
 
 	QElectroTech is free software: you can redistribute it and/or modify
@@ -118,6 +118,14 @@ void TerminalStripBridge::fromXml(const QDomElement &dom_element)
 			m_real_terminals.append(real_t);
 		}
 	}
+}
+
+/**
+ * @brief TerminalStripBridge::uuid
+ * @return The uuid of this terminal
+ */
+QUuid TerminalStripBridge::uuid() const noexcept {
+	return m_uuid;
 }
 
 /**

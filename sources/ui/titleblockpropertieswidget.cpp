@@ -1,5 +1,5 @@
 /*
-	Copyright 2006-2021 The QElectroTech Team
+	Copyright 2006-2024 The QElectroTech Team
 	This file is part of QElectroTech.
 
 	QElectroTech is free software: you can redistribute it and/or modify
@@ -419,6 +419,8 @@ void TitleBlockPropertiesWidget::updateTemplateList()
 		QET::QetCollection qc = tbt_c -> collection();
 		if (qc == QET::QetCollection::Common)
 			icon = QET::Icons::QETLogo;
+		else if (qc == QET::QetCollection::Company)
+			icon = QET::Icons::Company;
 		else if (qc == QET::QetCollection::Custom)
 			icon = QET::Icons::Home;
 		else if (qc == QET::QetCollection::Embedded)
@@ -434,7 +436,7 @@ void TitleBlockPropertiesWidget::updateTemplateList()
 
 /**
 	@brief TitleBlockPropertiesWidget::changeCurrentTitleBlockTemplate
-	Load the additionnal field of title block "text"
+	Load the additional field of title block "text"
 */
 void TitleBlockPropertiesWidget::changeCurrentTitleBlockTemplate(int index)
 {

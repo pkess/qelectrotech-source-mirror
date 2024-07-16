@@ -9,7 +9,9 @@ jobs:
   publish_amd64:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
+    - name: Checkout submodules
+      run: git submodule update --init --recursive
     - uses: snapcore/action-build@v1
       id: build
     - uses: snapcore/action-publish@v1
@@ -17,4 +19,4 @@ jobs:
         SNAPCRAFT_STORE_CREDENTIALS: ${{ secrets.STORE_LOGIN }}
       with:
         snap: ${{ steps.build.outputs.snap }}
-        release: edge
+        release: stable

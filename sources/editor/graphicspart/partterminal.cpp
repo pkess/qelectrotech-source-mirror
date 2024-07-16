@@ -1,5 +1,5 @@
 /*
-	Copyright 2006-2021 The QElectroTech Team
+	Copyright 2006-2024 The QElectroTech Team
 	This file is part of QElectroTech.
 
 	QElectroTech is free software: you can redistribute it and/or modify
@@ -176,13 +176,14 @@ qreal PartTerminal::rotation() const {
 		case Qet::South : return 180;
 		case Qet::West  : return 270;
 	}
+	return 0;
 }
 
 /**
-	@brief PartTerminal::setName
+	@brief PartTerminal::setTerminalName
 	@param name
 */
-void PartTerminal::setName(QString& name) {
+void PartTerminal::setTerminalName(const QString& name) {
 	if (d -> m_name == name) return;
 	d -> m_name = name;
 	emit nameChanged();

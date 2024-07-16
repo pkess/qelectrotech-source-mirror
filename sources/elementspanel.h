@@ -1,5 +1,5 @@
 /*
-	Copyright 2006-2021 The QElectroTech Team
+	Copyright 2006-2024 The QElectroTech Team
 	This file is part of QElectroTech.
 	
 	QElectroTech is free software: you can redistribute it and/or modify
@@ -81,6 +81,7 @@ class ElementsPanel : public GenericPanel {
 	private:
 	QSet<QETProject *> projects_to_display_;       ///< list of projects that have been added to this panel
 	QTreeWidgetItem *common_tbt_collection_item_;  ///< pointer to the item representing the common templates collection
+	QTreeWidgetItem *company_tbt_collection_item_; ///< pointer to the item representing the company's templates collection
 	QTreeWidgetItem *custom_tbt_collection_item_;  ///< pointer to the item representing the user templates collection
 	bool first_reload_;                            ///< used to distinguish the first time this panel is reloaded
 	QString filter_;                               ///< Currently applied filter

@@ -1,5 +1,5 @@
 ﻿/*
-	Copyright 2006-2021 The QElectroTech Team
+	Copyright 2006-2024 The QElectroTech Team
 	This file is part of QElectroTech.
 	
 	QElectroTech is free software: you can redistribute it and/or modify
@@ -20,7 +20,7 @@
 
 #include "../NameList/nameslist.h"
 #include "../diagramcontext.h"
-#include "../pugixml/pugixml.hpp"
+#include "pugixml/src/pugixml.hpp"
 
 #include <QIcon>
 #include <QString>
@@ -76,6 +76,7 @@ class ElementsLocation
 		bool isDirectory() const;
 		bool isFileSystem() const;
 		bool isCommonCollection() const;
+		bool isCompanyCollection() const;
 		bool isCustomCollection() const;
 		bool isProject() const;
 		bool exist() const;

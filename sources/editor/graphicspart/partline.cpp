@@ -1,5 +1,5 @@
 /*
-	Copyright 2006-2021 The QElectroTech Team
+	Copyright 2006-2024 The QElectroTech Team
 	This file is part of QElectroTech.
 
 	QElectroTech is free software: you can redistribute it and/or modify
@@ -155,32 +155,12 @@ void PartLine::fromXml(const QDomElement &qde) {
 */
 QVariant PartLine::itemChange(QGraphicsItem::GraphicsItemChange change, const QVariant &value)
 {
-	if (change == ItemSelectedHasChanged && scene())
-	{
-		if (value.toBool() == true)
-		{
-				//When item is selected, he must to be up to date whene the selection in the scene change, for display or not the handler,
-				//according to the number of selected items.
-			connect(scene(), &QGraphicsScene::selectionChanged, this, &PartLine::sceneSelectionChanged);
-
-			if (scene()->selectedItems().size() == 1)
-				addHandler();
-		}
-		else
-		{
-			disconnect(scene(), &QGraphicsScene::selectionChanged, this, &PartLine::sceneSelectionChanged);
-			removeHandler();
-		}
-	}
-	else if (change == ItemPositionHasChanged)
+	if (change == ItemPositionHasChanged)
 	{
 		adjusteHandlerPos();
 	}
 	else if (change == ItemSceneChange)
 	{
-		if(scene())
-			disconnect(scene(), &QGraphicsScene::selectionChanged, this, &PartLine::sceneSelectionChanged);
-
 		setSelected(false); //This is item removed from scene, then we deselect this, and so, the handlers is also removed.
 	}
 
@@ -302,18 +282,6 @@ void PartLine::handlerMouseReleaseEvent(QetGraphicsHandlerItem *qghi, QGraphicsS
 	elementScene()->undoStack().push(m_undo_command);
 	m_undo_command = nullptr;
 	m_vector_index = -1;
-}
-
-/**
-	@brief PartLine::sceneSelectionChanged
-	When the scene selection change, if there are several primitive selected, we remove the handler of this item
-*/
-void PartLine::sceneSelectionChanged()
-{
-	if (this->isSelected() && scene()->selectedItems().size() == 1)
-		addHandler();
-	else
-		removeHandler();
 }
 
 /**
@@ -638,7 +606,7 @@ QPainterPath PartLine::path() const
 
 	//debugPaint(painter);
 
-		//Determine if we must to draw extremity
+		//Determine if we must draw extremity
 	qreal reduced_line_length = line_length - (length1 * requiredLengthForEndType(first_end));
 	bool draw_1st_end = first_end && reduced_line_length >= 0;
 
@@ -717,7 +685,7 @@ QPainterPath PartLine::path() const
 			stop_point = four_points2[0];
 		}
 
-			//Adjust the end point accordint to the pen width
+			//Adjust the end point according to the pen width
 		if (pen_width && (second_end == Qet::Simple || second_end == Qet::Circle))
 			stop_point = QLineF(point1, stop_point).pointAt((line_length - (pen_width / 2.0)) / line_length);
 	}

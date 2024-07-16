@@ -1,5 +1,5 @@
 /*
-	Copyright 2006-2021 The QElectroTech Team
+	Copyright 2006-2024 The QElectroTech Team
 	This file is part of QElectroTech.
 	
 	QElectroTech is free software: you can redistribute it and/or modify
@@ -90,6 +90,9 @@ class PartPolygon : public CustomElementGraphicPart
 		void setRotation (qreal angle);
 		qreal rotation () const;
 
+		void addHandler() override;
+		void removeHandler() override;
+
 	protected:
 		QVariant itemChange(GraphicsItemChange change, const QVariant &value) override;
 		bool sceneEventFilter(QGraphicsItem *watched, QEvent *event) override;
@@ -100,10 +103,7 @@ class PartPolygon : public CustomElementGraphicPart
 		void handlerMousePressEvent   (QetGraphicsHandlerItem *qghi, QGraphicsSceneMouseEvent *event);
 		void handlerMouseMoveEvent    (QetGraphicsHandlerItem *qghi, QGraphicsSceneMouseEvent *event);
 		void handlerMouseReleaseEvent (QetGraphicsHandlerItem *qghi, QGraphicsSceneMouseEvent *event);
-		void sceneSelectionChanged ();
-		
-		void addHandler();
-		void removeHandler();
+
 		void insertPoint();
 		void removePoint();
 		
@@ -117,6 +117,6 @@ class PartPolygon : public CustomElementGraphicPart
 		QAction *m_insert_point,
 				*m_remove_point;
 		QPointF m_context_menu_pos;
-        qreal m_rot;
+		qreal m_rot;
 };
 #endif

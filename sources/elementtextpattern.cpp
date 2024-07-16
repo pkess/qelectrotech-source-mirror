@@ -1,5 +1,5 @@
 /*
-	Copyright 2006-2021 The QElectroTech Team
+	Copyright 2006-2024 The QElectroTech Team
 	This file is part of QElectroTech.
 
 	QElectroTech is free software: you can redistribute it and/or modify
@@ -150,7 +150,7 @@ ImportElementTextPattern::ImportElementTextPattern(Element *elmt):
 	
 	bool ok=false;
 	bool erase = false;
-		//Remove the .xml extention of the files
+		//Remove the .xml extension of the files
 	result.replaceInStrings(".xml", "");
 	QString name = getName(result, &ok, &erase);
 	

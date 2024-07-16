@@ -1,5 +1,5 @@
 /*
-	Copyright 2006-2021 The QElectroTech Team
+	Copyright 2006-2024 The QElectroTech Team
 	This file is part of QElectroTech.
 
 	QElectroTech is free software: you can redistribute it and/or modify
@@ -17,11 +17,18 @@
 */
 #ifndef QGRAPHICSITEMUTILITY_H
 #define QGRAPHICSITEMUTILITY_H
+
 #include <QtGlobal>
+
 class QGraphicsItem;
 class Element;
+class QPainter;
 
-bool centerToParentBottom  (QGraphicsItem *item);
-bool centerToBottomDiagram (QGraphicsItem *item_to_center, Element *element_to_follow, qreal offset = 0 );
+namespace QGIUtility
+{
+	bool centerToParentBottom  (QGraphicsItem *item);
+	bool centerToBottomDiagram (QGraphicsItem *item_to_center, Element *element_to_follow, qreal offset = 0 );
+	void drawBoundingRectSelection(QGraphicsItem *item, QPainter *painter);
+}
 
 #endif // QGRAPHICSITEMUTILITY_H

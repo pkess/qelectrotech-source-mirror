@@ -1,5 +1,5 @@
 ﻿/*
-		Copyright 2006-2021 The QElectroTech Team
+		Copyright 2006-2024 The QElectroTech Team
 		This file is part of QElectroTech.
 
 		QElectroTech is free software: you can redistribute it and/or modify
@@ -68,7 +68,7 @@ QDomElement UserProperties::toXml(QDomDocument &xml_document) const
  * @brief UserProperties::fromXml
  * @param xml_element
  * @return load user properties from xml
- * Take car befor use this function that the tagName of this class
+ * Take care before using this function that the tagName of this class
  * is the same as the tag of xml_element given in parameter.
  */
 bool UserProperties::fromXml(const QDomElement &xml_element)

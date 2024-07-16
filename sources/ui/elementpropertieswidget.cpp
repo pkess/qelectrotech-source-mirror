@@ -1,5 +1,5 @@
 /*
-	Copyright 2006-2021 The QElectroTech Team
+	Copyright 2006-2024 The QElectroTech Team
 	This file is part of QElectroTech.
 
 	QElectroTech is free software: you can redistribute it and/or modify
@@ -154,7 +154,7 @@ void ElementPropertiesWidget::setDynamicText(DynamicElementTextItem *text)
 
 /**
 	@brief ElementPropertiesWidget::setTextsGroup
-	Conveniance function :
+	Convenience function :
 	same as call : ElementPropertiesWidget::setElement,
 	with parameter the parent element of group.
 	Set the dynamics text tab as current tab,

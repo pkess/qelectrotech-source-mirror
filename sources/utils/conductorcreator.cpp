@@ -1,5 +1,5 @@
 /*
-	Copyright 2006-2021 The QElectroTech Team
+	Copyright 2006-2024 The QElectroTech Team
 	This file is part of QElectroTech.
 	
 	QElectroTech is free software: you can redistribute it and/or modify
@@ -152,7 +152,7 @@ QList<Conductor *> ConductorCreator::existingPotential()
 		{
 			c_list.append(t->conductors().first());
 			
-				//We must to check m_terminals_list contain a terminal
+				//We must check if m_terminals_list contains a terminal
 				//in the same potential of c, and if true, exclude this terminal from the search.
 			for (Conductor *c : t->conductors().first()->relatedPotentialConductors(false))
 			{

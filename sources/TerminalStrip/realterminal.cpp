@@ -1,5 +1,5 @@
 /*
-	Copyright 2006-2021 The QElectroTech Team
+	Copyright 2006-2024 The QElectroTech Team
 	This file is part of QElectroTech.
 
 	QElectroTech is free software: you can redistribute it and/or modify
@@ -143,8 +143,8 @@ QString RealTerminal::label() const {
 
 /**
  * @brief RealTerminal::Xref
- * @return Conveniant method to get the XRef
- * formated to string
+ * @return Convenient method to get the XRef
+ * formatted to string
  */
 QString RealTerminal::Xref() const
 {

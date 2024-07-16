@@ -1,5 +1,5 @@
 ﻿/*
-	Copyright 2006-2021 The QElectroTech Team
+	Copyright 2006-2024 The QElectroTech Team
 	This file is part of QElectroTech.
 
 	QElectroTech is free software: you can redistribute it and/or modify
@@ -76,7 +76,7 @@ ElementPropertiesEditorWidget::~ElementPropertiesEditorWidget()
 
 /**
 	@brief ElementPropertiesEditorWidget::upDateInterface
-	Update the interface with the curent value
+	Update the interface with the current value
 */
 void ElementPropertiesEditorWidget::upDateInterface()
 {

@@ -1,5 +1,5 @@
 /*
-	Copyright 2006-2021 The QElectroTech Team
+	Copyright 2006-2024 The QElectroTech Team
 	This file is part of QElectroTech.
 
 	QElectroTech is free software: you can redistribute it and/or modify
@@ -62,6 +62,10 @@ void QetGraphicsItem::setPos(const QPointF &p) {
 */
 void QetGraphicsItem::setPos(qreal x, qreal y) {
 	setPos(QPointF(x, y));
+}
+
+bool QetGraphicsItem::isHovered() const {
+	return m_hovered;
 }
 
 /**
@@ -154,4 +158,16 @@ void QetGraphicsItem::mouseReleaseEvent(QGraphicsSceneMouseEvent *event)
 		diagram()->elementsMover().endMovement();
 		event->accept();
 	}
+}
+
+void QetGraphicsItem::hoverEnterEvent(QGraphicsSceneHoverEvent *event)
+{
+	m_hovered = true;
+	QGraphicsObject::hoverEnterEvent(event);
+}
+
+void QetGraphicsItem::hoverLeaveEvent(QGraphicsSceneHoverEvent *event)
+{
+	m_hovered = false;
+	QGraphicsObject::hoverLeaveEvent(event);
 }

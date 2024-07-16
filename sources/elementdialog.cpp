@@ -1,5 +1,5 @@
 /*
-	Copyright 2006-2021 The QElectroTech Team
+	Copyright 2006-2024 The QElectroTech Team
 	This file is part of QElectroTech.
 	
 	QElectroTech is free software: you can redistribute it and/or modify
@@ -93,9 +93,9 @@ void ElementDialog::setUpWidget()
 			prjs.append(prj);
 
 	if (m_mode == OpenElement)
-		m_model->loadCollections(true, true, prjs);
+		m_model->loadCollections(true, true, true, prjs);
 	else
-		m_model->loadCollections(false, true, prjs);
+		m_model->loadCollections(false, true, true, prjs);
 
 	m_tree_view->setModel(m_model);
 	m_tree_view->setHeaderHidden(true);
@@ -238,7 +238,7 @@ void ElementDialog::checkAccept()
 /**
 	@brief ElementDialog::location
 	@return The selected location or a null location if user has selected nothing
-	or selection isn't compatible with the curent mode
+	or selection isn't compatible with the current mode
 */
 ElementsLocation ElementDialog::location() const
 {

@@ -28,10 +28,9 @@
 #include <QLocale>
 #include <QSqlError>
 
-#if defined(Q_OS_LINUX) || defined(Q_OS_WINDOWS)
 #include <QSqlDriver>
 #include <sqlite3.h>
-#endif
+
 
 /**
 	@brief projectDataBase::projectDataBase
@@ -430,8 +429,8 @@ void projectDataBase::populateElementTable()
 }
 
 /**
-	@brief projectDataBase::populateElementsTable
-	Populate the elements table
+	@brief projectDataBase::populateElementInfoTable
+	Populate the element info table
 */
 void projectDataBase::populateElementInfoTable()
 {

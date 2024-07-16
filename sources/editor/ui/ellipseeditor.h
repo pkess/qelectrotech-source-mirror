@@ -1,5 +1,5 @@
 /*
-	Copyright 2006-2021 The QElectroTech Team
+	Copyright 2006-2024 The QElectroTech Team
 	This file is part of QElectroTech.
 
 	QElectroTech is free software: you can redistribute it and/or modify
@@ -33,7 +33,7 @@ class StyleEditor;
  */
 class EllipseEditor : public ElementItemEditor
 {
-    Q_OBJECT
+	Q_OBJECT
 
 	public:
 		explicit EllipseEditor (QETElementEditor *editor, PartEllipse *part = nullptr, QWidget *parent = nullptr);

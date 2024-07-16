@@ -59,230 +59,267 @@
         <translation>napló</translation>
     </message>
     <message>
-        <location filename="../sources/ui/aboutqetdialog.cpp" line="61"/>
+        <location filename="../sources/ui/aboutqetdialog.cpp" line="62"/>
         <source>QElectroTech, une application de réalisation de schémas électriques.</source>
         <comment>about tab, description line</comment>
         <translation>QElectroTech, egy alkalmazás elektromos tervek készítéséhez.</translation>
     </message>
     <message>
-        <location filename="../sources/ui/aboutqetdialog.cpp" line="63"/>
+        <location filename="../sources/ui/aboutqetdialog.cpp" line="64"/>
         <source> Les développeurs de QElectroTech</source>
         <comment>about tab, developers line</comment>
         <translation> A QElectroTech fejlesztői</translation>
     </message>
     <message>
-        <location filename="../sources/ui/aboutqetdialog.cpp" line="74"/>
+        <location filename="../sources/ui/aboutqetdialog.cpp" line="75"/>
         <source>Contact : &lt;a href=&quot;mailto:qet@lists.tuxfamily.org&quot;&gt;qet@lists.tuxfamily.org&lt;/a&gt;</source>
         <comment>about tab, contact line</comment>
         <translation>Kapcsolat : &lt;a href=&quot;mailto:qet@lists.tuxfamily.org&quot;&gt;qet@lists.tuxfamily.org&lt;/a&gt;</translation>
     </message>
     <message>
-        <location filename="../sources/ui/aboutqetdialog.cpp" line="86"/>
+        <location filename="../sources/ui/aboutqetdialog.cpp" line="87"/>
         <source>Idée originale</source>
         <translation>Eredeti elképzelés</translation>
     </message>
     <message>
-        <location filename="../sources/ui/aboutqetdialog.cpp" line="87"/>
         <location filename="../sources/ui/aboutqetdialog.cpp" line="88"/>
         <location filename="../sources/ui/aboutqetdialog.cpp" line="89"/>
-        <location filename="../sources/ui/aboutqetdialog.cpp" line="92"/>
+        <location filename="../sources/ui/aboutqetdialog.cpp" line="90"/>
         <location filename="../sources/ui/aboutqetdialog.cpp" line="93"/>
         <location filename="../sources/ui/aboutqetdialog.cpp" line="94"/>
         <location filename="../sources/ui/aboutqetdialog.cpp" line="95"/>
         <location filename="../sources/ui/aboutqetdialog.cpp" line="96"/>
-        <location filename="../sources/ui/aboutqetdialog.cpp" line="148"/>
-        <location filename="../sources/ui/aboutqetdialog.cpp" line="151"/>
+        <location filename="../sources/ui/aboutqetdialog.cpp" line="97"/>
+        <location filename="../sources/ui/aboutqetdialog.cpp" line="155"/>
+        <location filename="../sources/ui/aboutqetdialog.cpp" line="158"/>
         <source>Développement</source>
         <translation>Fejlesztés</translation>
     </message>
     <message>
-        <location filename="../sources/ui/aboutqetdialog.cpp" line="90"/>
+        <location filename="../sources/ui/aboutqetdialog.cpp" line="91"/>
         <source>Convertisseur DXF</source>
         <translation>DXF kovertáló</translation>
     </message>
     <message>
-        <location filename="../sources/ui/aboutqetdialog.cpp" line="91"/>
+        <location filename="../sources/ui/aboutqetdialog.cpp" line="92"/>
         <source>Plugin Bornier</source>
         <translation>Sorkapocs tömb plugin</translation>
     </message>
     <message>
-        <location filename="../sources/ui/aboutqetdialog.cpp" line="97"/>
+        <location filename="../sources/ui/aboutqetdialog.cpp" line="98"/>
         <source>Collection</source>
         <translation>Gyűjtemény</translation>
     </message>
     <message>
-        <location filename="../sources/ui/aboutqetdialog.cpp" line="105"/>
         <location filename="../sources/ui/aboutqetdialog.cpp" line="106"/>
+        <location filename="../sources/ui/aboutqetdialog.cpp" line="107"/>
         <source>Traduction en espagnol</source>
         <translation>Spanyol fordító</translation>
     </message>
     <message>
-        <location filename="../sources/ui/aboutqetdialog.cpp" line="107"/>
         <location filename="../sources/ui/aboutqetdialog.cpp" line="108"/>
+        <location filename="../sources/ui/aboutqetdialog.cpp" line="109"/>
         <source>Traduction en russe</source>
         <translation>Orosz fordító</translation>
     </message>
     <message>
-        <location filename="../sources/ui/aboutqetdialog.cpp" line="109"/>
+        <location filename="../sources/ui/aboutqetdialog.cpp" line="110"/>
         <source>Traduction en portugais</source>
         <translation>Portugál fordító</translation>
     </message>
     <message>
-        <location filename="../sources/ui/aboutqetdialog.cpp" line="110"/>
+        <location filename="../sources/ui/aboutqetdialog.cpp" line="111"/>
         <source>Traduction en tchèque</source>
         <translation>Cseh fordító</translation>
     </message>
     <message>
-        <location filename="../sources/ui/aboutqetdialog.cpp" line="111"/>
+        <location filename="../sources/ui/aboutqetdialog.cpp" line="112"/>
         <source>Traduction en polonais</source>
         <translation>Lengyel fordító</translation>
     </message>
     <message>
-        <location filename="../sources/ui/aboutqetdialog.cpp" line="112"/>
         <location filename="../sources/ui/aboutqetdialog.cpp" line="113"/>
+        <location filename="../sources/ui/aboutqetdialog.cpp" line="114"/>
         <source>Traduction en allemand</source>
         <translation>Német fordító</translation>
     </message>
     <message>
-        <location filename="../sources/ui/aboutqetdialog.cpp" line="114"/>
+        <location filename="../sources/ui/aboutqetdialog.cpp" line="115"/>
         <source>Traduction en roumain</source>
         <translation>Román fordító</translation>
     </message>
     <message>
-        <location filename="../sources/ui/aboutqetdialog.cpp" line="115"/>
+        <location filename="../sources/ui/aboutqetdialog.cpp" line="116"/>
         <source>Traduction en italien</source>
         <translation>Olasz fordító</translation>
     </message>
     <message>
-        <location filename="../sources/ui/aboutqetdialog.cpp" line="116"/>
+        <location filename="../sources/ui/aboutqetdialog.cpp" line="117"/>
         <source>Traduction en arabe</source>
         <translation>Arab fordító</translation>
     </message>
     <message>
-        <location filename="../sources/ui/aboutqetdialog.cpp" line="117"/>
+        <location filename="../sources/ui/aboutqetdialog.cpp" line="118"/>
         <source>Traduction en croate</source>
         <translation>Horváth fordító</translation>
     </message>
     <message>
-        <location filename="../sources/ui/aboutqetdialog.cpp" line="118"/>
+        <location filename="../sources/ui/aboutqetdialog.cpp" line="119"/>
         <source>Traduction en catalan</source>
         <translation>Katalán fordító</translation>
     </message>
     <message>
-        <location filename="../sources/ui/aboutqetdialog.cpp" line="119"/>
         <location filename="../sources/ui/aboutqetdialog.cpp" line="120"/>
+        <location filename="../sources/ui/aboutqetdialog.cpp" line="121"/>
         <source>Traduction en grec</source>
         <translation>Görög fordító</translation>
     </message>
     <message>
-        <location filename="../sources/ui/aboutqetdialog.cpp" line="121"/>
         <location filename="../sources/ui/aboutqetdialog.cpp" line="122"/>
+        <location filename="../sources/ui/aboutqetdialog.cpp" line="123"/>
         <source>Traduction en néerlandais</source>
         <translation>Holland fordító</translation>
     </message>
     <message>
-        <location filename="../sources/ui/aboutqetdialog.cpp" line="123"/>
+        <location filename="../sources/ui/aboutqetdialog.cpp" line="124"/>
         <source>Traduction en flamand</source>
         <translation>Flamand fordító</translation>
     </message>
     <message>
-        <location filename="../sources/ui/aboutqetdialog.cpp" line="124"/>
+        <location filename="../sources/ui/aboutqetdialog.cpp" line="125"/>
         <source>Traduction en danois</source>
         <translation>Dán fordító</translation>
     </message>
     <message>
-        <location filename="../sources/ui/aboutqetdialog.cpp" line="125"/>
+        <location filename="../sources/ui/aboutqetdialog.cpp" line="126"/>
         <source>Traduction en brézilien</source>
         <translation>Brazil fordító</translation>
     </message>
     <message>
-        <location filename="../sources/ui/aboutqetdialog.cpp" line="126"/>
         <location filename="../sources/ui/aboutqetdialog.cpp" line="127"/>
+        <location filename="../sources/ui/aboutqetdialog.cpp" line="128"/>
         <source>Traduction en Turc</source>
         <translation>Török fordító</translation>
     </message>
     <message>
-        <location filename="../sources/ui/aboutqetdialog.cpp" line="128"/>
+        <location filename="../sources/ui/aboutqetdialog.cpp" line="129"/>
         <source>Traduction en hongrois</source>
         <translation>Magyar fordító</translation>
     </message>
     <message>
-        <location filename="../sources/ui/aboutqetdialog.cpp" line="136"/>
+        <location filename="../sources/ui/aboutqetdialog.cpp" line="130"/>
+        <source>Traduction en serbe</source>
+        <translation>Szerb fordító</translation>
+    </message>
+    <message>
+        <location filename="../sources/ui/aboutqetdialog.cpp" line="133"/>
+        <source>Traduction en japonais</source>
+        <translation>Japán fordító</translation>
+    </message>
+    <message>
+        <location filename="../sources/ui/aboutqetdialog.cpp" line="134"/>
+        <source>Traduction en mongol</source>
+        <translation>Mongol fordító</translation>
+    </message>
+    <message>
+        <location filename="../sources/ui/aboutqetdialog.cpp" line="143"/>
         <source>Paquets Fedora et Red Hat</source>
         <translation>Fedora és Red Hat programcsomag</translation>
     </message>
     <message>
-        <location filename="../sources/ui/aboutqetdialog.cpp" line="137"/>
+        <location filename="../sources/ui/aboutqetdialog.cpp" line="144"/>
         <source>Paquets Mageia</source>
         <translation>Mageia programcsomag</translation>
     </message>
     <message>
-        <location filename="../sources/ui/aboutqetdialog.cpp" line="138"/>
-        <location filename="../sources/ui/aboutqetdialog.cpp" line="139"/>
-        <location filename="../sources/ui/aboutqetdialog.cpp" line="140"/>
+        <location filename="../sources/ui/aboutqetdialog.cpp" line="145"/>
+        <location filename="../sources/ui/aboutqetdialog.cpp" line="146"/>
+        <location filename="../sources/ui/aboutqetdialog.cpp" line="147"/>
         <source>Paquets Debian</source>
         <translation>Debian programcsomag</translation>
     </message>
     <message>
-        <location filename="../sources/ui/aboutqetdialog.cpp" line="141"/>
-        <location filename="../sources/ui/aboutqetdialog.cpp" line="142"/>
+        <location filename="../sources/ui/aboutqetdialog.cpp" line="148"/>
+        <location filename="../sources/ui/aboutqetdialog.cpp" line="149"/>
         <source>Paquets Gentoo</source>
         <translation>Gentoo programcsomag</translation>
     </message>
     <message>
-        <location filename="../sources/ui/aboutqetdialog.cpp" line="143"/>
+        <location filename="../sources/ui/aboutqetdialog.cpp" line="150"/>
         <source>Paquets OS/2</source>
         <translation>OS/2 programcsomag</translation>
     </message>
     <message>
-        <location filename="../sources/ui/aboutqetdialog.cpp" line="144"/>
+        <location filename="../sources/ui/aboutqetdialog.cpp" line="151"/>
         <source>Paquets FreeBSD</source>
         <translation>FreeBSD programcsomag</translation>
     </message>
     <message>
-        <location filename="../sources/ui/aboutqetdialog.cpp" line="145"/>
+        <location filename="../sources/ui/aboutqetdialog.cpp" line="152"/>
         <source>Paquets MAC OS X</source>
         <translation>MAC OS X programcsomag</translation>
     </message>
     <message>
-        <location filename="../sources/ui/aboutqetdialog.cpp" line="146"/>
+        <location filename="../sources/ui/aboutqetdialog.cpp" line="153"/>
         <source>Paquets Archlinux AUR</source>
         <translation>Archlinus AUR programcsomag</translation>
     </message>
     <message>
-        <location filename="../sources/ui/aboutqetdialog.cpp" line="147"/>
+        <location filename="../sources/ui/aboutqetdialog.cpp" line="154"/>
         <source>Icônes</source>
         <translation>Ikonok</translation>
     </message>
     <message>
-        <location filename="../sources/ui/aboutqetdialog.cpp" line="149"/>
-        <location filename="../sources/ui/aboutqetdialog.cpp" line="150"/>
+        <location filename="../sources/ui/aboutqetdialog.cpp" line="156"/>
+        <location filename="../sources/ui/aboutqetdialog.cpp" line="157"/>
         <source>Documentation</source>
         <translation>Dukumentáció</translation>
     </message>
     <message>
-        <location filename="../sources/ui/aboutqetdialog.cpp" line="152"/>
+        <location filename="../sources/ui/aboutqetdialog.cpp" line="159"/>
         <source>Collection d&apos;éléments</source>
         <translation>Tervjelek gyűjteménye</translation>
     </message>
     <message>
-        <location filename="../sources/ui/aboutqetdialog.cpp" line="153"/>
-        <source>Python plugin qet-tb-generator</source>
-        <translation>Pyton beépülő modul sorkapocs generátor</translation>
+        <location filename="../sources/ui/aboutqetdialog.cpp" line="176"/>
+        <source>Redimensionneur d&apos;éléments</source>
+        <comment>Element scaler</comment>
+        <translation>Elem átméretező</translation>
     </message>
     <message>
-        <location filename="../sources/ui/aboutqetdialog.cpp" line="154"/>
+        <location filename="../sources/ui/aboutqetdialog.cpp" line="180"/>
+        <source>Convertisseur d&apos;élément DXF</source>
+        <comment>Dxf2elmt</comment>
+        <translation>DXF elem konvertáló</translation>
+    </message>
+    <message>
+        <location filename="../sources/ui/aboutqetdialog.cpp" line="182"/>
+        <source>Outil de traduction d&apos;éléments</source>
+        <comment>Qet_translate</comment>
+        <translation>Elem fordító eszköz</translation>
+    </message>
+    <message>
+        <location filename="../sources/ui/aboutqetdialog.cpp" line="160"/>
         <source>Paquets Snap</source>
         <translation>Beépülő programcsomag</translation>
     </message>
     <message>
-        <location filename="../sources/ui/aboutqetdialog.cpp" line="170"/>
-        <source>redimensionneur d&apos;éléments</source>
-        <comment>Element scaler</comment>
-        <translation>Elem újraméretezés</translation>
+        <location filename="../sources/ui/aboutqetdialog.cpp" line="131"/>
+        <source>Traduction en ukrainien</source>
+        <translation>Ukrán fordító</translation>
     </message>
     <message>
-        <location filename="../sources/ui/aboutqetdialog.cpp" line="171"/>
+        <location filename="../sources/ui/aboutqetdialog.cpp" line="132"/>
+        <source>Traduction en norvégien</source>
+        <translation>Norvég fordító</translation>
+    </message>
+    <message>
+        <location filename="../sources/ui/aboutqetdialog.cpp" line="135"/>
+        <source>Traduction en slovène</source>
+        <translation>Szlovén fordító</translation>
+    </message>
+    <message>
+        <location filename="../sources/ui/aboutqetdialog.cpp" line="178"/>
         <source>Générateur d&apos;élément lambda</source>
         <comment>Lambda element generator</comment>
         <translation>Lambda elem generátor</translation>
@@ -407,6 +444,19 @@
         <location filename="../sources/factory/ui/addtabledialog.cpp" line="180"/>
         <source>Sélectionner la police des cellules du tableau</source>
         <translation>A táblázat celláinak betűtípusának kiválasztása</translation>
+    </message>
+</context>
+<context>
+    <name>AddTerminalStripItemDialog</name>
+    <message>
+        <location filename="../sources/TerminalStrip/ui/addterminalstripitemdialog.ui" line="14"/>
+        <source>Dialog</source>
+        <translation>Párbeszédablak</translation>
+    </message>
+    <message>
+        <location filename="../sources/TerminalStrip/ui/addterminalstripitemdialog.ui" line="20"/>
+        <source>Ajouter le plan de bornes suivant :</source>
+        <translation>Hozzáadja a következő sorkapocs tervet :</translation>
     </message>
 </context>
 <context>
@@ -685,6 +735,7 @@ Megjegyzés: ezek a lehetőségek NEM engedélyezik, vagy blokkolják az Automat
 <context>
     <name>BorderPropertiesWidget</name>
     <message>
+    <message>
         <location filename="../sources/ui/borderpropertieswidget.ui" line="17"/>
         <source>Dimensions du folio</source>
         <translatorcomment>oszlopok és sorok száma</translatorcomment>
@@ -745,13 +796,13 @@ Megjegyzés: ezek a lehetőségek NEM engedélyezik, vagy blokkolják az Automat
 <context>
     <name>Conductor</name>
     <message>
-        <location filename="../sources/qetgraphicsitem/conductor.cpp" line="1637"/>
+        <location filename="../sources/qetgraphicsitem/conductor.cpp" line="1661"/>
         <source>Modifier les propriétés d&apos;un conducteur</source>
         <comment>undo caption</comment>
         <translation>Vezeték tulajdonságainak módosítása</translation>
     </message>
     <message>
-        <location filename="../sources/qetgraphicsitem/conductor.cpp" line="1642"/>
+        <location filename="../sources/qetgraphicsitem/conductor.cpp" line="1666"/>
         <source>Modifier les propriétés de plusieurs conducteurs</source>
         <comment>undo caption</comment>
         <translation>Több vezeték tulajdonságainak módosítása</translation>
@@ -1035,7 +1086,7 @@ Megjegyzés: ezek a lehetőségek NEM engedélyezik, vagy blokkolják az Automat
 <context>
     <name>CustomElementGraphicPart</name>
     <message>
-        <location filename="../sources/editor/graphicspart/customelementgraphicpart.cpp" line="1366"/>
+        <location filename="../sources/editor/graphicspart/customelementgraphicpart.cpp" line="1362"/>
         <source>Déplacer une primitive</source>
         <translation>Egyszerű mozgatás</translation>
     </message>
@@ -1043,7 +1094,7 @@ Megjegyzés: ezek a lehetőségek NEM engedélyezik, vagy blokkolják az Automat
 <context>
     <name>Diagram</name>
     <message>
-        <location filename="../sources/diagram.cpp" line="1811"/>
+        <location filename="../sources/diagram.cpp" line="1831"/>
         <source>Modifier la profondeur</source>
         <translation>Rétegelrendezés módosítása</translation>
     </message>
@@ -1093,7 +1144,7 @@ Megjegyzés: ezek a lehetőségek NEM engedélyezik, vagy blokkolják az Automat
 <context>
     <name>DiagramEventAddElement</name>
     <message>
-        <location filename="../sources/diagramevent/diagrameventaddelement.cpp" line="226"/>
+        <location filename="../sources/diagramevent/diagrameventaddelement.cpp" line="248"/>
         <source>Ajouter %1</source>
         <translation>Hozzáad %1</translation>
     </message>
@@ -1548,59 +1599,59 @@ Megjegyzés: ezek a lehetőségek NEM engedélyezik, vagy blokkolják az Automat
         <translation>Forgatás</translation>
     </message>
     <message>
-        <location filename="../sources/editor/ui/dynamictextfieldeditor.cpp" line="255"/>
-        <location filename="../sources/editor/ui/dynamictextfieldeditor.cpp" line="266"/>
+        <location filename="../sources/editor/ui/dynamictextfieldeditor.cpp" line="245"/>
+        <location filename="../sources/editor/ui/dynamictextfieldeditor.cpp" line="256"/>
         <source>Déplacer un champ texte</source>
         <translation>Szövegmező mozgatása</translation>
     </message>
     <message>
-        <location filename="../sources/editor/ui/dynamictextfieldeditor.cpp" line="277"/>
+        <location filename="../sources/editor/ui/dynamictextfieldeditor.cpp" line="267"/>
         <source>Pivoter un champ texte</source>
         <translation>Szövegmező forgatása</translation>
     </message>
     <message>
-        <location filename="../sources/editor/ui/dynamictextfieldeditor.cpp" line="288"/>
+        <location filename="../sources/editor/ui/dynamictextfieldeditor.cpp" line="278"/>
         <source>Modifier le texte d&apos;un champ texte</source>
         <translation>Szövegmező szövegének szerkesztése</translation>
     </message>
     <message>
-        <location filename="../sources/editor/ui/dynamictextfieldeditor.cpp" line="299"/>
-        <location filename="../sources/editor/ui/dynamictextfieldeditor.cpp" line="421"/>
+        <location filename="../sources/editor/ui/dynamictextfieldeditor.cpp" line="289"/>
+        <location filename="../sources/editor/ui/dynamictextfieldeditor.cpp" line="411"/>
         <source>Modifier la police d&apos;un champ texte</source>
         <translation>Szövegmező betűtípusának megváltoztatása</translation>
     </message>
     <message>
-        <location filename="../sources/editor/ui/dynamictextfieldeditor.cpp" line="435"/>
+        <location filename="../sources/editor/ui/dynamictextfieldeditor.cpp" line="425"/>
         <source>Modifier la couleur d&apos;un champ texte</source>
         <translation>Szövegmező színének változtatása</translation>
     </message>
     <message>
-        <location filename="../sources/editor/ui/dynamictextfieldeditor.cpp" line="448"/>
+        <location filename="../sources/editor/ui/dynamictextfieldeditor.cpp" line="438"/>
         <source>Modifier la conservation de l&apos;angle</source>
         <translation>A szög módosításának megőrzése</translation>
     </message>
     <message>
-        <location filename="../sources/editor/ui/dynamictextfieldeditor.cpp" line="311"/>
+        <location filename="../sources/editor/ui/dynamictextfieldeditor.cpp" line="301"/>
         <source>Modifier le cadre d&apos;un champ texte</source>
         <translation>Szövegmező keretének módosítása</translation>
     </message>
     <message>
-        <location filename="../sources/editor/ui/dynamictextfieldeditor.cpp" line="324"/>
+        <location filename="../sources/editor/ui/dynamictextfieldeditor.cpp" line="314"/>
         <source>Modifier la largeur d&apos;un texte</source>
         <translation>Szöveg szélességének változtatása</translation>
     </message>
     <message>
-        <location filename="../sources/editor/ui/dynamictextfieldeditor.cpp" line="337"/>
+        <location filename="../sources/editor/ui/dynamictextfieldeditor.cpp" line="327"/>
         <source>Modifier l&apos;information d&apos;un texte</source>
         <translation>Szöveges információ szerkesztése</translation>
     </message>
     <message>
-        <location filename="../sources/editor/ui/dynamictextfieldeditor.cpp" line="374"/>
+        <location filename="../sources/editor/ui/dynamictextfieldeditor.cpp" line="364"/>
         <source>Modifier la source de texte, d&apos;un texte</source>
         <translation>Szöveg forrásának változtatása</translation>
     </message>
     <message>
-        <location filename="../sources/editor/ui/dynamictextfieldeditor.cpp" line="405"/>
+        <location filename="../sources/editor/ui/dynamictextfieldeditor.cpp" line="395"/>
         <source>Modifier l&apos;alignement d&apos;un champ texte</source>
         <translation>Szövegmező elhelyezésének módosítása</translation>
     </message>
@@ -1875,7 +1926,7 @@ Megjegyzés: ezek a lehetőségek NEM engedélyezik, vagy blokkolják az Automat
     <message>
         <location filename="../sources/editor/ui/elementpropertieseditorwidget.cpp" line="125"/>
         <source>Vignette</source>
-        <translation type="unfinished">Bélyegkép</translation>
+        <translation>Bélyegkép</translation>
     </message>
     <message>
         <location filename="../sources/editor/ui/elementpropertieseditorwidget.cpp" line="128"/>
@@ -1895,7 +1946,7 @@ Megjegyzés: ezek a lehetőségek NEM engedélyezik, vagy blokkolják az Automat
     <message>
         <location filename="../sources/editor/ui/elementpropertieseditorwidget.cpp" line="131"/>
         <source>Other</source>
-        <translation type="unfinished"></translation>
+        <translation>egyéb</translation>
     </message>
     <message>
         <location filename="../sources/editor/ui/elementpropertieseditorwidget.cpp" line="133"/>
@@ -2147,7 +2198,7 @@ Megjegyzés: ezek a lehetőségek NEM engedélyezik, vagy blokkolják az Automat
     <message>
         <location filename="../sources/dataBase/ui/elementquerywidget.ui" line="295"/>
         <source>Vignettes</source>
-        <translation type="unfinished"></translation>
+        <translation>bélyegkép</translation>
     </message>
     <message>
         <location filename="../sources/dataBase/ui/elementquerywidget.ui" line="305"/>
@@ -2218,29 +2269,29 @@ Megjegyzés: ezek a lehetőségek NEM engedélyezik, vagy blokkolják az Automat
 <context>
     <name>ElementScene</name>
     <message>
-        <location filename="../sources/editor/elementscene.cpp" line="279"/>
+        <location filename="../sources/editor/elementscene.cpp" line="275"/>
         <source>Déplacer une primitive</source>
         <translation>Egyszerű mozgatás</translation>
     </message>
     <message>
-        <location filename="../sources/editor/elementscene.cpp" line="835"/>
+        <location filename="../sources/editor/elementscene.cpp" line="870"/>
         <source>Éditer les informations sur l&apos;auteur</source>
         <comment>window title</comment>
         <translation>Szerzői információ szerkesztése</translation>
     </message>
     <message>
-        <location filename="../sources/editor/elementscene.cpp" line="840"/>
+        <location filename="../sources/editor/elementscene.cpp" line="875"/>
         <source>Vous pouvez utiliser ce champ libre pour mentionner les auteurs de l&apos;élément, sa licence, ou tout autre renseignement que vous jugerez utile.</source>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../sources/editor/elementscene.cpp" line="904"/>
+        <location filename="../sources/editor/elementscene.cpp" line="939"/>
         <source>Éditer les noms</source>
         <comment>window title</comment>
         <translation>Név szerkesztése</translation>
     </message>
     <message>
-        <location filename="../sources/editor/elementscene.cpp" line="906"/>
+        <location filename="../sources/editor/elementscene.cpp" line="941"/>
         <source>Vous pouvez spécifier le nom de l&apos;élément dans plusieurs langues.</source>
         <translation>Az elem nevét több nyelven beírhatod.</translation>
     </message>
@@ -2411,13 +2462,13 @@ Megjegyzés: ezek a lehetőségek NEM engedélyezik, vagy blokkolják az Automat
         <translation>Keresés</translation>
     </message>
     <message>
-        <location filename="../sources/ElementsCollection/elementscollectionwidget.cpp" line="394"/>
+        <location filename="../sources/ElementsCollection/elementscollectionwidget.cpp" line="395"/>
         <source>Supprimer l&apos;élément ?</source>
         <comment>message box title</comment>
         <translation>Elem törlése ?</translation>
     </message>
     <message>
-        <location filename="../sources/ElementsCollection/elementscollectionwidget.cpp" line="395"/>
+        <location filename="../sources/ElementsCollection/elementscollectionwidget.cpp" line="396"/>
         <source>Êtes-vous sûr  de vouloir supprimer cet élément ?
 </source>
         <comment>message box content</comment>
@@ -2425,25 +2476,25 @@ Megjegyzés: ezek a lehetőségek NEM engedélyezik, vagy blokkolják az Automat
 </translation>
     </message>
     <message>
-        <location filename="../sources/ElementsCollection/elementscollectionwidget.cpp" line="410"/>
+        <location filename="../sources/ElementsCollection/elementscollectionwidget.cpp" line="411"/>
         <source>Suppression de l&apos;élément</source>
         <comment>message box title</comment>
         <translation>Elem törlés</translation>
     </message>
     <message>
-        <location filename="../sources/ElementsCollection/elementscollectionwidget.cpp" line="412"/>
+        <location filename="../sources/ElementsCollection/elementscollectionwidget.cpp" line="413"/>
         <source>La suppression de l&apos;élément a échoué.</source>
         <comment>message box content</comment>
         <translation>Az elem törlése nem sikerült.</translation>
     </message>
     <message>
-        <location filename="../sources/ElementsCollection/elementscollectionwidget.cpp" line="437"/>
+        <location filename="../sources/ElementsCollection/elementscollectionwidget.cpp" line="439"/>
         <source>Supprimer le dossier?</source>
         <comment>message box title</comment>
         <translation>Mappa törlése?</translation>
     </message>
     <message>
-        <location filename="../sources/ElementsCollection/elementscollectionwidget.cpp" line="438"/>
+        <location filename="../sources/ElementsCollection/elementscollectionwidget.cpp" line="440"/>
         <source>Êtes-vous sûr  de vouloir supprimer le dossier ?
 Tout les éléments et les dossier contenus dans ce dossier seront supprimés.</source>
         <comment>message box content</comment>
@@ -2451,48 +2502,63 @@ Tout les éléments et les dossier contenus dans ce dossier seront supprimés.</
 Az összes elem és fájl a mappában törölve lesz.</translation>
     </message>
     <message>
-        <location filename="../sources/ElementsCollection/elementscollectionwidget.cpp" line="454"/>
+        <location filename="../sources/ElementsCollection/elementscollectionwidget.cpp" line="456"/>
         <source>Suppression du dossier</source>
         <comment>message box title</comment>
         <translation>Mappa törlés</translation>
     </message>
     <message>
-        <location filename="../sources/ElementsCollection/elementscollectionwidget.cpp" line="456"/>
+        <location filename="../sources/ElementsCollection/elementscollectionwidget.cpp" line="458"/>
         <source>La suppression du dossier a échoué.</source>
         <comment>message box content</comment>
         <translation>Mappa törlés nem sikerült.</translation>
     </message>
     <message>
-        <location filename="../sources/ElementsCollection/elementscollectionwidget.cpp" line="595"/>
+        <location filename="../sources/ElementsCollection/elementscollectionwidget.cpp" line="600"/>
+        <source>Le dossier</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../sources/ElementsCollection/elementscollectionwidget.cpp" line="601"/>
+        <source>contient</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../sources/ElementsCollection/elementscollectionwidget.cpp" line="602"/>
+        <source>éléments</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../sources/ElementsCollection/elementscollectionwidget.cpp" line="605"/>
         <source>Le dossier %1 contient</source>
         <translation>a mappa %1 tartalmaz</translation>
     </message>
     <message numerus="yes">
-        <location filename="../sources/ElementsCollection/elementscollectionwidget.cpp" line="597"/>
+        <location filename="../sources/ElementsCollection/elementscollectionwidget.cpp" line="607"/>
         <source>%n élément(s), répartie(s)</source>
         <translation>
             <numerusform>%n elem, alkatrész</numerusform>
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../sources/ElementsCollection/elementscollectionwidget.cpp" line="600"/>
+        <location filename="../sources/ElementsCollection/elementscollectionwidget.cpp" line="610"/>
         <source>dans %n dossier(s).</source>
         <translation>
             <numerusform>%n mappákban.</numerusform>
         </translation>
     </message>
     <message>
-        <location filename="../sources/ElementsCollection/elementscollectionwidget.cpp" line="603"/>
+        <location filename="../sources/ElementsCollection/elementscollectionwidget.cpp" line="613"/>
         <source>Chemin de la collection :  %1</source>
         <translation>A gyűjtemény elérési útvonala : %1</translation>
     </message>
     <message>
-        <location filename="../sources/ElementsCollection/elementscollectionwidget.cpp" line="607"/>
+        <location filename="../sources/ElementsCollection/elementscollectionwidget.cpp" line="617"/>
         <source>Chemin dans le système de fichiers :  %1</source>
         <translation>A fájlrendszer elérési útvonala : %1</translation>
     </message>
     <message>
-        <location filename="../sources/ElementsCollection/elementscollectionwidget.cpp" line="612"/>
+        <location filename="../sources/ElementsCollection/elementscollectionwidget.cpp" line="622"/>
         <source>Propriété du dossier %1</source>
         <translation>A mappa tulajdonsága %1</translation>
     </message>
@@ -2523,25 +2589,37 @@ Az összes elem és fájl a mappában törölve lesz.</translation>
         <translation>Húzd meg és ejtsd le ezt a tervjel sablont egy tervlapra, hogy alkalmazzuk.</translation>
     </message>
     <message>
-        <location filename="../sources/elementspanel.cpp" line="230"/>
+        <location filename="../sources/elementspanel.cpp" line="231"/>
         <source>Double-cliquez pour réduire ou développer la collection de cartouches QElectroTech</source>
         <comment>Status tip</comment>
         <translation>Dupla kattintással összecsukható, vagy kinyitható a QElectrotech tervjel gyűjtemény</translation>
     </message>
     <message>
-        <location filename="../sources/elementspanel.cpp" line="231"/>
+        <location filename="../sources/elementspanel.cpp" line="232"/>
         <source>Ceci est la collection de cartouches fournie avec QElectroTech. Installée en tant que composant système, vous ne pouvez normalement pas la personnaliser.</source>
         <comment>&quot;What&apos;s this&quot; tip</comment>
         <translation>Ez a tervjelgyűjtemény alkalmazható a QElectrotech-kel együtt. Renszeralkalmazásként van telepítve. Normál esetben nem testreszabható.</translation>
     </message>
     <message>
-        <location filename="../sources/elementspanel.cpp" line="238"/>
+        <location filename="../sources/elementspanel.cpp" line="239"/>
+        <source>Double-cliquez pour réduire ou développer la collection company de cartouches</source>
+        <comment>Status tip</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../sources/elementspanel.cpp" line="240"/>
+        <source>Ceci est la collection company de cartouches -- utilisez-la pour créer, stocker et éditer vos propres cartouches.</source>
+        <comment>&quot;What&apos;s this&quot; tip</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../sources/elementspanel.cpp" line="247"/>
         <source>Double-cliquez pour réduire ou développer votre collection personnelle de cartouches</source>
         <comment>Status tip</comment>
         <translation>Dupla kattintással összecsukható, vagy kinyitható a saját tervjelgyűjtemény</translation>
     </message>
     <message>
-        <location filename="../sources/elementspanel.cpp" line="239"/>
+        <location filename="../sources/elementspanel.cpp" line="248"/>
         <source>Ceci est votre collection personnelle de cartouches -- utilisez-la pour créer, stocker et éditer vos propres cartouches.</source>
         <comment>&quot;What&apos;s this&quot; tip</comment>
         <translation>Ez a saját tervjelgyűjteményed -- használhatod a létrehozást, tárolást és szerkesztést a saját tervjeleidhez.</translation>
@@ -2606,31 +2684,41 @@ Az összes elem és fájl a mappában törölve lesz.</translation>
     </message>
     <message>
         <location filename="../sources/elementspanelwidget.cpp" line="65"/>
+        <source>Remonter ce folio x100</source>
+        <translation>Tervlap mozgatása fel 100 lappal</translation>
+    </message>
+    <message>
+        <location filename="../sources/elementspanelwidget.cpp" line="66"/>
         <source>Remonter ce folio au debut</source>
         <translation>Tervlap mozgatása kezdőlapnak</translation>
     </message>
     <message>
-        <location filename="../sources/elementspanelwidget.cpp" line="66"/>
+        <location filename="../sources/elementspanelwidget.cpp" line="67"/>
         <source>Abaisser ce folio x10</source>
         <translation>Tervlap mozgatása le 10 lappal</translation>
     </message>
     <message>
-        <location filename="../sources/elementspanelwidget.cpp" line="67"/>
+        <location filename="../sources/elementspanelwidget.cpp" line="68"/>
+        <source>Abaisser ce folio x100</source>
+        <translation>Tervlap mozgatása le 100 lappal</translation>
+    </message>
+    <message>
+        <location filename="../sources/elementspanelwidget.cpp" line="69"/>
         <source>Nouveau modèle</source>
         <translation>Új sablon</translation>
     </message>
     <message>
-        <location filename="../sources/elementspanelwidget.cpp" line="68"/>
+        <location filename="../sources/elementspanelwidget.cpp" line="70"/>
         <source>Éditer ce modèle</source>
         <translation>Sablon szerkesztése</translation>
     </message>
     <message>
-        <location filename="../sources/elementspanelwidget.cpp" line="69"/>
+        <location filename="../sources/elementspanelwidget.cpp" line="71"/>
         <source>Supprimer ce modèle</source>
         <translation>Sablon törlése</translation>
     </message>
     <message>
-        <location filename="../sources/elementspanelwidget.cpp" line="81"/>
+        <location filename="../sources/elementspanelwidget.cpp" line="88"/>
         <source>Filtrer</source>
         <translation>Szűrő</translation>
     </message>
@@ -2721,49 +2809,49 @@ Az összes elem és fájl a mappában törölve lesz.</translation>
         <translation>Kiterjedések</translation>
     </message>
     <message>
-        <location filename="../sources/exportdialog.cpp" line="721"/>
+        <location filename="../sources/exportdialog.cpp" line="731"/>
         <source>Noms des fichiers cibles</source>
         <comment>message box title</comment>
         <translation>Cél fájl nevek</translation>
     </message>
     <message>
-        <location filename="../sources/exportdialog.cpp" line="722"/>
+        <location filename="../sources/exportdialog.cpp" line="732"/>
         <source>Vous devez entrer un nom de fichier non vide et unique pour chaque folio à exporter.</source>
         <comment>message box content</comment>
         <translation>Muszáj beírni egy egyedi fájlnevet egyenként a tervlapok exportálásához.</translation>
     </message>
     <message>
-        <location filename="../sources/exportdialog.cpp" line="737"/>
+        <location filename="../sources/exportdialog.cpp" line="747"/>
         <source>Dossier non spécifié</source>
         <comment>message box title</comment>
         <translation>A könyvtár hiányzik</translation>
     </message>
     <message>
-        <location filename="../sources/exportdialog.cpp" line="738"/>
+        <location filename="../sources/exportdialog.cpp" line="748"/>
         <source>Vous devez spécifier le chemin du dossier dans lequel seront enregistrés les fichiers images.</source>
         <comment>message box content</comment>
         <translation>Muszáj meghatározni a könyvtár útvonalát, amelyikbe a képfájl mentve lesz.</translation>
     </message>
     <message>
-        <location filename="../sources/exportdialog.cpp" line="779"/>
+        <location filename="../sources/exportdialog.cpp" line="789"/>
         <source>Impossible d&apos;écrire dans ce fichier</source>
         <comment>message box title</comment>
         <translation>Nem lehet írni ezt a fájl-t</translation>
     </message>
     <message>
-        <location filename="../sources/exportdialog.cpp" line="781"/>
+        <location filename="../sources/exportdialog.cpp" line="791"/>
         <source>Il semblerait que vous n&apos;ayez pas les permissions nécessaires pour écrire dans le fichier %1.</source>
         <comment>message box content</comment>
         <translation>Úgy tűnik nem rendelkezel a szükséges engedéllyel a fájl írásához %1.</translation>
     </message>
     <message>
-        <location filename="../sources/exportdialog.cpp" line="898"/>
+        <location filename="../sources/exportdialog.cpp" line="908"/>
         <source>Aperçu</source>
         <translation>Előnézet</translation>
     </message>
     <message>
-        <location filename="../sources/exportdialog.cpp" line="1002"/>
-        <location filename="../sources/exportdialog.cpp" line="1007"/>
+        <location filename="../sources/exportdialog.cpp" line="1012"/>
+        <location filename="../sources/exportdialog.cpp" line="1017"/>
         <source>px</source>
         <translation>pixel</translation>
     </message>
@@ -2771,91 +2859,96 @@ Az összes elem és fájl a mappában törölve lesz.</translation>
 <context>
     <name>ExportPropertiesWidget</name>
     <message>
-        <location filename="../sources/exportpropertieswidget.cpp" line="129"/>
+        <location filename="../sources/exportpropertieswidget.cpp" line="132"/>
         <source>Exporter dans le dossier</source>
         <comment>dialog title</comment>
         <translation>Exportálás a könyvtárba</translation>
     </message>
     <message>
-        <location filename="../sources/exportpropertieswidget.cpp" line="150"/>
+        <location filename="../sources/exportpropertieswidget.cpp" line="153"/>
         <source>Dossier cible :</source>
         <translation>Cél könyvtár:</translation>
     </message>
     <message>
-        <location filename="../sources/exportpropertieswidget.cpp" line="155"/>
+        <location filename="../sources/exportpropertieswidget.cpp" line="158"/>
         <source>Parcourir</source>
         <translation>Böngészés</translation>
     </message>
     <message>
-        <location filename="../sources/exportpropertieswidget.cpp" line="165"/>
+        <location filename="../sources/exportpropertieswidget.cpp" line="168"/>
         <source>Format :</source>
         <translation>Formátum :</translation>
     </message>
     <message>
-        <location filename="../sources/exportpropertieswidget.cpp" line="168"/>
+        <location filename="../sources/exportpropertieswidget.cpp" line="171"/>
         <source>PNG (*.png)</source>
         <translation>PNG (*.png)</translation>
     </message>
     <message>
-        <location filename="../sources/exportpropertieswidget.cpp" line="169"/>
+        <location filename="../sources/exportpropertieswidget.cpp" line="172"/>
         <source>JPEG (*.jpg)</source>
         <translation>JPEG (*.jpg)</translation>
     </message>
     <message>
-        <location filename="../sources/exportpropertieswidget.cpp" line="170"/>
+        <location filename="../sources/exportpropertieswidget.cpp" line="173"/>
         <source>Bitmap (*.bmp)</source>
         <translation>Bitkép (*.bmp)</translation>
     </message>
     <message>
-        <location filename="../sources/exportpropertieswidget.cpp" line="171"/>
+        <location filename="../sources/exportpropertieswidget.cpp" line="174"/>
         <source>SVG (*.svg)</source>
         <translation>SVG (*.svg)</translation>
     </message>
     <message>
-        <location filename="../sources/exportpropertieswidget.cpp" line="172"/>
+        <location filename="../sources/exportpropertieswidget.cpp" line="175"/>
         <source>DXF (*.dxf)</source>
         <translation>DXF (*.dxf)</translation>
     </message>
     <message>
-        <location filename="../sources/exportpropertieswidget.cpp" line="178"/>
+        <location filename="../sources/exportpropertieswidget.cpp" line="181"/>
         <source>Options de rendu</source>
         <comment>groupbox title</comment>
         <translation>Feldolgozás lehetőségei</translation>
     </message>
     <message>
-        <location filename="../sources/exportpropertieswidget.cpp" line="183"/>
+        <location filename="../sources/exportpropertieswidget.cpp" line="186"/>
         <source>Exporter entièrement le folio</source>
         <translation>Összes tervlap exportálása</translation>
     </message>
     <message>
-        <location filename="../sources/exportpropertieswidget.cpp" line="186"/>
+        <location filename="../sources/exportpropertieswidget.cpp" line="189"/>
         <source>Exporter seulement les éléments</source>
         <translation>Csak az elemek exportálása</translation>
     </message>
     <message>
-        <location filename="../sources/exportpropertieswidget.cpp" line="191"/>
+        <location filename="../sources/exportpropertieswidget.cpp" line="194"/>
         <source>Dessiner la grille</source>
         <translation>Pontrács rajzolása</translation>
     </message>
     <message>
-        <location filename="../sources/exportpropertieswidget.cpp" line="195"/>
+        <location filename="../sources/exportpropertieswidget.cpp" line="198"/>
         <source>Dessiner le cadre</source>
         <translation>Keret rajzolása</translation>
     </message>
     <message>
-        <location filename="../sources/exportpropertieswidget.cpp" line="199"/>
+        <location filename="../sources/exportpropertieswidget.cpp" line="202"/>
         <source>Dessiner le cartouche</source>
         <translation>Tervjel rajzolása</translation>
     </message>
     <message>
-        <location filename="../sources/exportpropertieswidget.cpp" line="203"/>
+        <location filename="../sources/exportpropertieswidget.cpp" line="206"/>
         <source>Dessiner les bornes</source>
         <translation>Sorkapcsok rajzolása</translation>
     </message>
     <message>
-        <location filename="../sources/exportpropertieswidget.cpp" line="207"/>
+        <location filename="../sources/exportpropertieswidget.cpp" line="210"/>
         <source>Conserver les couleurs des conducteurs</source>
         <translation>Vezetékek színének megtartása</translation>
+    </message>
+    <message>
+        <location filename="../sources/exportpropertieswidget.cpp" line="214"/>
+        <source>SVG: fond transparent</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -2998,78 +3091,78 @@ Szöveg és szám szintén bevihető.</translation>
     <message>
         <location filename="../sources/TerminalStrip/ui/freeterminaleditor.ui" line="17"/>
         <source>Déplacer dans :</source>
-        <translation type="unfinished"></translation>
+        <translation>Áthelyezés :</translation>
     </message>
     <message>
         <location filename="../sources/TerminalStrip/ui/freeterminaleditor.ui" line="57"/>
         <source>Type :</source>
-        <translation type="unfinished">Típus :</translation>
+        <translation>Típus :</translation>
     </message>
     <message>
         <location filename="../sources/TerminalStrip/ui/freeterminaleditor.ui" line="64"/>
         <source>Fonction :</source>
-        <translation type="unfinished">Funkció :</translation>
+        <translation>Funkció :</translation>
     </message>
     <message>
         <location filename="../sources/TerminalStrip/ui/freeterminaleditor.ui" line="71"/>
         <source>LED :</source>
-        <translation type="unfinished">LED :</translation>
+        <translation>LED :</translation>
     </message>
     <message>
         <location filename="../sources/TerminalStrip/ui/freeterminaleditor.ui" line="78"/>
         <source>Appliquer le déplacement</source>
-        <translation type="unfinished"></translation>
+        <translation>Áthelyezés alkalmazása</translation>
     </message>
     <message>
         <location filename="../sources/TerminalStrip/ui/freeterminaleditor.ui" line="100"/>
         <location filename="../sources/TerminalStrip/ui/freeterminaleditor.ui" line="129"/>
         <source>Générique</source>
-        <translation type="unfinished">Általános</translation>
+        <translation>Általános</translation>
     </message>
     <message>
         <location filename="../sources/TerminalStrip/ui/freeterminaleditor.ui" line="105"/>
         <source>Fusible</source>
-        <translation type="unfinished">Biztosíték</translation>
+        <translation>Biztosíték</translation>
     </message>
     <message>
         <location filename="../sources/TerminalStrip/ui/freeterminaleditor.ui" line="110"/>
         <source>Sectionnable</source>
-        <translation type="unfinished">Megosztható</translation>
+        <translation>Megosztható</translation>
     </message>
     <message>
         <location filename="../sources/TerminalStrip/ui/freeterminaleditor.ui" line="115"/>
         <source>Diode</source>
-        <translation type="unfinished">Dióda</translation>
+        <translation>Dióda</translation>
     </message>
     <message>
         <location filename="../sources/TerminalStrip/ui/freeterminaleditor.ui" line="120"/>
         <source>Terre</source>
-        <translation type="unfinished"></translation>
+        <translation>Földelés</translation>
     </message>
     <message>
         <location filename="../sources/TerminalStrip/ui/freeterminaleditor.ui" line="134"/>
         <source>Phase</source>
-        <translation type="unfinished">Fázis</translation>
+        <translation>Fázis</translation>
     </message>
     <message>
         <location filename="../sources/TerminalStrip/ui/freeterminaleditor.ui" line="139"/>
         <source>Neutre</source>
-        <translation type="unfinished">Nulla</translation>
+        <translation>Nulla</translation>
     </message>
     <message>
         <location filename="../sources/TerminalStrip/ui/freeterminaleditor.ui" line="148"/>
         <source>Sans</source>
-        <translation type="unfinished">Nélkül</translation>
+        <translation>Nélkül</translation>
     </message>
     <message>
         <location filename="../sources/TerminalStrip/ui/freeterminaleditor.ui" line="153"/>
         <source>Avec</source>
-        <translation type="unfinished">Vele</translation>
+        <translation>Vele</translation>
     </message>
     <message>
         <location filename="../sources/TerminalStrip/ui/freeterminaleditor.cpp" line="114"/>
         <source>Modifier des propriétés de borniers</source>
-        <translation type="unfinished">Sorkapocsléc tulajdonságainak módosítása</translation>
+        <translation>Sorkapocsléc tulajdonságainak módosítása</translation>
     </message>
 </context>
 <context>
@@ -3077,27 +3170,27 @@ Szöveg és szám szintén bevihető.</translation>
     <message>
         <location filename="../sources/TerminalStrip/ui/freeterminalmodel.cpp" line="207"/>
         <source>Label</source>
-        <translation type="unfinished">Címke</translation>
+        <translation>Címke</translation>
     </message>
     <message>
         <location filename="../sources/TerminalStrip/ui/freeterminalmodel.cpp" line="208"/>
         <source>Référence croisé</source>
-        <translation type="unfinished">Kereszthivatkozás</translation>
+        <translation>Kereszthivatkozás</translation>
     </message>
     <message>
         <location filename="../sources/TerminalStrip/ui/freeterminalmodel.cpp" line="209"/>
         <source>Type</source>
-        <translation type="unfinished">Típus</translation>
+        <translation>Típus</translation>
     </message>
     <message>
         <location filename="../sources/TerminalStrip/ui/freeterminalmodel.cpp" line="210"/>
         <source>Fonction</source>
-        <translation type="unfinished">Funkció</translation>
+        <translation>Funkció</translation>
     </message>
     <message>
         <location filename="../sources/TerminalStrip/ui/freeterminalmodel.cpp" line="211"/>
         <source>led</source>
-        <translation type="unfinished">led</translation>
+        <translation>led</translation>
     </message>
 </context>
 <context>
@@ -3149,32 +3242,32 @@ Szöveg és szám szintén bevihető.</translation>
         <translation>Közös gyűjtemény könyvtár</translation>
     </message>
     <message>
-        <location filename="../sources/ui/configpage/generalconfigurationpage.ui" line="287"/>
+        <location filename="../sources/ui/configpage/generalconfigurationpage.ui" line="308"/>
         <source>Répertoire des cartouches utilisateur</source>
         <translation>Felhasználói szövegmezők könytára</translation>
     </message>
     <message>
-        <location filename="../sources/ui/configpage/generalconfigurationpage.ui" line="390"/>
+        <location filename="../sources/ui/configpage/generalconfigurationpage.ui" line="432"/>
         <source>Vous pouvez définir ici l&apos;apparence par defaut des differents textes de QElectroTech</source>
         <translation>Itt lehet meghatározni a QElectrotech különböző szövegeinek alapértelmezett megjelenését</translation>
     </message>
     <message>
-        <location filename="../sources/ui/configpage/generalconfigurationpage.ui" line="573"/>
+        <location filename="../sources/ui/configpage/generalconfigurationpage.ui" line="615"/>
         <source>Grille + Clavier</source>
         <translation>Rács + Billentyű</translation>
     </message>
     <message>
-        <location filename="../sources/ui/configpage/generalconfigurationpage.ui" line="579"/>
+        <location filename="../sources/ui/configpage/generalconfigurationpage.ui" line="621"/>
         <source>Grille : 1 - 30</source>
         <translation>Rács: 1 - 30</translation>
     </message>
     <message>
-        <location filename="../sources/ui/configpage/generalconfigurationpage.ui" line="646"/>
+        <location filename="../sources/ui/configpage/generalconfigurationpage.ui" line="688"/>
         <source>DiagramEditor xGrid</source>
         <translation>Sémaszerkesztő xRács</translation>
     </message>
     <message>
-        <location filename="../sources/ui/configpage/generalconfigurationpage.ui" line="613"/>
+        <location filename="../sources/ui/configpage/generalconfigurationpage.ui" line="655"/>
         <source>DiagramEditor yGrid</source>
         <translation>Sémaszerkesztő yRács</translation>
     </message>
@@ -3194,88 +3287,108 @@ Szöveg és szám szintén bevihető.</translation>
         <translation>Magas képpontsűrűségű (hdpi) méretezési mód megjelenítése (a QElectrotech következő indításakor) :</translation>
     </message>
     <message>
-        <location filename="../sources/ui/configpage/generalconfigurationpage.ui" line="341"/>
+        <location filename="../sources/ui/configpage/generalconfigurationpage.ui" line="245"/>
+        <source>Répertoire de la collection company</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../sources/ui/configpage/generalconfigurationpage.ui" line="266"/>
+        <source>Répertoire des cartouches company</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../sources/ui/configpage/generalconfigurationpage.ui" line="383"/>
         <source>Langues</source>
         <translation>Nyelvek</translation>
     </message>
     <message>
-        <location filename="../sources/ui/configpage/generalconfigurationpage.ui" line="384"/>
+        <location filename="../sources/ui/configpage/generalconfigurationpage.ui" line="426"/>
         <source>Textes</source>
         <translation>Szöveg</translation>
     </message>
     <message>
-        <location filename="../sources/ui/configpage/generalconfigurationpage.ui" line="404"/>
+        <location filename="../sources/ui/configpage/generalconfigurationpage.ui" line="446"/>
         <source>Textes d&apos;éléments</source>
         <translation>Elemekhez tartozó szövegek</translation>
     </message>
     <message>
-        <location filename="../sources/ui/configpage/generalconfigurationpage.ui" line="417"/>
-        <location filename="../sources/ui/configpage/generalconfigurationpage.ui" line="483"/>
-        <location filename="../sources/ui/configpage/generalconfigurationpage.ui" line="529"/>
+        <location filename="../sources/ui/configpage/generalconfigurationpage.ui" line="459"/>
+        <location filename="../sources/ui/configpage/generalconfigurationpage.ui" line="525"/>
+        <location filename="../sources/ui/configpage/generalconfigurationpage.ui" line="571"/>
         <source>Police :</source>
         <translation>Betűtípus :</translation>
     </message>
     <message>
-        <location filename="../sources/ui/configpage/generalconfigurationpage.ui" line="427"/>
-        <location filename="../sources/ui/configpage/generalconfigurationpage.ui" line="490"/>
+        <location filename="../sources/ui/configpage/generalconfigurationpage.ui" line="469"/>
+        <location filename="../sources/ui/configpage/generalconfigurationpage.ui" line="532"/>
         <source>°</source>
         <translation>°</translation>
     </message>
     <message>
-        <location filename="../sources/ui/configpage/generalconfigurationpage.ui" line="437"/>
+        <location filename="../sources/ui/configpage/generalconfigurationpage.ui" line="479"/>
         <source>Longueur :</source>
         <translation>Hosszúság :</translation>
     </message>
     <message>
-        <location filename="../sources/ui/configpage/generalconfigurationpage.ui" line="447"/>
-        <location filename="../sources/ui/configpage/generalconfigurationpage.ui" line="476"/>
+        <location filename="../sources/ui/configpage/generalconfigurationpage.ui" line="489"/>
+        <location filename="../sources/ui/configpage/generalconfigurationpage.ui" line="518"/>
         <source>Rotation :</source>
         <translation>Forgatás :</translation>
     </message>
     <message>
-        <location filename="../sources/ui/configpage/generalconfigurationpage.ui" line="470"/>
+        <location filename="../sources/ui/configpage/generalconfigurationpage.ui" line="512"/>
         <source>Textes indépendants</source>
         <translation>Független szövegek</translation>
     </message>
     <message>
-        <location filename="../sources/ui/configpage/generalconfigurationpage.ui" line="523"/>
+        <location filename="../sources/ui/configpage/generalconfigurationpage.ui" line="565"/>
         <source>Autres textes</source>
         <translation>Egyéb szövegek</translation>
     </message>
     <message>
-        <location filename="../sources/ui/configpage/generalconfigurationpage.ui" line="620"/>
+        <location filename="../sources/ui/configpage/generalconfigurationpage.ui" line="662"/>
         <source>La Grille doite etre active pour pouvoir voir les modifications.</source>
         <translation>A Rácsnak aktívnak kell lennie, hogy lássuk a változásokat.</translation>
     </message>
     <message>
-        <location filename="../sources/ui/configpage/generalconfigurationpage.ui" line="669"/>
+        <location filename="../sources/ui/configpage/generalconfigurationpage.ui" line="711"/>
         <source>Déplacement au clavier : 1 - 30</source>
         <translation>Billentyűzetről mozgatás: 1 - 30</translation>
     </message>
     <message>
-        <location filename="../sources/ui/configpage/generalconfigurationpage.ui" line="719"/>
+        <location filename="../sources/ui/configpage/generalconfigurationpage.ui" line="761"/>
         <source>DiagramEditor (touche :   gauche / droite)  xGrid</source>
         <translation>Sémaszerkesztő (billentyű: bal / jobb) xRács</translation>
     </message>
     <message>
-        <location filename="../sources/ui/configpage/generalconfigurationpage.ui" line="726"/>
+        <location filename="../sources/ui/configpage/generalconfigurationpage.ui" line="768"/>
         <source>DiagramEditor (touche :   haut / bas)  yGrid</source>
         <translation>Sémaszerkesztő (billentyű: fel / le) yRács</translation>
     </message>
     <message>
-        <location filename="../sources/ui/configpage/generalconfigurationpage.ui" line="749"/>
+        <location filename="../sources/ui/configpage/generalconfigurationpage.ui" line="791"/>
         <source>Déplacement au clavier avec la touche ALT : 1 - 9</source>
         <translation>Billentyűzetről mozgatás ALT + billentyű: 1 - 9</translation>
     </message>
     <message>
-        <location filename="../sources/ui/configpage/generalconfigurationpage.ui" line="755"/>
+        <location filename="../sources/ui/configpage/generalconfigurationpage.ui" line="797"/>
         <source>DiagramEditor (touche :   gauche / droite ) xGrid</source>
         <translation>Sémaszerkesztő (billentyű: bal / jobb) xRács</translation>
     </message>
     <message>
-        <location filename="../sources/ui/configpage/generalconfigurationpage.ui" line="784"/>
+        <location filename="../sources/ui/configpage/generalconfigurationpage.ui" line="826"/>
         <source>DiagramEditor (touche :  haut / bas)  yGrid</source>
         <translation>Sémaszerkesztő (billentyű: fel / le) yRács</translation>
+    </message>
+    <message>
+        <location filename="../sources/ui/configpage/generalconfigurationpage.ui" line="885"/>
+        <source>Editor</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../sources/ui/configpage/generalconfigurationpage.ui" line="893"/>
+        <source>Max. parts in Element Editor List</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../sources/ui/configpage/generalconfigurationpage.ui" line="41"/>
@@ -3298,36 +3411,40 @@ Szöveg és szám szintén bevihető.</translation>
         <translation>Engedélyezze a kicsinyítést a tervlapon</translation>
     </message>
     <message>
-        <location filename="../sources/ui/configpage/generalconfigurationpage.cpp" line="398"/>
+        <location filename="../sources/ui/configpage/generalconfigurationpage.cpp" line="467"/>
         <source>Chemin de la collection utilisateur</source>
         <translation>Felhasználói gyűjtemény elérési útvonala</translation>
     </message>
     <message>
-        <location filename="../sources/ui/configpage/generalconfigurationpage.cpp" line="384"/>
+        <location filename="../sources/ui/configpage/generalconfigurationpage.cpp" line="439"/>
         <source>Chemin de la collection commune</source>
         <translation>Közös gyűjtemény elérési útvonala</translation>
     </message>
     <message>
         <location filename="../sources/ui/configpage/generalconfigurationpage.ui" line="232"/>
         <location filename="../sources/ui/configpage/generalconfigurationpage.ui" line="253"/>
-        <location filename="../sources/ui/configpage/generalconfigurationpage.ui" line="267"/>
+        <location filename="../sources/ui/configpage/generalconfigurationpage.ui" line="274"/>
+        <location filename="../sources/ui/configpage/generalconfigurationpage.ui" line="295"/>
+        <location filename="../sources/ui/configpage/generalconfigurationpage.ui" line="316"/>
         <source>Par defaut</source>
         <translation>Alapértelmezés szerint</translation>
     </message>
     <message>
         <location filename="../sources/ui/configpage/generalconfigurationpage.ui" line="237"/>
         <location filename="../sources/ui/configpage/generalconfigurationpage.ui" line="258"/>
-        <location filename="../sources/ui/configpage/generalconfigurationpage.ui" line="272"/>
+        <location filename="../sources/ui/configpage/generalconfigurationpage.ui" line="279"/>
+        <location filename="../sources/ui/configpage/generalconfigurationpage.ui" line="300"/>
+        <location filename="../sources/ui/configpage/generalconfigurationpage.ui" line="321"/>
         <source>Parcourir...</source>
         <translation>Böngészés...</translation>
     </message>
     <message>
-        <location filename="../sources/ui/configpage/generalconfigurationpage.ui" line="245"/>
+        <location filename="../sources/ui/configpage/generalconfigurationpage.ui" line="287"/>
         <source>Répertoire de la collection utilisateur</source>
         <translation>Felhasználói gyűjtemény könyvtára</translation>
     </message>
     <message>
-        <location filename="../sources/ui/configpage/generalconfigurationpage.ui" line="280"/>
+        <location filename="../sources/ui/configpage/generalconfigurationpage.ui" line="329"/>
         <source>(Recharger les collections d&apos;éléments pour appliquer les changements)</source>
         <translation>(Az elem gyűjtemény újratöltése a változások érvényesítéséhez)</translation>
     </message>
@@ -3343,24 +3460,24 @@ Szöveg és szám szintén bevihető.</translation>
         <translation> perc</translation>
     </message>
     <message>
-        <location filename="../sources/ui/configpage/generalconfigurationpage.ui" line="297"/>
+        <location filename="../sources/ui/configpage/generalconfigurationpage.ui" line="339"/>
         <source>Gestion des éléments</source>
         <translation>Elemek szervezés</translation>
     </message>
     <message>
-        <location filename="../sources/ui/configpage/generalconfigurationpage.ui" line="306"/>
+        <location filename="../sources/ui/configpage/generalconfigurationpage.ui" line="348"/>
         <source>Mettre en valeur dans le panel les éléments fraîchement intégrés</source>
         <translation>A frissen elhelyezett alkatrészek kiemelése a panelen</translation>
     </message>
     <message>
-        <location filename="../sources/ui/configpage/generalconfigurationpage.ui" line="313"/>
+        <location filename="../sources/ui/configpage/generalconfigurationpage.ui" line="355"/>
         <source>Chaque élément embarque des informations sur ses auteurs, sa licence, ou tout autre renseignement que vous jugerez utile dans un champ libre.
 Vous pouvez spécifier ici la valeur par défaut de ce champ pour les éléments que vous créerez :</source>
         <translation>Az elem tartalmazhat információt a szerzőről, engedélyt, vagy más hasznos információt.
 A szövegmező alapértelmezett értékének meghatározása az új elemek alá vonatkoztatva :</translation>
     </message>
     <message>
-        <location filename="../sources/ui/configpage/generalconfigurationpage.ui" line="350"/>
+        <location filename="../sources/ui/configpage/generalconfigurationpage.ui" line="392"/>
         <source>Appliqué au prochain lancement de QElectroTech</source>
         <translation>Alkalmazás a QElectroTech következő indításánál</translation>
     </message>
@@ -3390,140 +3507,165 @@ A szövegmező alapértelmezett értékének meghatározása az új elemek alá 
         <translation>Nincs kerekítés</translation>
     </message>
     <message>
-        <location filename="../sources/ui/configpage/generalconfigurationpage.cpp" line="274"/>
+        <location filename="../sources/ui/configpage/generalconfigurationpage.cpp" line="329"/>
         <source>Général</source>
         <comment>configuration page title</comment>
         <translation>Általános</translation>
     </message>
     <message>
-        <location filename="../sources/ui/configpage/generalconfigurationpage.cpp" line="292"/>
+        <location filename="../sources/ui/configpage/generalconfigurationpage.cpp" line="347"/>
         <source>Système</source>
         <translation>Rendszer</translation>
     </message>
     <message>
-        <location filename="../sources/ui/configpage/generalconfigurationpage.cpp" line="296"/>
+        <location filename="../sources/ui/configpage/generalconfigurationpage.cpp" line="351"/>
         <source>Arabe</source>
         <translation>Arab</translation>
     </message>
     <message>
-        <location filename="../sources/ui/configpage/generalconfigurationpage.cpp" line="297"/>
+        <location filename="../sources/ui/configpage/generalconfigurationpage.cpp" line="352"/>
         <source>Brézilien</source>
         <translation>Brazil</translation>
     </message>
     <message>
-        <location filename="../sources/ui/configpage/generalconfigurationpage.cpp" line="298"/>
+        <location filename="../sources/ui/configpage/generalconfigurationpage.cpp" line="353"/>
         <source>Catalan</source>
         <translation>Katalán</translation>
     </message>
     <message>
-        <location filename="../sources/ui/configpage/generalconfigurationpage.cpp" line="299"/>
+        <location filename="../sources/ui/configpage/generalconfigurationpage.cpp" line="354"/>
         <source>Tchèque</source>
         <translation>Cseh</translation>
     </message>
     <message>
-        <location filename="../sources/ui/configpage/generalconfigurationpage.cpp" line="300"/>
+        <location filename="../sources/ui/configpage/generalconfigurationpage.cpp" line="355"/>
         <source>Allemand</source>
         <translation>Német</translation>
     </message>
     <message>
-        <location filename="../sources/ui/configpage/generalconfigurationpage.cpp" line="301"/>
+        <location filename="../sources/ui/configpage/generalconfigurationpage.cpp" line="356"/>
         <source>Danois</source>
         <translation>Dán</translation>
     </message>
     <message>
-        <location filename="../sources/ui/configpage/generalconfigurationpage.cpp" line="302"/>
+        <location filename="../sources/ui/configpage/generalconfigurationpage.cpp" line="357"/>
         <source>Grec</source>
         <translation>Görög</translation>
     </message>
     <message>
-        <location filename="../sources/ui/configpage/generalconfigurationpage.cpp" line="303"/>
+        <location filename="../sources/ui/configpage/generalconfigurationpage.cpp" line="358"/>
         <source>Anglais</source>
         <translation>Angol</translation>
     </message>
     <message>
-        <location filename="../sources/ui/configpage/generalconfigurationpage.cpp" line="304"/>
+        <location filename="../sources/ui/configpage/generalconfigurationpage.cpp" line="359"/>
         <source>Espagnol</source>
         <translation>Spanyol</translation>
     </message>
     <message>
-        <location filename="../sources/ui/configpage/generalconfigurationpage.cpp" line="305"/>
+        <location filename="../sources/ui/configpage/generalconfigurationpage.cpp" line="360"/>
         <source>Français</source>
         <translation>Francia</translation>
     </message>
     <message>
-        <location filename="../sources/ui/configpage/generalconfigurationpage.cpp" line="306"/>
+        <location filename="../sources/ui/configpage/generalconfigurationpage.cpp" line="361"/>
         <source>Croate</source>
         <translation>Horváth</translation>
     </message>
     <message>
-        <location filename="../sources/ui/configpage/generalconfigurationpage.cpp" line="307"/>
+        <location filename="../sources/ui/configpage/generalconfigurationpage.cpp" line="362"/>
         <source>Italien</source>
         <translation>Olasz</translation>
     </message>
     <message>
-        <location filename="../sources/ui/configpage/generalconfigurationpage.cpp" line="308"/>
+        <location filename="../sources/ui/configpage/generalconfigurationpage.cpp" line="363"/>
         <source>Japonais</source>
         <translation>Japán</translation>
     </message>
     <message>
-        <location filename="../sources/ui/configpage/generalconfigurationpage.cpp" line="309"/>
+        <location filename="../sources/ui/configpage/generalconfigurationpage.cpp" line="364"/>
         <source>Polonais</source>
         <translation>Lengyel</translation>
     </message>
     <message>
-        <location filename="../sources/ui/configpage/generalconfigurationpage.cpp" line="310"/>
+        <location filename="../sources/ui/configpage/generalconfigurationpage.cpp" line="365"/>
         <source>Portugais</source>
         <translation>Portugál</translation>
     </message>
     <message>
-        <location filename="../sources/ui/configpage/generalconfigurationpage.cpp" line="311"/>
+        <location filename="../sources/ui/configpage/generalconfigurationpage.cpp" line="366"/>
         <source>Roumains</source>
         <translation>Román</translation>
     </message>
     <message>
-        <location filename="../sources/ui/configpage/generalconfigurationpage.cpp" line="312"/>
+        <location filename="../sources/ui/configpage/generalconfigurationpage.cpp" line="367"/>
         <source>Russe</source>
         <translation>Orosz</translation>
     </message>
     <message>
-        <location filename="../sources/ui/configpage/generalconfigurationpage.cpp" line="313"/>
+        <location filename="../sources/ui/configpage/generalconfigurationpage.cpp" line="368"/>
         <source>Slovène</source>
         <translation>Szlovén</translation>
     </message>
     <message>
-        <location filename="../sources/ui/configpage/generalconfigurationpage.cpp" line="314"/>
+        <location filename="../sources/ui/configpage/generalconfigurationpage.cpp" line="369"/>
         <source>Pays-Bas</source>
         <translation>Holland</translation>
     </message>
     <message>
-        <location filename="../sources/ui/configpage/generalconfigurationpage.cpp" line="315"/>
+        <location filename="../sources/ui/configpage/generalconfigurationpage.cpp" line="370"/>
         <source>Norvege</source>
         <translation>Norvég</translation>
     </message>
     <message>
-        <location filename="../sources/ui/configpage/generalconfigurationpage.cpp" line="316"/>
+        <location filename="../sources/ui/configpage/generalconfigurationpage.cpp" line="371"/>
         <source>Belgique-Flemish</source>
         <translation>Belga-Flamand</translation>
     </message>
     <message>
-        <location filename="../sources/ui/configpage/generalconfigurationpage.cpp" line="317"/>
+        <location filename="../sources/ui/configpage/generalconfigurationpage.cpp" line="372"/>
         <source>Turc</source>
         <translation>Török</translation>
     </message>
     <message>
-        <location filename="../sources/ui/configpage/generalconfigurationpage.cpp" line="318"/>
+        <location filename="../sources/ui/configpage/generalconfigurationpage.cpp" line="373"/>
         <source>Hongrois</source>
         <translation>Magyar</translation>
     </message>
     <message>
-        <location filename="../sources/ui/configpage/generalconfigurationpage.cpp" line="319"/>
+        <location filename="../sources/ui/configpage/generalconfigurationpage.cpp" line="374"/>
         <source>Mongol</source>
         <translation>Mongol</translation>
     </message>
     <message>
-        <location filename="../sources/ui/configpage/generalconfigurationpage.cpp" line="412"/>
+        <location filename="../sources/ui/configpage/generalconfigurationpage.cpp" line="375"/>
+        <source>Ukrainien</source>
+        <translation>Ukrán</translation>
+    </message>
+    <message>
+        <location filename="../sources/ui/configpage/generalconfigurationpage.cpp" line="376"/>
+        <source>Chinois</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../sources/ui/configpage/generalconfigurationpage.cpp" line="453"/>
+        <source>Chemin de la collection company</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../sources/ui/configpage/generalconfigurationpage.cpp" line="481"/>
+        <source>Chemin des cartouches company</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../sources/ui/configpage/generalconfigurationpage.cpp" line="495"/>
         <source>Chemin des cartouches utilisateur</source>
         <translation>Felhasználói szövegmező elérési útvonala</translation>
+    </message>
+    <message>
+        <location filename="../sources/ui/configpage/generalconfigurationpage.cpp" line="524"/>
+        <source>To high values might lead to crashes of the application.</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -3571,7 +3713,7 @@ A szövegmező alapértelmezett értékének meghatározása az új elemek alá 
         <translation>Ez egy tervjel sablon, amit a tervlaphoz lehet alkalmazni.</translation>
     </message>
     <message>
-        <location filename="../sources/genericpanel.cpp" line="919"/>
+        <location filename="../sources/genericpanel.cpp" line="917"/>
         <source>%1 [non utilisé dans le projet]</source>
         <translation>%1 [a projektben nem használt]</translation>
     </message>
@@ -4444,13 +4586,13 @@ Ehhez speciális szerkesztőt kell használni.</translation>
         <translation>&amp;Következő &gt;</translation>
     </message>
     <message>
-        <location filename="../sources/newelementwizard.cpp" line="85"/>
+        <location filename="../sources/newelementwizard.cpp" line="84"/>
         <source>Étape 1/3 : Catégorie parente</source>
         <comment>wizard page title</comment>
         <translation>1 lépés a 3-ból: Szülő kategória</translation>
     </message>
     <message>
-        <location filename="../sources/newelementwizard.cpp" line="86"/>
+        <location filename="../sources/newelementwizard.cpp" line="85"/>
         <source>Sélectionnez une catégorie dans laquelle enregistrer le nouvel élément.</source>
         <comment>wizard page subtitle</comment>
         <translation>Kategória választása, amibe az új elemet mented.</translation>
@@ -4640,10 +4782,10 @@ Ehhez speciális szerkesztőt kell használni.</translation>
 <context>
     <name>PartArc</name>
     <message>
-        <location filename="../sources/editor/graphicspart/partarc.cpp" line="348"/>
-        <location filename="../sources/editor/graphicspart/partarc.cpp" line="352"/>
-        <location filename="../sources/editor/graphicspart/partarc.cpp" line="358"/>
-        <location filename="../sources/editor/graphicspart/partarc.cpp" line="365"/>
+        <location filename="../sources/editor/graphicspart/partarc.cpp" line="328"/>
+        <location filename="../sources/editor/graphicspart/partarc.cpp" line="332"/>
+        <location filename="../sources/editor/graphicspart/partarc.cpp" line="338"/>
+        <location filename="../sources/editor/graphicspart/partarc.cpp" line="345"/>
         <source>Modifier un arc</source>
         <translation>Ív szerkesztése</translation>
     </message>
@@ -4657,7 +4799,7 @@ Ehhez speciális szerkesztőt kell használni.</translation>
         <translation>Dinamikus szövegmező</translation>
     </message>
     <message>
-        <location filename="../sources/editor/graphicspart/partdynamictextfield.cpp" line="483"/>
+        <location filename="../sources/editor/graphicspart/partdynamictextfield.cpp" line="489"/>
         <source>Déplacer un champ texte</source>
         <translation>Szövegmező mozgatása</translation>
     </message>
@@ -4665,7 +4807,7 @@ Ehhez speciális szerkesztőt kell használni.</translation>
 <context>
     <name>PartEllipse</name>
     <message>
-        <location filename="../sources/editor/graphicspart/partellipse.cpp" line="299"/>
+        <location filename="../sources/editor/graphicspart/partellipse.cpp" line="279"/>
         <source>Modifier un rectangle</source>
         <translation>Négyzet változtatása</translation>
     </message>
@@ -4673,7 +4815,7 @@ Ehhez speciális szerkesztőt kell használni.</translation>
 <context>
     <name>PartLine</name>
     <message>
-        <location filename="../sources/editor/graphicspart/partline.cpp" line="261"/>
+        <location filename="../sources/editor/graphicspart/partline.cpp" line="241"/>
         <source>Modifier une ligne</source>
         <translation>Vonal szerkesztése</translation>
     </message>
@@ -4691,17 +4833,17 @@ Ehhez speciális szerkesztőt kell használni.</translation>
         <translation>Pont törlése</translation>
     </message>
     <message>
-        <location filename="../sources/editor/graphicspart/partpolygon.cpp" line="448"/>
+        <location filename="../sources/editor/graphicspart/partpolygon.cpp" line="428"/>
         <source>Modifier un polygone</source>
         <translation>Sokszög változtatása</translation>
     </message>
     <message>
-        <location filename="../sources/editor/graphicspart/partpolygon.cpp" line="543"/>
+        <location filename="../sources/editor/graphicspart/partpolygon.cpp" line="511"/>
         <source>Ajouter un point à un polygone</source>
         <translation>Pont hozzáadása egy sokszöghöz</translation>
     </message>
     <message>
-        <location filename="../sources/editor/graphicspart/partpolygon.cpp" line="576"/>
+        <location filename="../sources/editor/graphicspart/partpolygon.cpp" line="544"/>
         <source>Supprimer un point d&apos;un polygone</source>
         <translation>Pont törlése egy sokszögből</translation>
     </message>
@@ -5158,44 +5300,44 @@ Az összeférhetetlen változók a következők:
         <translation>Oldal elrendezés</translation>
     </message>
     <message>
-        <location filename="../sources/print/projectprintwindow.cpp" line="66"/>
+        <location filename="../sources/print/projectprintwindow.cpp" line="68"/>
         <source>Options d&apos;impression</source>
         <comment>window title</comment>
         <translation>Nyomtatási lehetőségek</translation>
     </message>
     <message>
-        <location filename="../sources/print/projectprintwindow.cpp" line="107"/>
+        <location filename="../sources/print/projectprintwindow.cpp" line="109"/>
         <source>projet</source>
         <comment>string used to generate a filename</comment>
         <translation>projekt</translation>
     </message>
     <message>
-        <location filename="../sources/print/projectprintwindow.cpp" line="138"/>
+        <location filename="../sources/print/projectprintwindow.cpp" line="140"/>
         <source>Imprimer</source>
         <translation>Nyomtatás</translation>
     </message>
     <message>
-        <location filename="../sources/print/projectprintwindow.cpp" line="144"/>
+        <location filename="../sources/print/projectprintwindow.cpp" line="146"/>
         <source>Exporter en pdf</source>
         <translation>Exportálás PDF-be</translation>
     </message>
     <message>
-        <location filename="../sources/print/projectprintwindow.cpp" line="167"/>
+        <location filename="../sources/print/projectprintwindow.cpp" line="169"/>
         <source>Mise en page (non disponible sous Windows pour l&apos;export PDF)</source>
         <translation>Elrendezés (PDF-fájlok exportálásához nem érhető el Windows-ban)</translation>
     </message>
     <message>
-        <location filename="../sources/print/projectprintwindow.cpp" line="431"/>
+        <location filename="../sources/print/projectprintwindow.cpp" line="433"/>
         <source>Folio sans titre</source>
         <translation>Cím nélküli tervlap</translation>
     </message>
     <message>
-        <location filename="../sources/print/projectprintwindow.cpp" line="670"/>
+        <location filename="../sources/print/projectprintwindow.cpp" line="672"/>
         <source>Exporter sous : </source>
         <translation>Exportálás : </translation>
     </message>
     <message>
-        <location filename="../sources/print/projectprintwindow.cpp" line="670"/>
+        <location filename="../sources/print/projectprintwindow.cpp" line="672"/>
         <source>Fichier (*.pdf)</source>
         <translation>Fájl (*.pdf)</translation>
     </message>
@@ -5321,211 +5463,217 @@ Akarod menteni a változásokat?</translation>
 <context>
     <name>QETApp</name>
     <message>
-        <location filename="../sources/qetapp.cpp" line="112"/>
+        <location filename="../sources/qetapp.cpp" line="121"/>
         <source>Chargement... Initialisation du cache des collections d&apos;éléments</source>
         <comment>splash screen caption</comment>
         <translation>Töltés...Az elemgyűjtemény kiinduló állapotba hozása</translation>
     </message>
     <message>
-        <location filename="../sources/qetapp.cpp" line="123"/>
+        <location filename="../sources/qetapp.cpp" line="132"/>
         <source>Chargement... Éditeur de schéma</source>
         <comment>splash screen caption</comment>
         <translation>Töltés...Tervlap szerkesztő</translation>
     </message>
     <message>
-        <location filename="../sources/qetapp.cpp" line="128"/>
+        <location filename="../sources/qetapp.cpp" line="137"/>
         <source>Chargement... Ouverture des fichiers</source>
         <comment>splash screen caption</comment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../sources/qetapp.cpp" line="226"/>
+        <location filename="../sources/qetapp.cpp" line="238"/>
         <source>LTR</source>
         <comment>Translate this string to RTL if you are translating 		 to a Right-to-Left language, else translate to LTR</comment>
         <translation>LTR</translation>
     </message>
     <message>
-        <location filename="../sources/qetapp.cpp" line="424"/>
+        <location filename="../sources/qetapp.cpp" line="436"/>
         <source>Cartouches QET</source>
         <comment>title of the title block templates 					collection provided by QElectroTech</comment>
         <translation>QET tervjelek/szimbólumok</translation>
     </message>
     <message>
-        <location filename="../sources/qetapp.cpp" line="444"/>
+        <location filename="../sources/qetapp.cpp" line="457"/>
+        <source>Cartouches company</source>
+        <comment>title of the company&apos;s 					title block templates collection</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../sources/qetapp.cpp" line="477"/>
         <source>Cartouches utilisateur</source>
         <comment>title of the user&apos;s 					title block templates collection</comment>
         <translation>Felhasználói tervjelek/szimbólumok</translation>
     </message>
     <message>
-        <location filename="../sources/qetapp.cpp" line="1195"/>
+        <location filename="../sources/qetapp.cpp" line="1351"/>
         <source>Q</source>
         <comment>Single-letter example text - translate length, not meaning</comment>
         <translation>Q</translation>
     </message>
     <message>
-        <location filename="../sources/qetapp.cpp" line="1197"/>
+        <location filename="../sources/qetapp.cpp" line="1353"/>
         <source>QET</source>
         <comment>Small example text - translate length, not meaning</comment>
         <translation>QET</translation>
     </message>
     <message>
-        <location filename="../sources/qetapp.cpp" line="1199"/>
+        <location filename="../sources/qetapp.cpp" line="1355"/>
         <source>Schema</source>
         <comment>Normal example text - translate length, not meaning</comment>
         <translation>Terv</translation>
     </message>
     <message>
-        <location filename="../sources/qetapp.cpp" line="1201"/>
+        <location filename="../sources/qetapp.cpp" line="1357"/>
         <source>Electrique</source>
         <comment>Normal example text - translate length, not meaning</comment>
         <translation>Elektromos</translation>
     </message>
     <message>
-        <location filename="../sources/qetapp.cpp" line="1203"/>
+        <location filename="../sources/qetapp.cpp" line="1359"/>
         <source>QElectroTech</source>
         <comment>Long example text - translate length, not meaning</comment>
         <translation>QElectroTech</translation>
     </message>
     <message>
-        <location filename="../sources/qetapp.cpp" line="1680"/>
+        <location filename="../sources/qetapp.cpp" line="1836"/>
         <source>Configurer QElectroTech</source>
         <comment>window title</comment>
         <translation>QElectroTech konfigurálása</translation>
     </message>
     <message>
-        <location filename="../sources/qetapp.cpp" line="1824"/>
+        <location filename="../sources/qetapp.cpp" line="1980"/>
         <source>Chargement...</source>
         <comment>splash screen caption</comment>
         <translation>Töltés...</translation>
     </message>
     <message>
-        <location filename="../sources/qetapp.cpp" line="1922"/>
+        <location filename="../sources/qetapp.cpp" line="2086"/>
         <source>Chargement... icône du systray</source>
         <comment>splash screen caption</comment>
         <translation>Töltés... Rendszer tálca ikon</translation>
     </message>
     <message>
-        <location filename="../sources/qetapp.cpp" line="1926"/>
+        <location filename="../sources/qetapp.cpp" line="2090"/>
         <source>QElectroTech</source>
         <comment>systray menu title</comment>
         <translation>QElectroTech</translation>
     </message>
     <message>
-        <location filename="../sources/qetapp.cpp" line="1929"/>
+        <location filename="../sources/qetapp.cpp" line="2093"/>
         <source>&amp;Quitter</source>
         <translation>&amp;Kilép</translation>
     </message>
     <message>
-        <location filename="../sources/qetapp.cpp" line="1931"/>
+        <location filename="../sources/qetapp.cpp" line="2095"/>
         <source>&amp;Masquer</source>
         <translation>&amp;Elrejt</translation>
     </message>
     <message>
-        <location filename="../sources/qetapp.cpp" line="1933"/>
+        <location filename="../sources/qetapp.cpp" line="2097"/>
         <source>&amp;Restaurer</source>
         <translation>&amp;Mutat</translation>
     </message>
     <message>
-        <location filename="../sources/qetapp.cpp" line="1935"/>
+        <location filename="../sources/qetapp.cpp" line="2099"/>
         <source>&amp;Masquer tous les éditeurs de schéma</source>
         <translation>&amp;Elrejti a vázlat szerkesztőt</translation>
     </message>
     <message>
-        <location filename="../sources/qetapp.cpp" line="1938"/>
+        <location filename="../sources/qetapp.cpp" line="2102"/>
         <source>&amp;Restaurer tous les éditeurs de schéma</source>
         <translation>&amp;Megjeleníti a vázlat szerkesztőt</translation>
     </message>
     <message>
-        <location filename="../sources/qetapp.cpp" line="1941"/>
+        <location filename="../sources/qetapp.cpp" line="2105"/>
         <source>&amp;Masquer tous les éditeurs d&apos;élément</source>
         <translation>&amp;Elrejti az elem szerkesztőt</translation>
     </message>
     <message>
-        <location filename="../sources/qetapp.cpp" line="1944"/>
+        <location filename="../sources/qetapp.cpp" line="2108"/>
         <source>&amp;Restaurer tous les éditeurs d&apos;élément</source>
         <translation>&amp;Megjeleníti a elem szerkesztőt</translation>
     </message>
     <message>
-        <location filename="../sources/qetapp.cpp" line="1947"/>
+        <location filename="../sources/qetapp.cpp" line="2111"/>
         <source>&amp;Masquer tous les éditeurs de cartouche</source>
         <comment>systray submenu entry</comment>
         <translation>&amp;Elrejti a szövegmező sablon szerkesztőt</translation>
     </message>
     <message>
-        <location filename="../sources/qetapp.cpp" line="1950"/>
+        <location filename="../sources/qetapp.cpp" line="2114"/>
         <source>&amp;Restaurer tous les éditeurs de cartouche</source>
         <comment>systray submenu entry</comment>
         <translation>&amp;Megjeleníti a szövegmező sablon szerkesztőt</translation>
     </message>
     <message>
-        <location filename="../sources/qetapp.cpp" line="1953"/>
+        <location filename="../sources/qetapp.cpp" line="2117"/>
         <source>&amp;Nouvel éditeur de schéma</source>
         <translation>&amp;Új vázlat szerkesztő</translation>
     </message>
     <message>
-        <location filename="../sources/qetapp.cpp" line="1955"/>
+        <location filename="../sources/qetapp.cpp" line="2119"/>
         <source>&amp;Nouvel éditeur d&apos;élément</source>
         <translation>&amp;Új elem szerkesztő</translation>
     </message>
     <message>
-        <location filename="../sources/qetapp.cpp" line="1957"/>
+        <location filename="../sources/qetapp.cpp" line="2121"/>
         <source>Ferme l&apos;application QElectroTech</source>
         <translation>QElectroTech bezárása</translation>
     </message>
     <message>
-        <location filename="../sources/qetapp.cpp" line="1958"/>
+        <location filename="../sources/qetapp.cpp" line="2122"/>
         <source>Réduire QElectroTech dans le systray</source>
         <translation>QElectroTech tálcába helyezése</translation>
     </message>
     <message>
-        <location filename="../sources/qetapp.cpp" line="1959"/>
+        <location filename="../sources/qetapp.cpp" line="2123"/>
         <source>Restaurer QElectroTech</source>
         <translation>QElectroTech visszahelyezése</translation>
     </message>
     <message>
-        <location filename="../sources/qetapp.cpp" line="1976"/>
+        <location filename="../sources/qetapp.cpp" line="2140"/>
         <source>QElectroTech</source>
         <comment>systray icon tooltip</comment>
         <translation>QElectroTech</translation>
     </message>
     <message>
-        <location filename="../sources/qetapp.cpp" line="2071"/>
+        <location filename="../sources/qetapp.cpp" line="2235"/>
         <source>Éditeurs de schémas</source>
         <translation>Vázlat szerkesztők</translation>
     </message>
     <message>
-        <location filename="../sources/qetapp.cpp" line="2081"/>
+        <location filename="../sources/qetapp.cpp" line="2245"/>
         <source>Éditeurs d&apos;élément</source>
         <translation>Elem szerkesztők</translation>
     </message>
     <message>
-        <location filename="../sources/qetapp.cpp" line="2092"/>
+        <location filename="../sources/qetapp.cpp" line="2256"/>
         <source>Éditeurs de cartouche</source>
         <comment>systray menu entry</comment>
         <translation>Szövegmező sablon szerkesztők</translation>
     </message>
     <message>
-        <location filename="../sources/qetapp.cpp" line="2144"/>
+        <location filename="../sources/qetapp.cpp" line="2308"/>
         <source>&lt;b&gt;Le fichier de restauration suivant a été trouvé,&lt;br&gt;Voulez-vous l&apos;ouvrir ?&lt;/b&gt;&lt;br&gt;</source>
         <translation>&lt;b&gt;A következő helyreállított fájl-t találtuk, &lt;br&gt; Szeretnéd megnyitni ?&lt;/b&gt;&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../sources/qetapp.cpp" line="2147"/>
+        <location filename="../sources/qetapp.cpp" line="2311"/>
         <source>&lt;b&gt;Les fichiers de restauration suivant on été trouvé,&lt;br&gt;Voulez-vous les ouvrir ?&lt;/b&gt;&lt;br&gt;</source>
         <translation>&lt;b&gt;A következő helyreállított fájlokat találtuk, &lt;br&gt; Szeretnéd megnyitni őket ?&lt;/b&gt;&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../sources/qetapp.cpp" line="2162"/>
+        <location filename="../sources/qetapp.cpp" line="2326"/>
         <source>Fichier de restauration</source>
         <translation>Fájl helyreállítás</translation>
     </message>
     <message>
-        <location filename="../sources/qetapp.cpp" line="2264"/>
+        <location filename="../sources/qetapp.cpp" line="2428"/>
         <source>Usage : </source>
         <translation>Használat: </translation>
     </message>
     <message>
-        <location filename="../sources/qetapp.cpp" line="2266"/>
+        <location filename="../sources/qetapp.cpp" line="2430"/>
         <source> [options] [fichier]...
 
 </source>
@@ -5534,7 +5682,7 @@ Akarod menteni a változásokat?</translation>
 </translation>
     </message>
     <message>
-        <location filename="../sources/qetapp.cpp" line="2267"/>
+        <location filename="../sources/qetapp.cpp" line="2431"/>
         <source>QElectroTech, une application de réalisation de schémas électriques.
 
 Options disponibles : 
@@ -5551,28 +5699,28 @@ Elérhető lehetőségek:
 </translation>
     </message>
     <message>
-        <location filename="../sources/qetapp.cpp" line="2273"/>
+        <location filename="../sources/qetapp.cpp" line="2437"/>
         <source>  --common-elements-dir=DIR     Definir le dossier de la collection d&apos;elements
 </source>
         <translation>  --common-elements-dir=DIR     Meghatározza az elemgyűjtemény könyvtárat
 </translation>
     </message>
     <message>
-        <location filename="../sources/qetapp.cpp" line="2276"/>
+        <location filename="../sources/qetapp.cpp" line="2440"/>
         <source>  --common-tbt-dir=DIR          Definir le dossier de la collection de modeles de cartouches
 </source>
         <translation>  --common-tbt-dir=DIR          Meghatározza a szövegmező-sablonok gyűjtemény-könyvtárát
 </translation>
     </message>
     <message>
-        <location filename="../sources/qetapp.cpp" line="2279"/>
+        <location filename="../sources/qetapp.cpp" line="2443"/>
         <source>  --config-dir=DIR              Definir le dossier de configuration
 </source>
         <translation>  --config-dir=DIR              Meghatározza a konfigurációs könyvtárat
 </translation>
     </message>
     <message>
-        <location filename="../sources/qetapp.cpp" line="2281"/>
+        <location filename="../sources/qetapp.cpp" line="2445"/>
         <source>  --lang-dir=DIR                Definir le dossier contenant les fichiers de langue
 </source>
         <translation>  --lang-dir=DIR                Meghatározza  nyelvi fájl könyvtárat
@@ -5582,146 +5730,140 @@ Elérhető lehetőségek:
 <context>
     <name>QETDiagramEditor</name>
     <message>
-        <location filename="../sources/qetdiagrameditor.cpp" line="99"/>
+        <location filename="../sources/qetdiagrameditor.cpp" line="100"/>
         <source>QElectroTech</source>
         <comment>window title</comment>
         <translation>QElectroTech</translation>
     </message>
     <message>
-        <location filename="../sources/qetdiagrameditor.cpp" line="101"/>
+        <location filename="../sources/qetdiagrameditor.cpp" line="102"/>
         <source>QElectroTech</source>
         <comment>status bar message</comment>
         <translation>QElectroTech</translation>
     </message>
     <message>
-        <location filename="../sources/qetdiagrameditor.cpp" line="214"/>
+        <location filename="../sources/qetdiagrameditor.cpp" line="215"/>
         <source>Aucune modification</source>
         <translation>Nincs módosístás</translation>
     </message>
     <message>
-        <location filename="../sources/qetdiagrameditor.cpp" line="215"/>
+        <location filename="../sources/qetdiagrameditor.cpp" line="216"/>
         <source>Cliquez sur une action pour revenir en arrière dans l&apos;édition de votre schéma</source>
         <comment>Status tip</comment>
         <translation>Kattints egy műveletre, hogy visszaterjen a változtatásokban egy korábbi állapotra</translation>
     </message>
     <message>
-        <location filename="../sources/qetdiagrameditor.cpp" line="216"/>
+        <location filename="../sources/qetdiagrameditor.cpp" line="217"/>
         <source>Ce panneau liste les différentes actions effectuées sur le folio courant. Cliquer sur une action permet de revenir à l&apos;état du schéma juste après son application.</source>
         <comment>&quot;What&apos;s this&quot; tip</comment>
         <translation>Ez a panel felsorolja a különböző végrehajtott változtatásokat a jelenlegi tervlapon. Egy változásra kattintva, a tervlap visszakapja azt az állapotot, ami közvetlenül utána volt alkalmazva.</translation>
     </message>
     <message>
-        <location filename="../sources/qetdiagrameditor.cpp" line="218"/>
+        <location filename="../sources/qetdiagrameditor.cpp" line="219"/>
         <source>Annulations</source>
         <comment>dock title</comment>
         <translation>Visszavonás</translation>
     </message>
     <message>
-        <location filename="../sources/qetdiagrameditor.cpp" line="265"/>
+        <location filename="../sources/qetdiagrameditor.cpp" line="266"/>
         <source>E&amp;xporter</source>
         <translation>&amp;Exportálás</translation>
     </message>
     <message>
-        <location filename="../sources/qetdiagrameditor.cpp" line="276"/>
+        <location filename="../sources/qetdiagrameditor.cpp" line="277"/>
         <source>Imprimer</source>
         <translation>Nyomtatás</translation>
     </message>
     <message>
-        <location filename="../sources/qetdiagrameditor.cpp" line="297"/>
+        <location filename="../sources/qetdiagrameditor.cpp" line="298"/>
         <source>&amp;Quitter</source>
         <translation>&amp;Kilépés</translation>
     </message>
     <message>
-        <location filename="../sources/qetdiagrameditor.cpp" line="303"/>
+        <location filename="../sources/qetdiagrameditor.cpp" line="304"/>
         <source>Annuler</source>
         <translation>Visszavonás</translation>
     </message>
     <message>
-        <location filename="../sources/qetdiagrameditor.cpp" line="308"/>
+        <location filename="../sources/qetdiagrameditor.cpp" line="309"/>
         <source>Refaire</source>
         <translation>Újrakészít</translation>
     </message>
     <message>
-        <location filename="../sources/qetdiagrameditor.cpp" line="314"/>
+        <location filename="../sources/qetdiagrameditor.cpp" line="315"/>
         <source>Co&amp;uper</source>
         <translation>Ki&amp;vágás</translation>
     </message>
     <message>
-        <location filename="../sources/qetdiagrameditor.cpp" line="315"/>
+        <location filename="../sources/qetdiagrameditor.cpp" line="316"/>
         <source>Cop&amp;ier</source>
         <translation>M&amp;ásolás</translation>
     </message>
     <message>
-        <location filename="../sources/qetdiagrameditor.cpp" line="316"/>
+        <location filename="../sources/qetdiagrameditor.cpp" line="317"/>
         <source>C&amp;oller</source>
         <translation>&amp;Beilleszt</translation>
     </message>
     <message>
-        <location filename="../sources/qetdiagrameditor.cpp" line="340"/>
+        <location filename="../sources/qetdiagrameditor.cpp" line="341"/>
         <source>Réinitialiser les conducteurs</source>
         <translation>Vezetékek visszaállítása</translation>
     </message>
     <message>
-        <location filename="../sources/qetdiagrameditor.cpp" line="349"/>
+        <location filename="../sources/qetdiagrameditor.cpp" line="350"/>
         <source>Création automatique de conducteur(s)</source>
         <comment>Tool tip of auto conductor</comment>
         <translation>Önműködően létrehozza a vezetőket</translation>
     </message>
     <message>
-        <location filename="../sources/qetdiagrameditor.cpp" line="350"/>
+        <location filename="../sources/qetdiagrameditor.cpp" line="351"/>
         <source>Utiliser la création automatique de conducteur(s) quand cela est possible</source>
         <comment>Status tip of auto conductor</comment>
         <translation>Használja a vezetők automatikus létrehozását, amikor lehetséges</translation>
     </message>
     <message>
-        <location filename="../sources/qetdiagrameditor.cpp" line="358"/>
+        <location filename="../sources/qetdiagrameditor.cpp" line="359"/>
         <source>Couleur de fond blanc/gris</source>
         <comment>Tool tip of white/grey background button</comment>
         <translation>Háttér szín fehér / szürke</translation>
     </message>
     <message>
-        <location filename="../sources/qetdiagrameditor.cpp" line="359"/>
-        <source>Affiche la couleur de fond du folio en blanc ou en gris</source>
-        <comment>Status tip of white/grey background button</comment>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="../sources/qetdiagrameditor.cpp" line="368"/>
+        <location filename="../sources/qetdiagrameditor.cpp" line="369"/>
         <source>Afficher la grille</source>
         <translation>Rács megjelenítése</translation>
     </message>
     <message>
-        <location filename="../sources/qetdiagrameditor.cpp" line="369"/>
+        <location filename="../sources/qetdiagrameditor.cpp" line="370"/>
         <source>Affiche ou masque la grille des folios</source>
         <translation>Megjeleníti vagy elrejti a tervlap rácsát</translation>
     </message>
     <message>
-        <location filename="../sources/qetdiagrameditor.cpp" line="381"/>
+        <location filename="../sources/qetdiagrameditor.cpp" line="382"/>
         <source>Propriétés du folio</source>
         <translation>Tervlap tulajdonsága</translation>
     </message>
     <message>
-        <location filename="../sources/qetdiagrameditor.cpp" line="393"/>
+        <location filename="../sources/qetdiagrameditor.cpp" line="394"/>
         <source>Propriétés du projet</source>
         <translation>Projekt tulajdonságok</translation>
     </message>
     <message>
-        <location filename="../sources/qetdiagrameditor.cpp" line="399"/>
+        <location filename="../sources/qetdiagrameditor.cpp" line="400"/>
         <source>Ajouter un folio</source>
         <translation>Tervlap hozzáadása</translation>
     </message>
     <message>
-        <location filename="../sources/qetdiagrameditor.cpp" line="408"/>
+        <location filename="../sources/qetdiagrameditor.cpp" line="409"/>
         <source>Supprimer le folio</source>
         <translation>Ennek a tervlapnak a törlése</translation>
     </message>
     <message>
-        <location filename="../sources/qetdiagrameditor.cpp" line="412"/>
+        <location filename="../sources/qetdiagrameditor.cpp" line="413"/>
         <source>Nettoyer le projet</source>
         <translation>Projekt tisztítása</translation>
     </message>
     <message>
-        <location filename="../sources/qetdiagrameditor.cpp" line="437"/>
+        <location filename="../sources/qetdiagrameditor.cpp" line="438"/>
         <source>Ajouter un sommaire</source>
         <translation>Összesítés hozzáadása</translation>
     </message>
@@ -5797,391 +5939,391 @@ Elérhető lehetőségek:
         <translation>&amp;Bezár</translation>
     </message>
     <message>
-        <location filename="../sources/qetdiagrameditor.cpp" line="552"/>
+        <location filename="../sources/qetdiagrameditor.cpp" line="553"/>
         <source>Crée un nouveau projet</source>
         <comment>status bar tip</comment>
         <translation>Új projekt létrehozás</translation>
     </message>
     <message>
-        <location filename="../sources/qetdiagrameditor.cpp" line="553"/>
+        <location filename="../sources/qetdiagrameditor.cpp" line="554"/>
         <source>Ouvre un projet existant</source>
         <comment>status bar tip</comment>
         <translation>Létező projekt megnyitása</translation>
     </message>
     <message>
-        <location filename="../sources/qetdiagrameditor.cpp" line="554"/>
+        <location filename="../sources/qetdiagrameditor.cpp" line="555"/>
         <source>Ferme le projet courant</source>
         <comment>status bar tip</comment>
         <translation>A jelenlegi projekt bezárása</translation>
     </message>
     <message>
-        <location filename="../sources/qetdiagrameditor.cpp" line="555"/>
+        <location filename="../sources/qetdiagrameditor.cpp" line="556"/>
         <source>Enregistre le projet courant et tous ses folios</source>
         <comment>status bar tip</comment>
         <translation>A jelenlegi projekt és összes tervlap mentése</translation>
     </message>
     <message>
-        <location filename="../sources/qetdiagrameditor.cpp" line="556"/>
+        <location filename="../sources/qetdiagrameditor.cpp" line="557"/>
         <source>Enregistre le projet courant avec un autre nom de fichier</source>
         <comment>status bar tip</comment>
         <translation>A jelenlegi projekt mentése más néven</translation>
     </message>
     <message>
-        <location filename="../sources/qetdiagrameditor.cpp" line="569"/>
+        <location filename="../sources/qetdiagrameditor.cpp" line="570"/>
         <source>Ajouter une colonne</source>
         <translation>Oszlop hozzáadása</translation>
     </message>
     <message>
-        <location filename="../sources/qetdiagrameditor.cpp" line="570"/>
+        <location filename="../sources/qetdiagrameditor.cpp" line="571"/>
         <source>Enlever une colonne</source>
         <translation>Oszlop eltávolítása</translation>
     </message>
     <message>
-        <location filename="../sources/qetdiagrameditor.cpp" line="574"/>
+        <location filename="../sources/qetdiagrameditor.cpp" line="575"/>
         <source>Ajoute une colonne au folio</source>
         <comment>status bar tip</comment>
         <translation>Egy oszlop hozzáadása a tervlaphoz</translation>
     </message>
     <message>
-        <location filename="../sources/qetdiagrameditor.cpp" line="575"/>
+        <location filename="../sources/qetdiagrameditor.cpp" line="576"/>
         <source>Enlève une colonne au folio</source>
         <comment>status bar tip</comment>
         <translation>Egy oszlop eltávolítása a tervlapról</translation>
     </message>
     <message>
-        <location filename="../sources/qetdiagrameditor.cpp" line="576"/>
+        <location filename="../sources/qetdiagrameditor.cpp" line="577"/>
         <source>Agrandit le folio en hauteur</source>
         <comment>status bar tip</comment>
         <translation>Tervlap magasság növelése</translation>
     </message>
     <message>
-        <location filename="../sources/qetdiagrameditor.cpp" line="577"/>
+        <location filename="../sources/qetdiagrameditor.cpp" line="578"/>
         <source>Rétrécit le folio en hauteur</source>
         <comment>status bar tip</comment>
         <translation>Tervlap magasság csökkentése</translation>
     </message>
     <message>
-        <location filename="../sources/qetdiagrameditor.cpp" line="587"/>
+        <location filename="../sources/qetdiagrameditor.cpp" line="588"/>
         <source>Supprimer</source>
         <translation>Törlés</translation>
     </message>
     <message>
-        <location filename="../sources/qetdiagrameditor.cpp" line="588"/>
+        <location filename="../sources/qetdiagrameditor.cpp" line="589"/>
         <source>Pivoter</source>
         <translation>Forgatás</translation>
     </message>
     <message>
-        <location filename="../sources/qetdiagrameditor.cpp" line="589"/>
+        <location filename="../sources/qetdiagrameditor.cpp" line="590"/>
         <source>Orienter les textes</source>
         <translation>Szöveg irányának megváltoztatása</translation>
     </message>
     <message>
-        <location filename="../sources/qetdiagrameditor.cpp" line="590"/>
+        <location filename="../sources/qetdiagrameditor.cpp" line="591"/>
         <source>Retrouver dans le panel</source>
         <translation>Keresés a panelban</translation>
     </message>
     <message>
-        <location filename="../sources/qetdiagrameditor.cpp" line="591"/>
+        <location filename="../sources/qetdiagrameditor.cpp" line="592"/>
         <source>Éditer l&apos;item sélectionné</source>
         <translation>A kijelölt elem szerkesztése</translation>
     </message>
     <message>
-        <location filename="../sources/qetdiagrameditor.cpp" line="695"/>
+        <location filename="../sources/qetdiagrameditor.cpp" line="702"/>
         <source>Chercher/remplacer</source>
         <translation>Keresés / csere</translation>
     </message>
     <message>
-        <location filename="../sources/qetdiagrameditor.cpp" line="754"/>
+        <location filename="../sources/qetdiagrameditor.cpp" line="761"/>
         <source>Profondeur</source>
         <comment>toolbar title</comment>
         <translation>Rétegelrendezés</translation>
     </message>
     <message>
-        <location filename="../sources/qetdiagrameditor.cpp" line="1480"/>
+        <location filename="../sources/qetdiagrameditor.cpp" line="1496"/>
         <source>Groupe</source>
         <translation>Csoport</translation>
     </message>
     <message>
-        <location filename="../sources/qetdiagrameditor.cpp" line="341"/>
+        <location filename="../sources/qetdiagrameditor.cpp" line="342"/>
         <source>Ctrl+K</source>
         <translation>Ctrl+K</translation>
     </message>
     <message>
-        <location filename="../sources/qetdiagrameditor.cpp" line="382"/>
+        <location filename="../sources/qetdiagrameditor.cpp" line="383"/>
         <source>Ctrl+L</source>
         <translation>Ctrl+L</translation>
     </message>
     <message>
-        <location filename="../sources/qetdiagrameditor.cpp" line="429"/>
+        <location filename="../sources/qetdiagrameditor.cpp" line="430"/>
         <source>Ajouter une nomenclature</source>
         <translation>Osztályozási rendszer hozzáadása</translation>
     </message>
     <message>
-        <location filename="../sources/qetdiagrameditor.cpp" line="592"/>
+        <location filename="../sources/qetdiagrameditor.cpp" line="593"/>
         <source>Grouper les textes sélectionnés</source>
         <translation>Kiválasztott szövegek csoportosítása</translation>
     </message>
     <message>
-        <location filename="../sources/qetdiagrameditor.cpp" line="597"/>
+        <location filename="../sources/qetdiagrameditor.cpp" line="598"/>
         <source>Ctrl+E</source>
         <translation>Ctrl+E</translation>
     </message>
     <message>
-        <location filename="../sources/qetdiagrameditor.cpp" line="599"/>
+        <location filename="../sources/qetdiagrameditor.cpp" line="600"/>
         <source>Enlève les éléments sélectionnés du folio</source>
         <comment>status bar tip</comment>
         <translation>Kiválasztott elem eltávolítása a tervlapról</translation>
     </message>
     <message>
-        <location filename="../sources/qetdiagrameditor.cpp" line="600"/>
+        <location filename="../sources/qetdiagrameditor.cpp" line="601"/>
         <source>Pivote les éléments et textes sélectionnés</source>
         <comment>status bar tip</comment>
         <translation>A kiválasztott elemek és szövegek forgatása</translation>
     </message>
     <message>
-        <location filename="../sources/qetdiagrameditor.cpp" line="601"/>
+        <location filename="../sources/qetdiagrameditor.cpp" line="602"/>
         <source>Pivote les textes sélectionnés à un angle précis</source>
         <comment>status bar tip</comment>
         <translation>A kiválasztott szövegek forgatása egy meghatározott szögben</translation>
     </message>
     <message>
-        <location filename="../sources/qetdiagrameditor.cpp" line="602"/>
+        <location filename="../sources/qetdiagrameditor.cpp" line="603"/>
         <source>Retrouve l&apos;élément sélectionné dans le panel</source>
         <comment>status bar tip</comment>
         <translation>A kiválasztott elem keresése a panelen</translation>
     </message>
     <message>
-        <location filename="../sources/qetdiagrameditor.cpp" line="614"/>
+        <location filename="../sources/qetdiagrameditor.cpp" line="615"/>
         <source>Tout sélectionner</source>
         <translation>Összes kiválasztása</translation>
     </message>
     <message>
-        <location filename="../sources/qetdiagrameditor.cpp" line="615"/>
+        <location filename="../sources/qetdiagrameditor.cpp" line="616"/>
         <source>Désélectionner tout</source>
         <translation>Kiválasztás megszüntetése</translation>
     </message>
     <message>
-        <location filename="../sources/qetdiagrameditor.cpp" line="616"/>
+        <location filename="../sources/qetdiagrameditor.cpp" line="617"/>
         <source>Inverser la sélection</source>
         <translation>Kiválasztás megfordítása</translation>
     </message>
     <message>
-        <location filename="../sources/qetdiagrameditor.cpp" line="620"/>
+        <location filename="../sources/qetdiagrameditor.cpp" line="621"/>
         <source>Ctrl+I</source>
         <translation>Ctrl+I</translation>
     </message>
     <message>
-        <location filename="../sources/qetdiagrameditor.cpp" line="622"/>
+        <location filename="../sources/qetdiagrameditor.cpp" line="623"/>
         <source>Sélectionne tous les éléments du folio</source>
         <comment>status bar tip</comment>
         <translation>Összes elem kiválasztása a tervlapon</translation>
     </message>
     <message>
-        <location filename="../sources/qetdiagrameditor.cpp" line="623"/>
+        <location filename="../sources/qetdiagrameditor.cpp" line="624"/>
         <source>Désélectionne tous les éléments du folio</source>
         <comment>status bar tip</comment>
         <translation>Összes elem kiválasztásának megszüntetése a tervlapon</translation>
     </message>
     <message>
-        <location filename="../sources/qetdiagrameditor.cpp" line="624"/>
+        <location filename="../sources/qetdiagrameditor.cpp" line="625"/>
         <source>Désélectionne les éléments sélectionnés et sélectionne les éléments non sélectionnés</source>
         <comment>status bar tip</comment>
         <translation>Elemek kiválasztásának megfordítása</translation>
     </message>
     <message>
-        <location filename="../sources/qetdiagrameditor.cpp" line="633"/>
+        <location filename="../sources/qetdiagrameditor.cpp" line="634"/>
         <source>Zoom avant</source>
         <translation>Nagyítás</translation>
     </message>
     <message>
-        <location filename="../sources/qetdiagrameditor.cpp" line="634"/>
+        <location filename="../sources/qetdiagrameditor.cpp" line="635"/>
         <source>Zoom arrière</source>
         <translation>Kicsinyítés</translation>
     </message>
     <message>
-        <location filename="../sources/qetdiagrameditor.cpp" line="635"/>
+        <location filename="../sources/qetdiagrameditor.cpp" line="636"/>
         <source>Zoom sur le contenu</source>
         <translation>Tartalom nagyítása</translation>
     </message>
     <message>
-        <location filename="../sources/qetdiagrameditor.cpp" line="636"/>
+        <location filename="../sources/qetdiagrameditor.cpp" line="637"/>
         <source>Zoom adapté</source>
         <translation>Legnagyobb nézetben</translation>
     </message>
     <message>
-        <location filename="../sources/qetdiagrameditor.cpp" line="637"/>
+        <location filename="../sources/qetdiagrameditor.cpp" line="638"/>
         <source>Pas de zoom</source>
         <translation>Nagyítás alaphelyzetbe állítása</translation>
     </message>
     <message>
-        <location filename="../sources/qetdiagrameditor.cpp" line="642"/>
+        <location filename="../sources/qetdiagrameditor.cpp" line="643"/>
         <source>Ctrl+8</source>
         <translation>Ctrl+8</translation>
     </message>
     <message>
-        <location filename="../sources/qetdiagrameditor.cpp" line="643"/>
+        <location filename="../sources/qetdiagrameditor.cpp" line="644"/>
         <source>Ctrl+9</source>
         <translation>Ctrl+9</translation>
     </message>
     <message>
-        <location filename="../sources/qetdiagrameditor.cpp" line="644"/>
+        <location filename="../sources/qetdiagrameditor.cpp" line="645"/>
         <source>Ctrl+0</source>
         <translation>Ctrl+0</translation>
     </message>
     <message>
-        <location filename="../sources/qetdiagrameditor.cpp" line="646"/>
+        <location filename="../sources/qetdiagrameditor.cpp" line="647"/>
         <source>Agrandit le folio</source>
         <comment>status bar tip</comment>
         <translation>Tervlap nagyítása</translation>
     </message>
     <message>
-        <location filename="../sources/qetdiagrameditor.cpp" line="647"/>
+        <location filename="../sources/qetdiagrameditor.cpp" line="648"/>
         <source>Rétrécit le folio</source>
         <comment>status bar tip</comment>
         <translation>Tervlap kicsinyítése</translation>
     </message>
     <message>
-        <location filename="../sources/qetdiagrameditor.cpp" line="648"/>
+        <location filename="../sources/qetdiagrameditor.cpp" line="649"/>
         <source>Adapte le zoom de façon à afficher tout le contenu du folio indépendamment du cadre</source>
         <translation>Beállítja a nagyítást a teljes tartalom megjelenítéséhez, a tervlaptól függetlenül</translation>
     </message>
     <message>
-        <location filename="../sources/qetdiagrameditor.cpp" line="649"/>
+        <location filename="../sources/qetdiagrameditor.cpp" line="650"/>
         <source>Adapte le zoom exactement sur le cadre du folio</source>
         <comment>status bar tip</comment>
         <translation>Beállítja a nagyítást pontosan a tervlap részére</translation>
     </message>
     <message>
-        <location filename="../sources/qetdiagrameditor.cpp" line="650"/>
+        <location filename="../sources/qetdiagrameditor.cpp" line="651"/>
         <source>Restaure le zoom par défaut</source>
         <comment>status bar tip</comment>
         <translation>Visszaállítja az alapértelmezett nyagyítást</translation>
     </message>
     <message>
-        <location filename="../sources/qetdiagrameditor.cpp" line="661"/>
+        <location filename="../sources/qetdiagrameditor.cpp" line="662"/>
         <source>Ajouter un champ de texte</source>
         <translation>Szövegmező hozzáadása</translation>
     </message>
     <message>
-        <location filename="../sources/qetdiagrameditor.cpp" line="662"/>
+        <location filename="../sources/qetdiagrameditor.cpp" line="663"/>
         <source>Ajouter une image</source>
         <translation>Kép hozzáadása</translation>
     </message>
     <message>
-        <location filename="../sources/qetdiagrameditor.cpp" line="664"/>
+        <location filename="../sources/qetdiagrameditor.cpp" line="665"/>
         <source>Ajouter un rectangle</source>
         <translation>Négyzet hozzáadása</translation>
     </message>
     <message>
-        <location filename="../sources/qetdiagrameditor.cpp" line="665"/>
+        <location filename="../sources/qetdiagrameditor.cpp" line="666"/>
         <source>Ajouter une ellipse</source>
         <translation>Elipszis hozzáadása</translation>
     </message>
     <message>
-        <location filename="../sources/qetdiagrameditor.cpp" line="666"/>
+        <location filename="../sources/qetdiagrameditor.cpp" line="667"/>
         <source>Ajouter une polyligne</source>
         <translation>Sokszög hozzáadása</translation>
     </message>
     <message>
-        <location filename="../sources/qetdiagrameditor.cpp" line="266"/>
+        <location filename="../sources/qetdiagrameditor.cpp" line="267"/>
         <source>Ctrl+Shift+X</source>
         <translation>Ctrl+Shift+X</translation>
     </message>
     <message>
-        <location filename="../sources/qetdiagrameditor.cpp" line="298"/>
+        <location filename="../sources/qetdiagrameditor.cpp" line="299"/>
         <source>Ctrl+Q</source>
         <translation>Ctrl+Q</translation>
     </message>
     <message>
-        <location filename="../sources/qetdiagrameditor.cpp" line="400"/>
+        <location filename="../sources/qetdiagrameditor.cpp" line="401"/>
         <source>Ctrl+T</source>
         <translation>Ctrl+T</translation>
     </message>
     <message>
-        <location filename="../sources/qetdiagrameditor.cpp" line="267"/>
+        <location filename="../sources/qetdiagrameditor.cpp" line="268"/>
         <source>Exporte le folio courant dans un autre format</source>
         <comment>status bar tip</comment>
         <translation>A jelenlegi tervlapot más formátumba exportálja</translation>
     </message>
     <message>
-        <location filename="../sources/qetdiagrameditor.cpp" line="278"/>
+        <location filename="../sources/qetdiagrameditor.cpp" line="279"/>
         <source>Imprime un ou plusieurs folios du projet courant</source>
         <comment>status bar tip</comment>
         <translation>Egy, vagy több tervlapot kinyomtat a jelenlegi projektből</translation>
     </message>
     <message>
-        <location filename="../sources/qetdiagrameditor.cpp" line="299"/>
+        <location filename="../sources/qetdiagrameditor.cpp" line="300"/>
         <source>Ferme l&apos;application QElectroTech</source>
         <comment>status bar tip</comment>
         <translation>QElectroTech bezárása</translation>
     </message>
     <message>
-        <location filename="../sources/qetdiagrameditor.cpp" line="306"/>
+        <location filename="../sources/qetdiagrameditor.cpp" line="307"/>
         <source>Annule l&apos;action précédente</source>
         <comment>status bar tip</comment>
         <translation>Az előző művelet visszavonása</translation>
     </message>
     <message>
-        <location filename="../sources/qetdiagrameditor.cpp" line="158"/>
+        <location filename="../sources/qetdiagrameditor.cpp" line="159"/>
         <source>Projets</source>
         <comment>dock title</comment>
         <translation>Projektek</translation>
     </message>
     <message>
-        <location filename="../sources/qetdiagrameditor.cpp" line="190"/>
+        <location filename="../sources/qetdiagrameditor.cpp" line="191"/>
         <source>Collections</source>
         <translation>Gyűjtemény</translation>
     </message>
     <message>
-        <location filename="../sources/qetdiagrameditor.cpp" line="311"/>
+        <location filename="../sources/qetdiagrameditor.cpp" line="312"/>
         <source>Restaure l&apos;action annulée</source>
         <comment>status bar tip</comment>
         <translation>Visszaállítja a visszavont műveletet</translation>
     </message>
     <message>
-        <location filename="../sources/qetdiagrameditor.cpp" line="322"/>
+        <location filename="../sources/qetdiagrameditor.cpp" line="323"/>
         <source>Transfère les éléments sélectionnés dans le presse-papier</source>
         <comment>status bar tip</comment>
         <translation>A kiválasztott elemek vágólapra helyezése</translation>
     </message>
     <message>
-        <location filename="../sources/qetdiagrameditor.cpp" line="323"/>
+        <location filename="../sources/qetdiagrameditor.cpp" line="324"/>
         <source>Copie les éléments sélectionnés dans le presse-papier</source>
         <comment>status bar tip</comment>
         <translation>A kiválasztott elemek másolása</translation>
     </message>
     <message>
-        <location filename="../sources/qetdiagrameditor.cpp" line="324"/>
+        <location filename="../sources/qetdiagrameditor.cpp" line="325"/>
         <source>Place les éléments du presse-papier sur le folio</source>
         <comment>status bar tip</comment>
         <translation>A vágólapon lévő elemeket beilleszti a tervlapba</translation>
     </message>
     <message>
-        <location filename="../sources/qetdiagrameditor.cpp" line="571"/>
+        <location filename="../sources/qetdiagrameditor.cpp" line="572"/>
         <source>Ajouter une ligne</source>
         <comment>Add row</comment>
         <translation>Sor hozzáadása</translation>
     </message>
     <message>
-        <location filename="../sources/qetdiagrameditor.cpp" line="572"/>
+        <location filename="../sources/qetdiagrameditor.cpp" line="573"/>
         <source>Enlever une ligne</source>
         <comment>Remove row</comment>
         <translation>Sor eltávolítása</translation>
     </message>
     <message>
-        <location filename="../sources/qetdiagrameditor.cpp" line="663"/>
+        <location filename="../sources/qetdiagrameditor.cpp" line="664"/>
         <source>Ajouter une ligne</source>
         <comment>Draw line</comment>
-        <translation>Sor hozzáadása</translation>
+        <translation>Vonal rajzolása</translation>
     </message>
     <message>
-        <location filename="../sources/qetdiagrameditor.cpp" line="342"/>
+        <location filename="../sources/qetdiagrameditor.cpp" line="343"/>
         <source>Recalcule les chemins des conducteurs sans tenir compte des modifications</source>
         <comment>status bar tip</comment>
         <translation>Visszaállítja a vezetékek útvonalát, figyelmen kívül hagyva a felhasználó változtatásait</translation>
     </message>
     <message>
-        <location filename="../sources/qetdiagrameditor.cpp" line="383"/>
+        <location filename="../sources/qetdiagrameditor.cpp" line="384"/>
         <source>Édite les propriétés du folio (dimensions, informations du cartouche, propriétés des conducteurs...)</source>
         <comment>status bar tip</comment>
         <translation>Tervlap tulajdonságainak szerkesztése (méret, szövegmező információk, vezeték tulajdoságok...)</translation>
@@ -6217,23 +6359,29 @@ Elérhető lehetőségek:
         <translation>Ablakok elrendezése mozaik mintában</translation>
     </message>
     <message>
-        <location filename="../sources/qetdiagrameditor.cpp" line="287"/>
+        <location filename="../sources/qetdiagrameditor.cpp" line="288"/>
         <source>Exporter en pdf</source>
         <translation>Exportálás PDF-be</translation>
     </message>
     <message>
-        <location filename="../sources/qetdiagrameditor.cpp" line="288"/>
+        <location filename="../sources/qetdiagrameditor.cpp" line="289"/>
         <source>Exporte un ou plusieurs folios du projet courant</source>
         <comment>status bar tip</comment>
         <translation>Exportálja a jelenlegi projekt egy vagy több tervlapját</translation>
     </message>
     <message>
-        <location filename="../sources/qetdiagrameditor.cpp" line="422"/>
+        <location filename="../sources/qetdiagrameditor.cpp" line="360"/>
+        <source>Affiche la couleur de fond du folio en blanc ou en gris</source>
+        <comment>Status tip of white/grey background button</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../sources/qetdiagrameditor.cpp" line="423"/>
         <source>Exporter au format CSV</source>
         <translation>Exportálás CSV formátumba</translation>
     </message>
     <message>
-        <location filename="../sources/qetdiagrameditor.cpp" line="444"/>
+        <location filename="../sources/qetdiagrameditor.cpp" line="445"/>
         <source>Gestionnaire de borniers (DEV)</source>
         <translation>Sorkapocs rendszerező (DEV)</translation>
     </message>
@@ -6266,230 +6414,245 @@ Elérhető lehetőségek:
         <translation>Előző projekt aktiválása</translation>
     </message>
     <message>
-        <location filename="../sources/qetdiagrameditor.cpp" line="595"/>
+        <location filename="../sources/qetdiagrameditor.cpp" line="551"/>
+        <source>Ctrl+Shift+S</source>
+        <translation type="unfinished">Ctrl+Shift+S</translation>
+    </message>
+    <message>
+        <location filename="../sources/qetdiagrameditor.cpp" line="596"/>
         <source>SPACE</source>
         <translation>Szóköz</translation>
     </message>
     <message>
-        <location filename="../sources/qetdiagrameditor.cpp" line="596"/>
+        <location filename="../sources/qetdiagrameditor.cpp" line="597"/>
         <source>Ctrl+SPACE</source>
         <translation>Ctrl+Szóköz</translation>
     </message>
     <message>
         <location filename="../sources/qetdiagrameditor.cpp" line="668"/>
+        <source>Ajouter un plan de bornes</source>
+        <translation>Sorkapocsterv hozzáadása</translation>
+    </message>
+    <message>
+        <location filename="../sources/qetdiagrameditor.cpp" line="670"/>
         <source>Ajoute un champ de texte sur le folio actuel</source>
         <translation>Szövegmező hozzáadása a jelenlegi tervlaphoz</translation>
     </message>
     <message>
-        <location filename="../sources/qetdiagrameditor.cpp" line="669"/>
+        <location filename="../sources/qetdiagrameditor.cpp" line="671"/>
         <source>Ajoute une image sur le folio actuel</source>
         <translation>Kép hozzáadása a jelenlegi tervlaphoz</translation>
     </message>
     <message>
-        <location filename="../sources/qetdiagrameditor.cpp" line="670"/>
+        <location filename="../sources/qetdiagrameditor.cpp" line="672"/>
         <source>Ajoute une ligne sur le folio actuel</source>
         <translation>Vonal hozzáadása a jelenlegi tervlaphoz</translation>
     </message>
     <message>
-        <location filename="../sources/qetdiagrameditor.cpp" line="671"/>
+        <location filename="../sources/qetdiagrameditor.cpp" line="673"/>
         <source>Ajoute un rectangle sur le folio actuel</source>
         <translation>Négyszög hozzáadása a jelenlegi tervlaphoz</translation>
     </message>
     <message>
-        <location filename="../sources/qetdiagrameditor.cpp" line="672"/>
+        <location filename="../sources/qetdiagrameditor.cpp" line="674"/>
         <source>Ajoute une ellipse sur le folio actuel</source>
         <translation>Ellipszis hozzáadása a jelenlegi tervlaphoz</translation>
     </message>
     <message>
-        <location filename="../sources/qetdiagrameditor.cpp" line="673"/>
+        <location filename="../sources/qetdiagrameditor.cpp" line="675"/>
         <source>Ajoute une polyligne sur le folio actuel</source>
         <translation>Vonallánc hozzáadása a jelenlegi tervlaphoz</translation>
     </message>
     <message>
-        <location filename="../sources/qetdiagrameditor.cpp" line="712"/>
+        <location filename="../sources/qetdiagrameditor.cpp" line="676"/>
+        <source>Ajoute un plan de bornier sur le folio actuel</source>
+        <translation>Sorkapocsterv hozzáadása a jelenlegi tervlaphoz</translation>
+    </message>
+    <message>
+        <location filename="../sources/qetdiagrameditor.cpp" line="719"/>
         <source>Outils</source>
         <translation>Eszközök</translation>
     </message>
     <message>
-        <location filename="../sources/qetdiagrameditor.cpp" line="715"/>
+        <location filename="../sources/qetdiagrameditor.cpp" line="722"/>
         <source>Affichage</source>
         <translation>Megjelenítés</translation>
     </message>
     <message>
-        <location filename="../sources/qetdiagrameditor.cpp" line="718"/>
+        <location filename="../sources/qetdiagrameditor.cpp" line="725"/>
         <source>Schéma</source>
         <translation>Terv</translation>
     </message>
     <message>
-        <location filename="../sources/qetdiagrameditor.cpp" line="750"/>
+        <location filename="../sources/qetdiagrameditor.cpp" line="757"/>
         <source>Ajouter</source>
         <translation>Hozzáad</translation>
     </message>
     <message>
-        <location filename="../sources/qetdiagrameditor.cpp" line="771"/>
+        <location filename="../sources/qetdiagrameditor.cpp" line="778"/>
         <source>&amp;Fichier</source>
         <translation>&amp;Fájl</translation>
     </message>
     <message>
-        <location filename="../sources/qetdiagrameditor.cpp" line="772"/>
+        <location filename="../sources/qetdiagrameditor.cpp" line="779"/>
         <source>&amp;Édition</source>
         <translation>S&amp;zerkesztés</translation>
     </message>
     <message>
-        <location filename="../sources/qetdiagrameditor.cpp" line="773"/>
+        <location filename="../sources/qetdiagrameditor.cpp" line="780"/>
         <source>&amp;Projet</source>
         <translation>&amp;Projekt</translation>
     </message>
     <message>
-        <location filename="../sources/qetdiagrameditor.cpp" line="774"/>
+        <location filename="../sources/qetdiagrameditor.cpp" line="781"/>
         <source>Afficha&amp;ge</source>
         <translation>&amp;Megjelenítés</translation>
     </message>
     <message>
-        <location filename="../sources/qetdiagrameditor.cpp" line="776"/>
+        <location filename="../sources/qetdiagrameditor.cpp" line="783"/>
         <source>Fe&amp;nêtres</source>
         <translation>Ab&amp;lakok</translation>
     </message>
     <message>
-        <location filename="../sources/qetdiagrameditor.cpp" line="785"/>
+        <location filename="../sources/qetdiagrameditor.cpp" line="792"/>
         <source>&amp;Récemment ouverts</source>
         <translation>&amp;Utolsó fájlok</translation>
     </message>
     <message>
-        <location filename="../sources/qetdiagrameditor.cpp" line="836"/>
+        <location filename="../sources/qetdiagrameditor.cpp" line="843"/>
         <source>Affiche ou non la barre d&apos;outils principale</source>
         <translation>Megjeleníti, vagy elrejti a fő eszköztárat</translation>
     </message>
     <message>
-        <location filename="../sources/qetdiagrameditor.cpp" line="837"/>
+        <location filename="../sources/qetdiagrameditor.cpp" line="844"/>
         <source>Affiche ou non la barre d&apos;outils Affichage</source>
         <translation>Megjeleníti, vagy elrejti a eszköztárat</translation>
     </message>
     <message>
-        <location filename="../sources/qetdiagrameditor.cpp" line="838"/>
+        <location filename="../sources/qetdiagrameditor.cpp" line="845"/>
         <source>Affiche ou non la barre d&apos;outils Schéma</source>
         <translation>Megjeleníti, vagy elrejti tervlap eszköztárat</translation>
     </message>
     <message>
-        <location filename="../sources/qetdiagrameditor.cpp" line="839"/>
+        <location filename="../sources/qetdiagrameditor.cpp" line="846"/>
         <source>Affiche ou non le panel d&apos;appareils</source>
         <translation>Megmutatja, vagy elrejti az elemek panelt</translation>
     </message>
     <message>
-        <location filename="../sources/qetdiagrameditor.cpp" line="840"/>
+        <location filename="../sources/qetdiagrameditor.cpp" line="847"/>
         <source>Affiche ou non la liste des modifications</source>
         <translation>Megjeleníti, vagy elrejti a visszavonás listát</translation>
     </message>
     <message>
-        <location filename="../sources/qetdiagrameditor.cpp" line="844"/>
+        <location filename="../sources/qetdiagrameditor.cpp" line="851"/>
         <source>Afficher les projets</source>
         <translation>Projektek megjelenítése</translation>
     </message>
     <message>
-        <location filename="../sources/qetdiagrameditor.cpp" line="925"/>
-        <location filename="../sources/qetdiagrameditor.cpp" line="948"/>
+        <location filename="../sources/qetdiagrameditor.cpp" line="932"/>
+        <location filename="../sources/qetdiagrameditor.cpp" line="955"/>
         <source>Projet %1 enregistré dans le repertoire: %2.</source>
         <translation>A %1 projekt bejegyezve a: %2 könyvtárba.</translation>
     </message>
     <message>
-        <location filename="../sources/qetdiagrameditor.cpp" line="996"/>
+        <location filename="../sources/qetdiagrameditor.cpp" line="1003"/>
         <source>Ouvrir un fichier</source>
         <translation>Fájl megnyitása</translation>
     </message>
     <message>
-        <location filename="../sources/qetdiagrameditor.cpp" line="998"/>
+        <location filename="../sources/qetdiagrameditor.cpp" line="1005"/>
         <source>Projets QElectroTech (*.qet);;Fichiers XML (*.xml);;Tous les fichiers (*)</source>
         <translation>QElectroTech projekt(*.qet);;XML fájlok (*.xml);;minden fájl (*)</translation>
     </message>
     <message>
-        <location filename="../sources/qetdiagrameditor.cpp" line="1081"/>
-        <location filename="../sources/qetdiagrameditor.cpp" line="1097"/>
+        <location filename="../sources/qetdiagrameditor.cpp" line="1088"/>
+        <location filename="../sources/qetdiagrameditor.cpp" line="1104"/>
         <source>Impossible d&apos;ouvrir le fichier</source>
         <comment>message box title</comment>
         <translation>Nem lehet a fájlt megnyitni</translation>
     </message>
     <message>
-        <location filename="../sources/qetdiagrameditor.cpp" line="1083"/>
+        <location filename="../sources/qetdiagrameditor.cpp" line="1090"/>
         <source>Il semblerait que le fichier %1 que vous essayez d&apos;ouvrir n&apos;existe pas ou plus.</source>
         <translation>Úgy tűnik %1 fájl amelyiket megpróbáltad megnyitni nem létezik, vagy nem létezik többé.</translation>
     </message>
     <message>
-        <location filename="../sources/qetdiagrameditor.cpp" line="1098"/>
+        <location filename="../sources/qetdiagrameditor.cpp" line="1105"/>
         <source>Il semblerait que le fichier que vous essayez d&apos;ouvrir ne soit pas accessible en lecture. Il est donc impossible de l&apos;ouvrir. Veuillez vérifier les permissions du fichier.</source>
         <translation>A megnyitni próbált fájl sérültnek tűnik és nem lehet megnyitni. Kérlek ellenőrízd a fájlhoz szükséges engedélyeket.</translation>
     </message>
     <message>
-        <location filename="../sources/qetdiagrameditor.cpp" line="1112"/>
+        <location filename="../sources/qetdiagrameditor.cpp" line="1119"/>
         <source>Ouverture du projet en lecture seule</source>
         <comment>message box title</comment>
         <translation>Csak olvasható fájl megnyitása</translation>
     </message>
     <message>
-        <location filename="../sources/qetdiagrameditor.cpp" line="1113"/>
+        <location filename="../sources/qetdiagrameditor.cpp" line="1120"/>
         <source>Il semblerait que le projet que vous essayez d&apos;ouvrir ne soit pas accessible en écriture. Il sera donc ouvert en lecture seule.</source>
         <translation>A megnyitni próbált projekt írásvédetnek tűnik. Csak olvashatóként lesz megnyitva.</translation>
     </message>
     <message>
-        <location filename="../sources/qetdiagrameditor.cpp" line="1130"/>
-        <location filename="../sources/qetdiagrameditor.cpp" line="1894"/>
+        <location filename="../sources/qetdiagrameditor.cpp" line="1137"/>
+        <location filename="../sources/qetdiagrameditor.cpp" line="1913"/>
         <source>Échec de l&apos;ouverture du projet</source>
         <comment>message box title</comment>
         <translation>Képtelen megnyitni a projektet</translation>
     </message>
     <message>
-        <location filename="../sources/qetdiagrameditor.cpp" line="1132"/>
+        <location filename="../sources/qetdiagrameditor.cpp" line="1139"/>
         <source>Il semblerait que le fichier %1 ne soit pas un fichier projet QElectroTech. Il ne peut donc être ouvert.</source>
         <comment>message box content</comment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../sources/qetdiagrameditor.cpp" line="1415"/>
+        <location filename="../sources/qetdiagrameditor.cpp" line="1422"/>
         <source>Double-click pour terminer la forme, Click droit pour annuler le dernier point</source>
         <translation>Dupla kattintás a forma befejezéséhez, Jobb kattintás az utolsó pont visszavonásához</translation>
     </message>
     <message>
-        <location filename="../sources/qetdiagrameditor.cpp" line="1675"/>
+        <location filename="../sources/qetdiagrameditor.cpp" line="1694"/>
         <source>Éditer l&apos;élement</source>
         <comment>edit element</comment>
         <translation>Elem szerkesztése</translation>
     </message>
     <message>
-        <location filename="../sources/qetdiagrameditor.cpp" line="1682"/>
+        <location filename="../sources/qetdiagrameditor.cpp" line="1701"/>
         <source>Éditer le champ de texte</source>
         <comment>edit text field</comment>
         <translation>Szövegmező szerkesztése</translation>
     </message>
     <message>
-        <location filename="../sources/qetdiagrameditor.cpp" line="1689"/>
+        <location filename="../sources/qetdiagrameditor.cpp" line="1708"/>
         <source>Éditer l&apos;image</source>
         <comment>edit image</comment>
         <translation>Kép szerkesztése</translation>
     </message>
     <message>
-        <location filename="../sources/qetdiagrameditor.cpp" line="1696"/>
+        <location filename="../sources/qetdiagrameditor.cpp" line="1715"/>
         <source>Éditer le conducteur</source>
         <comment>edit conductor</comment>
         <translation>Vezető szerkesztése</translation>
     </message>
     <message>
-        <location filename="../sources/qetdiagrameditor.cpp" line="1704"/>
+        <location filename="../sources/qetdiagrameditor.cpp" line="1723"/>
         <source>Éditer l&apos;objet sélectionné</source>
         <comment>edit selected item</comment>
         <translation>Kijelölt objektum szerkesztése</translation>
     </message>
     <message>
-        <location filename="../sources/qetdiagrameditor.cpp" line="1895"/>
+        <location filename="../sources/qetdiagrameditor.cpp" line="1914"/>
         <source>Une erreur est survenue lors de l&apos;ouverture du fichier %1.</source>
         <comment>message box content</comment>
         <translation>Hiba történt a fájl megnyitásakor %1.</translation>
     </message>
     <message>
-        <location filename="../sources/qetdiagrameditor.cpp" line="1943"/>
+        <location filename="../sources/qetdiagrameditor.cpp" line="1962"/>
         <source>Active le projet « %1 »</source>
         <translation>Projekt aktiválása « %1 »</translation>
     </message>
     <message>
-        <location filename="../sources/qetdiagrameditor.cpp" line="2295"/>
+        <location filename="../sources/qetdiagrameditor.cpp" line="2314"/>
         <source>Erreur</source>
         <comment>message box title</comment>
         <translation>Hiba</translation>
@@ -6498,52 +6661,47 @@ Elérhető lehetőségek:
 <context>
     <name>QETElementEditor</name>
     <message>
-        <location filename="../sources/editor/ui/qetelementeditor.ui" line="213"/>
+        <location filename="../sources/editor/ui/qetelementeditor.ui" line="214"/>
         <source>&amp;Nouveau</source>
         <translation>&amp;Új</translation>
     </message>
     <message>
-        <location filename="../sources/editor/ui/qetelementeditor.ui" line="222"/>
+        <location filename="../sources/editor/ui/qetelementeditor.ui" line="223"/>
         <source>&amp;Ouvrir</source>
         <translation>&amp;Megnyitás</translation>
     </message>
     <message>
-        <location filename="../sources/editor/ui/qetelementeditor.ui" line="231"/>
+        <location filename="../sources/editor/ui/qetelementeditor.ui" line="232"/>
         <source>&amp;Ouvrir depuis un fichier</source>
         <translation>&amp;Megnyitás egy fájlból</translation>
     </message>
     <message>
-        <location filename="../sources/editor/ui/qetelementeditor.ui" line="240"/>
+        <location filename="../sources/editor/ui/qetelementeditor.ui" line="241"/>
         <source>&amp;Lancer le plugin convertisseur DXF</source>
         <translation>Elindítja a &amp;DXF átalakító beépülő modult</translation>
     </message>
     <message>
-        <location filename="../sources/editor/ui/qetelementeditor.ui" line="249"/>
+        <location filename="../sources/editor/ui/qetelementeditor.ui" line="250"/>
         <source>&amp;Enregistrer</source>
         <translation>M&amp;entés</translation>
     </message>
     <message>
-        <location filename="../sources/editor/ui/qetelementeditor.ui" line="258"/>
+        <location filename="../sources/editor/ui/qetelementeditor.ui" line="259"/>
         <source>Enregistrer sous</source>
         <translation>Mentés más néven</translation>
     </message>
     <message>
-        <location filename="../sources/editor/ui/qetelementeditor.ui" line="267"/>
+        <location filename="../sources/editor/ui/qetelementeditor.ui" line="268"/>
         <source>Enregistrer dans un fichier</source>
         <translation>Mentés fájlba</translation>
     </message>
     <message>
-        <location filename="../sources/editor/ui/qetelementeditor.ui" line="276"/>
+        <location filename="../sources/editor/ui/qetelementeditor.ui" line="277"/>
         <source>Recharger</source>
         <translation>Újratöltés</translation>
     </message>
     <message>
-        <location filename="../sources/editor/ui/qetelementeditor.ui" line="285"/>
-        <source>&amp;Quitter</source>
-        <translation>&amp;Kilépés</translation>
-    </message>
-    <message>
-        <location filename="../sources/editor/ui/qetelementeditor.ui" line="204"/>
+        <location filename="../sources/editor/ui/qetelementeditor.ui" line="205"/>
         <source>Tout sélectionner</source>
         <translation>Összes kiválasztása</translation>
     </message>
@@ -6553,351 +6711,319 @@ Elérhető lehetőségek:
         <translation>QElectroTech - Elem Szerkesztő</translation>
     </message>
     <message>
-        <location filename="../sources/editor/ui/qetelementeditor.ui" line="92"/>
+        <location filename="../sources/editor/ui/qetelementeditor.ui" line="93"/>
         <source>&amp;Aide</source>
         <translation>&amp;Segítség</translation>
     </message>
     <message>
-        <location filename="../sources/editor/ui/qetelementeditor.ui" line="111"/>
+        <location filename="../sources/editor/ui/qetelementeditor.ui" line="112"/>
         <source>Annulations</source>
         <translation>Visszavonás</translation>
     </message>
     <message>
-        <location filename="../sources/editor/ui/qetelementeditor.ui" line="123"/>
+        <location filename="../sources/editor/ui/qetelementeditor.ui" line="124"/>
         <source>Parties</source>
         <translation>Alkatrészek</translation>
     </message>
     <message>
-        <location filename="../sources/editor/ui/qetelementeditor.ui" line="135"/>
+        <location filename="../sources/editor/ui/qetelementeditor.ui" line="136"/>
         <source>Informations</source>
         <translation>Információ</translation>
     </message>
     <message>
-        <location filename="../sources/editor/ui/qetelementeditor.ui" line="144"/>
+        <location filename="../sources/editor/ui/qetelementeditor.ui" line="145"/>
         <source>Outils</source>
         <translation>Eszközök</translation>
     </message>
     <message>
-        <location filename="../sources/editor/ui/qetelementeditor.ui" line="161"/>
+        <location filename="../sources/editor/ui/qetelementeditor.ui" line="162"/>
         <source>Affichage</source>
         <translation>Megjelenítés</translation>
     </message>
     <message>
-        <location filename="../sources/editor/ui/qetelementeditor.ui" line="176"/>
+        <location filename="../sources/editor/ui/qetelementeditor.ui" line="177"/>
         <source>Élément</source>
         <translation>Elem</translation>
     </message>
     <message>
-        <location filename="../sources/editor/ui/qetelementeditor.ui" line="189"/>
+        <location filename="../sources/editor/ui/qetelementeditor.ui" line="190"/>
         <source>Annulation</source>
         <translation>Visszavonás</translation>
     </message>
     <message>
-        <location filename="../sources/editor/ui/qetelementeditor.ui" line="294"/>
+        <location filename="../sources/editor/ui/qetelementeditor.ui" line="286"/>
+        <source>&amp;Fermer cet éditeur</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../sources/editor/ui/qetelementeditor.ui" line="289"/>
+        <source>Fermer cet éditeur</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../sources/editor/ui/qetelementeditor.ui" line="298"/>
         <source>Désélectionner tout</source>
         <translation>Kiválasztás megszüntetése</translation>
     </message>
     <message>
-        <location filename="../sources/editor/ui/qetelementeditor.ui" line="303"/>
+        <location filename="../sources/editor/ui/qetelementeditor.ui" line="307"/>
         <source>Co&amp;uper</source>
         <translation>Ki&amp;vágás</translation>
     </message>
     <message>
-        <location filename="../sources/editor/ui/qetelementeditor.ui" line="312"/>
+        <location filename="../sources/editor/ui/qetelementeditor.ui" line="316"/>
         <source>Cop&amp;ier</source>
         <translation>M&amp;ásolás</translation>
     </message>
     <message>
-        <location filename="../sources/editor/ui/qetelementeditor.ui" line="321"/>
+        <location filename="../sources/editor/ui/qetelementeditor.ui" line="325"/>
         <source>C&amp;oller</source>
         <translation>&amp;Beilleszt</translation>
     </message>
     <message>
-        <location filename="../sources/editor/ui/qetelementeditor.ui" line="330"/>
+        <location filename="../sources/editor/ui/qetelementeditor.ui" line="334"/>
         <source>C&amp;oller dans la zone</source>
         <translation>&amp;Beillesztés a területre</translation>
     </message>
     <message>
-        <location filename="../sources/editor/ui/qetelementeditor.ui" line="339"/>
+        <location filename="../sources/editor/ui/qetelementeditor.ui" line="343"/>
         <source>Un fichier</source>
         <translation>Egy fájl</translation>
     </message>
     <message>
-        <location filename="../sources/editor/ui/qetelementeditor.ui" line="348"/>
+        <location filename="../sources/editor/ui/qetelementeditor.ui" line="352"/>
         <source>Un élément</source>
         <translation>Egy elem</translation>
     </message>
     <message>
-        <location filename="../sources/editor/ui/qetelementeditor.ui" line="438"/>
+        <location filename="../sources/editor/ui/qetelementeditor.ui" line="442"/>
         <source>À &amp;propos de QElectroTech</source>
         <translation>&amp;A QElectroTech-ről</translation>
     </message>
     <message>
-        <location filename="../sources/editor/ui/qetelementeditor.ui" line="441"/>
+        <location filename="../sources/editor/ui/qetelementeditor.ui" line="445"/>
         <source>Affiche des informations sur QElectroTech</source>
         <translation>Információk megjelenítése a QElectroTech</translation>
     </message>
     <message>
-        <location filename="../sources/editor/ui/qetelementeditor.ui" line="450"/>
+        <location filename="../sources/editor/ui/qetelementeditor.ui" line="454"/>
         <source>Manuel en ligne</source>
         <translation>Interneten elérhető felhasználói kézikönyv</translation>
     </message>
     <message>
-        <location filename="../sources/editor/ui/qetelementeditor.ui" line="453"/>
+        <location filename="../sources/editor/ui/qetelementeditor.ui" line="457"/>
         <source>Lance le navigateur par défaut vers le manuel en ligne de QElectroTech</source>
         <translation>Az alapértelmezett böngésző elindítása az internetes QElectrotech felhasználói kézikönyvhöz</translation>
     </message>
     <message>
-        <location filename="../sources/editor/ui/qetelementeditor.ui" line="462"/>
+        <location filename="../sources/editor/ui/qetelementeditor.ui" line="466"/>
         <source>Chaine Youtube</source>
         <translation>Youtube csatorna</translation>
     </message>
     <message>
-        <location filename="../sources/editor/ui/qetelementeditor.ui" line="465"/>
+        <location filename="../sources/editor/ui/qetelementeditor.ui" line="469"/>
         <source>Lance le navigateur par défaut vers la chaine Youtube de QElectroTech</source>
         <translation>Az alapértelmezett böngésző elindítása a QElectrotech Youtube csatornájához</translation>
     </message>
     <message>
-        <location filename="../sources/editor/ui/qetelementeditor.ui" line="474"/>
+        <location filename="../sources/editor/ui/qetelementeditor.ui" line="478"/>
         <source>Soutenir le projet par un don</source>
         <translation>A projekt támogatása adománnyal</translation>
     </message>
     <message>
-        <location filename="../sources/editor/ui/qetelementeditor.ui" line="477"/>
+        <location filename="../sources/editor/ui/qetelementeditor.ui" line="481"/>
         <source>Soutenir le projet QElectroTech par un don</source>
         <translation>A QElectroTech projekt támogatása adománnyal</translation>
     </message>
     <message>
-        <location filename="../sources/editor/ui/qetelementeditor.ui" line="486"/>
+        <location filename="../sources/editor/ui/qetelementeditor.ui" line="490"/>
         <source>À propos de &amp;Qt</source>
         <translation>&amp;Rólunk</translation>
     </message>
     <message>
-        <location filename="../sources/editor/ui/qetelementeditor.ui" line="489"/>
+        <location filename="../sources/editor/ui/qetelementeditor.ui" line="493"/>
         <source>Affiche des informations sur la bibliothèque Qt</source>
         <translation>Információk megjelenítése a Qt könyvtárról</translation>
     </message>
     <message>
-        <location filename="../sources/editor/ui/qetelementeditor.ui" line="498"/>
+        <location filename="../sources/editor/ui/qetelementeditor.ui" line="502"/>
         <source>Rotation</source>
         <translation>Forgatás</translation>
     </message>
     <message>
-        <location filename="../sources/editor/ui/qetelementeditor.ui" line="501"/>
+        <location filename="../sources/editor/ui/qetelementeditor.ui" line="505"/>
         <source>Space</source>
         <translation>hely</translation>
     </message>
     <message>
-        <location filename="../sources/editor/ui/qetelementeditor.ui" line="357"/>
+        <location filename="../sources/editor/ui/qetelementeditor.ui" line="514"/>
+        <source>Importer un dxf</source>
+        <translation>DXF importálása</translation>
+    </message>
+    <message>
+        <location filename="../sources/editor/ui/qetelementeditor.ui" line="361"/>
         <source>Inverser la sélection</source>
         <translation>Kiválasztás megfordítása</translation>
     </message>
     <message>
-        <location filename="../sources/editor/ui/qetelementeditor.ui" line="366"/>
+        <location filename="../sources/editor/ui/qetelementeditor.ui" line="370"/>
         <source>&amp;Supprimer</source>
         <translation>&amp;Törlés</translation>
     </message>
     <message>
-        <location filename="../sources/editor/ui/qetelementeditor.ui" line="375"/>
+        <location filename="../sources/editor/ui/qetelementeditor.ui" line="379"/>
         <source>Éditer le nom et les traductions de l&apos;élément</source>
         <translation>Az elem nevének és fordításának szerkesztése</translation>
     </message>
     <message>
-        <location filename="../sources/editor/ui/qetelementeditor.ui" line="384"/>
+        <location filename="../sources/editor/ui/qetelementeditor.ui" line="388"/>
         <source>Éditer les informations sur l&apos;auteur</source>
         <translation>Szerzői információ szerkesztése</translation>
     </message>
     <message>
-        <location filename="../sources/editor/ui/qetelementeditor.ui" line="393"/>
+        <location filename="../sources/editor/ui/qetelementeditor.ui" line="397"/>
         <source>Éditer les propriétés de l&apos;élément</source>
         <translation>Elem tulajdonságainak szerkesztése</translation>
     </message>
     <message>
-        <location filename="../sources/editor/ui/qetelementeditor.cpp" line="947"/>
-        <source>To install the plugin DXFtoQET
-Visit https://download.tuxfamily.org/qet/builds/dxf_to_elmt/
-
-&gt;&gt; Install on Windows
-Put DXFtoQET.exe binary on C:\Users\user_name\AppData\Roaming\qet\ directory 
-</source>
-        <translation>A DXFtoQET beépülő modul telepítése
-Látogass el a https://download.tuxfamily.org/qet/builds/dxf_to_elmt/
-
-&gt;&gt; Telepítés Windowson
-Másold a DXFtoQET.exe-fájlt a C:\Users\user_name\AppData\Roaming\qet\ könyvtárba 
-</translation>
-    </message>
-    <message>
-        <location filename="../sources/editor/ui/qetelementeditor.cpp" line="953"/>
-        <source>To install the plugin DXFtoQET
-Visit https://download.tuxfamily.org/qet/builds/dxf_to_elmt/
-
-&gt;&gt; Install on macOSX
-Put DXFtoQET.app binary on /Users/user_name/.qet/ directory 
-</source>
-        <translation>A DXFtoQET beépülő modul telepítése
-Látogass el a https://download.tuxfamily.org/qet/builds/dxf_to_elmt/
-
-&gt;&gt; Telepítés macOSX-en
-Másold a DXFtoQET.app ot a /Users/user_name/.qet/ könyvtárba 
-</translation>
-    </message>
-    <message>
-        <location filename="../sources/editor/ui/qetelementeditor.cpp" line="959"/>
-        <source>To install the plugin DXFtoQET
-Visit https://download.tuxfamily.org/qet/builds/dxf_to_elmt/
-
-&gt;&gt; Install on Linux
-Put DXFtoQET binary on your /home/user_name/.qet/ directory
-make it executable : chmod +x ./DXFtoQET
-</source>
-        <translation>A DXFtoQET beépülő modul telepítése
-Látogass el a https://download.tuxfamily.org/qet/builds/dxf_to_elmt/
-
-&gt;&gt; Telepítés Windowson
-Másold a DXFtoQET fájlt a  Te /home/user_name/.qet/ könyvtáradba
-végrahajtásához : chmod +x ./DXFtoQET
-</translation>
-    </message>
-    <message>
-        <location filename="../sources/editor/ui/qetelementeditor.cpp" line="979"/>
+        <location filename="../sources/editor/ui/qetelementeditor.cpp" line="986"/>
         <source>Annuler</source>
         <translation>Visszavonás</translation>
     </message>
     <message>
-        <location filename="../sources/editor/ui/qetelementeditor.cpp" line="980"/>
+        <location filename="../sources/editor/ui/qetelementeditor.cpp" line="987"/>
         <source>Refaire</source>
         <translation>Újrakészít</translation>
     </message>
     <message>
-        <location filename="../sources/editor/ui/qetelementeditor.cpp" line="990"/>
+        <location filename="../sources/editor/ui/qetelementeditor.cpp" line="997"/>
         <source>Ctrl+Shift+O</source>
         <translation>Ctrl+Shift+O</translation>
     </message>
     <message>
-        <location filename="../sources/editor/ui/qetelementeditor.cpp" line="992"/>
+        <location filename="../sources/editor/ui/qetelementeditor.cpp" line="999"/>
         <source>Ctrl+Shift+S</source>
         <translation>Ctrl+Shift+S</translation>
     </message>
     <message>
-        <location filename="../sources/editor/ui/qetelementeditor.cpp" line="993"/>
+        <location filename="../sources/editor/ui/qetelementeditor.cpp" line="1012"/>
         <source>Ctrl+Q</source>
         <translation>Ctrl+Q</translation>
     </message>
     <message>
-        <location filename="../sources/editor/ui/qetelementeditor.cpp" line="995"/>
+        <location filename="../sources/editor/ui/qetelementeditor.cpp" line="1001"/>
         <source>Ctrl+Shift+A</source>
         <translation>Ctrl+Shift+A</translation>
     </message>
     <message>
-        <location filename="../sources/editor/ui/qetelementeditor.cpp" line="996"/>
+        <location filename="../sources/editor/ui/qetelementeditor.cpp" line="1002"/>
         <source>Ctrl+I</source>
         <translation>Ctrl+I</translation>
     </message>
     <message>
-        <location filename="../sources/editor/ui/qetelementeditor.cpp" line="1000"/>
+        <location filename="../sources/editor/ui/qetelementeditor.cpp" line="1006"/>
         <source>Ctrl+Shift+V</source>
         <translation>Ctrl+Shift+V</translation>
     </message>
     <message>
-        <location filename="../sources/editor/ui/qetelementeditor.cpp" line="1007"/>
+        <location filename="../sources/editor/ui/qetelementeditor.cpp" line="1014"/>
         <source>Backspace</source>
         <translatorcomment>visszafelé törlő billentyű</translatorcomment>
         <translation>Backspace</translation>
     </message>
     <message>
-        <location filename="../sources/editor/ui/qetelementeditor.cpp" line="1001"/>
+        <location filename="../sources/editor/ui/qetelementeditor.cpp" line="1007"/>
         <source>Ctrl+E</source>
         <translation>Ctrl+E</translation>
     </message>
     <message>
-        <location filename="../sources/editor/ui/qetelementeditor.cpp" line="1002"/>
+        <location filename="../sources/editor/ui/qetelementeditor.cpp" line="1008"/>
         <source>Ctrl+Y</source>
         <translation>Ctrl+Y</translation>
     </message>
     <message>
-        <location filename="../sources/editor/ui/qetelementeditor.cpp" line="1017"/>
+        <location filename="../sources/editor/ui/qetelementeditor.cpp" line="1025"/>
         <source>Profondeur</source>
         <comment>toolbar title</comment>
         <translation>Rétegelrendezés</translation>
     </message>
     <message>
-        <location filename="../sources/editor/ui/qetelementeditor.ui" line="402"/>
+        <location filename="../sources/editor/ui/qetelementeditor.ui" line="406"/>
         <source>Zoom avant</source>
         <translation>Nagyítás</translation>
     </message>
     <message>
-        <location filename="../sources/editor/ui/qetelementeditor.ui" line="411"/>
+        <location filename="../sources/editor/ui/qetelementeditor.ui" line="415"/>
         <source>Zoom arrière</source>
         <translation>Kicsinyítés</translation>
     </message>
     <message>
-        <location filename="../sources/editor/ui/qetelementeditor.ui" line="420"/>
+        <location filename="../sources/editor/ui/qetelementeditor.ui" line="424"/>
         <source>Zoom adapté</source>
         <translation>Legnagyobb nézetben</translation>
     </message>
     <message>
-        <location filename="../sources/editor/ui/qetelementeditor.ui" line="429"/>
+        <location filename="../sources/editor/ui/qetelementeditor.ui" line="433"/>
         <source>Pas de zoom</source>
         <translation>Nagyítás alaphelyzetbe állítása</translation>
     </message>
     <message>
-        <location filename="../sources/editor/ui/qetelementeditor.cpp" line="1028"/>
+        <location filename="../sources/editor/ui/qetelementeditor.cpp" line="1036"/>
         <source>Ctrl+9</source>
         <translation>Ctrl+9</translation>
     </message>
     <message>
-        <location filename="../sources/editor/ui/qetelementeditor.cpp" line="1029"/>
+        <location filename="../sources/editor/ui/qetelementeditor.cpp" line="1037"/>
         <source>Ctrl+0</source>
         <translation>Ctrl+0</translation>
     </message>
     <message>
-        <location filename="../sources/editor/ui/qetelementeditor.cpp" line="1034"/>
+        <location filename="../sources/editor/ui/qetelementeditor.cpp" line="1042"/>
         <source>Ajouter une ligne</source>
-        <translation>Sor hozzáadása</translation>
+        <translation>Vonal rajzolása</translation>
     </message>
     <message>
-        <location filename="../sources/editor/ui/qetelementeditor.cpp" line="1035"/>
+        <location filename="../sources/editor/ui/qetelementeditor.cpp" line="1043"/>
         <source>Ajouter un rectangle</source>
         <translation>Négyzet hozzáadása</translation>
     </message>
     <message>
-        <location filename="../sources/editor/ui/qetelementeditor.cpp" line="1036"/>
+        <location filename="../sources/editor/ui/qetelementeditor.cpp" line="1044"/>
         <source>Ajouter une ellipse</source>
         <translation>Elipszis hozzáadása</translation>
     </message>
     <message>
-        <location filename="../sources/editor/ui/qetelementeditor.cpp" line="1037"/>
+        <location filename="../sources/editor/ui/qetelementeditor.cpp" line="1045"/>
         <source>Ajouter un polygone</source>
         <translation>Sokszög hozzáadása</translation>
     </message>
     <message>
-        <location filename="../sources/editor/ui/qetelementeditor.cpp" line="1038"/>
+        <location filename="../sources/editor/ui/qetelementeditor.cpp" line="1046"/>
         <source>Ajouter du texte</source>
         <translation>Szöveg hozzáadása</translation>
     </message>
     <message>
-        <location filename="../sources/editor/ui/qetelementeditor.cpp" line="1039"/>
+        <location filename="../sources/editor/ui/qetelementeditor.cpp" line="1047"/>
         <source>Ajouter un arc de cercle</source>
         <translation>Ív hozzáadása</translation>
     </message>
     <message>
-        <location filename="../sources/editor/ui/qetelementeditor.cpp" line="1040"/>
+        <location filename="../sources/editor/ui/qetelementeditor.cpp" line="1048"/>
         <source>Ajouter une borne</source>
         <translation>Csatlakozó hozzáadása</translation>
     </message>
     <message>
-        <location filename="../sources/editor/ui/qetelementeditor.cpp" line="1041"/>
+        <location filename="../sources/editor/ui/qetelementeditor.cpp" line="1049"/>
         <source>Ajouter un champ texte dynamique</source>
         <translation>Dinamikus szövegmező hozzáadása</translation>
     </message>
     <message>
-        <location filename="../sources/editor/ui/qetelementeditor.cpp" line="1056"/>
+        <location filename="../sources/editor/ui/qetelementeditor.cpp" line="1064"/>
         <source>Double-click pour terminer la forme, Click droit pour annuler le dernier point</source>
         <translation>Dupla kattintás a forma befejezéséhez, Jobb kattintás az utolsó pont visszavonásához</translation>
     </message>
     <message>
-        <location filename="../sources/editor/ui/qetelementeditor.cpp" line="1060"/>
+        <location filename="../sources/editor/ui/qetelementeditor.cpp" line="1068"/>
         <source>Parties</source>
         <comment>toolbar title</comment>
         <translation>Alkatrészek</translation>
@@ -6908,81 +7034,81 @@ végrahajtásához : chmod +x ./DXFtoQET
         <translation>&amp;Fájl</translation>
     </message>
     <message>
-        <location filename="../sources/editor/ui/qetelementeditor.ui" line="49"/>
+        <location filename="../sources/editor/ui/qetelementeditor.ui" line="50"/>
         <source>&amp;Édition</source>
         <translation>&amp;Szerkesztés</translation>
     </message>
     <message>
-        <location filename="../sources/editor/ui/qetelementeditor.ui" line="82"/>
+        <location filename="../sources/editor/ui/qetelementeditor.ui" line="83"/>
         <source>Afficha&amp;ge</source>
         <translation>&amp;Megjelenítés</translation>
     </message>
     <message>
-        <location filename="../sources/editor/ui/qetelementeditor.ui" line="53"/>
+        <location filename="../sources/editor/ui/qetelementeditor.ui" line="54"/>
         <source>Coller depuis...</source>
         <translation>Beillesztés valamiből...</translation>
     </message>
     <message>
-        <location filename="../sources/editor/ui/qetelementeditor.cpp" line="447"/>
+        <location filename="../sources/editor/ui/qetelementeditor.cpp" line="444"/>
         <source>[Modifié]</source>
         <comment>window title tag</comment>
         <translation>[Megváltozott]</translation>
     </message>
     <message>
-        <location filename="../sources/editor/ui/qetelementeditor.cpp" line="451"/>
+        <location filename="../sources/editor/ui/qetelementeditor.cpp" line="448"/>
         <source> [lecture seule]</source>
         <comment>window title tag</comment>
         <translation> [Csak olvasható]</translation>
     </message>
     <message>
-        <location filename="../sources/editor/ui/qetelementeditor.cpp" line="1164"/>
+        <location filename="../sources/editor/ui/qetelementeditor.cpp" line="1171"/>
         <source>Aucune modification</source>
         <translation>Nincs módosístás</translation>
     </message>
     <message>
-        <location filename="../sources/editor/ui/qetelementeditor.cpp" line="1176"/>
+        <location filename="../sources/editor/ui/qetelementeditor.cpp" line="1183"/>
         <source>Éditeur d&apos;éléments</source>
         <comment>status bar message</comment>
         <translation>Elemek szerkesztése</translation>
     </message>
     <message numerus="yes">
-        <location filename="../sources/editor/ui/qetelementeditor.cpp" line="528"/>
-        <location filename="../sources/editor/ui/qetelementeditor.cpp" line="665"/>
+        <location filename="../sources/editor/ui/qetelementeditor.cpp" line="533"/>
+        <location filename="../sources/editor/ui/qetelementeditor.cpp" line="670"/>
         <source>%n partie(s) sélectionnée(s).</source>
         <translation>
             <numerusform>%n kiválasztott alkatrész.</numerusform>
         </translation>
     </message>
     <message>
-        <location filename="../sources/editor/ui/qetelementeditor.cpp" line="733"/>
+        <location filename="../sources/editor/ui/qetelementeditor.cpp" line="740"/>
         <source>Absence de borne</source>
         <comment>warning title</comment>
         <translation>Hiányzó csatlakozó</translation>
     </message>
     <message>
-        <location filename="../sources/editor/ui/qetelementeditor.cpp" line="734"/>
+        <location filename="../sources/editor/ui/qetelementeditor.cpp" line="741"/>
         <source>&lt;br&gt;En l&apos;absence de borne, l&apos;élément ne pourra être relié à d&apos;autres éléments par l&apos;intermédiaire de conducteurs.</source>
         <comment>warning description</comment>
         <translation>&lt;br&gt;Csatlakozó nélkül,az elemet nem lehet csatlakoztatni másik elemhez vezetékkel.</translation>
     </message>
     <message>
-        <location filename="../sources/editor/ui/qetelementeditor.cpp" line="755"/>
+        <location filename="../sources/editor/ui/qetelementeditor.cpp" line="762"/>
         <source>Absence de borne</source>
         <translation>Hiányzó csatlakozó</translation>
     </message>
     <message>
-        <location filename="../sources/editor/ui/qetelementeditor.cpp" line="756"/>
+        <location filename="../sources/editor/ui/qetelementeditor.cpp" line="763"/>
         <source>&lt;br&gt;&lt;b&gt;Erreur&lt;/b&gt; :&lt;br&gt;Les reports de folio doivent posséder une seul borne.&lt;br&gt;&lt;b&gt;Solution&lt;/b&gt; :&lt;br&gt;Verifier que l&apos;élément ne possède qu&apos;une seul borne</source>
         <translation>&lt;br&gt; &lt;b&gt; Hiba &lt;/ b&gt;: &lt;br&gt; a tervlap hivatkozásnak muszály rendelkeznie kell egy csatlakozással&lt;br&gt; &lt;b&gt; Megoldás &lt;/ b&gt; :&lt;br&gt; Ellenőrízd, hogy az elem csak egy csatlakozással rendelkezik</translation>
     </message>
     <message>
-        <location filename="../sources/editor/ui/qetelementeditor.cpp" line="768"/>
+        <location filename="../sources/editor/ui/qetelementeditor.cpp" line="775"/>
         <source>La vérification de cet élément a généré</source>
         <comment>message box content</comment>
         <translation>Az elem generálásának megerősítése</translation>
     </message>
     <message numerus="yes">
-        <location filename="../sources/editor/ui/qetelementeditor.cpp" line="771"/>
+        <location filename="../sources/editor/ui/qetelementeditor.cpp" line="778"/>
         <source> %n erreur(s)</source>
         <comment>errors</comment>
         <translation>
@@ -6990,96 +7116,132 @@ végrahajtásához : chmod +x ./DXFtoQET
         </translation>
     </message>
     <message>
-        <location filename="../sources/editor/ui/qetelementeditor.cpp" line="776"/>
+        <location filename="../sources/editor/ui/qetelementeditor.cpp" line="783"/>
         <source> et</source>
         <translation> és</translation>
     </message>
     <message>
-        <location filename="../sources/editor/ui/qetelementeditor.cpp" line="788"/>
+        <location filename="../sources/editor/ui/qetelementeditor.cpp" line="795"/>
         <source>&lt;b&gt;%1&lt;/b&gt; : %2</source>
         <comment>warning title: warning description</comment>
         <translation>&lt;b&gt;%1&lt;/b&gt; : %2</translation>
     </message>
     <message>
-        <location filename="../sources/editor/ui/qetelementeditor.cpp" line="795"/>
+        <location filename="../sources/editor/ui/qetelementeditor.cpp" line="802"/>
         <source>Erreurs</source>
         <translation>Hiba</translation>
     </message>
     <message>
-        <location filename="../sources/editor/ui/qetelementeditor.cpp" line="798"/>
+        <location filename="../sources/editor/ui/qetelementeditor.cpp" line="805"/>
         <source>Avertissements</source>
         <translation>Figyelmeztetés</translation>
     </message>
     <message>
-        <location filename="../sources/editor/ui/qetelementeditor.cpp" line="214"/>
+        <location filename="../sources/editor/ui/qetelementeditor.cpp" line="211"/>
         <source>Le fichier %1 n&apos;existe pas.</source>
         <comment>message box content</comment>
         <translation>A %1 fájl nem létezik.</translation>
     </message>
     <message>
-        <location filename="../sources/editor/ui/qetelementeditor.cpp" line="73"/>
+        <location filename="../sources/editor/ui/qetelementeditor.cpp" line="70"/>
         <source>Afficher</source>
         <comment>menu entry</comment>
         <translation>Megjelenítés</translation>
     </message>
     <message>
-        <location filename="../sources/editor/ui/qetelementeditor.cpp" line="220"/>
-        <location filename="../sources/editor/ui/qetelementeditor.cpp" line="1414"/>
+        <location filename="../sources/editor/ui/qetelementeditor.cpp" line="217"/>
+        <location filename="../sources/editor/ui/qetelementeditor.cpp" line="1421"/>
         <source>Impossible d&apos;ouvrir le fichier %1.</source>
         <comment>message box content</comment>
         <translation>Nem lehet a fájlt megnyitni %1.</translation>
     </message>
     <message>
-        <location filename="../sources/editor/ui/qetelementeditor.cpp" line="227"/>
-        <location filename="../sources/editor/ui/qetelementeditor.cpp" line="1419"/>
+        <location filename="../sources/editor/ui/qetelementeditor.cpp" line="224"/>
+        <location filename="../sources/editor/ui/qetelementeditor.cpp" line="1426"/>
         <source>Ce fichier n&apos;est pas un document XML valide</source>
         <comment>message box content</comment>
         <translation>Ez a fájl nem egy felhasználható XML dokumentum</translation>
     </message>
     <message>
-        <location filename="../sources/editor/ui/qetelementeditor.cpp" line="233"/>
-        <location filename="../sources/editor/ui/qetelementeditor.cpp" line="1425"/>
+        <location filename="../sources/editor/ui/qetelementeditor.cpp" line="230"/>
+        <location filename="../sources/editor/ui/qetelementeditor.cpp" line="1432"/>
         <source>Erreur</source>
         <comment>toolbar title</comment>
         <translation>Hiba</translation>
     </message>
     <message>
-        <location filename="../sources/editor/ui/qetelementeditor.cpp" line="244"/>
-        <location filename="../sources/editor/ui/qetelementeditor.cpp" line="314"/>
+        <location filename="../sources/editor/ui/qetelementeditor.cpp" line="241"/>
+        <location filename="../sources/editor/ui/qetelementeditor.cpp" line="311"/>
         <source>Édition en lecture seule</source>
         <comment>message box title</comment>
         <translation>Csak olvasható szerkesztés</translation>
     </message>
     <message>
-        <location filename="../sources/editor/ui/qetelementeditor.cpp" line="245"/>
-        <location filename="../sources/editor/ui/qetelementeditor.cpp" line="315"/>
+        <location filename="../sources/editor/ui/qetelementeditor.cpp" line="242"/>
+        <location filename="../sources/editor/ui/qetelementeditor.cpp" line="312"/>
         <source>Vous n&apos;avez pas les privilèges nécessaires pour modifier cet élement. Il sera donc ouvert en lecture seule.</source>
         <comment>message box content</comment>
         <translation>Nem engedélyezet ennek a elemnek a módosítása. Így, csak olvasható módban fog megnyílni.</translation>
     </message>
     <message>
-        <location filename="../sources/editor/ui/qetelementeditor.cpp" line="276"/>
-        <location filename="../sources/editor/ui/qetelementeditor.cpp" line="340"/>
+        <location filename="../sources/editor/ui/qetelementeditor.cpp" line="273"/>
+        <location filename="../sources/editor/ui/qetelementeditor.cpp" line="337"/>
         <source>Erreur</source>
         <comment>message box title</comment>
         <translation>Hiba</translation>
     </message>
     <message>
-        <location filename="../sources/editor/ui/qetelementeditor.cpp" line="277"/>
+        <location filename="../sources/editor/ui/qetelementeditor.cpp" line="274"/>
         <source>Impossible d&apos;écrire dans ce fichier</source>
         <comment>message box content</comment>
         <translation>Nem lehet írni ezt a fájl-t</translation>
     </message>
     <message>
-        <location filename="../sources/editor/ui/qetelementeditor.cpp" line="341"/>
+        <location filename="../sources/editor/ui/qetelementeditor.cpp" line="338"/>
         <source>Impossible d&apos;enregistrer l&apos;élément</source>
         <comment>message box content</comment>
         <translation>Nem lehet a fájlt menteni</translation>
     </message>
     <message>
-        <location filename="../sources/editor/ui/qetelementeditor.cpp" line="967"/>
+        <location filename="../sources/editor/ui/qetelementeditor.cpp" line="495"/>
+        <source>Trop de primitives, liste non générée: %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../sources/editor/ui/qetelementeditor.cpp" line="954"/>
         <source>To install the plugin DXFtoQET
-Visit https://download.tuxfamily.org/qet/builds/dxf_to_elmt/
+Visit https://download.qelectrotech.org/qet/builds/dxf_to_elmt/
+
+&gt;&gt; Install on Windows
+Put DXFtoQET.exe binary on C:\Users\user_name\AppData\Roaming\qet\ directory 
+</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../sources/editor/ui/qetelementeditor.cpp" line="960"/>
+        <source>To install the plugin DXFtoQET
+Visit https://download.qelectrotech.org/qet/builds/dxf_to_elmt/
+
+&gt;&gt; Install on macOSX
+Put DXFtoQET.app binary on /Users/user_name/.qet/ directory 
+</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../sources/editor/ui/qetelementeditor.cpp" line="966"/>
+        <source>To install the plugin DXFtoQET
+Visit https://download.qelectrotech.org/qet/builds/dxf_to_elmt/
+
+&gt;&gt; Install on Linux
+Put DXFtoQET binary on your /home/user_name/.qet/ directory
+make it executable : chmod +x ./DXFtoQET
+</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../sources/editor/ui/qetelementeditor.cpp" line="974"/>
+        <source>To install the plugin DXFtoQET
+Visit https://download.qelectrotech.org/qet/builds/dxf_to_elmt/
 
 &gt;&gt; Install on Linux
 Put DXFtoQET binary on your /home/user_name/.qet/ directory
@@ -7090,31 +7252,45 @@ Put DXFtoQET.exe binary on C:\Users\user_name\AppData\Roaming\qet\ directory
 &gt;&gt; Install on macOSX
 Put DXFtoQET.app binary on /Users/user_name/.qet/ directory 
 </source>
-        <translation>A DXFtoQET beépülő modul telepítése
-Látogass el a https://download.tuxfamily.org/qet/builds/dxf_to_elmt/
-
-&gt;&gt; Telepítés Linux-on
-Helyezd a DXFtoQET bináris fájlt a saját /home/user_name/.qet/ könyvtárba,
-készíts végrehajtható exe fájlt : chmod +x ./DXFtoQET
-&gt;&gt; Telepítés Windows-on
-Helyezd a DXFtoQET.exe fájlt a C:\Users\user_name\AppData\Roaming\qet\ könyvtárba 
-
-&gt;&gt; Telepítés macOSX-en
-Helyezd a DXFtoQET.app fájlt a /Users/user_name/.qet/ könyvtárba 
-</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../sources/editor/ui/qetelementeditor.cpp" line="1057"/>
+        <location filename="../sources/editor/ui/qetelementeditor.cpp" line="1015"/>
+        <source>Ctrl+W</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../sources/editor/ui/qetelementeditor.cpp" line="1065"/>
         <source>Ajouter un texte d&apos;élément non éditable dans les schémas</source>
         <translation>Nem szerkeszthető elemszöveg hozzáadása a tervlapokon</translation>
     </message>
     <message>
-        <location filename="../sources/editor/ui/qetelementeditor.cpp" line="1058"/>
+        <location filename="../sources/editor/ui/qetelementeditor.cpp" line="1066"/>
         <source>Ajouter un texte d&apos;élément pouvant être édité dans les schémas</source>
         <translation>Szerkeszthető elemszöveg hozzáadása a tervlapokon</translation>
     </message>
+    <message>
+        <location filename="../sources/editor/ui/qetelementeditor.cpp" line="1256"/>
+        <location filename="../sources/editor/ui/qetelementeditor.cpp" line="1285"/>
+        <location filename="../sources/editor/ui/qetelementeditor.cpp" line="1369"/>
+        <source>L&apos;enregistrement à échoué,
+les conditions requises ne sont pas valides</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../sources/editor/ui/qetelementeditor.cpp" line="1513"/>
+        <source>Avertissement</source>
+        <translation>Figyelem</translation>
+    </message>
+    <message>
+        <location filename="../sources/editor/ui/qetelementeditor.cpp" line="1513"/>
+        <source>L&apos;import d&apos;un dxf volumineux peut prendre du temps 
+veuillez patienter durant l&apos;import...</source>
+        <translation>Nagyméretű DXF file importálása eltarthat egy ideig 
+kérlek várd meg a befejezését...</translation>
+    </message>
     <message numerus="yes">
-        <location filename="../sources/editor/ui/qetelementeditor.cpp" line="778"/>
+        <location filename="../sources/editor/ui/qetelementeditor.cpp" line="785"/>
         <source> %n avertissement(s)</source>
         <comment>warnings</comment>
         <translation>
@@ -7122,103 +7298,90 @@ Helyezd a DXFtoQET.app fájlt a /Users/user_name/.qet/ könyvtárba
         </translation>
     </message>
     <message>
-        <location filename="../sources/editor/ui/qetelementeditor.cpp" line="838"/>
+        <location filename="../sources/editor/ui/qetelementeditor.cpp" line="845"/>
         <source>Impossible d&apos;ouvrir le fichier</source>
         <comment>message box title</comment>
         <translation>Nem lehet a fájlt megnyitni</translation>
     </message>
     <message>
-        <location filename="../sources/editor/ui/qetelementeditor.cpp" line="840"/>
+        <location filename="../sources/editor/ui/qetelementeditor.cpp" line="847"/>
         <source>Il semblerait que le fichier %1 que vous essayez d&apos;ouvrir n&apos;existe pas ou plus.</source>
         <translation>Úgy tűnik %1 fájl amelyiket megpróbáltad megnyitni nem létezik, vagy nem létezik többé.</translation>
     </message>
     <message>
-        <location filename="../sources/editor/ui/qetelementeditor.cpp" line="1371"/>
+        <location filename="../sources/editor/ui/qetelementeditor.cpp" line="1378"/>
         <source>Recharger l&apos;élément</source>
         <comment>dialog title</comment>
         <translation>Elem újratöltése</translation>
     </message>
     <message>
-        <location filename="../sources/editor/ui/qetelementeditor.cpp" line="1372"/>
+        <location filename="../sources/editor/ui/qetelementeditor.cpp" line="1379"/>
         <source>Vous avez efffectué des modifications sur cet élément. Si vous le rechargez, ces modifications seront perdues. Voulez-vous vraiment recharger l&apos;élément ?</source>
         <comment>dialog content</comment>
         <translation>Az elem módosítva lett az utolsó mentés óta. Ha újratöltöd, ezek a változások elvesznek. Biztosan akarod az elem újratöltését?</translation>
     </message>
     <message>
-        <location filename="../sources/editor/ui/qetelementeditor.cpp" line="1249"/>
-        <location filename="../sources/editor/ui/qetelementeditor.cpp" line="1278"/>
-        <location filename="../sources/editor/ui/qetelementeditor.cpp" line="1362"/>
+        <location filename="../sources/editor/ui/qetelementeditor.cpp" line="1256"/>
+        <location filename="../sources/editor/ui/qetelementeditor.cpp" line="1285"/>
+        <location filename="../sources/editor/ui/qetelementeditor.cpp" line="1369"/>
         <source>Echec de l&apos;enregistrement</source>
         <translation>Regisztráció sikertelen</translation>
     </message>
     <message>
-        <location filename="../sources/editor/ui/qetelementeditor.cpp" line="1249"/>
-        <location filename="../sources/editor/ui/qetelementeditor.cpp" line="1278"/>
-        <location filename="../sources/editor/ui/qetelementeditor.cpp" line="1362"/>
-        <source>L&apos;enregistrement à échoué,
-les conditions requises ne sont pas valides</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="../sources/editor/ui/qetelementeditor.cpp" line="1335"/>
+        <location filename="../sources/editor/ui/qetelementeditor.cpp" line="1342"/>
         <source>Enregistrer sous</source>
         <comment>dialog title</comment>
         <translation>Mentés más néven</translation>
     </message>
     <message>
-        <location filename="../sources/editor/ui/qetelementeditor.cpp" line="1337"/>
+        <location filename="../sources/editor/ui/qetelementeditor.cpp" line="1344"/>
         <source>Éléments QElectroTech (*.elmt)</source>
         <comment>filetypes allowed when saving an element file</comment>
         <translation>QElectroTech elemek (*.elmt)</translation>
     </message>
     <message>
-        <location filename="../sources/editor/ui/qetelementeditor.cpp" line="877"/>
+        <location filename="../sources/editor/ui/qetelementeditor.cpp" line="884"/>
         <source>Enregistrer l&apos;élément en cours ?</source>
         <comment>dialog title</comment>
         <translation>Mented a jelenlegi elemet?</translation>
     </message>
     <message>
-        <location filename="../sources/editor/ui/qetelementeditor.cpp" line="879"/>
+        <location filename="../sources/editor/ui/qetelementeditor.cpp" line="886"/>
         <source>Voulez-vous enregistrer l&apos;élément %1 ?</source>
         <comment>dialog content - %1 is an element name</comment>
         <translation>Szeretnéd menteni az elemet %1?</translation>
     </message>
     <message>
-        <location filename="../sources/editor/ui/qetelementeditor.cpp" line="490"/>
-        <source>Trop de primitives, liste non générée.</source>
-        <translation>Túl sok alkatrész, a lista nincs feldolgozva.</translation>
-    </message>
-    <message>
-        <location filename="../sources/editor/ui/qetelementeditor.cpp" line="425"/>
+        <location filename="../sources/editor/ui/qetelementeditor.cpp" line="422"/>
         <source>Ouvrir un fichier</source>
         <comment>dialog title</comment>
         <translation>Fájl megnyitása</translation>
     </message>
     <message>
-        <location filename="../sources/editor/ui/qetelementeditor.cpp" line="427"/>
+        <location filename="../sources/editor/ui/qetelementeditor.cpp" line="424"/>
         <source>Éléments QElectroTech (*.elmt);;Fichiers XML (*.xml);;Tous les fichiers (*)</source>
         <comment>filetypes allowed when opening an element file</comment>
         <translation>QElectroTech projekt(*.qet);;XML fájlok (*.xml);;minden fájl (*)</translation>
     </message>
     <message>
-        <location filename="../sources/editor/ui/qetelementeditor.cpp" line="291"/>
-        <location filename="../sources/editor/ui/qetelementeditor.cpp" line="297"/>
-        <location filename="../sources/editor/ui/qetelementeditor.cpp" line="1440"/>
-        <location filename="../sources/editor/ui/qetelementeditor.cpp" line="1446"/>
+        <location filename="../sources/editor/ui/qetelementeditor.cpp" line="288"/>
+        <location filename="../sources/editor/ui/qetelementeditor.cpp" line="294"/>
+        <location filename="../sources/editor/ui/qetelementeditor.cpp" line="1447"/>
+        <location filename="../sources/editor/ui/qetelementeditor.cpp" line="1453"/>
         <source>Élément inexistant.</source>
         <comment>message box title</comment>
         <translation>Nem létező elem.</translation>
     </message>
     <message>
-        <location filename="../sources/editor/ui/qetelementeditor.cpp" line="298"/>
-        <location filename="../sources/editor/ui/qetelementeditor.cpp" line="1447"/>
+        <location filename="../sources/editor/ui/qetelementeditor.cpp" line="295"/>
+        <location filename="../sources/editor/ui/qetelementeditor.cpp" line="1454"/>
         <source>L&apos;élément n&apos;existe pas.</source>
         <comment>message box content</comment>
         <translation>Az elem nem létezik.</translation>
     </message>
     <message>
-        <location filename="../sources/editor/ui/qetelementeditor.cpp" line="292"/>
-        <location filename="../sources/editor/ui/qetelementeditor.cpp" line="1441"/>
+        <location filename="../sources/editor/ui/qetelementeditor.cpp" line="289"/>
+        <location filename="../sources/editor/ui/qetelementeditor.cpp" line="1448"/>
         <source>Le chemin virtuel choisi ne correspond pas à un élément.</source>
         <comment>message box content</comment>
         <translation>A kiválasztott virtuális elérési útvonal nem tartozik egy elemhez sem.</translation>
@@ -7354,76 +7517,92 @@ les conditions requises ne sont pas valides</source>
 <context>
     <name>QETProject</name>
     <message>
-        <location filename="../sources/qetproject.cpp" line="359"/>
+        <location filename="../sources/qetproject.cpp" line="394"/>
         <source>Projet « %1 : %2»</source>
         <comment>displayed title for a ProjectView - %1 is the project title, -%2 is the project path</comment>
         <translation>Projekt « %1 : %2»</translation>
     </message>
     <message>
-        <location filename="../sources/qetproject.cpp" line="366"/>
+        <location filename="../sources/qetproject.cpp" line="401"/>
         <source>Projet %1</source>
         <comment>displayed title for a title-less project - %1 is the file name</comment>
         <translation>Projektek %1</translation>
     </message>
     <message>
-        <location filename="../sources/qetproject.cpp" line="373"/>
+        <location filename="../sources/qetproject.cpp" line="408"/>
         <source>Projet sans titre</source>
         <comment>displayed title for a project-less, file-less project</comment>
         <translation>Cím nélküli projekt</translation>
     </message>
     <message>
-        <location filename="../sources/qetproject.cpp" line="382"/>
+        <location filename="../sources/qetproject.cpp" line="417"/>
         <source>%1 [lecture seule]</source>
         <comment>displayed title for a read-only project - %1 is a displayable title</comment>
         <translation>%1 [csak olvasható]</translation>
     </message>
     <message>
-        <location filename="../sources/qetproject.cpp" line="390"/>
+        <location filename="../sources/qetproject.cpp" line="425"/>
         <source>%1 [modifié]</source>
         <comment>displayed title for a modified project - %1 is a displayable title</comment>
         <translation>%1 [megváltozott]</translation>
     </message>
     <message>
-        <location filename="../sources/qetproject.cpp" line="1168"/>
+        <location filename="../sources/qetproject.cpp" line="1206"/>
         <source>Une erreur s&apos;est produite durant l&apos;intégration du modèle.</source>
         <comment>error message</comment>
         <translation>Hiba történt a sablon integrációja közben.</translation>
     </message>
     <message>
-        <location filename="../sources/qetproject.cpp" line="1325"/>
+        <location filename="../sources/qetproject.cpp" line="1359"/>
         <source>Avertissement</source>
         <comment>message box title</comment>
         <translation>Figyelem</translation>
     </message>
     <message>
-        <location filename="../sources/qetproject.cpp" line="1327"/>
-        <source>Ce document semble avoir été enregistré avec une version ultérieure de QElectroTech. Il est possible que l&apos;ouverture de tout ou partie de ce document échoue.
-Que désirez vous faire ?</source>
-        <comment>message box content</comment>
-        <translation>Úgy tűnik ez a dokumentum a QElectroTech újabb verziójával lett elmentve. Az egész, vagy egy részének a megnyitása nem sikerül. Mit szeretnél tenni?</translation>
+        <location filename="../sources/qetproject.cpp" line="1361"/>
+        <source>Ce document semble avoir été enregistré avec une version %1
+ qui est ultérieure à votre version ! 
+Vous utilisez actuellement QElectroTech en version %2</source>
+        <translation>Ez a megjelenített dokumentum az alábbi verzióban lett mente %1
+ez későbbi verzió a jelenlegihez képest! 
+Jelenleg használt QElectroTech verzió %2</translation>
     </message>
     <message>
-        <location filename="../sources/qetproject.cpp" line="1348"/>
+        <location filename="../sources/qetproject.cpp" line="1366"/>
+        <source>.
+ Il est alors possible que l&apos;ouverture de tout ou partie de ce document échoue.
+Que désirez vous faire ?</source>
+        <translation>.
+Lehetséges, hogy a dokumentum teljes egéssze, vagy egy része nem nyitható meg.
+Mit szeretnél tenni?</translation>
+    </message>
+    <message>
+        <location filename="../sources/qetproject.cpp" line="1386"/>
         <source>Avertissement </source>
         <comment>message box title</comment>
         <translation>Figyelem </translation>
     </message>
     <message>
-        <location filename="../sources/qetproject.cpp" line="1349"/>
-        <source>Le projet que vous tentez d&apos;ouvrir est partiellement compatible avec votre version de QElectroTech.
-Afin de le rendre totalement compatible veuillez ouvrir ce même projet avec la version 0.8 de QElectroTech sauvegarder le projet et l&apos;ouvrir à  nouveau avec cette version.
-Que désirez vous faire ?</source>
-        <translation>A megnyitni kívánt projekt részben kompatibilis a QElectroTech verziójával.
-Annak érdekében, hogy teljes mértékben kompatibilis legyen, kérjük, nyissa meg ugyanazt a projektet a QElectroTech 0.8 verziójával, mentse a projektet, és nyissa meg újra ezzel a verzióval.
-Mit akarsz csinálni?</translation>
+        <location filename="../sources/qetproject.cpp" line="1387"/>
+        <source>Le projet que vous tentez d&apos;ouvrir est partiellement compatible avec votre version %1 de QElectroTech.
+</source>
+        <translation>A megnyitni próbált projekt részlegesen kompatibilis a QElecroTech %1 verziójával.
+</translation>
     </message>
     <message>
-        <location filename="../sources/qetproject.cpp" line="1417"/>
+        <location filename="../sources/qetproject.cpp" line="1390"/>
+        <source>Afin de le rendre totalement compatible veuillez ouvrir ce même projet avec la version 0.8, ou 0.80 de QElectroTech et sauvegarder le projet et l&apos;ouvrir à  nouveau avec cette version.
+Que désirez vous faire ?</source>
+        <translation>A teljes kompatibilitás elérése érdekében nyissa meg ugyanezt a projektet a QElectroTech 0.8-as vagy 0.80-as verziójával, mentse el a projektet, majd nyissa meg újra ezzel a verzióval.
+Mit szeretnél csinálni?</translation>
+    </message>
+    <message>
+        <location filename="../sources/qetproject.cpp" line="1461"/>
         <source>&lt;p align=&quot;center&quot;&gt;&lt;b&gt;Ouverture du projet en cours...&lt;/b&gt;&lt;br/&gt;Création des folios&lt;/p&gt;</source>
         <translation>&lt;p align=&quot;center&quot;&gt;&lt;b&gt;Projekt megnyitása ...&lt;/b&gt;&lt;br/&gt;Tervlap létrehozása&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../sources/qetproject.cpp" line="1459"/>
+        <location filename="../sources/qetproject.cpp" line="1503"/>
         <source>&lt;p align=&quot;center&quot;&gt;&lt;b&gt;Ouverture du projet en cours...&lt;/b&gt;&lt;br/&gt;Mise en place des références croisées&lt;/p&gt;</source>
         <translation>&lt;p align=&quot;center&quot;&gt;&lt;b&gt;Projekt megnyitása ...&lt;/b&gt;&lt;br/&gt;Kereszthivatkozások beállítása&lt;/p&gt;</translation>
     </message>
@@ -7786,13 +7965,13 @@ Mit akarsz csinálni?</translation>
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../sources/conductorautonumerotation.cpp" line="103"/>
+        <location filename="../sources/conductorautonumerotation.cpp" line="102"/>
         <source>Modifier les propriétés d&apos;un conducteur</source>
         <comment>undo caption</comment>
         <translation>Vezeték tulajdonságainak szerkesztése</translation>
     </message>
     <message>
-        <location filename="../sources/conductorautonumerotation.cpp" line="112"/>
+        <location filename="../sources/conductorautonumerotation.cpp" line="111"/>
         <source>Modifier les propriétés de plusieurs conducteurs</source>
         <comment>undo caption</comment>
         <translation>Több vezető tulajdonságának szerkesztése</translation>
@@ -7831,26 +8010,26 @@ Mit akarsz csinálni?</translation>
         <translation>Kivágás %1</translation>
     </message>
     <message>
-        <location filename="../sources/diagramcommands.cpp" line="184"/>
-        <location filename="../sources/diagramcommands.cpp" line="395"/>
+        <location filename="../sources/diagramcommands.cpp" line="248"/>
+        <location filename="../sources/undocommand/movegraphicsitemcommand.cpp" line="53"/>
         <source>déplacer %1</source>
         <comment>undo caption - %1 is a sentence listing the moved content</comment>
         <translation>Áthelyezés %1</translation>
     </message>
     <message>
-        <location filename="../sources/diagramcommands.cpp" line="417"/>
+        <location filename="../sources/diagramcommands.cpp" line="270"/>
         <source>modifier le texte</source>
         <comment>undo caption</comment>
         <translation>Szöveg módosítása</translation>
     </message>
     <message>
-        <location filename="../sources/diagramcommands.cpp" line="469"/>
+        <location filename="../sources/diagramcommands.cpp" line="322"/>
         <source>modifier un conducteur</source>
         <comment>undo caption</comment>
         <translation>Egy vezető módosítása</translation>
     </message>
     <message>
-        <location filename="../sources/diagramcommands.cpp" line="539"/>
+        <location filename="../sources/diagramcommands.cpp" line="392"/>
         <source>Réinitialiser %1</source>
         <comment>undo caption - %1 is a sentence listing the reset content</comment>
         <translation>Visszaállítás %1</translation>
@@ -7862,7 +8041,7 @@ Mit akarsz csinálni?</translation>
         <translation>szövegmező módosítása</translation>
     </message>
     <message>
-        <location filename="../sources/diagramcommands.cpp" line="590"/>
+        <location filename="../sources/diagramcommands.cpp" line="443"/>
         <source>modifier les dimensions du folio</source>
         <comment>undo caption</comment>
         <translation>Tervlap méretének megváltoztatása</translation>
@@ -7909,84 +8088,78 @@ Mit akarsz csinálni?</translation>
         <translation>Nem lehet a fájlt betölteni.</translation>
     </message>
     <message>
-        <location filename="../sources/editor/editorcommands.cpp" line="105"/>
+        <location filename="../sources/editor/UndoCommand/deletepartscommand.cpp" line="34"/>
         <source>suppression</source>
         <comment>undo caption</comment>
         <translation>törlés</translation>
     </message>
     <message>
-        <location filename="../sources/editor/editorcommands.cpp" line="155"/>
+        <location filename="../sources/editor/editorcommands.cpp" line="107"/>
         <source>couper des parties</source>
         <comment>undo caption</comment>
         <translation>Részlet kivágása</translation>
     </message>
     <message>
-        <location filename="../sources/editor/editorcommands.cpp" line="177"/>
+        <location filename="../sources/editor/editorcommands.cpp" line="129"/>
         <source>déplacement</source>
         <comment>undo caption</comment>
         <translation>áthelyezés</translation>
     </message>
     <message>
-        <location filename="../sources/editor/editorcommands.cpp" line="220"/>
-        <source>ajout %1</source>
-        <comment>undo caption</comment>
-        <translation>beszúrás %1</translation>
-    </message>
-    <message>
-        <location filename="../sources/editor/editorcommands.cpp" line="271"/>
+        <location filename="../sources/editor/editorcommands.cpp" line="171"/>
         <source>modification noms</source>
         <comment>undo caption</comment>
         <translation>név módosítás</translation>
     </message>
     <message>
-        <location filename="../sources/editor/editorcommands.cpp" line="320"/>
+        <location filename="../sources/editor/editorcommands.cpp" line="220"/>
         <source>amener au premier plan</source>
         <comment>undo caption</comment>
         <translation>előre hoz</translation>
     </message>
     <message>
-        <location filename="../sources/editor/editorcommands.cpp" line="323"/>
+        <location filename="../sources/editor/editorcommands.cpp" line="223"/>
         <source>rapprocher</source>
         <comment>undo caption</comment>
         <translation>emel</translation>
     </message>
     <message>
-        <location filename="../sources/editor/editorcommands.cpp" line="326"/>
+        <location filename="../sources/editor/editorcommands.cpp" line="226"/>
         <source>éloigner</source>
         <comment>undo caption</comment>
         <translation>süllyeszt</translation>
     </message>
     <message>
-        <location filename="../sources/editor/editorcommands.cpp" line="329"/>
+        <location filename="../sources/editor/editorcommands.cpp" line="229"/>
         <source>envoyer au fond</source>
         <comment>undo caption</comment>
         <translation>hátra küld</translation>
     </message>
     <message>
-        <location filename="../sources/editor/editorcommands.cpp" line="446"/>
+        <location filename="../sources/editor/editorcommands.cpp" line="346"/>
         <source>modification informations complementaires</source>
         <comment>undo caption</comment>
         <translation>A kiegészítő információ módosítása</translation>
     </message>
     <message>
-        <location filename="../sources/editor/editorcommands.cpp" line="578"/>
+        <location filename="../sources/editor/editorcommands.cpp" line="478"/>
         <source>redimensionnement %1</source>
         <comment>undo caption -- %1 is the resized primitive type name</comment>
         <translation>méretezés %1</translation>
     </message>
     <message>
-        <location filename="../sources/editor/editorcommands.cpp" line="580"/>
+        <location filename="../sources/editor/editorcommands.cpp" line="480"/>
         <source>redimensionnement de %1 primitives</source>
         <comment>undo caption -- %1 always &gt; 1</comment>
         <translation>%1 egyszerű méretezés</translation>
     </message>
     <message>
-        <location filename="../sources/editor/editorcommands.cpp" line="600"/>
+        <location filename="../sources/editor/editorcommands.cpp" line="500"/>
         <source>Modifier les propriétées de l&apos;élément</source>
         <translation>Elem tulajdonságainak szerkesztése</translation>
     </message>
     <message>
-        <location filename="../sources/editor/editorcommands.cpp" line="614"/>
+        <location filename="../sources/editor/editorcommands.cpp" line="514"/>
         <source>Pivoter la selection</source>
         <comment>undo caption</comment>
         <translation>A kijelölés forgatása</translation>
@@ -8018,6 +8191,7 @@ Mit akarsz csinálni?</translation>
     </message>
     <message>
         <location filename="../sources/editor/esevent/eseventaddterminal.cpp" line="65"/>
+        <location filename="../sources/editor/graphicspart/partterminal.h" line="84"/>
         <source>Borne</source>
         <translation>sorkapocs</translation>
     </message>
@@ -8096,37 +8270,37 @@ Mit akarsz csinálni?</translation>
         <translation> szöveg csoport</translation>
     </message>
     <message>
-        <location filename="../sources/exportdialog.cpp" line="989"/>
+        <location filename="../sources/exportdialog.cpp" line="999"/>
         <source>Folio sans titre</source>
         <translation>Cím nélküli tervlap</translation>
     </message>
     <message>
-        <location filename="../sources/exportdialog.cpp" line="991"/>
+        <location filename="../sources/exportdialog.cpp" line="1001"/>
         <source>schema</source>
         <translation>Terv</translation>
     </message>
     <message>
-        <location filename="../sources/exportdialog.cpp" line="1016"/>
+        <location filename="../sources/exportdialog.cpp" line="1026"/>
         <source>Conserver les proportions</source>
         <translation>Képarány megtartása</translation>
     </message>
     <message>
-        <location filename="../sources/exportdialog.cpp" line="1020"/>
+        <location filename="../sources/exportdialog.cpp" line="1030"/>
         <source>Réinitialiser les dimensions</source>
         <translation>Méret visszaállítása</translation>
     </message>
     <message>
-        <location filename="../sources/exportdialog.cpp" line="1024"/>
+        <location filename="../sources/exportdialog.cpp" line="1034"/>
         <source>Aperçu</source>
         <translation>Előnézet</translation>
     </message>
     <message>
-        <location filename="../sources/exportdialog.cpp" line="1028"/>
+        <location filename="../sources/exportdialog.cpp" line="1038"/>
         <source>Exporter vers le presse-papier</source>
         <translation>Exportálás a vágólapra</translation>
     </message>
     <message numerus="yes">
-        <location filename="../sources/qet.cpp" line="273"/>
+        <location filename="../sources/qet.cpp" line="274"/>
         <source>%n élément(s)</source>
         <comment>part of a sentence listing the content of a diagram</comment>
         <translation>
@@ -8134,7 +8308,7 @@ Mit akarsz csinálni?</translation>
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../sources/qet.cpp" line="282"/>
+        <location filename="../sources/qet.cpp" line="283"/>
         <source>%n conducteur(s)</source>
         <comment>part of a sentence listing the content of a diagram</comment>
         <translation>
@@ -8142,7 +8316,7 @@ Mit akarsz csinálni?</translation>
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../sources/qet.cpp" line="291"/>
+        <location filename="../sources/qet.cpp" line="292"/>
         <source>%n champ(s) de texte</source>
         <comment>part of a sentence listing the content of a diagram</comment>
         <translation>
@@ -8150,7 +8324,7 @@ Mit akarsz csinálni?</translation>
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../sources/qet.cpp" line="300"/>
+        <location filename="../sources/qet.cpp" line="301"/>
         <source>%n image(s)</source>
         <comment>part of a sentence listing the content of a diagram</comment>
         <translation>
@@ -8158,7 +8332,7 @@ Mit akarsz csinálni?</translation>
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../sources/qet.cpp" line="309"/>
+        <location filename="../sources/qet.cpp" line="310"/>
         <source>%n forme(s)</source>
         <comment>part of a sentence listing the content of a diagram</comment>
         <translation>
@@ -8166,7 +8340,7 @@ Mit akarsz csinálni?</translation>
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../sources/qet.cpp" line="318"/>
+        <location filename="../sources/qet.cpp" line="319"/>
         <source>%n texte(s) d&apos;élément</source>
         <comment>part of a sentence listing the content of a diagram</comment>
         <translation>
@@ -8174,100 +8348,108 @@ Mit akarsz csinálni?</translation>
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../sources/qet.cpp" line="326"/>
+        <location filename="../sources/qet.cpp" line="327"/>
         <source>%n tableau(s)</source>
         <comment>part of a sentence listing the content of diagram</comment>
         <translation>
             <numerusform>%n táblázat(ok)</numerusform>
         </translation>
     </message>
+    <message numerus="yes">
+        <location filename="../sources/qet.cpp" line="335"/>
+        <source>%n plan de bornes</source>
+        <comment>part of a sentence listing the content of a diagram</comment>
+        <translation>
+            <numerusform>%n sorkapocs terv</numerusform>
+        </translation>
+    </message>
     <message>
-        <location filename="../sources/qet.cpp" line="396"/>
+        <location filename="../sources/qet.cpp" line="405"/>
         <source>Le fichier texte contenant la licence GNU/GPL est introuvable - bon bah de toute façon, vous la connaissez par coeur non ?</source>
         <translation>A szövegfájl, ami a GNU/GPL engedélyt tartalmazza nem található - viszont, Te ezt a szíveddel érzed, ugye?</translation>
     </message>
     <message>
-        <location filename="../sources/qet.cpp" line="400"/>
+        <location filename="../sources/qet.cpp" line="409"/>
         <source>Le fichier texte contenant la licence GNU/GPL existe mais n&apos;a pas pu être ouvert - bon bah de toute façon, vous la connaissez par coeur non ?</source>
         <translation>A szövegfájl, ami a GNU/GPL engedélyt tartalmazza létezik, de nem lehetet megnyitni - viszont, Te ezt a szíveddel érzed, ugye?</translation>
     </message>
     <message>
-        <location filename="../sources/qet.cpp" line="623"/>
-        <location filename="../sources/qet.cpp" line="754"/>
-        <location filename="../sources/qetxml.cpp" line="269"/>
+        <location filename="../sources/qet.cpp" line="632"/>
+        <location filename="../sources/qet.cpp" line="767"/>
+        <location filename="../sources/qetxml.cpp" line="270"/>
         <source>Impossible d&apos;ouvrir le fichier %1 en écriture, erreur %2 rencontrée.</source>
         <comment>error message when attempting to write an XML file</comment>
         <translation>%1 fájlt nem lehet megnyitni az íráshoz, %2 hiba történt.</translation>
     </message>
     <message>
-        <location filename="../sources/qet.cpp" line="644"/>
+        <location filename="../sources/qet.cpp" line="653"/>
         <source>Une erreur est survenue lors de l&apos;écriture du fichier %1, erreur %2 rencontrée.</source>
         <comment>error message when attempting to write an XML file</comment>
         <translation>Hiba történt a fijl írása közben %1, %2 hiba történt.</translation>
     </message>
     <message>
-        <location filename="../sources/qet.cpp" line="718"/>
+        <location filename="../sources/qet.cpp" line="731"/>
         <source>Amener au premier plan</source>
         <translation>Előre hoz</translation>
     </message>
     <message>
-        <location filename="../sources/qet.cpp" line="719"/>
+        <location filename="../sources/qet.cpp" line="732"/>
         <source>Rapprocher</source>
         <translation>Emel</translation>
     </message>
     <message>
-        <location filename="../sources/qet.cpp" line="720"/>
+        <location filename="../sources/qet.cpp" line="733"/>
         <source>Éloigner</source>
         <translation>Süllyeszt</translation>
     </message>
     <message>
-        <location filename="../sources/qet.cpp" line="721"/>
+        <location filename="../sources/qet.cpp" line="734"/>
         <source>Envoyer au fond</source>
         <translation>Hátra küld</translation>
     </message>
     <message>
-        <location filename="../sources/qet.cpp" line="723"/>
+        <location filename="../sources/qet.cpp" line="736"/>
         <source>Ramène la ou les sélections au premier plan</source>
         <translation>A kiválasztás(ok) előre hozása</translation>
     </message>
     <message>
-        <location filename="../sources/qet.cpp" line="724"/>
+        <location filename="../sources/qet.cpp" line="737"/>
         <source>Rapproche la ou les sélections</source>
         <translation>A kiválasztás(ok) közelítése</translation>
     </message>
     <message>
-        <location filename="../sources/qet.cpp" line="725"/>
+        <location filename="../sources/qet.cpp" line="738"/>
         <source>Éloigne la ou les sélections</source>
         <translation>A kiválasztás(ok) távolítása le</translation>
     </message>
     <message>
-        <location filename="../sources/qet.cpp" line="726"/>
+        <location filename="../sources/qet.cpp" line="739"/>
         <source>Envoie en arrière plan la ou les sélections</source>
         <translation>A kiválasztás(ok) hátra küldése</translation>
     </message>
     <message>
-        <location filename="../sources/qet.cpp" line="728"/>
+        <location filename="../sources/qet.cpp" line="741"/>
         <source>Ctrl+Shift+Up</source>
         <translation>Ctrl+Shift+Up</translation>
     </message>
     <message>
-        <location filename="../sources/qet.cpp" line="729"/>
+        <location filename="../sources/qet.cpp" line="742"/>
         <source>Ctrl+Shift+Down</source>
         <translation>Ctrl+Shift+Down</translation>
     </message>
     <message>
-        <location filename="../sources/qet.cpp" line="730"/>
+        <location filename="../sources/qet.cpp" line="743"/>
         <source>Ctrl+Shift+End</source>
         <translation>Ctrl+Shift+End</translation>
     </message>
     <message>
-        <location filename="../sources/qet.cpp" line="731"/>
+        <location filename="../sources/qet.cpp" line="744"/>
         <source>Ctrl+Shift+Home</source>
         <translation>Ctrl+Shift+Home</translation>
     </message>
     <message>
-        <location filename="../sources/factory/elementpicturefactory.cpp" line="164"/>
-        <location filename="../sources/qetgraphicsitem/element.cpp" line="438"/>
+        <location filename="../sources/factory/elementpicturefactory.cpp" line="162"/>
+        <location filename="../sources/qetgraphicsitem/element.cpp" line="436"/>
         <source>Avertissement : l&apos;élément  a été enregistré avec une version ultérieure de QElectroTech.</source>
         <translation>Figyelem: a QElectrotech sokkal régebbi verziójával lett elmentve.</translation>
     </message>
@@ -8482,11 +8664,16 @@ Mit akarsz csinálni?</translation>
     </message>
     <message>
         <location filename="../sources/ElementsCollection/fileelementcollectionitem.cpp" line="126"/>
+        <source>Collection Company</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../sources/ElementsCollection/fileelementcollectionitem.cpp" line="128"/>
         <source>Collection utilisateur</source>
         <translation>Felhasználói gyűjtemény</translation>
     </message>
     <message>
-        <location filename="../sources/ElementsCollection/fileelementcollectionitem.cpp" line="128"/>
+        <location filename="../sources/ElementsCollection/fileelementcollectionitem.cpp" line="130"/>
         <source>Collection inconnue</source>
         <translation>Ismeretlen gyűjtemény</translation>
     </message>
@@ -8501,7 +8688,7 @@ Mit akarsz csinálni?</translation>
         <translation>Gyűjtemény</translation>
     </message>
     <message numerus="yes">
-        <location filename="../sources/elementsmover.cpp" line="191"/>
+        <location filename="../sources/elementsmover.cpp" line="205"/>
         <source>Ajouter %n conducteur(s)</source>
         <comment>add a numbers of conductor one or more</comment>
         <translation>
@@ -8625,6 +8812,7 @@ Cserélni akarod?</translation>
     </message>
     <message>
         <location filename="../sources/ElementsCollection/elementscollectionwidget.cpp" line="202"/>
+        <location filename="../sources/ElementsCollection/elementscollectionwidget.cpp" line="644"/>
         <source>chargement %p% (%v sur %m)</source>
         <translation>betöltés %p% (%v on %m)</translation>
     </message>
@@ -8841,22 +9029,22 @@ Cserélni akarod?</translation>
         <translation>Vezetékek létrehozása</translation>
     </message>
     <message>
-        <location filename="../sources/qetdiagrameditor.cpp" line="2392"/>
+        <location filename="../sources/qetdiagrameditor.cpp" line="2411"/>
         <source>To install the plugin qet_tb_generator&lt;br&gt;Visit :&lt;br&gt;&lt;a href=&apos;https://pypi.python.org/pypi/qet-tb-generator&apos;&gt;qet-tb-generator&lt;/a&gt;&lt;br&gt;Requires python 3.5 or above.&lt;br&gt;&lt;B&gt;&lt;U&gt; First install on Windows&lt;/B&gt;&lt;/U&gt;&lt;br&gt;1. Install, if required, python 3.5 or above&lt;br&gt; Visit :&lt;br&gt;&lt;a href=&apos;https://www.python.org/downloads/&apos;&gt;python.org&lt;/a&gt;&lt;br&gt;2. pip install qet_tb_generator&lt;br&gt;&lt;B&gt;&lt;U&gt; Update on Windows&lt;/B&gt;&lt;/U&gt;&lt;br&gt;python -m pip install --upgrade qet_tb_generator&lt;br&gt;&gt;&gt;user could launch in a terminal this script in this directory&lt;br&gt; C:\users\XXXX\AppData\Local\Programs\Python\Python36-32\Scripts   &lt;br&gt;</source>
         <translation>A qet_tb_generator beépülő modul telepítésehez&lt;br&gt;Látogass el:&lt;br&gt;&lt;a href=&apos;https://pypi.python.org/pypi/qet-tb-generator&apos;&gt;qet-tb-generator&lt;/a&gt;&lt;br&gt;Szükséges hozzá python 3.5 vagy, magasabb verziója.&lt;br&gt;&lt;B&gt;&lt;U&gt; Első telepítés Windowson&lt;/B&gt;&lt;/U&gt;&lt;br&gt;1. Python 3.5 vagy, magasabb verziójának telepítése, ha szükséges&lt;br&gt; Látogass el :&lt;br&gt;&lt;a href=&apos;https://www.python.org/downloads/&apos;&gt;python.org&lt;/a&gt;&lt;br&gt;2. parancssorba gépelve: pip install qet_tb_generator&lt;br&gt;&lt;B&gt;&lt;U&gt; Frissítés Windowson&lt;/B&gt;&lt;/U&gt;&lt;br&gt;parancssorba gépelve: python -m pip install --upgrade qet_tb_generator&lt;br&gt;&gt;&gt;a felhasználó ezt a script-et a terminálban indíthatja el és ebben a könyvtárban található &lt;br&gt; C:\users\XXXX\AppData\Local\Programs\Python\Python36-32\Scripts   &lt;br&gt; (XXXX a felhasználó neve)</translation>
     </message>
     <message>
-        <location filename="../sources/qetdiagrameditor.cpp" line="2412"/>
-        <source>To install the plugin qet_tb_generator&lt;br&gt;Visit  :&lt;br&gt;&lt;a href=&apos;https://pypi.python.org/pypi/qet-tb-generator&apos;&gt;qet-tb-generator&lt;/a&gt;&lt;br&gt;&lt;B&gt;&lt;U&gt; First install on macOSX&lt;/B&gt;&lt;/U&gt;&lt;br&gt;1. Install, if required, python 3.9 bundle only, &lt;br&gt;2 Run Profile.command script&lt;br&gt;because program use hardcoded PATH for localise qet-tb-generator plugin &lt;br&gt; Visit :&lt;br&gt;&lt;a href=&apos;https://qelectrotech.org/forum/viewtopic.php?pid=5674#p5674&apos;&gt;howto&lt;/a&gt;&lt;br&gt;2. pip3 install qet_tb_generator&lt;br&gt;&lt;B&gt;&lt;U&gt; Update on macOSX&lt;/B&gt;&lt;/U&gt;&lt;br&gt; pip3 install --upgrade qet_tb_generator&lt;br&gt;</source>
-        <translation>A qet_tb_generator beépülő modul telepítése&lt;br&gt;Látogass el  :&lt;br&gt;&lt;a href=&apos;https://pypi.python.org/pypi/qet-tb-generator&apos;&gt;qet-tb-generator&lt;/a&gt;&lt;br&gt;&lt;B&gt;&lt;U&gt; Első telepítés macOSX-en&lt;/B&gt;&lt;/U&gt;&lt;br&gt;1. Telepítsd, ha szükséges, a python 3.9 csomagot, &lt;br&gt;2 Futtasd Profile.command script&lt;br&gt;A program un. hardcoded PATH (szigorúan deklarált) elérési útvonalat használ a qet-tb-generator plugin-hoz &lt;br&gt; Látogass el :&lt;br&gt;&lt;a href=&apos;https://qelectrotech.org/forum/viewtopic.php?pid=5674#p5674&apos;&gt;hogyan (howto)&lt;/a&gt;&lt;br&gt;2. parancsaorba gépelve pip3 install qet_tb_generator&lt;br&gt;&lt;B&gt;&lt;U&gt; Frissítés macOSX-en&lt;/B&gt;&lt;/U&gt;&lt;br&gt; parancssorba gépelve pip3 install --upgrade qet_tb_generator&lt;br&gt;</translation>
+        <location filename="../sources/qetdiagrameditor.cpp" line="2431"/>
+        <source>To install the plugin qet_tb_generator&lt;br&gt;Visit  :&lt;br&gt;&lt;a href=&apos;https://pypi.python.org/pypi/qet-tb-generator&apos;&gt;qet-tb-generator&lt;/a&gt;&lt;br&gt;&lt;B&gt;&lt;U&gt; First install on macOSX&lt;/B&gt;&lt;/U&gt;&lt;br&gt;1. Install, if required, python 3.11 bundle only, &lt;a href=&apos;https://www.python.org/ftp/python/3.11.2/python-3.11.2-macos11.pkg&apos;&gt;python-3.11.2-macos11.pkg&lt;/a&gt;&lt;br&gt;2 Run Profile.command script&lt;br&gt;because program use hardcoded PATH for localise qet-tb-generator plugin &lt;br&gt; Visit :&lt;br&gt;&lt;a href=&apos;https://qelectrotech.org/forum/viewtopic.php?pid=5674#p5674&apos;&gt;howto&lt;/a&gt;&lt;br&gt;2. pip3 install qet_tb_generator&lt;br&gt;&lt;B&gt;&lt;U&gt; Update on macOSX&lt;/B&gt;&lt;/U&gt;&lt;br&gt; pip3 install --upgrade qet_tb_generator&lt;br&gt;</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../sources/qetdiagrameditor.cpp" line="2430"/>
+        <location filename="../sources/qetdiagrameditor.cpp" line="2450"/>
         <source>To install the plugin qet_tb_generator&lt;br&gt;Visit :&lt;br&gt;&lt;a href=&apos;https://pypi.python.org/pypi/qet-tb-generator&apos;&gt;qet-tb-generator&lt;/a&gt;&lt;br&gt;&lt;br&gt;Requires python 3.5 or above.&lt;br&gt;&lt;br&gt;&lt;B&gt;&lt;U&gt; First install on Linux&lt;/B&gt;&lt;/U&gt;&lt;br&gt;1. check you have pip3 installed: pip3 --version&lt;br&gt;If not install with: sudo apt-get install python3-pip&lt;br&gt;2. Install the program: sudo pip3 install qet_tb_generator&lt;br&gt;3. Run the program: qet_tb_generator&lt;br&gt;&lt;br&gt;&lt;B&gt;&lt;U&gt; Update on Linux&lt;/B&gt;&lt;/U&gt;&lt;br&gt;sudo pip3 install --upgrade qet_tb_generator&lt;br&gt;</source>
         <translation>A qet_tb_generator beépülő modul telepítésehez&lt;br&gt;Látogass el :&lt;br&gt;&lt;a href=&apos;https://pypi.python.org/pypi/qet-tb-generator&apos;&gt;qet-tb-generator&lt;/a&gt;&lt;br&gt;&lt;br&gt;Szükséges hozzá a python 3.5 vagy magasabb verzió.&lt;br&gt;&lt;br&gt;&lt;B&gt;&lt;U&gt; Első telepítés Linuxon&lt;/B&gt;&lt;/U&gt;&lt;br&gt;1.Ellenőrízd, hogy telepítve van-e: pip3 --version&lt;br&gt;Ha nincs, akkor töltsd le ezzel: sudo apt-get install python3-pip&lt;br&gt;2. Telepítsd a programot ezzel: sudo pip3 install qet_tb_generator&lt;br&gt;3. Futtasd a programot ezzel: qet_tb_generator&lt;br&gt;&lt;br&gt;&lt;B&gt;&lt;U&gt; Frissítés Linuxon&lt;/B&gt;&lt;/U&gt;&lt;br&gt;sudo pip3 install --upgrade qet_tb_generator&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../sources/qetdiagrameditor.cpp" line="2450"/>
+        <location filename="../sources/qetdiagrameditor.cpp" line="2470"/>
         <source>Error launching qet_tb_generator plugin</source>
         <translation>Hiba a qet_tb_generator beépülő modul indítással</translation>
     </message>
@@ -8877,26 +9065,26 @@ Cserélni akarod?</translation>
     </message>
     <message>
         <location filename="../sources/ElementsCollection/elementslocation.cpp" line="261"/>
-        <location filename="../sources/ElementsCollection/elementslocation.cpp" line="388"/>
+        <location filename="../sources/ElementsCollection/elementslocation.cpp" line="405"/>
         <location filename="../sources/SearchAndReplace/searchandreplaceworker.cpp" line="351"/>
         <location filename="../sources/SearchAndReplace/searchandreplaceworker.cpp" line="474"/>
         <location filename="../sources/SearchAndReplace/searchandreplaceworker.cpp" line="509"/>
         <location filename="../sources/SearchAndReplace/searchandreplaceworker.cpp" line="538"/>
         <location filename="../sources/SearchAndReplace/ui/searchandreplacewidget.cpp" line="425"/>
         <location filename="../sources/conductorproperties.cpp" line="826"/>
-        <location filename="../sources/factory/elementpicturefactory.cpp" line="581"/>
-        <location filename="../sources/qetapp.cpp" line="2016"/>
+        <location filename="../sources/factory/elementpicturefactory.cpp" line="578"/>
+        <location filename="../sources/qetapp.cpp" line="2180"/>
         <location filename="../sources/titleblock/templatelocation.cpp" line="108"/>
         <source>this is an error in the code</source>
         <translation>ez egy hiba a programkódban</translation>
     </message>
     <message>
-        <location filename="../sources/machine_info.cpp" line="125"/>
+        <location filename="../sources/machine_info.cpp" line="129"/>
         <source>Compilation : </source>
         <translation>Összeállítás: </translation>
     </message>
     <message>
-        <location filename="../sources/machine_info.cpp" line="377"/>
+        <location filename="../sources/machine_info.cpp" line="378"/>
         <source>Compilation :   </source>
         <translation>Összeállítás :   </translation>
     </message>
@@ -8936,12 +9124,12 @@ Cserélni akarod?</translation>
     <message>
         <location filename="../sources/TerminalStrip/UndoCommand/addterminaltostripcommand.cpp" line="54"/>
         <source>Ajouter %1 bornes</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 sorkapocs hozzáadása</translation>
     </message>
     <message>
         <location filename="../sources/TerminalStrip/UndoCommand/addterminaltostripcommand.cpp" line="141"/>
         <source>Enlever %1 bornes</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 sorkapocs eltávolítása</translation>
     </message>
     <message>
         <location filename="../sources/TerminalStrip/UndoCommand/addterminaltostripcommand.cpp" line="173"/>
@@ -8958,30 +9146,30 @@ Cserélni akarod?</translation>
         <location filename="../sources/TerminalStrip/UndoCommand/addterminaltostripcommand.cpp" line="176"/>
         <location filename="../sources/TerminalStrip/UndoCommand/addterminaltostripcommand.cpp" line="198"/>
         <source> d&apos;un groupe de bornes</source>
-        <translation type="unfinished"></translation>
+        <translation> sorkapcsok egy csoportja</translation>
     </message>
     <message>
         <location filename="../sources/TerminalStrip/UndoCommand/addterminaltostripcommand.cpp" line="177"/>
         <location filename="../sources/TerminalStrip/UndoCommand/addterminaltostripcommand.cpp" line="199"/>
         <source> du groupe de bornes %1</source>
-        <translation type="unfinished"></translation>
+        <translation> sorkapcsok egy csoportja %1</translation>
     </message>
     <message>
         <location filename="../sources/TerminalStrip/UndoCommand/addterminaltostripcommand.cpp" line="179"/>
         <location filename="../sources/TerminalStrip/UndoCommand/addterminaltostripcommand.cpp" line="201"/>
         <source>vers un groupe de bornes</source>
-        <translation type="unfinished"></translation>
+        <translation>egy sorkapocs tömbhöz</translation>
     </message>
     <message>
         <location filename="../sources/TerminalStrip/UndoCommand/addterminaltostripcommand.cpp" line="180"/>
         <location filename="../sources/TerminalStrip/UndoCommand/addterminaltostripcommand.cpp" line="202"/>
         <source>vers le groupe de bornes %1</source>
-        <translation type="unfinished"></translation>
+        <translation>sorkapocs tömbhöz %1</translation>
     </message>
     <message>
         <location filename="../sources/TerminalStrip/UndoCommand/addterminaltostripcommand.cpp" line="195"/>
         <source>Déplacer des bornes</source>
-        <translation type="unfinished"></translation>
+        <translation>Sorkapocs mozgatása</translation>
     </message>
     <message>
         <location filename="../sources/TerminalStrip/UndoCommand/addterminaltostripcommand.cpp" line="144"/>
@@ -9009,49 +9197,51 @@ Cserélni akarod?</translation>
         <translation>Sorkapocs tömb rendezése %1</translation>
     </message>
     <message>
-        <location filename="../sources/properties/elementdata.cpp" line="491"/>
+        <location filename="../sources/properties/elementdata.cpp" line="495"/>
+        <location filename="../sources/properties/elementdata.cpp" line="505"/>
         <source>Générique</source>
         <comment>generic terminal element type</comment>
         <translation>Általános</translation>
     </message>
     <message>
-        <location filename="../sources/properties/elementdata.cpp" line="493"/>
+        <location filename="../sources/properties/elementdata.cpp" line="497"/>
         <source>Fusible</source>
         <comment>fuse terminal element type</comment>
         <translation>Biztosíték</translation>
     </message>
     <message>
-        <location filename="../sources/properties/elementdata.cpp" line="495"/>
+        <location filename="../sources/properties/elementdata.cpp" line="499"/>
         <source>Sectionable</source>
         <comment>sectional terminal element type</comment>
         <translation>Megosztható</translation>
     </message>
     <message>
-        <location filename="../sources/properties/elementdata.cpp" line="497"/>
+        <location filename="../sources/properties/elementdata.cpp" line="501"/>
         <source>Diode</source>
         <comment>diode terminal element type</comment>
         <translation>Dióda</translation>
     </message>
     <message>
-        <location filename="../sources/properties/elementdata.cpp" line="499"/>
+        <location filename="../sources/properties/elementdata.cpp" line="503"/>
         <source>Terre</source>
         <comment>ground terminal element type</comment>
         <translation>Földelő</translation>
     </message>
     <message>
-        <location filename="../sources/properties/elementdata.cpp" line="534"/>
+        <location filename="../sources/properties/elementdata.cpp" line="540"/>
+        <location filename="../sources/properties/elementdata.cpp" line="544"/>
         <source>Générique</source>
         <comment>generic terminal element function</comment>
         <translation>Általános</translation>
     </message>
     <message>
-        <location filename="../sources/properties/elementdata.cpp" line="535"/>
+        <location filename="../sources/properties/elementdata.cpp" line="541"/>
         <source>Phase</source>
         <comment>phase terminal element function</comment>
         <translation>Fázis</translation>
     </message>
     <message>
-        <location filename="../sources/properties/elementdata.cpp" line="536"/>
+        <location filename="../sources/properties/elementdata.cpp" line="542"/>
         <source>Neutre</source>
         <comment>neutral terminal element function</comment>
         <translation>Nulla</translation>
@@ -9062,18 +9252,33 @@ Cserélni akarod?</translation>
         <translation>Egy elem tulajdonságainak módosítása</translation>
     </message>
     <message>
-        <location filename="../sources/TerminalStrip/UndoCommand/bridgeterminalscommand.cpp" line="27"/>
+        <location filename="../sources/TerminalStrip/UndoCommand/bridgeterminalscommand.cpp" line="28"/>
         <source>Ponter des bornes entre-elles</source>
-        <translation type="unfinished"></translation>
+        <translation>Sorkapcsok áthidalása egymással</translation>
     </message>
     <message>
-        <location filename="../sources/TerminalStrip/UndoCommand/bridgeterminalscommand.cpp" line="56"/>
+        <location filename="../sources/TerminalStrip/UndoCommand/bridgeterminalscommand.cpp" line="57"/>
         <source>Supprimer des ponts de bornes</source>
-        <translation type="unfinished"></translation>
+        <translation>Áthidalás törlése</translation>
     </message>
     <message>
         <location filename="../sources/TerminalStrip/UndoCommand/changeterminalstripcolor.cpp" line="37"/>
         <source>Modifier la couleur d&apos;un pont de bornes</source>
+        <translation>Áthidalás színének megváltoztatása</translation>
+    </message>
+    <message>
+        <location filename="../sources/editor/UndoCommand/openelmtcommand.cpp" line="31"/>
+        <source>Ouvrir un element</source>
+        <translation>Egy elem megnyitása</translation>
+    </message>
+    <message>
+        <location filename="../sources/editor/ui/qetelementeditor.cpp" line="1506"/>
+        <source>Importer un fichier dxf</source>
+        <translation>DXF fájl importálása</translation>
+    </message>
+    <message>
+        <location filename="../sources/TerminalStrip/GraphicsItem/properties/terminalstriplayoutshandler.cpp" line="26"/>
+        <source>Disposition par défaut</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -9087,7 +9292,7 @@ Cserélni akarod?</translation>
     </message>
     <message>
         <location filename="../sources/qtextorientationwidget.cpp" line="39"/>
-        <source>Exemple</source>
+        <source>Example</source>
         <comment>Longer example string</comment>
         <translation>Például</translation>
     </message>
@@ -9114,7 +9319,7 @@ Kérlek adj hozzá egy új táblázatot, vagy igazítsd a meglévőt megfelelő 
         <translation>Táblázat korlátozása</translation>
     </message>
     <message>
-        <location filename="../sources/qetgraphicsitem/ViewItem/qetgraphicstableitem.cpp" line="962"/>
+        <location filename="../sources/qetgraphicsitem/ViewItem/qetgraphicstableitem.cpp" line="966"/>
         <source>Modifier la géometrie d&apos;un tableau</source>
         <translation>A táblázat méretének a módosítása</translation>
     </message>
@@ -9147,27 +9352,27 @@ Kérlek adj hozzá egy új táblázatot, vagy igazítsd a meglévőt megfelelő 
         <translation>Szerkesztés %1</translation>
     </message>
     <message>
-        <location filename="../sources/qetgraphicsitem/qetshapeitem.cpp" line="999"/>
+        <location filename="../sources/qetgraphicsitem/qetshapeitem.cpp" line="1002"/>
         <source>une ligne</source>
         <translation>a vonal</translation>
     </message>
     <message>
-        <location filename="../sources/qetgraphicsitem/qetshapeitem.cpp" line="1000"/>
+        <location filename="../sources/qetgraphicsitem/qetshapeitem.cpp" line="1003"/>
         <source>un rectangle</source>
         <translation>négyszög</translation>
     </message>
     <message>
-        <location filename="../sources/qetgraphicsitem/qetshapeitem.cpp" line="1001"/>
+        <location filename="../sources/qetgraphicsitem/qetshapeitem.cpp" line="1004"/>
         <source>une éllipse</source>
         <translation>elipszis</translation>
     </message>
     <message>
-        <location filename="../sources/qetgraphicsitem/qetshapeitem.cpp" line="1002"/>
+        <location filename="../sources/qetgraphicsitem/qetshapeitem.cpp" line="1005"/>
         <source>une polyligne</source>
         <translation>vonallánc</translation>
     </message>
     <message>
-        <location filename="../sources/qetgraphicsitem/qetshapeitem.cpp" line="1003"/>
+        <location filename="../sources/qetgraphicsitem/qetshapeitem.cpp" line="1006"/>
         <source>une shape</source>
         <translation>a forma</translation>
     </message>
@@ -9523,7 +9728,7 @@ Kérlek adj hozzá egy új táblázatot, vagy igazítsd a meglévőt megfelelő 
     <message>
         <location filename="../sources/SearchAndReplace/ui/replacefoliowidget.ui" line="71"/>
         <source>Disponible en tant que %title pour les modèles de cartouches</source>
-        <translation>Elérhető, mint változat %cím a szövegmezőhöz</translation>
+        <translation>Elérhető változóként %cím a szövegmezőhöz</translation>
     </message>
     <message>
         <location filename="../sources/SearchAndReplace/ui/replacefoliowidget.ui" line="74"/>
@@ -9540,7 +9745,7 @@ Kérlek adj hozzá egy új táblázatot, vagy igazítsd a meglévőt megfelelő 
     <message>
         <location filename="../sources/SearchAndReplace/ui/replacefoliowidget.ui" line="81"/>
         <source>Disponible en tant que %author pour les modèles de cartouches</source>
-        <translation>Elérhető, mint változat %szerző a szövegmezőhöz</translation>
+        <translation>Elérhető változóként %szerző a szövegmezőhöz</translation>
     </message>
     <message>
         <location filename="../sources/SearchAndReplace/ui/replacefoliowidget.ui" line="91"/>
@@ -9560,12 +9765,12 @@ Kérlek adj hozzá egy új táblázatot, vagy igazítsd a meglévőt megfelelő 
     <message>
         <location filename="../sources/SearchAndReplace/ui/replacefoliowidget.ui" line="115"/>
         <source>Disponible en tant que %indexrev pour les modèles de cartouches</source>
-        <translation>Elérhető, mint változat %revízió a szövegmezőhöz</translation>
+        <translation>Elérhető változóként %revízió a szövegmezőhöz</translation>
     </message>
     <message>
         <location filename="../sources/SearchAndReplace/ui/replacefoliowidget.ui" line="125"/>
         <source>Disponible en tant que %filename pour les modèles de cartouches</source>
-        <translation>Elérhető, mint változat %fájlnév a szövegmezőhöz</translation>
+        <translation>Elérhető változóként %fájlnév a szövegmezőhöz</translation>
     </message>
     <message>
         <location filename="../sources/SearchAndReplace/ui/replacefoliowidget.ui" line="138"/>
@@ -9580,7 +9785,7 @@ Kérlek adj hozzá egy új táblázatot, vagy igazítsd a meglévőt megfelelő 
     <message>
         <location filename="../sources/SearchAndReplace/ui/replacefoliowidget.ui" line="154"/>
         <source>Disponible en tant que %date pour les modèles de cartouches</source>
-        <translation>Elérhető, mint változat %dátum a szövegmezőhöz</translation>
+        <translation>Elérhető változóként %dátum a szövegmezőhöz</translation>
     </message>
     <message>
         <location filename="../sources/SearchAndReplace/ui/replacefoliowidget.ui" line="167"/>
@@ -9600,7 +9805,7 @@ Les variables suivantes sont utilisables :
 - %total : nombre total de folios dans le projet 
 - %autonum : Folio Auto Numeration</source>
         <translation>Elérhető, mint %tervlap szövegmező modellekhez
-A következő változatok használhatók:
+A következő változók használhatók:
 -%id: jelenlegi tervlapszám a projektben
 -%total: összes tervlapszám a projektben
 -%autonum: tervlap automatikus számozás</translation>
@@ -9608,12 +9813,12 @@ A következő változatok használhatók:
     <message>
         <location filename="../sources/SearchAndReplace/ui/replacefoliowidget.ui" line="211"/>
         <source>Disponible en tant que %locmach pour les modèles de cartouches</source>
-        <translation>Elérhető, mint változat %elhelyezkedés a szövegmezőhöz</translation>
+        <translation>Elérhető változó %elhelyezkedés a szövegmezőhöz</translation>
     </message>
     <message>
         <location filename="../sources/SearchAndReplace/ui/replacefoliowidget.ui" line="221"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Disponible en tant que %plant pour les modèles de cartouches&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Elérhető, mint változat %berendezés a szövegmezőhöz&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Elérhető változóként %berendezés a szövegmezőhöz&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../sources/SearchAndReplace/ui/replacefoliowidget.ui" line="231"/>
@@ -10016,6 +10221,34 @@ A többi mező nincs használva.
 A többi mező nincs használva.</translation>
     </message>
     <message>
+        <location filename="../sources/autoNum/ui/selectautonumw.cpp" line="259"/>
+        <source>Element Autonumérotation</source>
+        <comment>title window</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../sources/autoNum/ui/selectautonumw.cpp" line="261"/>
+        <source>C&apos;est ici que vous pouvez définir la manière dont seront numérotés les nouveaux elements.
+-Une numérotation est composée d&apos;une variable minimum.
+-Vous pouvez ajouter ou supprimer une variable de numérotation par le biais des boutons - et +.
+-Une variable de numérotation comprend : un type, une valeur et une incrémentation.
+
+-les types &quot;Chiffre 1&quot;, &quot;Chiffre 01&quot; et &quot;Chiffre 001&quot;, représentent un type numérique défini dans le champ &quot;Valeur&quot;, qui s&apos;incrémente à chaque nouveau conducteur de la valeur du champ &quot;Incrémentation&quot;.
+-&quot;Chiffre 01&quot; et &quot;Chiffre 001&quot;, sont respectivement représentés sur le schéma par deux et trois digits minimum.
+Si le chiffre défini dans le champ Valeur possède moins de digits que le type choisi,celui-ci sera précédé par un ou deux 0 afin de respecter son type.
+
+-Le type &quot;Texte&quot;, représente un texte fixe.
+Le champ &quot;Incrémentation&quot; n&apos;est pas utilisé.
+
+-Le type &quot;N° folio&quot; représente le n° du folio en cours.
+Les autres champs ne sont pas utilisés.
+
+-Le type &quot;Folio&quot; représente le nom du folio en cours.
+Les autres champs ne sont pas utilisés.</source>
+        <comment>help dialog about the element autonumerotation</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../sources/autoNum/ui/selectautonumw.cpp" line="233"/>
         <source>Conducteur Autonumérotation</source>
         <comment>title window</comment>
@@ -10176,28 +10409,28 @@ A többi mező nincs használva.</translation>
         <translation>Egyszerű grafikus elem tulajdonságainak szerkesztése </translation>
     </message>
     <message>
-        <location filename="../sources/ui/shapegraphicsitempropertieswidget.cpp" line="197"/>
+        <location filename="../sources/ui/shapegraphicsitempropertieswidget.cpp" line="182"/>
         <source>Modifier le trait d&apos;une forme</source>
         <translation>Alakzat vonalának szerkesztése</translation>
     </message>
     <message>
-        <location filename="../sources/ui/shapegraphicsitempropertieswidget.cpp" line="212"/>
+        <location filename="../sources/ui/shapegraphicsitempropertieswidget.cpp" line="197"/>
         <source>Modifier le remplissage d&apos;une forme</source>
         <translation>Alakzat kitöltésének módosítása</translation>
     </message>
     <message>
-        <location filename="../sources/ui/shapegraphicsitempropertieswidget.cpp" line="223"/>
+        <location filename="../sources/ui/shapegraphicsitempropertieswidget.cpp" line="208"/>
         <source>Fermer le polygone</source>
         <translation>Sokszög bezárása</translation>
     </message>
     <message>
-        <location filename="../sources/ui/shapegraphicsitempropertieswidget.cpp" line="279"/>
-        <location filename="../sources/ui/shapegraphicsitempropertieswidget.cpp" line="311"/>
+        <location filename="../sources/ui/shapegraphicsitempropertieswidget.cpp" line="264"/>
+        <location filename="../sources/ui/shapegraphicsitempropertieswidget.cpp" line="296"/>
         <source>Modifier une forme simple</source>
         <translation>Egy egyszerű alakzat módosítása</translation>
     </message>
     <message>
-        <location filename="../sources/ui/shapegraphicsitempropertieswidget.cpp" line="323"/>
+        <location filename="../sources/ui/shapegraphicsitempropertieswidget.cpp" line="308"/>
         <source>Modifier les propriétés d&apos;une forme simple</source>
         <translation>Egyszerű alakzat tulajdonságainak módosítása</translation>
     </message>
@@ -11282,7 +11515,7 @@ A többi mező nincs használva.</translation>
         <location filename="../sources/editor/styleeditor.cpp" line="233"/>
         <source>Pink : HotPink</source>
         <comment>element part filling</comment>
-        <translation></translation>
+        <translation type="unfinished">Rózsaszín : Élénk rózsaszín</translation>
     </message>
     <message>
         <location filename="../sources/editor/styleeditor.cpp" line="234"/>
@@ -12345,12 +12578,12 @@ A többi mező nincs használva.</translation>
     <message>
         <location filename="../sources/TerminalStrip/ui/terminalstripeditor.ui" line="237"/>
         <source>Ponter les bornes</source>
-        <translation type="unfinished"></translation>
+        <translation>Sorkapcsok áthidalása</translation>
     </message>
     <message>
         <location filename="../sources/TerminalStrip/ui/terminalstripeditor.ui" line="244"/>
         <source>Déponter les bornes</source>
-        <translation type="unfinished"></translation>
+        <translation>Áthidalás eltávolítása</translation>
     </message>
     <message>
         <location filename="../sources/TerminalStrip/ui/terminalstripeditor.ui" line="255"/>
@@ -12365,7 +12598,7 @@ A többi mező nincs használva.</translation>
     <message>
         <location filename="../sources/TerminalStrip/ui/terminalstripeditor.ui" line="268"/>
         <source>Commentaire :</source>
-        <translation type="unfinished">Megjegyzés :</translation>
+        <translation>Megjegyzés :</translation>
     </message>
     <message>
         <location filename="../sources/TerminalStrip/ui/terminalstripeditor.ui" line="298"/>
@@ -12401,12 +12634,12 @@ A többi mező nincs használva.</translation>
     <message>
         <location filename="../sources/TerminalStrip/ui/terminalstripeditor.ui" line="57"/>
         <source>Effectuer le déplacement</source>
-        <translation type="unfinished"></translation>
+        <translation>Mozgatás</translation>
     </message>
     <message>
         <location filename="../sources/TerminalStrip/ui/terminalstripeditor.ui" line="94"/>
         <source>Couleur pont :</source>
-        <translation type="unfinished"></translation>
+        <translation>Áthidalás színe :</translation>
     </message>
     <message>
         <location filename="../sources/TerminalStrip/ui/terminalstripeditor.ui" line="110"/>
@@ -12431,7 +12664,7 @@ A többi mező nincs használva.</translation>
     <message>
         <location filename="../sources/TerminalStrip/ui/terminalstripeditor.ui" line="173"/>
         <source>Déplacer dans :</source>
-        <translation type="unfinished"></translation>
+        <translation>Mozgatás :</translation>
     </message>
     <message>
         <location filename="../sources/TerminalStrip/ui/terminalstripeditor.ui" line="189"/>
@@ -12481,10 +12714,10 @@ A többi mező nincs használva.</translation>
     <message>
         <location filename="../sources/TerminalStrip/ui/terminalstripeditor.cpp" line="127"/>
         <source>Bornes indépendantes</source>
-        <translation type="unfinished"></translation>
+        <translation>Független Sorkapocs</translation>
     </message>
     <message>
-        <location filename="../sources/TerminalStrip/ui/terminalstripeditor.cpp" line="195"/>
+        <location filename="../sources/TerminalStrip/ui/terminalstripeditor.cpp" line="196"/>
         <source>Modifier des propriétés de borniers</source>
         <translation>Sorkapocsléc tulajdonságainak módosítása</translation>
     </message>
@@ -12494,36 +12727,157 @@ A többi mező nincs használva.</translation>
     <message>
         <location filename="../sources/TerminalStrip/ui/terminalstripeditorwindow.ui" line="14"/>
         <source>Gestionnaire de borniers</source>
-        <translation type="unfinished">Csatlakozások szervezése</translation>
+        <translation>Sorkapocs rendszerező</translation>
     </message>
     <message>
         <location filename="../sources/TerminalStrip/ui/terminalstripeditorwindow.ui" line="58"/>
         <source>Ajouter un bornier</source>
-        <translation type="unfinished">Csatlakozó hozzáadása</translation>
+        <translation>Sorkapocs hozzáadása</translation>
     </message>
     <message>
         <location filename="../sources/TerminalStrip/ui/terminalstripeditorwindow.ui" line="61"/>
         <source>Ajouter un bornier au projet</source>
-        <translation type="unfinished"></translation>
+        <translation>Sorkapocstömb hozzáadása a projekthez</translation>
     </message>
     <message>
         <location filename="../sources/TerminalStrip/ui/terminalstripeditorwindow.ui" line="70"/>
         <source>Supprimer le bornier</source>
-        <translation type="unfinished">Sorkapocs eltávolítása</translation>
+        <translation>Sorkapocs eltávolítása</translation>
     </message>
     <message>
         <location filename="../sources/TerminalStrip/ui/terminalstripeditorwindow.ui" line="73"/>
         <source>Supprimer le bornier du projet</source>
-        <translation type="unfinished"></translation>
+        <translation>Sorkapocstömb törlése a projektből</translation>
     </message>
     <message>
         <location filename="../sources/TerminalStrip/ui/terminalstripeditorwindow.ui" line="82"/>
         <source>Recharger</source>
-        <translation type="unfinished">Újratöltés</translation>
+        <translation>Újratöltés</translation>
     </message>
     <message>
         <location filename="../sources/TerminalStrip/ui/terminalstripeditorwindow.ui" line="85"/>
         <source>Recharger les borniers</source>
+        <translation>Sorkapcsok újratöltése</translation>
+    </message>
+</context>
+<context>
+    <name>TerminalStripItem</name>
+    <message>
+        <location filename="../sources/TerminalStrip/GraphicsItem/terminalstripitem.cpp" line="94"/>
+        <source>plan de bornes</source>
+        <translation>sorkapcsok terve</translation>
+    </message>
+</context>
+<context>
+    <name>TerminalStripLayoutEditor</name>
+    <message>
+        <location filename="../sources/TerminalStrip/ui/terminalstriplayouteditor.ui" line="20"/>
+        <source>Borne niveau 0 :</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../sources/TerminalStrip/ui/terminalstriplayouteditor.ui" line="27"/>
+        <source>En tête :</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../sources/TerminalStrip/ui/terminalstriplayouteditor.ui" line="44"/>
+        <source>Point de pont</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../sources/TerminalStrip/ui/terminalstriplayouteditor.ui" line="72"/>
+        <source>Décalage vertical</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../sources/TerminalStrip/ui/terminalstriplayouteditor.ui" line="79"/>
+        <source>Afficher l&apos;aide</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../sources/TerminalStrip/ui/terminalstriplayouteditor.ui" line="107"/>
+        <source>Largeur</source>
+        <translation type="unfinished">Szélesség</translation>
+    </message>
+    <message>
+        <location filename="../sources/TerminalStrip/ui/terminalstriplayouteditor.ui" line="128"/>
+        <source>Hauteur</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../sources/TerminalStrip/ui/terminalstriplayouteditor.ui" line="135"/>
+        <source>Prévisualisation :</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../sources/TerminalStrip/ui/terminalstriplayouteditor.ui" line="193"/>
+        <location filename="../sources/TerminalStrip/ui/terminalstriplayouteditor.ui" line="212"/>
+        <source>Gauche</source>
+        <translation type="unfinished">Bal</translation>
+    </message>
+    <message>
+        <location filename="../sources/TerminalStrip/ui/terminalstriplayouteditor.ui" line="198"/>
+        <location filename="../sources/TerminalStrip/ui/terminalstriplayouteditor.ui" line="217"/>
+        <source>Centre</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../sources/TerminalStrip/ui/terminalstriplayouteditor.ui" line="203"/>
+        <location filename="../sources/TerminalStrip/ui/terminalstriplayouteditor.ui" line="222"/>
+        <source>Droite</source>
+        <translation type="unfinished">Jobb</translation>
+    </message>
+    <message>
+        <location filename="../sources/TerminalStrip/ui/terminalstriplayouteditor.ui" line="230"/>
+        <source>Alignement du texte d&apos;en tête :</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../sources/TerminalStrip/ui/terminalstriplayouteditor.ui" line="237"/>
+        <source>Alignement du texte de borne :</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../sources/TerminalStrip/ui/terminalstriplayouteditor.ui" line="245"/>
+        <location filename="../sources/TerminalStrip/ui/terminalstriplayouteditor.ui" line="259"/>
+        <source>Horizontal</source>
+        <translation type="unfinished">Vízszintes</translation>
+    </message>
+    <message>
+        <location filename="../sources/TerminalStrip/ui/terminalstriplayouteditor.ui" line="250"/>
+        <location filename="../sources/TerminalStrip/ui/terminalstriplayouteditor.ui" line="264"/>
+        <source>Vertical</source>
+        <translation type="unfinished">Függőleges</translation>
+    </message>
+    <message>
+        <location filename="../sources/TerminalStrip/ui/terminalstriplayouteditor.ui" line="272"/>
+        <source>Orientation du texte de borne :</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../sources/TerminalStrip/ui/terminalstriplayouteditor.ui" line="279"/>
+        <source>Orientation du texte d&apos;en tête :</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../sources/TerminalStrip/ui/terminalstriplayouteditor.ui" line="296"/>
+        <source>Borne niveau 2 :</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../sources/TerminalStrip/ui/terminalstriplayouteditor.ui" line="310"/>
+        <source>Espace :</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../sources/TerminalStrip/ui/terminalstriplayouteditor.ui" line="366"/>
+        <source>Borne niveau 3 :</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../sources/TerminalStrip/ui/terminalstriplayouteditor.ui" line="380"/>
+        <source>Borne niveau 1 :</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -12581,56 +12935,59 @@ A többi mező nincs használva.</translation>
     </message>
 </context>
 <context>
+    <name>TerminalStripProjectConfigPage</name>
+    <message>
+        <location filename="../sources/TerminalStrip/ui/ConfigPage/terminalstripprojectconfigpage.cpp" line="33"/>
+        <source>Plan de bornes</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>TerminalStripTreeDockWidget</name>
     <message>
         <location filename="../sources/TerminalStrip/ui/terminalstriptreedockwidget.ui" line="14"/>
         <source>Explorateur de bornier</source>
-        <translation type="unfinished">Sorkapocs lécek felkeresése</translation>
+        <translation>Sorkapocs léc/tömb felkereső</translation>
     </message>
     <message>
         <location filename="../sources/TerminalStrip/ui/terminalstriptreedockwidget.cpp" line="211"/>
         <source>Projet sans titre</source>
-        <translation type="unfinished">Cím nélküli projekt</translation>
+        <translation>Cím nélküli projekt</translation>
     </message>
     <message>
         <location filename="../sources/TerminalStrip/ui/terminalstriptreedockwidget.cpp" line="217"/>
         <source>Bornes indépendante</source>
-        <translation type="unfinished">Független sorkapcsok</translation>
+        <translation>Független sorkapcsok</translation>
     </message>
 </context>
 <context>
     <name>TextEditor</name>
     <message>
-        <location filename="../sources/editor/ui/texteditor.cpp" line="185"/>
+        <location filename="../sources/editor/ui/texteditor.cpp" line="186"/>
         <source>Modifier le contenu d&apos;un champ texte</source>
         <translation>Szövegmező tartalmának módosítása</translation>
     </message>
     <message>
-        <location filename="../sources/editor/ui/texteditor.cpp" line="227"/>
+        <location filename="../sources/editor/ui/texteditor.cpp" line="228"/>
         <source>Pivoter un champ texte</source>
         <translation>Szövegmező forgatása</translation>
     </message>
     <message>
-        <location filename="../sources/editor/ui/texteditor.cpp" line="242"/>
-        <location filename="../sources/editor/ui/texteditor.cpp" line="270"/>
+        <location filename="../sources/editor/ui/texteditor.cpp" line="243"/>
+        <location filename="../sources/editor/ui/texteditor.cpp" line="271"/>
         <source>Modifier la police d&apos;un texte</source>
         <translation>Szöveg betűtípusának változtatása</translation>
     </message>
     <message>
-        <location filename="../sources/editor/ui/texteditor.cpp" line="286"/>
+        <location filename="../sources/editor/ui/texteditor.cpp" line="287"/>
         <source>Modifier la couleur d&apos;un texte</source>
         <translation>Szöveg színének változtatása</translation>
     </message>
     <message>
-        <location filename="../sources/editor/ui/texteditor.cpp" line="198"/>
-        <location filename="../sources/editor/ui/texteditor.cpp" line="213"/>
+        <location filename="../sources/editor/ui/texteditor.cpp" line="199"/>
+        <location filename="../sources/editor/ui/texteditor.cpp" line="214"/>
         <source>Déplacer un champ texte</source>
         <translation>Szövegmező mozgatása</translation>
-    </message>
-    <message>
-        <location filename="../sources/editor/ui/texteditor.cpp" line="294"/>
-        <source>Form</source>
-        <translation>Űrlap</translation>
     </message>
     <message>
         <location filename="../sources/editor/ui/texteditor.cpp" line="305"/>
@@ -12666,6 +13023,24 @@ A többi mező nincs használva.</translation>
         <location filename="../sources/editor/ui/texteditor.cpp" line="364"/>
         <source>Couleur :</source>
         <translation>Szín :</translation>
+    </message>
+</context>
+<context>
+    <name>ThirdPartyBinaryInstallDialog</name>
+    <message>
+        <location filename="../sources/ui/thirdpartybinaryinstalldialog.ui" line="14"/>
+        <source>Logiciel tiers requis</source>
+        <translation>Harmadik fél által készített szoftver szükséges</translation>
+    </message>
+    <message>
+        <location filename="../sources/ui/thirdpartybinaryinstalldialog.ui" line="33"/>
+        <source>Télechargement</source>
+        <translation>Letöltés</translation>
+    </message>
+    <message>
+        <location filename="../sources/ui/thirdpartybinaryinstalldialog.ui" line="44"/>
+        <source>Dossier installation</source>
+        <translation>Telepítési könyvtár</translation>
     </message>
 </context>
 <context>
@@ -12732,7 +13107,7 @@ A többi mező nincs használva.</translation>
     <message>
         <location filename="../sources/ui/titleblockpropertieswidget.ui" line="234"/>
         <source>Disponible en tant que %locmach pour les modèles de cartouches</source>
-        <translation>Elérhető, mint változat %locmach a szövegmezőhöz</translation>
+        <translation>Elérhető változóként %locmach a szövegmezőhöz</translation>
     </message>
     <message>
         <location filename="../sources/ui/titleblockpropertieswidget.ui" line="285"/>
@@ -12752,7 +13127,7 @@ A többi mező nincs használva.</translation>
     <message>
         <location filename="../sources/ui/titleblockpropertieswidget.ui" line="313"/>
         <source>Disponible en tant que %date pour les modèles de cartouches</source>
-        <translation>Elérhető, mint változat %dátum a szövegmezőhöz</translation>
+        <translation>Elérhető változóként %dátum a szövegmezőhöz</translation>
     </message>
     <message>
         <location filename="../sources/ui/titleblockpropertieswidget.ui" line="326"/>
@@ -12772,7 +13147,7 @@ A többi mező nincs használva.</translation>
     <message>
         <location filename="../sources/ui/titleblockpropertieswidget.ui" line="248"/>
         <source>Disponible en tant que %title pour les modèles de cartouches</source>
-        <translation>Elérhető, mint változat %cím a szövegmezőhöz</translation>
+        <translation>Elérhető változóként %cím a szövegmezőhöz</translation>
     </message>
     <message>
         <location filename="../sources/ui/titleblockpropertieswidget.ui" line="346"/>
@@ -12782,7 +13157,7 @@ A többi mező nincs használva.</translation>
     <message>
         <location filename="../sources/ui/titleblockpropertieswidget.ui" line="269"/>
         <source>Disponible en tant que %author pour les modèles de cartouches</source>
-        <translation>Elérhető, mint változat %szerző a szövegmezőhöz</translation>
+        <translation>Elérhető változóként %szerző a szövegmezőhöz</translation>
     </message>
     <message>
         <location filename="../sources/ui/titleblockpropertieswidget.ui" line="255"/>
@@ -12792,7 +13167,7 @@ A többi mező nincs használva.</translation>
     <message>
         <location filename="../sources/ui/titleblockpropertieswidget.ui" line="276"/>
         <source>Disponible en tant que %filename pour les modèles de cartouches</source>
-        <translation>Elérhető, mint változat %fájlnév a szövegmezőhöz</translation>
+        <translation>Elérhető változóként %fájlnév a szövegmezőhöz</translation>
     </message>
     <message>
         <location filename="../sources/ui/titleblockpropertieswidget.ui" line="81"/>
@@ -12807,7 +13182,7 @@ A többi mező nincs használva.</translation>
     <message>
         <location filename="../sources/ui/titleblockpropertieswidget.ui" line="241"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Disponible en tant que %plant pour les modèles de cartouches&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Elérhető, mint változat %berendezés a szövegmezőhöz&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Elérhető változóként %berendezés a szövegmezőhöz&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../sources/ui/titleblockpropertieswidget.ui" line="335"/>
@@ -12817,7 +13192,7 @@ Les variables suivantes sont utilisables :
 - %total : nombre total de folios dans le projet 
 - %autonum : Folio Auto Numeration</source>
         <translation>Elérhető, mint %tervlap szövegmező modellekhez
-A következő változatok használhatók:
+A következő változók használhatók:
 -%id: jelenlegi tervlapszám a projektben
 -%total: összes tervlapszám a projektben
 -%autonum: tervlap automatikus számozás</translation>
@@ -12835,7 +13210,7 @@ A következő változatok használhatók:
     <message>
         <location filename="../sources/ui/titleblockpropertieswidget.ui" line="366"/>
         <source>Disponible en tant que %indexrev pour les modèles de cartouches</source>
-        <translation>Elérhető, mint változat %revízió a szövegmezőhöz</translation>
+        <translation>Elérhető változóként %revízió a szövegmezőhöz</translation>
     </message>
     <message>
         <location filename="../sources/ui/titleblockpropertieswidget.ui" line="380"/>
@@ -12872,7 +13247,7 @@ associer le nom &quot;volta&quot; et la valeur &quot;1745&quot; remplacera %{vol
     </message>
     <message>
         <location filename="../sources/ui/titleblockpropertieswidget.cpp" line="355"/>
-        <location filename="../sources/ui/titleblockpropertieswidget.cpp" line="480"/>
+        <location filename="../sources/ui/titleblockpropertieswidget.cpp" line="482"/>
         <source>Créer un Folio Numérotation Auto</source>
         <translation>Tervlap automatikus számozása létrehozása</translation>
     </message>
@@ -13305,7 +13680,7 @@ associer le nom &quot;volta&quot; et la valeur &quot;1745&quot; remplacera %{vol
     <message>
         <location filename="../sources/titleblock/templateview.cpp" line="660"/>
         <source>[%1px]</source>
-        <comment>content of the extra helper cell added when the total width of cells is greather than the preview width</comment>
+        <comment>content of the extra helper cell added when the total width of cells is greater than the preview width</comment>
         <translation>[%1px]</translation>
     </message>
     <message>
@@ -13531,7 +13906,7 @@ Maximális hossz : %2px
     </message>
     <message>
         <location filename="../sources/ui/xrefpropertieswidget.cpp" line="111"/>
-        <source>Rigth</source>
+        <source>Right</source>
         <translation>Jobb</translation>
     </message>
     <message>
@@ -13586,12 +13961,12 @@ Maximális hossz : %2px
 <context>
     <name>projectDataBase</name>
     <message>
-        <location filename="../sources/dataBase/projectdatabase.cpp" line="628"/>
+        <location filename="../sources/dataBase/projectdatabase.cpp" line="627"/>
         <source>Exporter la base de données interne du projet</source>
         <translation>A belső projekt adatbázis exportálása</translation>
     </message>
     <message>
-        <location filename="../sources/dataBase/projectdatabase.cpp" line="636"/>
+        <location filename="../sources/dataBase/projectdatabase.cpp" line="635"/>
         <source>sans_nom</source>
         <translation>cím nélkül</translation>
     </message>

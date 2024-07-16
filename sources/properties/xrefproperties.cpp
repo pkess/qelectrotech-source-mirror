@@ -1,5 +1,5 @@
 /*
-	Copyright 2006-2021 The QElectroTech Team
+	Copyright 2006-2024 The QElectroTech Team
 	This file is part of QElectroTech.
 
 	QElectroTech is free software: you can redistribute it and/or modify
@@ -163,7 +163,7 @@ bool XRefProperties::fromXml(const QDomElement &xml_element) {
 /**
 	@brief XRefProperties::defaultProperties
 	@return the default properties stored in the setting file
-	For the xref, there is 2 propreties.
+	For the xref, there are 2 properties.
 	For coil, stored with the string "coil" in the returned QHash.
 	For protection, stored with the string "protection" in the returned QHash.
 */

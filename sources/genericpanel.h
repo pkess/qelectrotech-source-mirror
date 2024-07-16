@@ -1,5 +1,5 @@
 /*
-	Copyright 2006-2021 The QElectroTech Team
+	Copyright 2006-2024 The QElectroTech Team
 	This file is part of QElectroTech.
 	
 	QElectroTech is free software: you can redistribute it and/or modify
@@ -164,7 +164,7 @@ class GenericPanel : public QTreeWidget {
 	virtual void diagramAdded(QETProject *, Diagram *);
 	virtual void diagramRemoved(QETProject *, Diagram *);
 	virtual void projectDiagramsOrderChanged(QETProject *, int, int);
-	virtual void diagramTitleChanged(Diagram *, const QString &);
+	virtual void diagramTitleChanged(Diagram *);
 	virtual void templatesCollectionChanged(TitleBlockTemplatesCollection*,
 						const QString &);
 	virtual void diagramUsedTemplate(TitleBlockTemplatesCollection *,

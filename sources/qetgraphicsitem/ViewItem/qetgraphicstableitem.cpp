@@ -1,5 +1,5 @@
 ﻿/*
-	Copyright 2006-2021 The QElectroTech Team
+	Copyright 2006-2024 The QElectroTech Team
 	This file is part of QElectroTech.
 
 	QElectroTech is free software: you can redistribute it and/or modify
@@ -65,7 +65,7 @@ void QetGraphicsTableItem::adjustTableToFolio(
 
 		//Calcul the maximum row to display to fit the nomenclature into diagram
 	auto available_height = drawable_rect.height() - table->pos().y();
-	auto min_row_height = table->minimumRowHeigth();
+	auto min_row_height = table->minimumRowHeight();
 	table->setDisplayNRow(int(floor(available_height/min_row_height))); //Convert a double to int, but max_row_to_display is already rounded an integer so we assume everything is ok
 }
 
@@ -512,6 +512,10 @@ int QetGraphicsTableItem::displayNRowOffset() const
  */
 int QetGraphicsTableItem::displayedRowCount() const
 {
+	if (!m_model) {
+		return 0;
+	}
+
 		//Calcule the number of rows to display.
 	auto row_count = m_model->rowCount();
 
@@ -524,12 +528,12 @@ int QetGraphicsTableItem::displayedRowCount() const
 	return row_count;
 }
 
-QetGraphicsTableItem *QetGraphicsTableItem::previousTable() const
+QPointer<QetGraphicsTableItem> QetGraphicsTableItem::previousTable() const
 {
 	return m_previous_table;
 }
 
-QetGraphicsTableItem *QetGraphicsTableItem::nextTable() const
+QPointer<QetGraphicsTableItem> QetGraphicsTableItem::nextTable() const
 {
 	return m_next_table;
 }
@@ -560,10 +564,10 @@ void QetGraphicsTableItem::initLink()
 }
 
 /**
-	@brief QetGraphicsTableItem::minimumRowHeigth
+	@brief QetGraphicsTableItem::minimumRowHeight
 	@return the minimum height of a row
 */
-int QetGraphicsTableItem::minimumRowHeigth() const
+int QetGraphicsTableItem::minimumRowHeight() const
 {
 	return m_minimum_row_height;
 }
@@ -1091,15 +1095,15 @@ void QetGraphicsTableItem::previousTableDisplayRowChanged()
  */
 void QetGraphicsTableItem::removeUselessNextTable(bool recursive)
 {
-	if (!m_next_table) {
-		return;
-	}
-
-	if (recursive) {
-		m_next_table->removeUselessNextTable();
-	}
-	if (m_next_table->displayedRowCount() <= 0) {
-		delete m_next_table;
-		m_next_table = nullptr;
+	if (m_next_table)
+	{
+		if (recursive) {
+			m_next_table->removeUselessNextTable();
+		}
+		if (m_next_table->displayedRowCount() <= 0)
+		{
+			m_next_table.data()->deleteLater();
+			m_next_table.clear();
+		}
 	}
 }

@@ -1,5 +1,5 @@
 /*
-	Copyright 2006-2021 The QElectroTech Team
+	Copyright 2006-2024 The QElectroTech Team
 	This file is part of QElectroTech.
 	
 	QElectroTech is free software: you can redistribute it and/or modify
@@ -221,8 +221,9 @@ bool ElementsPanel::matchesFilter(const QTreeWidgetItem *item,
 void ElementsPanel::reload()
 {
 	QIcon system_icon(":/ico/16x16/qet.png");
+	QIcon company_icon(":/ico/16x16/go-company.png");
 	QIcon user_icon(":/ico/16x16/go-home.png");
-	
+
 	// load the common title block templates collection
 	TitleBlockTemplatesCollection *common_tbt_collection = QETApp::commonTitleBlockTemplatesCollection();
 	common_tbt_collection_item_ = addTemplatesCollection(common_tbt_collection, invisibleRootItem());
@@ -231,6 +232,14 @@ void ElementsPanel::reload()
 	common_tbt_collection_item_ -> setWhatsThis(0, tr("Ceci est la collection de cartouches fournie avec QElectroTech. Installée en tant que composant système, vous ne pouvez normalement pas la personnaliser.", "\"What's this\" tip"));
 	if (first_reload_) common_tbt_collection_item_ -> setExpanded(true);
 	
+	// load the company title block templates collection
+	TitleBlockTemplatesCollection *company_tbt_collection = QETApp::companyTitleBlockTemplatesCollection();
+	company_tbt_collection_item_ = addTemplatesCollection(company_tbt_collection, invisibleRootItem());
+	company_tbt_collection_item_ -> setIcon(0, company_icon);
+	company_tbt_collection_item_ -> setStatusTip(0, tr("Double-cliquez pour réduire ou développer la collection company de cartouches", "Status tip"));
+	company_tbt_collection_item_ -> setWhatsThis(0, tr("Ceci est la collection company de cartouches -- utilisez-la pour créer, stocker et éditer vos propres cartouches.", "\"What's this\" tip"));
+	if (first_reload_) company_tbt_collection_item_ -> setExpanded(true);
+
 	// load the custom title block templates collection
 	TitleBlockTemplatesCollection *custom_tbt_collection = QETApp::customTitleBlockTemplatesCollection();
 	custom_tbt_collection_item_ = addTemplatesCollection(custom_tbt_collection, invisibleRootItem());

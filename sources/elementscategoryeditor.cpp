@@ -1,5 +1,5 @@
 /*
-	Copyright 2006-2021 The QElectroTech Team
+	Copyright 2006-2024 The QElectroTech Team
 	This file is part of QElectroTech.
 	
 	QElectroTech is free software: you can redistribute it and/or modify
@@ -141,7 +141,7 @@ void ElementsCategoryEditor::acceptCreation()
 		return;
 	}
 	
-		//User must enter a directorie name
+		//User must enter a directory name
 	if (!m_file_line_edit -> isValid()) {
 		QET::QetMessageBox::critical(this,
 									 tr("Nom interne manquant", "message box title"),

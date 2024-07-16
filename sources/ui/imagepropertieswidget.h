@@ -1,5 +1,5 @@
 /*
-	Copyright 2006-2021 The QElectroTech Team
+	Copyright 2006-2024 The QElectroTech Team
 	This file is part of QElectroTech.
 
 	QElectroTech is free software: you can redistribute it and/or modify
@@ -28,7 +28,7 @@ namespace Ui {
 
 /**
 	@brief The ImagePropertiesWidget class
-	This class provide a widget to edit the propertie of a DiagramImageItem
+	This class provides a widget to edit the properties of a DiagramImageItem
 */
 class ImagePropertiesWidget : public PropertiesEditorWidget
 {

@@ -1,5 +1,5 @@
 /*
-	Copyright 2006-2021 The QElectroTech Team
+	Copyright 2006-2024 The QElectroTech Team
 	This file is part of QElectroTech.
 
 	QElectroTech is free software: you can redistribute it and/or modify
@@ -21,7 +21,7 @@
 #include "../elementitemeditor.h"
 
 namespace Ui {
-    class LineEditor;
+	class LineEditor;
 }
 
 class PartLine;
@@ -33,11 +33,11 @@ class StyleEditor;
  */
 class LineEditor : public ElementItemEditor
 {
-     Q_OBJECT
+	Q_OBJECT
 
-    public:
-	explicit LineEditor(QETElementEditor *editor, PartLine *part = nullptr, QWidget *parent = nullptr);
-	~LineEditor() override;
+	public:
+		explicit LineEditor(QETElementEditor *editor, PartLine *part = nullptr, QWidget *parent = nullptr);
+		~LineEditor() override;
 
 		bool setPart(CustomElementPart *part)            override;
 		bool setParts(QList <CustomElementPart *> parts) override;

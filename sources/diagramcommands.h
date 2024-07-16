@@ -1,5 +1,5 @@
 /*
-	Copyright 2006-2021 The QElectroTech Team
+	Copyright 2006-2024 The QElectroTech Team
 	This file is part of QElectroTech.
 	
 	QElectroTech is free software: you can redistribute it and/or modify
@@ -70,45 +70,6 @@ class CutDiagramCommand : public DeleteQGraphicsItemCommand {
 };
 
 /**
-	@brief The MoveElementsCommand class
-	This command moves some content on a particular diagram.
-*/
-class MoveElementsCommand : public QUndoCommand {
-		// constructors, destructor
-	public:
-		MoveElementsCommand(Diagram *, const DiagramContent &,
-				    const QPointF &m, QUndoCommand * = nullptr);
-		~MoveElementsCommand() override;
-	private:
-		MoveElementsCommand(const MoveElementsCommand &);
-	
-		// methods
-	public:
-		void undo() override;
-		void redo() override;
-		virtual void move(const QPointF &);
-
-	private:
-		void setupAnimation (QObject * target,
-				     const QByteArray &propertyName,
-				     const QVariant& start,
-				     const QVariant& end);
-	
-	// attributes
-	private:
-	/// diagram the movement takes place on.
-	Diagram *diagram;
-	/// moved content
-	DiagramContent content_to_move;
-	/// applied movement
-	QPointF movement;
-	///animation group
-	QParallelAnimationGroup *m_anim_group;
-	/// prevent the first call to redo()
-	bool first_redo;
-};
-
-/**
 	@brief The MoveConductorsTextsCommand class
 	This command moves text items related to conductors
 	on a particular diagram.
@@ -145,7 +106,7 @@ class MoveConductorsTextsCommand : public QUndoCommand {
 
 /**
 	@brief The ChangeDiagramTextCommand class
-	This commad modifies a text item.
+	This command modifies a text item.
 */
 class ChangeDiagramTextCommand : public QUndoCommand {
 	// constructors, destructor

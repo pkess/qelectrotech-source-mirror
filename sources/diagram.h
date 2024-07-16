@@ -1,5 +1,5 @@
 /*
-	Copyright 2006-2021 The QElectroTech Team
+	Copyright 2006-2024 The QElectroTech Team
 	This file is part of QElectroTech.
 	
 	QElectroTech is free software: you can redistribute it and/or modify
@@ -259,12 +259,11 @@ class Diagram : public QGraphicsScene
 
 	public slots:
 		void adjustSceneRect ();
-		void titleChanged(const QString &);
+		void titleChanged();
 		void titleBlockTemplateChanged(const QString &);
 		void titleBlockTemplateRemoved(const QString &,
 					       const QString & = QString());
 		void setTitleBlockTemplate(const QString &);
-		void updateLabels();
 		void loadElmtFolioSeq();
 		void loadCndFolioSeq();
 	
@@ -276,7 +275,7 @@ class Diagram : public QGraphicsScene
 	signals:
 		void showDiagram (Diagram *);
 		void usedTitleBlockTemplateChanged(const QString &);
-		void diagramTitleChanged(Diagram *, const QString &);
+		void diagramTitleChanged(Diagram *);
 
 		/// Signal emitted when users wish to locate an element
 		/// from the diagram within elements collection
@@ -341,7 +340,7 @@ inline bool Diagram::displayGrid() {
 
 /**
 	@brief Diagram::setUseBorder
-	Set whether the diagram border (including rows/colums headers and the title
+	Set whether the diagram border (including rows/columns headers and the title
 	block) should be rendered along with the diagram. When set to false, the size
 	of the smallest rectangle containing all items is considered as the diagram
 	size.
@@ -362,7 +361,7 @@ inline bool Diagram::useBorder() {
 
 /**
 	@brief Diagram::setBorderOptions
-	Set the rendering options for the diagram border (including rows/colums
+	Set the rendering options for the diagram border (including rows/columns
 	headers and the title block)
 	@param bo Enabled options ORed together
 	@see BorderOptions
@@ -375,7 +374,7 @@ inline void Diagram::setBorderOptions(Diagram::BorderOptions bo) {
 
 /**
 	@brief Diagram::borderOptions
-	@return The rendering optios for the diagram border
+	@return The rendering options for the diagram border
 	@see setBorderOptions
 */
 inline Diagram::BorderOptions Diagram::borderOptions() {

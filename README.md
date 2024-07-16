@@ -15,25 +15,27 @@ The main goal of the developers is to provide a libre, easy to use and effective
 
 ### Version
 
-The current stable version is 0.80 and was released on 2021.02.21.  
-Once it has been officialy released, the stable version is always frozen and is no longer developed.
+The current stable version is 0.90 and was released on 2023.01.06.
+Once it has been officially released, the stable version is always frozen and is no longer developed.
 
-New functionalities, bug and issue fixings are further made in the development version (currently 0.9), which can also be [downloaded](https://qelectrotech.org/download.html).
+New functionalities, bug and issue fixings are further made in the development version (currently 0.100), which can also be [downloaded](https://qelectrotech.org/download.html).
 
-Users who want to test and take benefits from the last software implementations should use the development version. But... use it at your own risk, since things are sometimes broken or only partialy implemented until they are done!
+Users who want to test and take benefits from the last software implementations should use the development version. But... use it at your own risk, since things are sometimes broken or only partially implemented until they are done!
 
 ### License
 
 The software is licensed under [GNU/GPL](https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html).  
 You are free to use, copy, modify and redistribute it under the terms of the license.
 
-
-Like many other open source softwares, QElectroTech is provided as it is, without any warranty.
+Like many other open source software, QElectroTech is provided as is, without any warranty.
 
 ### Development / technical choices
 
 The development follows the classical way of free and open source software: the source code, written by a community of users, is freely accessible.
-If you are reading this on Github, be aware that this is an hourly synced mirror. Our real code repository [is located here](https://git.tuxfamily.org/qet/qet.git/).
+*    Get sources and sub-modules
+```txt
+git clone --recursive https://github.com/qelectrotech/qelectrotech-source-mirror.git
+```
 
 Here are the technical choices made for the software development:
 
@@ -41,11 +43,13 @@ Here are the technical choices made for the software development:
 *   Libraries: Qt 5.x
 *   [KF5 Framework](https://github.com/KDE)  
     [Cmake](https://cmake.org/install/)   
-    [kcoreaddons](https://github.com/KDE/kcoreaddons)   
-    [kwidgetsaddons](https://github.com/KDE/kwidgetsaddons).  
+    [kcoreaddons](https://github.com/KDE/kcoreaddons/tree/kf5)   
+    [kwidgetsaddons](https://github.com/KDE/kwidgetsaddons/tree/kf5).  
 *   Coding language: [C++](https://en.wikipedia.org/wiki/C%2B%2B)
 *   GUI translations: [Qt Linguist](http://doc.qt.io/qt-5/qtlinguist-index.html)
-*   Version control: [GIT](https://git.tuxfamily.org/qet/qet.git/)
+*   Version control: [GIT](https://github.com/qelectrotech/qelectrotech-source-mirror.git)
+*   Doxygen documentation :[Doxygen](https://download.qelectrotech.org/qet/doxygen/html/)
+*   QtCreator qch doxygen :[QElectroTech.qch](https://download.qelectrotech.org/qet/doxygen/)
 *   File format for projects, elements and titleblocks: [XML](http://www.w3schools.com/xml/xml_whatis.asp)
 *   Main development platform: [GNU/Linux](http://getgnulinux.org/en/linux/)
 *   Targeted platforms: Windows, GNU/Linux, Mac OS X, BSDs
@@ -76,7 +80,7 @@ The GUI can fit to small or big screens, and even to multi-display configuration
 ![](https://download.tuxfamily.org/qet/images-features/0030.png "GUI overview")
 
 
-The GUI of QElectroTech is translated in 19 languages.  
+The GUI of QElectroTech is translated in 25 languages.
 You only need to restart the application for the new selected language to take effect.
 ![](https://download.tuxfamily.org/qet/images-features/0040.png "Lang menu")
 
@@ -93,7 +97,7 @@ With only 2 mouse clicks you can add a full automatic generated table of content
 Changes in the documentation are updated on the fly.
 ![](https://download.tuxfamily.org/qet/images-features/0060.png "Table of content")
 
-Choose from more than 7.000 symbols...
+Choose from more than 8.200 symbols...
 The embedded QET collection contains a rich library of electric, logic, pneumatic, hydraulic and fluid symbols.  
 The library grows at every new release thanks to an active user community.
 ![](https://download.tuxfamily.org/qet/images-features/0070.png "Collections")
@@ -219,7 +223,7 @@ Nowadays, QET is not only used by many individuals, teachers and students but al
 If you love QElectroTech, you can help developers to buy new hardware to test
 and implement new features. Thanks in advance for your generous donations.
 
-For more information, look at [Paypal](https://www.paypal.com/donate/?token=rqf80cP0Ck1F2jn4Y46G7tIPv9bq7x0crXkwt3GZ6OZYG6ihJYi8lZxmmQ8itsFwMUdd1G&country.x=GB&locale.x=GB)
+For more information, look at [Paypal](https://www.paypal.com/donate/?cmd=_s-xclick&hosted_button_id=ZZHC9D7C3MDPC&ssrt=1694606609672)
 
 
 

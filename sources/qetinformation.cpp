@@ -1,5 +1,5 @@
 /*
-	Copyright 2006-2021 The QElectroTech Team
+	Copyright 2006-2024 The QElectroTech Team
 	This file is part of QElectroTech.
 
 	QElectroTech is free software: you can redistribute it and/or modify
@@ -177,7 +177,7 @@ QString QETInformation::elementInfoToVar(const QString &info)
  * @brief QETInformation::infoToVar
  * @param info
  * @return return the string @info prepended by %{ ans appended by }
- * exemple : if info is label, the returned string is %{label}
+ * example : if info is label, the returned string is %{label}
  */
 QString QETInformation::infoToVar(const QString &info)
 {

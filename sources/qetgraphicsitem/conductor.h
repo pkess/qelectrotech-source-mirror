@@ -1,5 +1,5 @@
 /*
-	Copyright 2006-2021 The QElectroTech Team
+	Copyright 2006-2024 The QElectroTech Team
 	This file is part of QElectroTech.
 	
 	QElectroTech is free software: you can redistribute it and/or modify
@@ -137,7 +137,7 @@ class Conductor : public QGraphicsObject
 		{return m_autoNum_seq;}
 		void setSequenceNum(const autonum::sequentialNumbers& sn);
 
-        QList<QPointF> junctions() const;
+		QList<QPointF> junctions() const;
 
 	private:
 		void setUpConnectionForFormula(
@@ -188,7 +188,7 @@ class Conductor : public QGraphicsObject
 		ConductorTextItem *m_text_item;
 			/// Segments composing the conductor
 		ConductorSegment *segments;
-			/// Attributs related to mouse interaction
+			/// Attributes related to mouse interaction
 		bool m_moving_segment;
 		int moved_point;
 		qreal m_previous_z_value;
@@ -227,7 +227,7 @@ class Conductor : public QGraphicsObject
 		static int getCoeff(const qreal &, const qreal &);
 		static int getSign(const qreal &);
 		QHash<ConductorSegmentProfile *, qreal> shareOffsetBetweenSegments(const qreal &offset, const QList<ConductorSegmentProfile *> &, const qreal & = 0.01) const;
-		static QPointF extendTerminal(const QPointF &, Qet::Orientation, qreal = 9.0);
+		static QPointF extendTerminal(const QPointF &, Qet::Orientation, qreal = 10);
 		static Qt::Corner movementType(const QPointF &, const QPointF &);
 		static QPointF movePointIntoPolygon(const QPointF &, const QPainterPath &);
 };

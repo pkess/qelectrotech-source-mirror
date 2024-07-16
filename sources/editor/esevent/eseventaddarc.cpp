@@ -1,5 +1,5 @@
 /*
-	Copyright 2006-2021 The QElectroTech Team
+	Copyright 2006-2024 The QElectroTech Team
 	This file is part of QElectroTech.
 
 	QElectroTech is free software: you can redistribute it and/or modify
@@ -17,7 +17,7 @@
 */
 #include "eseventaddarc.h"
 
-#include "../editorcommands.h"
+#include "../UndoCommand/addpartcommand.h"
 #include "../elementscene.h"
 #include "../graphicspart/partarc.h"
 
@@ -126,7 +126,7 @@ bool ESEventAddArc::keyPressEvent(QKeyEvent *event) {
 
 /**
 	@brief ESEventAddArc::updateArc
-	Redraw the arc with curent value
+	Redraw the arc with current value
 */
 void ESEventAddArc::updateArc()
 {

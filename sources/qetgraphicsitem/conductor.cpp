@@ -1,5 +1,5 @@
 /*
-	Copyright 2006-2021 The QElectroTech Team
+	Copyright 2006-2024 The QElectroTech Team
 	This file is part of QElectroTech.
 
 	QElectroTech is free software: you can redistribute it and/or modify
@@ -92,13 +92,13 @@ Conductor::Conductor(Terminal *p1, Terminal* p2) :
 	setZValue(11);
 	m_previous_z_value = zValue();
 
-		//Add this conductor to the list of conductor of each of the two terminal
+		//Add this conductor to the list of conductors of each of the two terminals
 	bool ajout_p1 = terminal1 -> addConductor(this);
 	bool ajout_p2 = terminal2 -> addConductor(this);
 		//m_valid become false if the conductor can't be added to terminal (conductor already exist)
 	m_valid = (!ajout_p1 || !ajout_p2) ? false : true;
 
-		//Default attribut for paint a conductor
+		//Default attribute to paint a conductor
 	if (!pen_and_brush_initialized)
 	{
 		conductor_pen.setJoinStyle(Qt::MiterJoin);
@@ -111,7 +111,7 @@ Conductor::Conductor(Terminal *p1, Terminal* p2) :
 		pen_and_brush_initialized = true;
 	}
 
-		//By default, the 4 profils are nuls -> we must to use priv_calculeConductor
+		//By default, the 4 profiles are nuls -> we must use priv_calculeConductor
 	conductor_profiles.insert(Qt::TopLeftCorner,     ConductorProfile());
 	conductor_profiles.insert(Qt::TopRightCorner,    ConductorProfile());
 	conductor_profiles.insert(Qt::BottomLeftCorner,  ConductorProfile());
@@ -135,7 +135,7 @@ Conductor::Conductor(Terminal *p1, Terminal* p2) :
 
 /**
 	@brief Conductor::~Conductor
-	Destructor. The conductor is removed from is terminal
+	Destructor. The conductor is removed from its terminal
 */
 Conductor::~Conductor()
 {
@@ -445,29 +445,37 @@ void Conductor::generateConductorPath(const QPointF &p1, Qet::Orientation o1, co
 }
 
 /**
-	Prolonge une borne.
-	@param terminal Le point correspondant a la borne
-	@param terminal_orientation L'orientation de la borne
-	@param ext_size la taille de la prolongation
-	@return le point correspondant a la borne apres prolongation
-*/
-QPointF Conductor::extendTerminal(const QPointF &terminal, Qet::Orientation terminal_orientation, qreal ext_size) {
+ * @brief Conductor::extendTerminal
+ * @param terminal : point to extend (must be the docking point of a terminal)
+ * @param terminal_orientation : the orientation of the terminal
+ * @param ext_size : how many to extrend (10 by default)
+ * @return the point with an extension of @ext_size
+ * and rounded to nearest multiple of ten
+ * in order to be snapped to the grid of the diagram.
+ */
+QPointF Conductor::extendTerminal(const QPointF &terminal, Qet::Orientation terminal_orientation, qreal ext_size)
+{
 	QPointF extended_terminal;
 	switch(terminal_orientation) {
 		case Qet::North:
-			extended_terminal = QPointF(terminal.x(), terminal.y() - ext_size);
+			extended_terminal = QPointF(terminal.x(),
+										std::round((terminal.y() - ext_size)/10)*10);
 			break;
 		case Qet::East:
-			extended_terminal = QPointF(terminal.x() + ext_size, terminal.y());
+			extended_terminal = QPointF(std::round((terminal.x() + ext_size)/10)*10,
+										terminal.y());
 			break;
 		case Qet::South:
-			extended_terminal = QPointF(terminal.x(), terminal.y() + ext_size);
+			extended_terminal = QPointF(terminal.x(),
+										std::round((terminal.y() + ext_size)/10)*10);
 			break;
 		case Qet::West:
-			extended_terminal = QPointF(terminal.x() - ext_size, terminal.y());
+			extended_terminal = QPointF(std::round((terminal.x() - ext_size)/10)*10,
+										terminal.y());
 			break;
 		default: extended_terminal = terminal;
 	}
+
 	return(extended_terminal);
 }
 
@@ -534,7 +542,7 @@ void Conductor::paint(QPainter *painter, const QStyleOptionGraphicsItem *options
 		final_conductor_pen.setColor(m_properties.m_color_2);
 		final_conductor_pen.setStyle(Qt::CustomDashLine);
 		QVector<qreal> dash_pattern;
-		dash_pattern << m_properties.m_dash_size-2 << m_properties.m_dash_size;
+		dash_pattern << m_properties.m_dash_size << m_properties.m_dash_size *2;
 		final_conductor_pen.setDashPattern(dash_pattern);
 		painter->save();
 		painter->setPen(final_conductor_pen);
@@ -847,7 +855,7 @@ void Conductor::handlerMouseReleaseEvent(QetGraphicsHandlerItem *qghi, QGraphics
 		saveProfile();
 		has_to_save_profile = false;
 	}
-		//When handler is released, the conductor can have more segment than befor the handler was moved
+		//When handler is released, the conductor can have more segment than before the handler was moved
 		//then we remove all handles and new ones are added
 	removeHandler();
 	addHandler();
@@ -1032,22 +1040,38 @@ QDomElement Conductor::toXml(QDomDocument &dom_document,
 
 	dom_element.setAttribute("x", QString::number(pos().x()));
 	dom_element.setAttribute("y", QString::number(pos().y()));
-
+	
 	// Terminal is uniquely identified by the uuid of the terminal and the element
 	if (terminal1->uuid().isNull()) {
 		// legacy method to identify the terminal
-		dom_element.setAttribute("terminal1", table_adr_id.value(terminal1)); // for backward compability
+		dom_element.setAttribute("terminal1", table_adr_id.value(terminal1)); // for backward compatibility
 	} else {
 		dom_element.setAttribute("element1", terminal1->parentElement()->uuid().toString());
+		dom_element.setAttribute("element1_label", terminal1->parentElement()->actualLabel());
+		if (terminal1->parentElement()->linkedElements().isEmpty()) {
+			//
+		} else {
+			dom_element.setAttribute("element1_linked", terminal1->parentElement()->linkedElements().last()->actualLabel());
+		}
+		dom_element.setAttribute("element1_name", terminal1->parentElement()->name());
 		dom_element.setAttribute("terminal1", terminal1->uuid().toString());
+		dom_element.setAttribute("terminalname1", terminal1->name());
 	}
 
 	if (terminal2->uuid().isNull()) {
 		// legacy method to identify the terminal
-		dom_element.setAttribute("terminal2", table_adr_id.value(terminal2)); // for backward compability
+		dom_element.setAttribute("terminal2", table_adr_id.value(terminal2)); // for backward compatibility
 	} else {
 		dom_element.setAttribute("element2", terminal2->parentElement()->uuid().toString());
+		dom_element.setAttribute("element2_label", terminal2->parentElement()->actualLabel());
+		if (terminal2->parentElement()->linkedElements().isEmpty()) {
+			//
+		} else {
+			dom_element.setAttribute("element2_linked", terminal2->parentElement()->linkedElements().last()->actualLabel());
+		}
+		dom_element.setAttribute("element2_name", terminal2->parentElement()->name());
 		dom_element.setAttribute("terminal2", terminal2->uuid().toString());
+		dom_element.setAttribute("terminalname2", terminal2->name());
 	}
 	dom_element.setAttribute("freezeLabel", m_freeze_label? "true" : "false");
 
@@ -1242,7 +1266,7 @@ QPointF Conductor::posForText(Qt::Orientations &flag)
 	bool all_segment_is_vertical   = true;
 	bool all_segment_is_horizontal = true;
 
-		//Go to first segement
+		//Go to first segment
 	while (!segment->isFirstSegment()) {
 		segment = segment->previousSegment();
 	}
@@ -1265,7 +1289,7 @@ QPointF Conductor::posForText(Qt::Orientations &flag)
 		if (segment -> firstPoint().y() != segment -> secondPoint().y())
 			all_segment_is_horizontal = false;
 
-			//We must to compare length segment, but they can be negative
+			//We must compare length segment, but they can be negative
 			//so we multiply by -1 to make it positive.
 		int saved = biggest_segment -> length();
 		if (saved < 0) saved *= -1;
@@ -1517,7 +1541,7 @@ QPainterPath Conductor::path() const
 	@brief Conductor::setPropertiesToPotential
 	@param property
 	@param only_text
-	Set propertie to conductor and every conductors in
+	Set property to conductor and every conductors in
 	the same potential of conductor.
 	If only_text is true only formula, text,
 	function and tension/protocol is set
@@ -1757,25 +1781,29 @@ void Conductor::setSequenceNum(const autonum::sequentialNumbers& sn)
 */
 void Conductor::setUpConnectionForFormula(QString old_formula, QString new_formula)
 {
-	if (diagram())
+	Diagram *diagram_ {diagram()};
+	if (!diagram_) {
+		diagram_ = terminal1->diagram();
+	}
+	if (diagram_)
 	{
 			//Because the variable %F is a reference to another text which can contain variables,
-			//we must to replace %F by the real text, to check if the real text contain the variable %id
+			//we must replace %F by the real text, to check if the real text contains the variable %id
 		if (old_formula.contains("%F"))
-			old_formula.replace("%F", diagram()->border_and_titleblock.folio());
+			old_formula.replace("%F", diagram_->border_and_titleblock.folio());
 
 		if (old_formula.contains("%id"))
-			disconnect(diagram()->project(), &QETProject::projectDiagramsOrderChanged, this, &Conductor::refreshText);
+			disconnect(diagram_->project(), &QETProject::projectDiagramsOrderChanged, this, &Conductor::refreshText);
 
 			//Label is frozen, so we don't update it.
 		if (m_freeze_label == true)
 			return;
 
 		if (new_formula.contains("%F"))
-			new_formula.replace("%F", diagram()->border_and_titleblock.folio());
+			new_formula.replace("%F", diagram_->border_and_titleblock.folio());
 
 		if (new_formula.contains("%id"))
-			connect(diagram()->project(), &QETProject::projectDiagramsOrderChanged, this, &Conductor::refreshText);
+			connect(diagram_->project(), &QETProject::projectDiagramsOrderChanged, this, &Conductor::refreshText);
 	}
 }
 
@@ -2063,8 +2091,8 @@ Conductor * longuestConductorInPotential(Conductor *conductor, bool all_diagram)
 	@brief relatedConductors
 	@param conductor
 	@return return all conductors who share the same terminals
-	of conductor given as parametre,
-	except conductor himself.
+	of conductor given as parameter,
+	except conductor itself.
 */
 QList <Conductor *> relatedConductors(const Conductor *conductor) {
 	QList<Conductor *> other_conductors_list = conductor -> terminal1 -> conductors();

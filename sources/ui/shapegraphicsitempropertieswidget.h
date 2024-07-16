@@ -1,5 +1,5 @@
 /*
-	Copyright 2006-2021 The QElectroTech Team
+	Copyright 2006-2024 The QElectroTech Team
 	This file is part of QElectroTech.
 
 	QElectroTech is free software: you can redistribute it and/or modify
@@ -53,13 +53,12 @@ class ShapeGraphicsItemPropertiesWidget : public PropertiesEditorWidget
 
 	private:
 		void setUpEditConnection();
+		void clearEditConnection();
 
 	private slots:
 		void on_m_lock_pos_cb_clicked();
-		void on_m_color_kpb_changed(const QColor &newColor);
-		void on_m_brush_color_kpb_changed(const QColor &newColor);
 
-		private:
+	private:
 		Ui::ShapeGraphicsItemPropertiesWidget *ui;
 		QetShapeItem *m_shape;
 		QList <QPointer<QetShapeItem>> m_shapes_list;

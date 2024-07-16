@@ -1,5 +1,5 @@
 /*
-	Copyright 2006-2021 The QElectroTech Team
+	Copyright 2006-2024 The QElectroTech Team
 	This file is part of QElectroTech.
 	
 	QElectroTech is free software: you can redistribute it and/or modify
@@ -16,6 +16,9 @@
 	along with QElectroTech.  If not, see <http://www.gnu.org/licenses/>.
 */
 #include "qgimanager.h"
+
+#include <QGraphicsScene>
+#include <QGraphicsItem>
 
 /**
 	Constructeur
@@ -84,6 +87,18 @@ void QGIManager::manage(const QList<QGraphicsItem *> &qgis) {
 */
 void QGIManager::release(const QList<QGraphicsItem *> &qgis) {
 	foreach(QGraphicsItem *qgi, qgis) release(qgi);
+}
+
+void QGIManager::manage(const QVector<QGraphicsItem *> &items) {
+	for (const auto &qgi : items) {
+		manage(qgi);
+	}
+}
+
+void QGIManager::release(const QVector<QGraphicsItem *> &items) {
+	for (const auto &qgi : items) {
+		release(qgi);
+	}
 }
 
 /**

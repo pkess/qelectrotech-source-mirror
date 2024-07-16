@@ -1,5 +1,5 @@
 /*
-	Copyright 2006-2021 The QElectroTech Team
+	Copyright 2006-2024 The QElectroTech Team
 	This file is part of QElectroTech.
 
 	QElectroTech is free software: you can redistribute it and/or modify
@@ -63,7 +63,7 @@ namespace autonum
 		public:
 			static QString formulaToLabel (QString formula, sequentialNumbers &seqStruct, Diagram *diagram, const Element *elmt = nullptr);
 			static QString replaceVariable (const QString &formula, const DiagramContext &dc);
-                        static QString genericXref (const Element *element);
+			static QString genericXref (const Element *element);
 
 		private:
 			AssignVariables(const QString& formula, const sequentialNumbers& seqStruct , Diagram *diagram, const Element *elmt = nullptr);

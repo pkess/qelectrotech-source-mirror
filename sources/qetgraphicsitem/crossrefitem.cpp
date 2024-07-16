@@ -1,5 +1,5 @@
 /*
-	Copyright 2006-2021 The QElectroTech Team
+	Copyright 2006-2024 The QElectroTech Team
 	This file is part of QElectroTech.
 
 	QElectroTech is free software: you can redistribute it and/or modify
@@ -29,7 +29,7 @@
 //define the height of the header.
 static int header = 5;
 //define the minimal height of the cross (without header)
-static int cross_min_heigth = 33;
+static int cross_min_height = 33;
 
 /**
 	@brief CrossRefItem::CrossRefItem
@@ -165,7 +165,7 @@ QPainterPath CrossRefItem::shape() const{
 	@param add_prefix
 	@return the string corresponding to the position of elmt in the diagram.
 	if add_prefix is true,
-	prefix (for power and delay contact) is added to the poistion text.
+	prefix (for power and delay contact) is added to the position text.
 */
 QString CrossRefItem::elementPositionText(
 		const Element *elmt, const bool &add_prefix) const
@@ -190,7 +190,7 @@ QString CrossRefItem::elementPositionText(
 
 /**
 	@brief CrossRefItem::updateProperties
-	update the curent properties
+	update the current properties
 */
 void CrossRefItem::updateProperties()
 {
@@ -247,19 +247,19 @@ void CrossRefItem::updateLabel()
 
 /**
 	@brief CrossRefItem::autoPos
-	Calculate and set position automaticaly.
+	Calculate and set position automatically.
 */
 void CrossRefItem::autoPos()
 {
 	//We calcul the position according to the snapTo of the xrefproperties
 	if (m_properties.snapTo() == XRefProperties::Bottom)
-		centerToBottomDiagram(this,
+		QGIUtility::centerToBottomDiagram(this,
 				      m_element,
 				      m_properties.offset() <= 40
 				      ? 5
 				      : m_properties.offset());
 	else
-		centerToParentBottom(this);
+		QGIUtility::centerToParentBottom(this);
 }
 
 /**
@@ -520,7 +520,7 @@ void CrossRefItem::setUpCrossBoundingRect(QPainter &painter)
 	if (no_str.isEmpty() && nc_str.isEmpty()) return;
 
 	//this is the default size of cross ref item
-	QRectF default_bounding(0, 0, 40, header + cross_min_heigth);
+	QRectF default_bounding(0, 0, 40, header + cross_min_height);
 
 	//Bounding rect of the NO text
 	QRectF no_bounding;
@@ -546,7 +546,7 @@ void CrossRefItem::setUpCrossBoundingRect(QPainter &painter)
 	}
 	//Adjust according to the NC
 	if (nc_bounding.height() > default_bounding.height() - header)
-		default_bounding.setHeight(nc_bounding.height() + header); //adjust the heigth
+		default_bounding.setHeight(nc_bounding.height() + header); //adjust the height
 	if (nc_bounding.width() > default_bounding.width()/2)
 		default_bounding.setWidth(nc_bounding.width()*2);//adjust the width
 
@@ -627,7 +627,7 @@ void CrossRefItem::drawAsContacts(QPainter &painter)
 		}
 	}
 
-	bounding_rect.adjust(-4, -4, 4, 4);
+	bounding_rect.adjust(-30, -4, 4, 4);
 	prepareGeometryChange();
 	m_bounding_rect = bounding_rect;
 	m_shape_path.addRect(bounding_rect);
@@ -646,7 +646,7 @@ QRectF CrossRefItem::drawContact(QPainter &painter, int flags, Element *elmt)
 	QString str = elementPositionText(elmt);
 	int offset = m_drawed_contacts*10;
 	QRectF bounding_rect = QRectF(0, offset, 24, 10);
-
+	
 	QPen pen = painter.pen();
 	m_hovered_contact == elmt ? pen.setColor(Qt::blue) :pen.setColor(Qt::black);
 	painter.setPen(pen);
@@ -660,7 +660,7 @@ QRectF CrossRefItem::drawContact(QPainter &painter, int flags, Element *elmt)
 		painter.drawLine(0, offset+6, 8, offset+6);
 		painter.drawLine(16, offset+6, 24, offset+6);
 
-		///take exemple of this code for display the terminal text
+		///take example of this code for display the terminal text
 		/*QFont font = QETApp::diagramTextsFont(4);
 		font.setBold(true);
 		painter.setFont(font);
@@ -759,9 +759,13 @@ QRectF CrossRefItem::drawContact(QPainter &painter, int flags, Element *elmt)
 	}
 
 		//Draw a switch contact
+	
+	
+	
 	else if (flags &SW)
 	{
 		bounding_rect = QRectF(0, offset, 24, 20);
+		bounding_rect.adjust(0, -4, 4, 4);
 
 			//draw the NO side
 		painter.drawLine(0, offset+6, 8, offset+6);
@@ -799,16 +803,12 @@ QRectF CrossRefItem::drawContact(QPainter &painter, int flags, Element *elmt)
 				QRectF rr(9.5, offset+17, 5, 3);
 				painter.drawArc(rr, 0, 180*16);
 			}
+			
 		}
-	else if (flags &Other)
-	{
-		bounding_rect = QRectF(0, offset, 24, 20);
-		}
-
 
 			//Draw position text
 		QRectF text_rect = painter.boundingRect(
-					QRectF(30, offset+5, 5, 10),
+					QRectF(30, offset+4, 5, 10),
 					Qt::AlignLeft | Qt::AlignVCenter,
 					str);
 		painter.drawText(text_rect,
@@ -826,11 +826,31 @@ QRectF CrossRefItem::drawContact(QPainter &painter, int flags, Element *elmt)
 			//a switch contact take place of two normal contact
 		m_drawed_contacts += 2;
 		
-	}else if(flags &Other){
+	}
 	
-		QRectF text_rect = painter.boundingRect(QRectF(30, offset, 5, 10), Qt::AlignLeft | Qt::AlignVCenter, str);
-		painter.drawText(text_rect, Qt::AlignLeft | Qt::AlignVCenter, str);
+		//Draw Other symbol "ↈ"
+	else if(flags &Other)
+	{
+		bounding_rect = QRectF(0, offset, 24, 20);
+		bounding_rect.adjust(0, -4, 4, 4);
 	
+			//Draw the first arc symbol
+		QRectF r(8, offset+4, 5, 3);
+				painter.drawArc(r, 10*16, 270*16);
+		
+			//Draw the second arc symbol
+		QRectF r2(11.2, offset+4, 5, 3);
+				painter.drawArc(r2, 160*16, 300*16);
+
+			//Draw position text
+		QRectF text_rect = painter.boundingRect(
+					QRectF(30, offset, 5, 10), 
+					Qt::AlignLeft | Qt::AlignVCenter, 
+					str);
+		painter.drawText(text_rect,
+					Qt::AlignLeft | Qt::AlignVCenter, 
+					str);
+		bounding_rect = bounding_rect.united(text_rect);
 
 		if (m_hovered_contacts_map.contains(elmt)) {
 			m_hovered_contacts_map.insert(elmt, bounding_rect);
@@ -838,11 +858,11 @@ QRectF CrossRefItem::drawContact(QPainter &painter, int flags, Element *elmt)
 		else {
 			m_hovered_contacts_map.insert(elmt, bounding_rect);
 		}
-		m_drawed_contacts += 1;
-		}
-
-	return bounding_rect;
+		++m_drawed_contacts;
+	}
+		return bounding_rect;
 }
+
 
 /**
 	@brief CrossRefItem::fillCrossRef
@@ -966,11 +986,11 @@ void CrossRefItem::AddExtraInfo(QPainter &painter, const QString& type)
 
 /**
 	@brief CrossRefItem::NOElements
-	@return The linked elements of m_element wich are open or switch contact.
+	@return The linked elements of m_element which are open or switch contact.
 	If linked element is a power contact,
-	xref propertie is set to don't show power contact
-	and this cross item must be drawed as cross,
-	the element is not append in the list.
+	xref property is set to not show power contact
+	and this cross item must be drawn as a cross,
+	the element is not appended in the list.
 */
 QList<Element *> CrossRefItem::NOElements() const
 {
@@ -978,8 +998,8 @@ QList<Element *> CrossRefItem::NOElements() const
 
 	foreach (Element *elmt, m_element->linkedElements())
 	{
-		//We continue if element is a power contact and xref propertie
-		//is set to don't show power contact
+		//We continue if element is a power contact and xref property
+		//is set to not show power contact
 		if (m_properties.displayHas() == XRefProperties::Cross &&
 			!m_properties.showPowerContact() &&
 			elmt -> kindInformations()["type"].toString() == "power")
@@ -998,12 +1018,12 @@ QList<Element *> CrossRefItem::NOElements() const
 
 /**
 	@brief CrossRefItem::NCElements
-	@return The linked elements of m_element wich are close
+	@return The linked elements of m_element which are close
 	or switch contact
 	If linked element is a power contact,
-	xref propertie is set to don't show power contact
-	and this cross item must be drawed as cross,
-	the element is not append in the list.
+	xref property is set to not show power contact
+	and this cross item must be drawn as a cross,
+	the element is not appended in the list.
 */
 QList<Element *> CrossRefItem::NCElements() const
 {
@@ -1011,8 +1031,8 @@ QList<Element *> CrossRefItem::NCElements() const
 
 	foreach (Element *elmt, m_element->linkedElements())
 	{
-		//We continue if element is a power contact and xref propertie
-		//is set to don't show power contact
+		//We continue if element is a power contact and xref property
+		//is set to not show power contact
 		if (m_properties.displayHas() == XRefProperties::Cross &&
 			!m_properties.showPowerContact() &&
 			elmt -> kindInformations()["type"].toString() == "power")

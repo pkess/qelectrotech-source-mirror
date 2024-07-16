@@ -1,5 +1,5 @@
 /*
-	Copyright 2006-2021 The QElectroTech Team
+	Copyright 2006-2024 The QElectroTech Team
 	This file is part of QElectroTech.
 	
 	QElectroTech is free software: you can redistribute it and/or modify
@@ -17,9 +17,12 @@
 */
 #ifndef QGI_MANAGER_H
 #define QGI_MANAGER_H
+
 #include <QtCore>
-#include <QGraphicsScene>
-#include <QGraphicsItem>
+
+class QGraphicsScene;
+class QGraphicsItem;
+
 /**
 	This class provides a QGraphicsItem manager, which can delete QGraphicsItem
 	as soon as there is no reference to them anymore.
@@ -42,8 +45,12 @@ class QGIManager {
 	public:
 	void manage(QGraphicsItem *);
 	void release(QGraphicsItem *);
-	void manage(const QList<QGraphicsItem *> &);
-	void release(const QList<QGraphicsItem *> &);
+	QT_DEPRECATED_X("Use QGIManager::manage(const QVector<QGraphicsItem *> &) instead")
+		void manage(const QList<QGraphicsItem *> &);
+	QT_DEPRECATED_X("Use QGIManager::release(const QVector<QGraphicsItem *> &) instead")
+		void release(const QList<QGraphicsItem *> &);
+	void manage(const QVector<QGraphicsItem *> &items);
+	void release(const QVector<QGraphicsItem *> &items);
 	void setDestroyQGIOnDelete(bool);
 	bool manages(QGraphicsItem *) const;
 };

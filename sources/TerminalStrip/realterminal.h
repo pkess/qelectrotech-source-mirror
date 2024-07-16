@@ -1,5 +1,5 @@
 /*
-	Copyright 2006-2021 The QElectroTech Team
+	Copyright 2006-2024 The QElectroTech Team
 	This file is part of QElectroTech.
 
 	QElectroTech is free software: you can redistribute it and/or modify
@@ -31,7 +31,7 @@ class TerminalStripBridge;
 /**
  * @brief The RealTerminal class
  * Represent a real terminal.
- * A real terminal can be a drawed terminal in a folio
+ * A real terminal can be a drawn terminal in a folio
  * or a terminal set by user but not present
  * on any folio (for example a reserved terminal).
  *

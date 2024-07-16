@@ -1,5 +1,5 @@
 /*
-	Copyright 2006-2021 The QElectroTech Team
+	Copyright 2006-2024 The QElectroTech Team
 	This file is part of QElectroTech.
 
 	QElectroTech is free software: you can redistribute it and/or modify
@@ -215,15 +215,15 @@ QGuiApplication::setHighDpiScaleFactorRoundingPolicy(QetSettings::hdpiScaleFacto
 	QObject::connect(&app, &SingleApplication::receivedMessage,
 			 &qetapp, &QETApp::receiveMessage);
 
-    QtConcurrent::run([=]()
-    {
-            // for debugging
-        qInstallMessageHandler(myMessageOutput);
-        qInfo("Start-up");
-            // delete old log files of max 7 days old.
-        delete_old_log_files(7);
+	QtConcurrent::run([=]()
+	{
+		// for debugging
+		qInstallMessageHandler(myMessageOutput);
+		qInfo("Start-up");
+		// delete old log files of max 7 days old.
+		delete_old_log_files(7);
 		MachineInfo::instance()->send_info_to_debug();
-    });
+	});
 	return app.exec();
 }
 

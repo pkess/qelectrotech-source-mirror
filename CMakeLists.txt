@@ -31,7 +31,7 @@ set(QET_DIR ${PROJECT_SOURCE_DIR})
 # Add sub directories
 option(PACKAGE_TESTS "Build the tests" ON)
 if(PACKAGE_TESTS)
-  message("Add sub directorie tests")
+  message("Add sub directory tests")
   add_subdirectory(tests)
 endif()
 
@@ -125,7 +125,7 @@ target_include_directories(
   ${QET_DIR}/sources/NameList
   ${QET_DIR}/sources/NameList/ui
   ${QET_DIR}/sources/utils
-  ${QET_DIR}/sources/pugixml
+  ${QET_DIR}/pugixml/src
   ${QET_DIR}/sources/dataBase
   ${QET_DIR}/sources/dataBase/ui
   ${QET_DIR}/sources/factory/ui

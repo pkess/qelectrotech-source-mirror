@@ -1,5 +1,5 @@
 ﻿/*
-	Copyright 2006-2021 The QElectroTech Team
+	Copyright 2006-2024 The QElectroTech Team
 	This file is part of QElectroTech.
 
 	QElectroTech is free software: you can redistribute it and/or modify
@@ -46,14 +46,11 @@
 #include "dynamictextfieldeditor.h"
 #include "../../newelementwizard.h"
 #include "../editorcommands.h"
+#include "../../dxf/dxftoelmt.h"
+#include "../UndoCommand/openelmtcommand.h"
 
 #include <QSettings>
 #include <QActionGroup>
-
-/**
-  Number max of primitive displayed by the parts list widget
-  */
-#define QET_MAX_PARTS_IN_ELEMENT_EDITOR_LIST 200
 
 /**
  * @brief QETElementEditor::QETElementEditor
@@ -109,7 +106,7 @@ void QETElementEditor::contextMenu(QPoint p, QList<QAction *> actions)
 	menu.addAction(ui->m_delete_action);
 	menu.addAction(ui->m_cut_action);
 	menu.addAction(ui->m_copy_action);
-    menu.addAction((ui->m_rotate_action));
+	menu.addAction((ui->m_rotate_action));
 	menu.addSeparator();
 	menu.addAction(ui->m_paste_action);
 	menu.addAction(ui->m_paste_in_area_action);
@@ -327,7 +324,7 @@ void QETElementEditor::fromLocation(const ElementsLocation &location)
  * @brief QETElementEditor::toLocation
  * Save the edited element into @location
  * @param location
- * @return true if succesfully saved
+ * @return true if successfully saved
  */
 bool QETElementEditor::toLocation(const ElementsLocation &location)
 {
@@ -462,7 +459,9 @@ void QETElementEditor::fillPartsList()
 	m_parts_list -> clear();
 	QList<QGraphicsItem *> qgis = m_elmt_scene -> zItems();
 
-	if (qgis.count() <= QET_MAX_PARTS_IN_ELEMENT_EDITOR_LIST)
+	QSettings settings;
+	int maxParts = settings.value("elementeditor/max-parts-element-editor-list", 200).toInt();
+	if (qgis.count() <= maxParts)
 	{
 		for (int j = qgis.count() - 1 ; j >= 0 ; -- j)
 		{
@@ -470,6 +469,12 @@ void QETElementEditor::fillPartsList()
 			if (CustomElementPart *cep = dynamic_cast<CustomElementPart *>(qgi))
 			{
 				QString part_desc = cep -> name();
+				if (PartTerminal *terminal = dynamic_cast<PartTerminal *>(qgi)) {
+					const auto t_name { terminal->terminalName() } ;
+					if (!t_name.isEmpty()) {
+						part_desc += QLatin1String(" : ") + t_name;
+					}
+				}
 				QListWidgetItem *qlwi = new QListWidgetItem(part_desc);
 				QVariant v;
 #if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)	// ### Qt 6: remove
@@ -487,7 +492,7 @@ void QETElementEditor::fillPartsList()
 		}
 	}
 	else {
-		m_parts_list -> addItem(new QListWidgetItem(tr("Trop de primitives, liste non générée.")));
+		m_parts_list -> addItem(new QListWidgetItem(tr("Trop de primitives, liste non générée: %1").arg(qgis.count())));
 	}
 	m_parts_list -> blockSignals(false);
 }
@@ -676,10 +681,12 @@ void QETElementEditor::updateInformations()
 void QETElementEditor::updatePartsList()
 {
 	int items_count = m_elmt_scene -> items().count();
+	QSettings settings;
+  const int maxParts = settings.value("elementeditor/max-parts-element-editor-list", 200).toInt();
 	if (m_parts_list -> count() != items_count) {
 		fillPartsList();
 	}
-	else if (items_count <= QET_MAX_PARTS_IN_ELEMENT_EDITOR_LIST) {
+	else if (items_count <= maxParts) {
 		m_parts_list -> blockSignals(true);
 		int i = 0;
 		QList<QGraphicsItem *> items = m_elmt_scene -> zItems();
@@ -944,19 +951,19 @@ void QETElementEditor::writeSettings() const
 void QETElementEditor::setupActions()
 {
 #if defined(Q_OS_WIN32) || defined(Q_OS_WIN64)
-	ui->m_open_dxf_action -> setStatusTip(tr("To install the plugin DXFtoQET\nVisit https://download.tuxfamily.org/qet/builds/dxf_to_elmt/\n"
+	ui->m_open_dxf_action -> setStatusTip(tr("To install the plugin DXFtoQET\nVisit https://download.qelectrotech.org/qet/builds/dxf_to_elmt/\n"
 					 "\n"
 					 ">> Install on Windows\n"
 					 "Put DXFtoQET.exe binary on C:\\Users\\user_name\\AppData\\Roaming\\qet\\ directory \n"
 					   ));
 #elif defined(Q_OS_MAC)
-	ui->m_open_dxf_action -> setStatusTip(tr("To install the plugin DXFtoQET\nVisit https://download.tuxfamily.org/qet/builds/dxf_to_elmt/\n"
+	ui->m_open_dxf_action -> setStatusTip(tr("To install the plugin DXFtoQET\nVisit https://download.qelectrotech.org/qet/builds/dxf_to_elmt/\n"
 					 "\n"
 					 ">> Install on macOSX\n"
 					 "Put DXFtoQET.app binary on /Users/user_name/.qet/ directory \n"
 					  ));
 #else
-	ui->m_open_dxf_action -> setStatusTip(tr("To install the plugin DXFtoQET\nVisit https://download.tuxfamily.org/qet/builds/dxf_to_elmt/\n"
+	ui->m_open_dxf_action -> setStatusTip(tr("To install the plugin DXFtoQET\nVisit https://download.qelectrotech.org/qet/builds/dxf_to_elmt/\n"
 					 "\n"
 					 ">> Install on Linux\n"
 					 "Put DXFtoQET binary on your /home/user_name/.qet/ directory\n"
@@ -964,7 +971,7 @@ void QETElementEditor::setupActions()
 					  ));
 #endif
 
-	ui->m_open_dxf_action -> setWhatsThis (tr("To install the plugin DXFtoQET\nVisit https://download.tuxfamily.org/qet/builds/dxf_to_elmt/\n"
+	ui->m_open_dxf_action -> setWhatsThis (tr("To install the plugin DXFtoQET\nVisit https://download.qelectrotech.org/qet/builds/dxf_to_elmt/\n"
 					 "\n"
 					 ">> Install on Linux\n"
 					 "Put DXFtoQET binary on your /home/user_name/.qet/ directory\n"
@@ -990,7 +997,6 @@ void QETElementEditor::setupActions()
 	ui->m_open_from_file_action   -> setShortcut(tr("Ctrl+Shift+O"));
 	ui->m_save_action             -> setShortcut(QKeySequence::Save);
 	ui->m_save_as_file_action     -> setShortcut(tr("Ctrl+Shift+S"));
-	ui->m_quit_action             -> setShortcut(QKeySequence(tr("Ctrl+Q")));
 	ui->m_select_all_act          -> setShortcut(QKeySequence::SelectAll);
 	ui->m_deselect_all_action     -> setShortcut(QKeySequence(tr("Ctrl+Shift+A")));
 	ui->m_revert_selection_action -> setShortcut(QKeySequence(tr("Ctrl+I")));
@@ -1003,8 +1009,10 @@ void QETElementEditor::setupActions()
 
 #ifndef Q_OS_MAC
 	ui->m_delete_action -> setShortcut(QKeySequence(Qt::Key_Delete));
+	ui->m_quit_action -> setShortcut(QKeySequence(tr("Ctrl+Q")));
 #else
 	ui->m_delete_action -> setShortcut(QKeySequence(tr("Backspace")));
+	ui->m_quit_action -> setShortcut(QKeySequence(tr("Ctrl+W")));
 #endif
 
 		//Depth action
@@ -1019,10 +1027,10 @@ void QETElementEditor::setupActions()
 	depth_toolbar -> addActions(m_depth_action_group -> actions());
 	addToolBar(Qt::TopToolBarArea, depth_toolbar);
 
-        //Rotate action
+		//Rotate action
 	connect(ui->m_rotate_action, &QAction::triggered, [this]() {this -> elementScene() -> undoStack().push(new RotateElementsCommand(this->elementScene()));});
 
-        //Zoom action
+		//Zoom action
 	ui->m_zoom_in_action       -> setShortcut(QKeySequence::ZoomIn);
 	ui->m_zoom_out_action      -> setShortcut(QKeySequence::ZoomOut);
 	ui->m_zoom_fit_best_action -> setShortcut(QKeySequence(tr("Ctrl+9")));
@@ -1128,7 +1136,6 @@ void QETElementEditor::setupConnection()
 	});
 
 	connect(&(m_elmt_scene -> undoStack()), &QUndoStack::indexChanged, [this]() {
-		this->updatePartsList();
 		this->updateInformations();
 	});
 }
@@ -1258,7 +1265,7 @@ bool QETElementEditor::on_m_save_action_triggered()
  */
 bool QETElementEditor::on_m_save_as_action_triggered()
 {
-	// Check element befor writing
+	// Check element before writing
 	if (checkElement()) {
 		//Ask a location to user
 		ElementsLocation location = ElementDialog::getSaveElementLocation(this);
@@ -1327,7 +1334,7 @@ void QETElementEditor::on_m_open_dxf_action_triggered()
 
 bool QETElementEditor::on_m_save_as_file_action_triggered()
 {
-	// Check element befor writing
+	// Check element before writing
 	if (checkElement()) {
 		//Ask a filename to user, for save the element
 		QString fn = QFileDialog::getSaveFileName(
@@ -1475,7 +1482,7 @@ void QETElementEditor::on_m_zoom_original_action_triggered() { m_view->zoomReset
 void QETElementEditor::on_m_about_qet_action_triggered() { QETApp::instance()->aboutQET(); }
 
 void QETElementEditor::on_m_online_manual_triggered() {
-	QString link = "https://download.tuxfamily.org/qet/manual_0.7/build/index.html";
+	QString link = "https://download.qelectrotech.org/qet/manual_0.7/build/index.html";
 	QDesktopServices::openUrl(QUrl(link));
 }
 
@@ -1490,3 +1497,30 @@ void QETElementEditor::on_m_donate_action_triggered() {
 }
 
 void QETElementEditor::on_m_about_qt_action_triggered() { qApp->aboutQt(); }
+
+void QETElementEditor::on_m_import_dxf_triggered()
+{
+	if (dxf2ElmtIsPresent(true, this))
+	{
+		QString file_path{QFileDialog::getOpenFileName(this,
+													   QObject::tr("Importer un fichier dxf"),
+													   "/home",
+													   "DXF (*.dxf)")};
+		if (file_path.isEmpty()) {
+			return;
+		}
+
+		QMessageBox::information(this, tr("Avertissement"), tr("L'import d'un dxf volumineux peut prendre du temps \n"
+															   "veuillez patienter durant l'import..."));
+
+		const QByteArray array_{dxfToElmt(file_path)};
+		if (array_.isEmpty()) {
+			return;
+		}
+		QDomDocument xml_;
+		xml_.setContent(array_);
+
+		m_elmt_scene->undoStack().push(new OpenElmtCommand(xml_, m_elmt_scene));
+	}
+}
+

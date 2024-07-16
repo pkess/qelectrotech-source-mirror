@@ -1,5 +1,5 @@
 /*
-	Copyright 2006-2021 The QElectroTech Team
+	Copyright 2006-2024 The QElectroTech Team
 	This file is part of QElectroTech.
 
 	QElectroTech is free software: you can redistribute it and/or modify
@@ -16,6 +16,9 @@
 	along with QElectroTech.  If not, see <http://www.gnu.org/licenses/>.
 */
 #include "machine_info.h"
+
+#include "qetversion.h"
+
 #include <QScreen>
 #include <QProcess>
 #include <QApplication>
@@ -28,7 +31,6 @@
 #ifdef Q_OS_WIN
 #include <windows.h>
 #endif
-#include "qet.h"
 
 MachineInfo *MachineInfo::m_instance = nullptr;
 /**
@@ -120,11 +122,13 @@ void MachineInfo::send_info_to_debug()
 		<< QLibraryInfo::path(QLibraryInfo::SettingsPath);
 #endif
 #endif
-	qInfo() << "GitRevision " + QString(GIT_COMMIT_SHA);
-	qInfo()<< "QElectroTech V " + QET::displayedVersion;
+	if (strlen(GIT_COMMIT_SHA)) {
+		qInfo() << "GitRevision " + QString(GIT_COMMIT_SHA);
+	}
+	qInfo()<< "QElectroTech V " + QetVersion::displayedVersion();
 	qInfo()<< QObject::tr("Compilation : ") + pc.built.version;
 	qInfo()<< "Built with Qt " + pc.built.QT
-	      + " - " + pc.built.arch
+		  + " - " + pc.built.arch
 		  + " - Date : " + pc.built.date
 		  + " : " + pc.built.time;
 	qInfo()<< "Run with Qt "+ QString(qVersion())
@@ -257,7 +261,7 @@ void MachineInfo::init_get_cpu_info_linux()
 	QString linuxGPUOutput = linuxgpuinfo.readAllStandardOutput();
 	pc.gpu.info=QString(linuxGPUOutput.toLocal8Bit().constData());
 	linuxgpuinfo.close();
-    
+
 	QProcess linuxgpuRAM;
 	linuxgpuRAM.start("bash",
 			QStringList()
@@ -267,9 +271,6 @@ void MachineInfo::init_get_cpu_info_linux()
 	QString linuxGPURAMOutput = linuxgpuRAM.readAllStandardOutput();
 	pc.gpu.RAM=QString(linuxGPURAMOutput.toLocal8Bit().constData());
 	linuxgpuRAM.close();
-    
- 
-       
 }
 
 /**
@@ -381,7 +382,10 @@ QString MachineInfo::compilation_info()
 	compilation_info += " - " + pc.built.arch;
 	compilation_info += " - Date : " + pc.built.date;
 	compilation_info += " : " + pc.built.time;
-	compilation_info += " <br>Run with Qt "+ QString(qVersion());
+	if (strlen(GIT_COMMIT_SHA)) {
+		compilation_info += "<br> Git Revision : " + QString(GIT_COMMIT_SHA);
+	}
+	compilation_info += " <br>Run with Qt " + QString(qVersion());
 	compilation_info += " using"
 			+ QString(" %1 thread(s)").arg(pc.cpu.ThreadCount);
 	compilation_info +=  "<br> CPU : " + pc.cpu.info;

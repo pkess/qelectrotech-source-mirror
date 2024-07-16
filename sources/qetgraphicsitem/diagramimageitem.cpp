@@ -1,5 +1,5 @@
 /*
-	Copyright 2006-2021 The QElectroTech Team
+	Copyright 2006-2024 The QElectroTech Team
 	This file is part of QElectroTech.
 
 	QElectroTech is free software: you can redistribute it and/or modify
@@ -83,7 +83,7 @@ void DiagramImageItem::paint(QPainter *painter, const QStyleOptionGraphicsItem *
 
 /**
 	@brief DiagramImageItem::editProperty
-	Open the approriate dialog to edit this image
+	Open the appropriate dialog to edit this image
 */
 void DiagramImageItem::editProperty()
 {
@@ -129,9 +129,9 @@ QString DiagramImageItem::name() const
 
 /**
 	@brief DiagramImageItem::fromXml
-	Load this image fro xml elemebt e
+	Load this image from xml element e
 	@param e
-	@return true if succesfully load.
+	@return true if successfully loaded.
 */
 bool DiagramImageItem::fromXml(const QDomElement &e)
 {

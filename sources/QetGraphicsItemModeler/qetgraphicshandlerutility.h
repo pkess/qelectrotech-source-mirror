@@ -1,5 +1,5 @@
 /*
-	Copyright 2006-2021 The QElectroTech Team
+	Copyright 2006-2024 The QElectroTech Team
 	This file is part of QElectroTech.
 
 	QElectroTech is free software: you can redistribute it and/or modify
@@ -28,7 +28,7 @@ class QPainter;
 	@brief The QetGraphicsHandlerUtility class
 	This class provide some methods to create and use handler for
 	modify graphics shape like line rectangle etc...
-	They also provide some conveniance static method.
+	They also provide some convenience static method.
 */
 class QetGraphicsHandlerUtility
 {

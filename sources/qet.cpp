@@ -1,5 +1,5 @@
 /*
-	Copyright 2006-2021 The QElectroTech Team
+	Copyright 2006-2024 The QElectroTech Team
 	This file is part of QElectroTech.
 
 	QElectroTech is free software: you can redistribute it and/or modify
@@ -266,7 +266,8 @@ QString QET::ElementsAndConductorsSentence(
 		int images_count,
 		int shapes_count,
 		int element_text_count,
-		int tables_count)
+		int tables_count,
+		int terminal_strip_count)
 {
 	QString text;
 	if (elements_count) {
@@ -327,6 +328,14 @@ QString QET::ElementsAndConductorsSentence(
 					"%n tableau(s)",
 					"part of a sentence listing the content of diagram",
 					tables_count);
+	}
+
+	if (terminal_strip_count) {
+		if (!text.isEmpty()) text += ", ";
+		text += QObject::tr(
+					"%n plan de bornes",
+					"part of a sentence listing the content of a diagram",
+					terminal_strip_count);
 	}
 
 	return(text);
@@ -678,6 +687,8 @@ QString QET::qetCollectionToString(const QET::QetCollection &c)
 	{
 		case Common :
 			return "common";
+		case Company :
+			return "company";
 		case Custom :
 			return "custom";
 		case Embedded :
@@ -697,6 +708,8 @@ QET::QetCollection QET::qetCollectionFromString(const QString &str)
 {
 	if (str == "common")
 		return QetCollection::Common;
+	else if (str == "company")
+		return QetCollection::Company;
 	else if (str == "custom")
 		return QetCollection::Custom;
 	else if (str == "embedded")

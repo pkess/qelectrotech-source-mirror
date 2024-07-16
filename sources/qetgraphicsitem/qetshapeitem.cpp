@@ -1,5 +1,5 @@
 /*
-	Copyright 2006-2021 The QElectroTech Team
+	Copyright 2006-2024 The QElectroTech Team
 	This file is part of QElectroTech.
 
 	QElectroTech is free software: you can redistribute it and/or modify
@@ -212,7 +212,7 @@ int QetShapeItem::pointsCount() const
 
 /**
 	@brief QetShapeItem::setNextPoint
-	Add a new point to the curent polygon
+	Add a new point to the current polygon
 	@param P the new point.
 */
 void QetShapeItem::setNextPoint(QPointF P)
@@ -952,28 +952,31 @@ bool QetShapeItem::toDXF(const QString &filepath,const QPen &pen)
 	switch (m_shapeType)
 	{
 		case Line:
-	    Createdxf::drawLine(filepath,
+			Createdxf::drawLine(filepath,
 			QLineF( mapToScene(m_P1),
 				mapToScene(m_P2)),
 				Createdxf::dxfColor(pen));
-	    return true;
+			return true;
 		case Rectangle:
-	    Createdxf::drawRectangle(filepath,
-			 QRectF(mapToScene(m_P1),
+			Createdxf::drawRectangle(filepath,
+			QRectF(mapToScene(m_P1),
 				mapToScene(m_P2)).normalized(),
 				Createdxf::dxfColor(pen));
-	    return true;
+			return true;
 		case Ellipse:
-	    Createdxf::drawEllipse(filepath,
-			 QRectF(mapToScene(m_P1),
+			Createdxf::drawEllipse(filepath,
+			QRectF(mapToScene(m_P1),
 				mapToScene(m_P2)).normalized(),
 				Createdxf::dxfColor(pen));
-	    return true;
-	case Polygon:
-	    Createdxf::drawPolygon(filepath,m_polygon,Createdxf::dxfColor(pen));
-	    return true;
-	default:
-	    return false;
+			return true;
+		case Polygon:
+			if(m_polygon.isClosed())
+				Createdxf::drawPolygon(filepath,m_polygon,Createdxf::dxfColor(pen));
+			else
+				Createdxf::drawPolyline(filepath,m_polygon,Createdxf::dxfColor(pen));
+			return true;
+		default:
+			return false;
 	}
 }
 
@@ -991,7 +994,7 @@ void QetShapeItem::editProperty()
 
 /**
 	@brief QetShapeItem::name
-	@return the name of the curent shape.
+	@return the name of the current shape.
 */
 QString QetShapeItem::name() const
 {

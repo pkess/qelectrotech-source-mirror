@@ -1,5 +1,5 @@
 /*
-	Copyright 2006-2021 The QElectroTech Team
+	Copyright 2006-2024 The QElectroTech Team
 	This file is part of QElectroTech.
 	
 	QElectroTech is free software: you can redistribute it and/or modify
@@ -63,7 +63,7 @@ public slots:
 	// attributes
 	private:
 	ProjectPropertiesDialog    *ppd_;
-	QETProject                 *m_project; ///< Project to edit propertie
+	QETProject                 *m_project; ///< Project to edit properties
 	BorderPropertiesWidget     *bpw;       ///< Widget to edit default diagram dimensions
 	TitleBlockPropertiesWidget *ipw;       ///< Widget to edit default title block properties
 	ConductorPropertiesWidget  *m_cpw;       ///< Widget to edit default conductor properties

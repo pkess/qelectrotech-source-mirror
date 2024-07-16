@@ -1,5 +1,5 @@
 /*
-	Copyright 2006-2021 The QElectroTech Team
+	Copyright 2006-2024 The QElectroTech Team
 	This file is part of QElectroTech.
 
 	QElectroTech is free software: you can redistribute it and/or modify
@@ -22,6 +22,9 @@
 
 #include <QDebug>
 #include <QGraphicsItem>
+
+namespace QGIUtility
+{
 
 /**
 	@brief centerToParentBottom
@@ -51,10 +54,10 @@ bool centerToParentBottom(QGraphicsItem *item) {
 	@param offset
 	@return true if element is centered else false (element_to_follow have not diagram)
 */
-#include "elementtextitemgroup.h"
-#include "crossrefitem.h"
-bool centerToBottomDiagram (QGraphicsItem *item_to_center, Element *element_to_follow, qreal offset) {
-	if (! element_to_follow -> diagram()) {
+bool centerToBottomDiagram (QGraphicsItem *item_to_center, Element *element_to_follow, qreal offset)
+{
+	if (! element_to_follow -> diagram())
+	{
 		qDebug() << "qgraphicsitemutility centerAtBottomDiagram : Element_to_follow have not diagram";
 		return false;
 	}
@@ -65,13 +68,13 @@ bool centerToBottomDiagram (QGraphicsItem *item_to_center, Element *element_to_f
 	point.setY(border.bottom() - item_to_center -> boundingRect().height() - offset );
 	point.rx() -= (item_to_center -> boundingRect().width()/2);
 	
-		//Apply the difference between the pos() of item and his bounding rect
+		//Apply the difference between the pos() of item and its bounding rect
 	QPointF tl = item_to_center->boundingRect().topLeft();
 	point.rx() -= tl.x();
 	point.ry() -= tl.y();
 	
-	item_to_center -> setPos(0,0);	  //Due to a weird behavior or bug, before set the new position and rotation,
-	item_to_center -> setRotation(0); //we must to set the position and rotation at 0.
+	item_to_center -> setPos(0,0);	  //Due to a weird behavior or bug, before setting the new position and rotation,
+	item_to_center -> setRotation(0); //we must set the position and rotation to 0.
 	
 	item_to_center->setPos(item_to_center->mapFromScene(point));
 	
@@ -81,8 +84,25 @@ bool centerToBottomDiagram (QGraphicsItem *item_to_center, Element *element_to_f
 		rot += parent->rotation();
 		parent = parent->parentItem();
 	}
-	if(rot != 0)
+	if(rot != 0) {
 		item_to_center->setRotation(item_to_center->rotation() - rot);
+	}
 
 	return true;
 }
+
+void drawBoundingRectSelection(QGraphicsItem *item, QPainter *painter)
+{
+	painter->save();
+	QPen t;
+	t.setColor(Qt::gray);
+	t.setStyle(Qt::DashDotLine);
+	t.setCosmetic(true);
+
+	painter->setPen(t);
+	painter->drawRoundedRect(item->boundingRect(),10,10);
+	painter->restore();
+}
+
+}
+

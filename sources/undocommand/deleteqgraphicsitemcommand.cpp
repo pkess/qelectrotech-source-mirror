@@ -1,5 +1,5 @@
 /*
-	Copyright 2006-2021 The QElectroTech Team
+	Copyright 2006-2024 The QElectroTech Team
 	This file is part of QElectroTech.
 
 	QElectroTech is free software: you can redistribute it and/or modify
@@ -31,7 +31,7 @@
 
 /**
 	@brief DeleteQGraphicsItemCommand::DeleteQGraphicsItemCommand
-	@param diagram : deigram where this undo work
+	@param diagram : diagram where this undo work
 	@param content : content to remove
 	@param parent : parent undo
 */
@@ -53,8 +53,8 @@ DeleteQGraphicsItemCommand::DeleteQGraphicsItemCommand(
 
 	}
 
-		//When remove a deti we must to know his parent item, for re-add deti as child of the parent
-		//when undo this command
+		//When removing a deti we must know its parent item, for re-adding deti as child of the parent
+		//when undoing this command
 	for(DynamicElementTextItem *deti : m_removed_contents.m_element_texts)
 	{
 		if(deti->parentGroup())

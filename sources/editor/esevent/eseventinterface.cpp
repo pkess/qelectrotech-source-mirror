@@ -1,5 +1,5 @@
 /*
-	Copyright 2006-2021 The QElectroTech Team
+	Copyright 2006-2024 The QElectroTech Team
 	This file is part of QElectroTech.
 
 	QElectroTech is free software: you can redistribute it and/or modify
@@ -84,7 +84,7 @@ bool ESEventInterface::wheelEvent(QGraphicsSceneWheelEvent *event) {
 
 /**
 	@brief ESEventInterface::keyPressEvent
-	By default, press escape key abort the curent action
+	By default, press escape key abort the current action
 	@param event
 	@return
 */

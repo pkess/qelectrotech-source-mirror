@@ -1,5 +1,5 @@
 /*
-	Copyright 2006-2021 The QElectroTech Team
+	Copyright 2006-2024 The QElectroTech Team
 	This file is part of QElectroTech.
 
 	QElectroTech is free software: you can redistribute it and/or modify
@@ -84,7 +84,7 @@ void SlaveElement::unlinkAllElements()
 
 /**
 	@brief SlaveElement::unlinkElement
-	Unlink the given elmt in parametre
+	Unlink the given element in parameter
 	@param elmt
 */
 void SlaveElement::unlinkElement(Element *elmt)

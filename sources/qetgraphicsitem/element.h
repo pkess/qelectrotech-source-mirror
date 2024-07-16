@@ -1,5 +1,5 @@
 ﻿/*
-	Copyright 2006-2021 The QElectroTech Team
+	Copyright 2006-2024 The QElectroTech Team
 	This file is part of QElectroTech.
 
 	QElectroTech is free software: you can redistribute it and/or modify
@@ -79,7 +79,7 @@ class Element : public QetGraphicsItem
 		int type() const override { return Type; }
 
 	signals:
-		void linkedElementChanged(); //This signal is emited when the linked elements with this element change
+		void linkedElementChanged(); //This signal is emitted when the linked elements with this element change
 		void elementInfoChange(
 				DiagramContext old_info,
 				DiagramContext new_info);

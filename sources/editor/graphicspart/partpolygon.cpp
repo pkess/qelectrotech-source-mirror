@@ -1,5 +1,5 @@
 /*
-	Copyright 2006-2021 The QElectroTech Team
+	Copyright 2006-2024 The QElectroTech Team
 	This file is part of QElectroTech.
 
 	QElectroTech is free software: you can redistribute it and/or modify
@@ -316,32 +316,12 @@ qreal PartPolygon::rotation() const {
 */
 QVariant PartPolygon::itemChange(QGraphicsItem::GraphicsItemChange change, const QVariant &value)
 {
-	if (change == ItemSelectedHasChanged && scene())
-	{
-		if (value.toBool() == true)
-		{
-				//When item is selected, he must to be up to date whene the selection in the scene change, for display or not the handler,
-				//according to the number of selected items.
-			connect(scene(), &QGraphicsScene::selectionChanged, this, &PartPolygon::sceneSelectionChanged);
-
-			if (scene()->selectedItems().size() == 1)
-				addHandler();
-		}
-		else
-		{
-			disconnect(scene(), &QGraphicsScene::selectionChanged, this, &PartPolygon::sceneSelectionChanged);
-			removeHandler();
-		}
-	}
-	else if (change == ItemPositionHasChanged)
+	if (change == ItemPositionHasChanged)
 	{
 		adjusteHandlerPos();
 	}
 	else if (change == ItemSceneChange)
 	{
-		if(scene())
-			disconnect(scene(), &QGraphicsScene::selectionChanged, this, &PartPolygon::sceneSelectionChanged);
-
 		setSelected(false); //This is item removed from scene, then we deselect this, and so, the handlers is also removed.
 	}
 
@@ -485,18 +465,6 @@ void PartPolygon::handlerMouseReleaseEvent(QetGraphicsHandlerItem *qghi, QGraphi
 }
 
 /**
-	@brief PartPolygon::sceneSelectionChanged
-	When the scene selection change, if there are several primitive selected, we remove the handler of this item
-*/
-void PartPolygon::sceneSelectionChanged()
-{
-	if (this->isSelected() && scene()->selectedItems().size() == 1)
-		addHandler();
-	else
-		removeHandler();
-}
-
-/**
 	@brief PartPolygon::addHandler
 	Add handlers for this item
 */
@@ -531,7 +499,7 @@ void PartPolygon::removeHandler()
 
 /**
 	@brief PartPolygon::insertPoint
-	Insert a point in this polygone
+	Insert a point in this polygon
 */
 void PartPolygon::insertPoint()
 {

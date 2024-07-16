@@ -1,5 +1,5 @@
 ﻿/*
-	Copyright 2006-2021 The QElectroTech Team
+	Copyright 2006-2024 The QElectroTech Team
 	This file is part of QElectroTech.
 
 	QElectroTech is free software: you can redistribute it and/or modify
@@ -180,6 +180,7 @@ void TerminalStripEditor::reload()
 	if (m_model)
 	{
 		m_model->reload();
+		spanMultiLevelTerminals();
 	}
 }
 

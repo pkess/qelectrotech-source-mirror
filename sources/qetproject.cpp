@@ -1,5 +1,5 @@
 ﻿/*
-	Copyright 2006-2021 The QElectroTech Team
+	Copyright 2006-2024 The QElectroTech Team
 	This file is part of QElectroTech.
 
 	QElectroTech is free software: you can redistribute it and/or modify
@@ -33,6 +33,7 @@
 #include "ui/importelementdialog.h"
 #include "TerminalStrip/terminalstrip.h"
 #include "qetxml.h"
+#include "qetversion.h"
 
 #include <QHash>
 #include <QStandardPaths>
@@ -51,12 +52,18 @@ static int BACKUP_INTERVAL = 120000; //interval in ms of backup = 2min
 QETProject::QETProject(QObject *parent) :
 	QObject              (parent),
 	m_titleblocks_collection(this),
-	m_data_base(this, this)
+	m_data_base(this, this),
+	m_project_properties_handler{this}
 {
 	setDefaultTitleBlockProperties(TitleBlockProperties::defaultProperties());
 
 	m_elements_collection = new XmlElementCollection(this);
 	init();
+}
+
+ProjectPropertiesHandler &QETProject::projectPropertiesHandler()
+{
+	return m_project_properties_handler;
 }
 
 /**
@@ -68,7 +75,8 @@ QETProject::QETProject(QObject *parent) :
 QETProject::QETProject(const QString &path, QObject *parent) :
 	QObject              (parent),
 	m_titleblocks_collection(this),
-	m_data_base(this, this)
+	m_data_base(this, this),
+	m_project_properties_handler{this}
 {
 	QFile file(path);
 	m_state = openFile(&file);
@@ -89,7 +97,8 @@ QETProject::QETProject(const QString &path, QObject *parent) :
 QETProject::QETProject(KAutoSaveFile *backup, QObject *parent) :
 	QObject              (parent),
 	m_titleblocks_collection(this),
-	m_data_base(this, this)
+	m_data_base(this, this),
+	m_project_properties_handler{this}
 {
 	m_state = openFile(backup);
 		//Failed to open from the backup, try to open the crashed
@@ -225,7 +234,33 @@ QETProject::ProjectState QETProject::openFile(QFile *file)
 	if(opened_here) {
 		file->close();
 	}
-	return ProjectState::Ok;
+	return m_state;
+}
+
+/**
+ * @brief QETProject::refresh
+ * Refresh everything in the project.
+ * This is notably use when open a project from file.
+ */
+void QETProject::refresh()
+{
+	DialogWaiting *dlgWaiting { nullptr };
+	if(DialogWaiting::hasInstance())
+	{
+	dlgWaiting = DialogWaiting::instance();
+		dlgWaiting->setModal(true);
+		dlgWaiting->show();
+	}
+
+	for(const auto &diagram : diagrams())
+	{
+		if(dlgWaiting)
+		{
+			dlgWaiting->setProgressBar(dlgWaiting->progressBarValue()+1);
+			dlgWaiting->setDetail(diagram->title());
+		}
+		diagram->refreshContents();
+	}
 }
 
 /**
@@ -408,9 +443,9 @@ QString QETProject::title() const
 /**
 	@return la version de QElectroTech declaree dans le fichier projet lorsque
 	celui-ci a ete ouvert ; si ce projet n'a jamais ete enregistre / ouvert
-	depuis un fichier, cette methode retourne -1.
+	depuis un fichier, cette methode une version nulle.
 */
-qreal QETProject::declaredQElectroTechVersion()
+QVersionNumber QETProject::declaredQElectroTechVersion()
 {
 	return(m_project_qet_version);
 }
@@ -473,6 +508,9 @@ void QETProject::setDefaultTitleBlockProperties(const TitleBlockProperties &titl
 		{
 			case QET::Common :
 				collection = QETApp::commonTitleBlockTemplatesCollection();
+				break;
+			case QET::Company :
+			//	collection = QETApp::companyTitleBlockTemplatesCollection();
 				break;
 			case QET::Custom :
 				collection = QETApp::customTitleBlockTemplatesCollection();
@@ -629,7 +667,7 @@ QHash <QString, NumerotationContext> QETProject::folioAutoNum() const
 /**
 	@brief QETProject::addConductorAutoNum
 	Add a new conductor numerotation context. If key already exist,
-	replace old context by the new context
+	replace old context with the new context
 	@param key
 	@param context
 */
@@ -640,7 +678,7 @@ void QETProject::addConductorAutoNum(const QString& key, const NumerotationConte
 /**
 	@brief QETProject::addElementAutoNum
 	Add a new element numerotation context. If key already exist,
-	replace old context by the new context
+	replace old context with the new context
 	@param key
 	@param context
 */
@@ -653,7 +691,7 @@ void QETProject::addElementAutoNum(const QString& key, const NumerotationContext
 /**
 	@brief QETProject::addFolioAutoNum
 	Add a new folio numerotation context. If key already exist,
-	replace old context by the new context
+	replace old context with the new context
 	@param key
 	@param context
 */
@@ -881,7 +919,7 @@ QDomDocument QETProject::toXml()
 	// racine du projet
 	QDomDocument xml_doc;
 	QDomElement project_root = xml_doc.createElement("project");
-	project_root.setAttribute("version", QET::version);
+	QetVersion::toXmlAttribute(project_root);
 	if (project_title_.isEmpty())
 	{
 		// if project_title_is Empty add title from m_file_path
@@ -1045,7 +1083,7 @@ bool QETProject::isEmpty() const
 /**
 	@brief QETProject::importElement
 	Import the element represented by location
-	to the embbeded collection of this project
+	to the embedded collection of this project
 	@param location
 	@return the location of the imported element, location can be null.
 */
@@ -1082,7 +1120,7 @@ ElementsLocation QETProject::importElement(ElementsLocation &location)
 		if (ied.exec() == QDialog::Accepted) {
 			QET::Action action = ied.action();
 
-			//Use the exisitng element
+			//Use the exisiting element
 			if (action == QET::Ignore) {
 				return existing_location;
 			}
@@ -1211,7 +1249,7 @@ QList<ElementsLocation> QETProject::unusedElements() const
 	within this project, false otherwise
 */
 bool QETProject::usesTitleBlockTemplate(const TitleBlockTemplateLocation &location) {
-	// a diagram can only use a title block template embedded wihtin its parent project
+	// a diagram can only use a title block template embedded within its parent project
 	if (location.parentProject() != this) return(false);
 
 	foreach (Diagram *diagram, diagrams()) {
@@ -1311,24 +1349,23 @@ void QETProject::readProjectXml(QDomDocument &xml_project)
 	if (root_elmt.tagName() == QLatin1String("project"))
 	{
 		//Normal opening mode
-		if (root_elmt.hasAttribute(QStringLiteral("version")))
+		m_project_qet_version = QetVersion::fromXmlAttribute(root_elmt);
+		if (!m_project_qet_version.isNull())
 		{
-			bool conv_ok;
-			m_project_qet_version = root_elmt.attribute(QStringLiteral("version")).toDouble(&conv_ok);
-#if TODO_LIST
-#pragma message("@TODO use of version convert")
-#endif
-			if (conv_ok && QET::version.toDouble() < m_project_qet_version)
+			if (QetVersion::currentVersion() < m_project_qet_version)
 			{
 				int ret = QET::QetMessageBox::warning(
 							nullptr,
 							tr("Avertissement",
 							   "message box title"),
-							tr("Ce document semble avoir été enregistré avec "
-							   "une version ultérieure de QElectroTech. Il est "
-							   "possible que l'ouverture de tout ou partie de ce "
+							tr("Ce document semble avoir été enregistré avec une version %1"
+							   "\n qui est ultérieure à votre version !"
+							   " \n"
+							   "Vous utilisez actuellement QElectroTech en version %2")
+							.arg(root_elmt.attribute(QStringLiteral("version")), QetVersion::currentVersion().toString() +
+							tr(".\n Il est alors possible que l'ouverture de tout ou partie de ce "
 							   "document échoue.\n"
-							   "Que désirez vous faire ?",
+							   "Que désirez vous faire ?"),
 							   "message box content"),
 							  QMessageBox::Open | QMessageBox::Cancel
 							  );
@@ -1339,20 +1376,23 @@ void QETProject::readProjectXml(QDomDocument &xml_project)
 					return;
 				}
 			}
+
 				//Since QElectrotech 0.9 the compatibility with project made with
 				//Qet 0.6 or lower is break;
-			if (conv_ok && m_project_qet_version <= 0.6 )
+			if (m_project_qet_version <= QetVersion::versionZeroDotSix())
 			{
 				auto ret = QET::QetMessageBox::warning(
-							   nullptr,
-							   tr("Avertissement ", "message box title"),
-							   tr("Le projet que vous tentez d'ouvrir est partiellement "
-								  "compatible avec votre version de QElectroTech.\n"
-								  "Afin de le rendre totalement compatible veuillez ouvrir ce même projet "
-								  "avec la version 0.8 de QElectroTech sauvegarder le projet "
-								  "et l'ouvrir à  nouveau avec cette version.\n"
-								  "Que désirez vous faire ?"),
-							   QMessageBox::Open | QMessageBox::Cancel);
+							nullptr,
+							tr("Avertissement ", "message box title"),
+							tr("Le projet que vous tentez d'ouvrir est partiellement "
+							   "compatible avec votre version %1 de QElectroTech.\n")
+							.arg(QetVersion::currentVersion().toString()) +
+							tr("Afin de le rendre totalement compatible veuillez ouvrir ce même projet "
+							   "avec la version 0.8, ou 0.80 de QElectroTech et sauvegarder le projet "
+							   "et l'ouvrir à  nouveau avec cette version.\n"
+							   "Que désirez vous faire ?"),
+							   QMessageBox::Open | QMessageBox::Cancel
+							  );
 
 				if (ret == QMessageBox::Cancel)
 				{
@@ -1366,6 +1406,7 @@ void QETProject::readProjectXml(QDomDocument &xml_project)
 	else
 	{
 		m_state = ProjectParsingFailed;
+		return;
 	}
 
 	m_data_base.blockSignals(true);
@@ -1387,6 +1428,9 @@ void QETProject::readProjectXml(QDomDocument &xml_project)
 
 		//Load the terminal strip
 	readTerminalStripXml(xml_project);
+
+		//Now that all are loaded we refresh content of the project.
+	refresh();
 
 
 	m_data_base.blockSignals(false);
@@ -1460,18 +1504,6 @@ void QETProject::readDiagramsXml(QDomDocument &xml_project)
 								 "<b>Ouverture du projet en cours...</b><br/>"
 								 "Mise en place des références croisées"
 								 "</p>"));
-	}
-
-	m_data_base.updateDB(); //All diagrams and items are created we need to update the database
-
-	for(const auto &diagram : diagrams())
-	{
-		if(dlgWaiting)
-		{
-			dlgWaiting->setProgressBar(dlgWaiting->progressBarValue()+1);
-			dlgWaiting->setDetail(diagram->title());
-		}
-		diagram->refreshContents();
 	}
 }
 
@@ -1641,7 +1673,7 @@ void QETProject::writeProjectPropertiesXml(QDomElement &xml_element) {
 	default conductor
 	defaut folio report
 	default Xref
-	@param xml_element : xml element to use for store default propertie.
+	@param xml_element : xml element to use to store default properties.
 */
 void QETProject::writeDefaultPropertiesXml(QDomElement &xml_element)
 {
@@ -1720,7 +1752,7 @@ void QETProject::writeDefaultPropertiesXml(QDomElement &xml_element)
 	@brief QETProject::addDiagram
 	Add a diagram in this project
 	@param diagram added diagram
-	@param pos postion of the new diagram, by default at the end
+	@param pos position of the new diagram, by default at the end
 */
 void QETProject::addDiagram(Diagram *diagram, int pos)
 {
@@ -1775,6 +1807,40 @@ NamesList QETProject::namesListForIntegrationCategory()
 		0x03b5,
 		0x03af,
 		0x03b1};
+	const QChar turkish_data[12] = {
+		0x0130,
+		0x0074,
+		0x0068,
+		0x0061,
+		0x006C,
+		0x0020,
+		0x00F6,
+		0x011F,
+		0x0065,
+		0x006C,
+		0x0065,
+		0x0072};
+	const QChar ukrainian_data[20] = {
+		0x0406,
+		0x043c,
+		0x043f,
+		0x043e,
+		0x0440,
+		0x0442,
+		0x043e,
+		0x0432,
+		0x0430,
+		0x043d,
+		0x0456,
+		0x0020,
+		0x0435,
+		0x043b,
+		0x0435,
+		0x043c,
+		0x0435,
+		0x043d,
+		0x0442,
+		0x0438};
 	const QChar japanese_data[10] = {
 		0x30A4,
 		0x30F3,
@@ -1786,7 +1852,11 @@ NamesList QETProject::namesListForIntegrationCategory()
 		0x305F,
 		0x8981,
 		0x7D20};
-
+	const QChar chinese_data[4] ={
+		0x5BFC,
+		0x5165,
+		0x5143,
+		0x4EF6};
 	names.addName("fr", "Éléments importés");
 	names.addName("en", "Imported elements");
 	names.addName("de", "Importierte elemente");
@@ -1801,7 +1871,12 @@ NamesList QETProject::namesListForIntegrationCategory()
 	names.addName("hr", "Uvezeni elementi");
 	names.addName("ca", "Elements importats");
 	names.addName("ro", "Elemente importate");
+	names.addName("tr", QString(turkish_data, 12));
+	names.addName("da", "Importerede elementer");
+	names.addName("sl", "Uvoženi elementi");
 	names.addName("ja", QString(japanese_data, 10));
+	names.addName("uk", QString(ukrainian_data, 20));
+	names.addName("zh", QString(chinese_data, 4));
 	return (names);
 #else
 #	if TODO_LIST
@@ -1821,6 +1896,9 @@ NamesList QETProject::namesListForIntegrationCategory()
 	names.addName("hr", "Uvezeni elementi");
 	names.addName("ca", "Elements importats");
 	names.addName("ro", "Elemente importate");
+	names.addName("da", "Importerede elementer");
+	names.addName("sl", "Uvoženi elementi");
+	names.addName("uk", "Імпортовані елементи");
 	return (names);
 #endif
 }
@@ -1872,6 +1950,7 @@ DiagramContext QETProject::projectProperties()
 void QETProject::setProjectProperties(const DiagramContext &context) {
 	m_project_properties = context;
 	updateDiagramsFolioData();
+	emit projectInformationsChanged(this);
 }
 
 /**

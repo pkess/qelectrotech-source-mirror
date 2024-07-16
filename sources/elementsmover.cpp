@@ -1,5 +1,5 @@
 /*
-	Copyright 2006-2021 The QElectroTech Team
+	Copyright 2006-2024 The QElectroTech Team
 	This file is part of QElectroTech.
 
 	QElectroTech is free software: you can redistribute it and/or modify
@@ -20,7 +20,6 @@
 #include "conductorautonumerotation.h"
 #include "diagram.h"
 #include "qetgraphicsitem/conductor.h"
-#include "diagramcommands.h"
 #include "qetgraphicsitem/conductortextitem.h"
 #include "qetgraphicsitem/diagramimageitem.h"
 #include "qetgraphicsitem/dynamicelementtextitem.h"
@@ -28,26 +27,19 @@
 #include "qetgraphicsitem/elementtextitemgroup.h"
 #include "qetgraphicsitem/independenttextitem.h"
 #include "undocommand/addgraphicsobjectcommand.h"
+#include "qetapp.h"
+#include "qetdiagrameditor.h"
+#include "undocommand/movegraphicsitemcommand.h"
 
 /**
 	@brief ElementsMover::ElementsMover Constructor
 */
-ElementsMover::ElementsMover() :
-	movement_running_(false),
-	current_movement_(),
-	diagram_(nullptr),
-	m_movement_driver(nullptr),
-	m_moved_content()
-{
-
-}
+ElementsMover::ElementsMover(){}
 
 /**
 	@brief ElementsMover::~ElementsMover Destructor
 */
-ElementsMover::~ElementsMover()
-{
-}
+ElementsMover::~ElementsMover(){}
 
 /**
 	@brief ElementsMover::isReady
@@ -56,7 +48,7 @@ ElementsMover::~ElementsMover()
 */
 bool ElementsMover::isReady() const
 {
-	return(!movement_running_);
+	return(!m_movement_running);
 }
 
 /**
@@ -69,31 +61,39 @@ bool ElementsMover::isReady() const
 int ElementsMover::beginMovement(Diagram *diagram, QGraphicsItem *driver_item)
 {
 		// They must be no movement in progress
-	if (movement_running_) return(-1);
+	if (m_movement_running) return(-1);
 
 		// Be sure we have diagram to work
 	if (!diagram) return(-1);
-	diagram_ = diagram;
+	m_diagram = diagram;
+
+	if (!diagram->views().isEmpty()) {
+		const auto qde = QETApp::diagramEditorAncestorOf(diagram->views().at(0));
+		if (qde) {
+			m_status_bar = qde->statusBar();
+		}
+	} else {
+		m_status_bar.clear();
+	}
 
 		// Take count of driver item
 	m_movement_driver = driver_item;
 
 		// At the beginning of movement, move is NULL
-	current_movement_ = QPointF(0.0, 0.0);
+	m_current_movement -= m_current_movement;
 
 	m_moved_content = DiagramContent(diagram);
 	m_moved_content.removeNonMovableItems();
 
-		//Remove element text, if the parent element is selected.
-	QList<DynamicElementTextItem *> deti_list = m_moved_content.m_element_texts.values();
-	for(DynamicElementTextItem *deti : deti_list) {
+		//Remove element text and text group, if the parent element is selected.
+	const auto element_text{m_moved_content.m_element_texts};
+	for(const auto &deti : element_text) {
 		if(m_moved_content.m_elements.contains(deti->parentElement())) {
 			m_moved_content.m_element_texts.remove(deti);
 		}
 	}
-
-	QList<ElementTextItemGroup *> etig_list = m_moved_content.m_texts_groups.values();
-	for(ElementTextItemGroup *etig : etig_list) {
+	const auto element_text_group{m_moved_content.m_texts_groups};
+	for(const auto &etig : element_text_group) {
 		if (m_moved_content.m_elements.contains(etig->parentElement())) {
 			m_moved_content.m_texts_groups.remove(etig);
 		}
@@ -103,7 +103,7 @@ int ElementsMover::beginMovement(Diagram *diagram, QGraphicsItem *driver_item)
 
 	/* At this point, we've got all info to manage movement.
 	 * There is now a move in progress */
-	movement_running_ = true;
+	m_movement_running = true;
 
 	return(m_moved_content.count());
 }
@@ -115,36 +115,48 @@ int ElementsMover::beginMovement(Diagram *diagram, QGraphicsItem *driver_item)
 */
 void ElementsMover::continueMovement(const QPointF &movement)
 {
-	if (!movement_running_ || movement.isNull()) return;
+	if (!m_movement_running || movement.isNull()) return;
 
-	current_movement_ += movement;
+	m_current_movement += movement;
 
-	//Move every movable item, except conductor
+		//Move every movable item, except conductor
 	typedef DiagramContent dc;
-	for (QGraphicsItem *qgi : m_moved_content.items(dc::Elements | dc::TextFields | dc::Images | dc::Shapes | dc::ElementTextFields | dc::TextGroup | dc::ConductorsToMove))
+	for (auto &qgi : m_moved_content.items(dc::Elements
+										   | dc::TextFields
+										   | dc::Images
+										   | dc::Shapes
+										   | dc::ElementTextFields
+										   | dc::TextGroup
+										   | dc::ConductorsToMove))
 	{
 		if (qgi == m_movement_driver)
 			continue;
-		qgi -> setPos(qgi->pos() + movement);
+		qgi->setPos(qgi->pos() + movement);
 	}
 
 	// Move some conductors
-	for (Conductor *c : m_moved_content.m_conductors_to_update)
+	for (auto &conductor : m_moved_content.m_conductors_to_update)
 	{
 #if TODO_LIST
-#pragma message("@TODO fix this problem correctly, probably we must to see conductor class.")
+#pragma message("@TODO fix this problem correctly, probably we must see conductor class.")
 #endif
-			//Due to a weird behavior, we must to ensure that the position of the conductor is to (0,0).
+			//Due to a weird behavior, we must ensure that the position of the conductor is (0,0).
 			//If not, in some unknown case the function QGraphicsScene::itemsBoundingRect() return a rectangle
-			//that take in acount the pos() of the conductor, even if the bounding rect returned by the conductor is not in the pos().
-			//For the user this situation appear when the top right of the folio is not at the top right of the graphicsview,
+			//that take into account the pos() of the conductor, even if the bounding rect returned by the conductor is not in the pos().
+			//For the user this situation appears when the top right of the folio is not at the top right of the graphicsview,
 			//but displaced to the right and/or bottom.
 
-	//@TODO fix this problem correctly, probably we must to see conductor class.
-//		if (c->pos() != QPointF(0,0)) { //<- they work, but the conductor text return to her original pos when the pos is set by user and not auto
+	//@TODO fix this problem correctly, probably we must see conductor class.
+//		if (c->pos() != QPointF(0,0)) { //<- they work, but the conductor text return to its original pos when the pos is set by user and not auto
 //			c->setPos(0,0);				// because set the pos to 0,0 so text move to, and after call updatePath but because text pos is user defined
 //		}								// we don't move it.
-		c->updatePath();
+		conductor->updatePath();
+	}
+
+	if (m_status_bar && m_movement_driver)
+	{
+		const auto point_{m_movement_driver->scenePos()};
+		m_status_bar->showMessage(QString("x %1 : y %2").arg(QString::number(point_.x()), QString::number(point_.y())));
 	}
 }
 
@@ -157,74 +169,81 @@ void ElementsMover::continueMovement(const QPointF &movement)
 void ElementsMover::endMovement()
 {
 		// A movement must be inited
-	if (!movement_running_) return;
+	if (!m_movement_running) return;
 
 		//empty command to be used has parent of commands below
-	QUndoCommand *undo_object = new QUndoCommand();
+	QUndoCommand *undo_object{new QUndoCommand()};
 
 		//Create undo move if there is a movement
-	if (!current_movement_.isNull()) {
-		QUndoCommand *quc = new MoveElementsCommand(diagram_, m_moved_content, current_movement_, undo_object);
+	if (!m_current_movement.isNull()) {
+		QUndoCommand *quc{new MoveGraphicsItemCommand(m_diagram, m_moved_content, m_current_movement, undo_object)};
 		undo_object->setText(quc->text());
 	}
 
 		//There is only one element moved, and project authorize auto conductor,
 		//we try auto connection of conductor;
 	typedef DiagramContent dc;
-	if (m_moved_content.items(dc::TextFields | dc::Images | dc::Shapes).size() == 0 &&
-		m_moved_content.items(dc::Elements).size() == 1 &&
-		diagram_ -> project() -> autoConductor())
+	if (m_moved_content.items(dc::TextFields
+								| dc::Images
+								| dc::Shapes
+								| dc::TerminalStrip).isEmpty()
+		&& m_moved_content.items(dc::Elements).size() == 1
+		&& m_diagram->project()->autoConductor())
 	{
-		Element *elmt = m_moved_content.m_elements.first();
+		const Element *elmt{m_moved_content.m_elements.first()};
+		const auto aligned_free_terminals{elmt->AlignedFreeTerminals()};
 
-		int acc = elmt->AlignedFreeTerminals().size();
-
-		while (!elmt -> AlignedFreeTerminals().isEmpty())
+		if (const int acc = aligned_free_terminals.size())
 		{
-			QPair <Terminal *, Terminal *> pair = elmt -> AlignedFreeTerminals().takeFirst();
+			for (const auto &pair : aligned_free_terminals)
+			{
+				Conductor *conductor{new Conductor(pair.first, pair.second)};
 
-			Conductor *conductor = new Conductor(pair.first, pair.second);
-
-				//Create an undo object for each new auto conductor, with undo_object for parent
-			new AddGraphicsObjectCommand(conductor, diagram_, QPointF(), undo_object);
+					//Create an undo object for each new auto conductor, with undo_object for parent
+				new AddGraphicsObjectCommand(conductor, m_diagram, QPointF(), undo_object);
 				if (undo_object->text().isEmpty())
 					undo_object->setText(QObject::tr("Ajouter %n conducteur(s)", "add a numbers of conductor one or more", acc));
 
-				//Get all conductors at the same potential of conductor
-			QSet <Conductor *> conductors_list = conductor->relatedPotentialConductors();
+					//Get all conductors at the same potential of conductor
+				const auto conductors_list{conductor->relatedPotentialConductors()};
 
-				//Compare the properties of every conductors stored in conductors_list,
-				//if every conductors properties is equal, we use this properties for conductor.
-			ConductorProperties others_properties;
-			bool use_properties = false;
-			if (!conductors_list.isEmpty())
-			{
-				use_properties = true;
-				others_properties = (*conductors_list.begin())->properties();
-				foreach (Conductor *cond, conductors_list)
-					if (cond->properties() != others_properties)
-						use_properties = false;
-			}
+					//Compare the properties of every conductors stored in conductors_list,
+					//if every conductors properties is equal, we use this properties for conductor.
+				ConductorProperties others_properties;
+				bool use_properties = false;
+				if (!conductors_list.isEmpty())
+				{
+					use_properties = true;
+					others_properties = (*conductors_list.cbegin())->properties();
+					for (const auto &cond :  conductors_list)
+						if (cond->properties() != others_properties)
+							use_properties = false;
+				}
 
-			if (use_properties)
-				conductor->setProperties(others_properties);
-			else
-			{
-				conductor -> setProperties(diagram_ -> defaultConductorProperties);
+				if (use_properties)
+					conductor->setProperties(others_properties);
+				else
+				{
+					conductor -> setProperties(m_diagram -> defaultConductorProperties);
 					//Autonum the new conductor, the undo command associated for this, have for parent undo_object
-				ConductorAutoNumerotation can  (conductor, diagram_, undo_object);
-				can.numerate();
+					ConductorAutoNumerotation can  (conductor, m_diagram, undo_object);
+					can.numerate();
+				}
 			}
 		}
 	}
 
 		//Add undo_object if have child
-	if (undo_object->childCount() >= 1)
-		diagram_ -> undoStack().push(undo_object);
+	if (undo_object->childCount())
+		m_diagram->undoStack().push(undo_object);
 	else
 		delete undo_object;
 
 		// There is no movement in progress now
-	movement_running_ = false;
+	m_movement_running = false;
 	m_moved_content.clear();
+
+	if (m_status_bar) {
+		m_status_bar->clearMessage();
+	}
 }

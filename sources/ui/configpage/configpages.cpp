@@ -1,5 +1,5 @@
 /*
-	Copyright 2006-2021 The QElectroTech Team
+	Copyright 2006-2024 The QElectroTech Team
 	This file is part of QElectroTech.
 
 	QElectroTech is free software: you can redistribute it and/or modify
@@ -68,7 +68,7 @@ NewDiagramPage::NewDiagramPage(QETProject *project,
 	// default conductor properties
 	m_cpw = new ConductorPropertiesWidget(ConductorProperties::defaultProperties());
 	m_cpw->setHiddenAvailableAutonum(true);
-	// default propertie of report label
+	// default properties of report label
 	rpw = new ReportPropertieWidget(ReportProperties::defaultProperties());
 	// default properties of xref
 	xrefpw = new XRefPropertiesWidget(XRefProperties::defaultProperties(), this);
@@ -170,7 +170,7 @@ void NewDiagramPage::applyConf()
 		// proprietes par defaut des conducteurs
 		m_cpw -> properties().toSettings(settings, "diagrameditor/defaultconductor");
 
-		// default report propertie
+		// default report properties
 		rpw->toSettings(settings, "diagrameditor/defaultreport");
 
 		// default xref properties

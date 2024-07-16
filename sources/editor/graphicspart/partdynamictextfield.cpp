@@ -1,5 +1,5 @@
 /*
-	Copyright 2006-2021 The QElectroTech Team
+	Copyright 2006-2024 The QElectroTech Team
 	This file is part of QElectroTech.
 
 	QElectroTech is free software: you can redistribute it and/or modify
@@ -175,6 +175,12 @@ void PartDynamicTextField::fromXml(const QDomElement &dom_elmt) {
 		QFont font_;
 		font_.fromString(dom_elmt.attribute("font"));
 		setFont(font_);
+	}
+	else if (dom_elmt.hasAttribute("font_size")) {
+#if TODO_LIST
+#pragma message("@TODO plc-user: remove again, when elements are converted!")
+#endif
+		setFont(QETApp::dynamicTextsItemFont(dom_elmt.attribute("font_size", QString::number(9)).toInt()));
 	}
 	else {
 #if TODO_LIST

@@ -1,5 +1,5 @@
 /*
-	Copyright 2006-2021 The QElectroTech Team
+	Copyright 2006-2024 The QElectroTech Team
 	This file is part of QElectroTech.
 	
 	QElectroTech is free software: you can redistribute it and/or modify
@@ -122,6 +122,12 @@ GeneralConfigurationPage::GeneralConfigurationPage(QWidget *parent) :
 	
 	ui->m_highlight_integrated_elements->setChecked(settings.value("diagrameditor/highlight-integrated-elements", true).toBool());
 	ui->m_default_elements_info->setPlainText(settings.value("elementeditor/default-informations", "").toString());
+	/*
+	  Nombre maximum de primitives affichees par la "liste des parties"
+	  Au-dela, un petit message est affiche, indiquant que ce nombre a ete depasse
+	  et que la liste ne sera donc pas mise a jour.
+	*/
+	ui->MaxPartsElementEditorList_sb->setValue(settings.value("elementeditor/max-parts-element-editor-list", 200).toInt());
 	
 	QString path = settings.value("elements-collections/common-collection-path", "default").toString();
 	if (path != "default")
@@ -130,6 +136,24 @@ GeneralConfigurationPage::GeneralConfigurationPage(QWidget *parent) :
 		ui->m_common_elmt_path_cb->setCurrentIndex(1);
 		ui->m_common_elmt_path_cb->setItemData(1, path, Qt::DisplayRole);
 		ui->m_common_elmt_path_cb->blockSignals(false);
+	}
+
+	path = settings.value("elements-collections/company-collection-path", "default").toString();
+	if (path != "default")
+	{
+		ui->m_company_elmt_path_cb->blockSignals(true);
+		ui->m_company_elmt_path_cb->setCurrentIndex(1);
+		ui->m_company_elmt_path_cb->setItemData(1, path, Qt::DisplayRole);
+		ui->m_company_elmt_path_cb->blockSignals(false);
+	}
+
+	path = settings.value("elements-collections/company-tbt-path", "default").toString();
+	if (path != "default")
+	{
+		ui->m_company_tbt_path_cb->blockSignals(true);
+		ui->m_company_tbt_path_cb->setCurrentIndex(1);
+		ui->m_company_tbt_path_cb->setItemData(1, path, Qt::DisplayRole);
+		ui->m_company_tbt_path_cb->blockSignals(false);
 	}
 
 	path = settings.value("elements-collections/custom-collection-path", "default").toString();
@@ -185,6 +209,7 @@ void GeneralConfigurationPage::applyConf()
 
 		//ELEMENT EDITOR
 	settings.setValue("elementeditor/default-informations", ui->m_default_elements_info->toPlainText());
+	settings.setValue("elementeditor/max-parts-element-editor-list", ui->MaxPartsElementEditorList_sb->value());
 
 		//DIAGRAM VIEW
 	settings.setValue("diagramview/gestures", ui->m_use_gesture_trackpad->isChecked());
@@ -198,7 +223,7 @@ void GeneralConfigurationPage::applyConf()
 		//NOMENCLATURE
 	settings.setValue("nomenclature/terminal-exportlist",ui->m_export_terminal->isChecked());
 
-	
+
 		//DIAGRAM EDITOR
 	QString view_mode = ui->m_use_tab_mode_rb->isChecked() ? "tabbed" : "windowed";
 	settings.setValue("diagrameditor/viewmode", view_mode) ;
@@ -234,6 +259,21 @@ void GeneralConfigurationPage::applyConf()
 		QETApp::resetCollectionsPath();
 	}
 	
+	path = settings.value("elements-collections/company-collection-path").toString();
+	if (ui->m_company_elmt_path_cb->currentIndex() == 1)
+	{
+		QString path = ui->m_company_elmt_path_cb->currentText();
+		QDir dir(path);
+		settings.setValue("elements-collections/company-collection-path",
+						  dir.exists() ? path : "default");
+	}
+	else {
+		settings.setValue("elements-collections/company-collection-path", "default");
+	}
+	if (path != settings.value("elements-collections/company-collection-path").toString()) {
+		QETApp::resetCollectionsPath();
+	}
+
 	path = settings.value("elements-collections/custom-collection-path").toString();
 	if (ui->m_custom_elmt_path_cb->currentIndex() == 1)
 	{
@@ -249,6 +289,21 @@ void GeneralConfigurationPage::applyConf()
 		QETApp::resetCollectionsPath();
 	}
 	
+	path = settings.value("elements-collections/company-tbt-path").toString();
+	if (ui->m_company_tbt_path_cb->currentIndex() == 1)
+	{
+		QString path = ui->m_company_tbt_path_cb->currentText();
+		QDir dir(path);
+		settings.setValue("elements-collections/company-tbt-path",
+						  dir.exists() ? path : "default");
+	}
+	else {
+		settings.setValue("elements-collections/company-tbt-path", "default");
+	}
+	if (path != settings.value("elements-collections/company-tbt-path").toString()) {
+		QETApp::resetCollectionsPath();
+	}
+
 	path = settings.value("elements-collections/custom-tbt-path").toString();
 	if (ui->m_custom_tbt_path_cb->currentIndex() == 1)
 	{
@@ -294,7 +349,7 @@ void GeneralConfigurationPage::fillLang()
 
 		// all lang available on lang directory
 	ui->m_lang_cb->addItem(QET::Icons::sa,		tr("Arabe"), "ar");
-	ui->m_lang_cb->addItem(QET::Icons::br,		tr("Brézilien"), "pt_br");
+	ui->m_lang_cb->addItem(QET::Icons::br,		tr("Brézilien"), "pt_BR");
 	ui->m_lang_cb->addItem(QET::Icons::catalonia,	tr("Catalan"), "ca");
 	ui->m_lang_cb->addItem(QET::Icons::cs,		tr("Tchèque"), "cs");
 	ui->m_lang_cb->addItem(QET::Icons::de,		tr("Allemand"), "de");
@@ -317,8 +372,8 @@ void GeneralConfigurationPage::fillLang()
 	ui->m_lang_cb->addItem(QET::Icons::tr,		tr("Turc"), "tr");
 	ui->m_lang_cb->addItem(QET::Icons::hu,		tr("Hongrois"), "hu");
 	ui->m_lang_cb->addItem(QET::Icons::mn,		tr("Mongol"), "mn");
-
-
+	ui->m_lang_cb->addItem(QET::Icons::uk,      tr("Ukrainien"), "uk");
+	ui->m_lang_cb->addItem(QET::Icons::zh,      tr("Chinois"), "zh");
 		//set current index to the lang found in setting file
 		//if lang doesn't exist set to system
 	QSettings settings;
@@ -391,6 +446,20 @@ void GeneralConfigurationPage::on_m_common_elmt_path_cb_currentIndexChanged(int 
 	}
 }
 
+void GeneralConfigurationPage::on_m_company_elmt_path_cb_currentIndexChanged(int index)
+{
+	if (index == 1)
+	{
+		QString path = QFileDialog::getExistingDirectory(this, tr("Chemin de la collection company"), QDir::homePath());
+		if (!path.isEmpty()) {
+			ui->m_company_elmt_path_cb->setItemData(1, path, Qt::DisplayRole);
+		}
+		else {
+			ui->m_company_elmt_path_cb->setCurrentIndex(0);
+		}
+	}
+}
+
 void GeneralConfigurationPage::on_m_custom_elmt_path_cb_currentIndexChanged(int index)
 {
 	if (index == 1)
@@ -401,6 +470,20 @@ void GeneralConfigurationPage::on_m_custom_elmt_path_cb_currentIndexChanged(int 
 		}
 		else {
 			ui->m_custom_elmt_path_cb->setCurrentIndex(0);
+		}
+	}
+}
+
+void GeneralConfigurationPage::on_m_company_tbt_path_cb_currentIndexChanged(int index)
+{
+	if (index == 1)
+	{
+		QString path = QFileDialog::getExistingDirectory(this, tr("Chemin des cartouches company"), QDir::homePath());
+		if (!path.isEmpty()) {
+			ui->m_company_tbt_path_cb->setItemData(1, path, Qt::DisplayRole);
+		}
+		else {
+			ui->m_company_tbt_path_cb->setCurrentIndex(0);
 		}
 	}
 }
@@ -432,5 +515,16 @@ void GeneralConfigurationPage::on_m_indi_text_font_pb_clicked()
 							QString::number(font.pointSize()) + " (" +
 							font.styleName() + ")";
 		ui->m_indi_text_font_pb->setText(fontInfos);
+	}
+}
+
+void GeneralConfigurationPage::on_MaxPartsElementEditorList_sb_valueChanged(int value)
+{
+	if (value > 500) {
+		ui->MaxPartsElementEditorList_sb->setToolTip(tr("To high values might lead to crashes of the application."));
+		ui->MaxPartsElementEditorList_sb->setStyleSheet("background-color: orange");
+	} else {
+		ui->MaxPartsElementEditorList_sb->setToolTip("");
+		ui->MaxPartsElementEditorList_sb->setStyleSheet("");
 	}
 }

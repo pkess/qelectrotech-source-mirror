@@ -1,5 +1,5 @@
 /*
-	Copyright 2006-2021 The QElectroTech Team
+	Copyright 2006-2024 The QElectroTech Team
 	This file is part of QElectroTech.
 
 	QElectroTech is free software: you can redistribute it and/or modify
@@ -35,6 +35,7 @@
 #include "graphicspart/parttext.h"
 #include "ui/qetelementeditor.h"
 #include "ui/elementpropertieseditorwidget.h"
+#include "../qetversion.h"
 
 #include <QKeyEvent>
 #include <algorithm>
@@ -119,7 +120,6 @@ void ElementScene::mouseMoveEvent(QGraphicsSceneMouseEvent *e)
 			if (m_event_interface->isFinish()) {
 				delete m_event_interface;
 				m_event_interface = nullptr;
-				emit(partsAdded());
 			}
 			return;
 		}
@@ -151,7 +151,6 @@ void ElementScene::mousePressEvent(QGraphicsSceneMouseEvent *e)
 			if (m_event_interface->isFinish()) {
 				delete m_event_interface;
 				m_event_interface = nullptr;
-				emit(partsAdded());
 			}
 			return;
 		}
@@ -171,7 +170,6 @@ void ElementScene::mouseReleaseEvent(QGraphicsSceneMouseEvent *e)
 			if (m_event_interface->isFinish()) {
 				delete m_event_interface;
 				m_event_interface = nullptr;
-				emit(partsAdded());
 			}
 			return;
 		}
@@ -199,7 +197,6 @@ void ElementScene::mouseDoubleClickEvent(QGraphicsSceneMouseEvent *event)
 			if (m_event_interface->isFinish()) {
 				delete m_event_interface;
 				m_event_interface = nullptr;
-				emit(partsAdded());
 			}
 			return;
 		}
@@ -223,7 +220,6 @@ void ElementScene::keyPressEvent(QKeyEvent *event)
 			{
 				delete m_event_interface;
 				m_event_interface = nullptr;
-				emit(partsAdded());
 			}
 			return;
 		}
@@ -337,8 +333,8 @@ void ElementScene::setEventInterface(ESEventInterface *event_interface)
 	if (m_event_interface)
 	{
 		delete m_event_interface;
-		//We must to re-init because previous interface
-		//Reset his own init when deleted
+		//We must re-init because previous interface
+		//Reset its own init when deleted
 		event_interface->init();
 	}
 	m_event_interface = event_interface;
@@ -453,7 +449,7 @@ const QDomDocument ElementScene::toXml(bool all_parts)
 	root.setAttribute("hotspot_y",   QString("%1").arg(
 				  -(qRound(size.y() - (ymargin/2)))));
 
-	root.setAttribute("version", QET::version);
+	QetVersion::toXmlAttribute(root);
 	root.setAttribute("link_type", m_element_data.typeToString(m_element_data.m_type));
 
 	//Uuid used to compare two elements
@@ -726,6 +722,48 @@ QETElementEditor* ElementScene::editor() const
 }
 
 /**
+ * @brief ElementScene::addItems
+ * Add items to the scene and emit partsAdded.
+ * Prefer always use this method instead of QGraphicsScene::addItem
+ * even if you want to add one item, for gain the signal emission
+ * @param items
+ */
+void ElementScene::addItems(QVector<QGraphicsItem *> items)
+{
+	for (const auto &item : items) {
+		addItem(item);
+	}
+
+	emit partsAdded();
+}
+
+/**
+ * @brief ElementScene::removeItems
+ * Remove items from the scene and emit partsRemoved.
+ * Prefer always use this method instead of QGraphicsScene::removeItem
+ * even if you want to remove one item, for gain the signal emission
+ * @param items
+ */
+void ElementScene::removeItems(QVector<QGraphicsItem *> items)
+{
+	const int previous_selected_count{selectedItems().size()};
+
+		//block signal to avoid multiple emit of selection changed,
+		//we emit this signal only once at the end of this function.
+	blockSignals(true);
+	for (const auto &item : items) {
+		removeItem(item);
+	}
+	blockSignals(false);
+
+	if (previous_selected_count != selectedItems().size()) {
+		emit selectionChanged();
+	}
+
+	emit partsRemoved();
+}
+
+/**
 	@brief ElementScene::slot_select
 	Select the item in content,
 	every others items in the scene are deselected
@@ -735,11 +773,11 @@ void ElementScene::slot_select(const ElementContent &content)
 {
 	blockSignals(true);
 
-	/* Befor clear selection,
-	 * we must to remove the handlers items in @content,
+	/* Before clearing selection,
+	 * we must remove the handlers items in @content,
 	 * because if in @content there are a selected item,
 	 * but also its handlers items, When item is deselected,
-	 * the item delete its handlers items,
+	 * the item deletes its handlers items,
 	 * then handlers in content doesn't exist anymore and cause segfault
 	 */
 	QList<QGraphicsItem*> items_list;
@@ -796,18 +834,15 @@ void ElementScene::slot_invertSelection()
 */
 void ElementScene::slot_delete()
 {
-	// check that there is something selected
-	// verifie qu'il y a qqc de selectionne
-	QList<QGraphicsItem *> selected_items = selectedItems();
-	if (selected_items.isEmpty()) return;
+	const auto selected_items{selectedItems().toVector()};
+	if (selected_items.isEmpty()) {
+		return;
+	}
 
-	// erase everything that is selected
-	// efface tout ce qui est selectionne
 	m_undo_stack.push(new DeletePartsCommand(this, selected_items));
 
-	// removing items does not trigger QGraphicsScene::selectionChanged()
-	emit(partsRemoved());
-	emit(selectionChanged());
+		// removing items does not trigger QGraphicsScene::selectionChanged()
+	emit selectionChanged();
 }
 
 /**
@@ -1330,24 +1365,28 @@ void ElementScene::managePrimitivesGroups()
 		m_decorator -> hide();
 	}
 
+	if (m_single_selected_item) {
+		m_single_selected_item->removeHandler();
+		m_single_selected_item.clear();
+	}
+
 		// should we hide the decorator?
-	QList<QGraphicsItem *> selected_items = zItems(
-				ElementScene::Selected
-				| ElementScene::IncludeTerminals);
+	const auto selected_items{zItems(ElementScene::Selected | ElementScene::IncludeTerminals)};
 	if (selected_items.size() <= 1)
 	{
-		m_decorator -> hide();
+		m_decorator->hide();
+
+		if (!selected_items.isEmpty())
+		{
+			if (CustomElementGraphicPart *item_ = dynamic_cast<CustomElementGraphicPart *>(selected_items.first()))
+			{
+				item_->addHandler();
+				m_single_selected_item = item_;
+			}
+		}
 	}
 	else
 	{
-		for(QGraphicsItem *qgi : selected_items)
-		{
-			/* We recall set selected,
-			 * then every primitive will remove there handler
-			 * because there are several item selected
-			 */
-			qgi->setSelected(true);
-		}
 		m_decorator -> setZValue(1000000);
 		m_decorator -> setPos(0, 0);
 		m_decorator -> setItems(selected_items);

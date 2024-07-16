@@ -1,5 +1,5 @@
 /*
-	Copyright 2006-2021 The QElectroTech Team
+	Copyright 2006-2024 The QElectroTech Team
 	This file is part of QElectroTech.
 
 	QElectroTech is free software: you can redistribute it and/or modify
@@ -22,6 +22,7 @@
 #include "diagrameventinterface.h"
 
 class Element;
+class QStatusBar;
 
 /**
 	@brief The DiagramEventAddElement class
@@ -51,6 +52,7 @@ class DiagramEventAddElement : public DiagramEventInterface
 		ElementsLocation m_location;
 		Element *m_element;
 		QString m_integrate_path;
+		QPointer<QStatusBar> m_status_bar;
 };
 
 #endif // DIAGRAMEVENTADDELEMENT_H

@@ -1,5 +1,5 @@
 /*
-	Copyright 2006-2021 The QElectroTech Team
+	Copyright 2006-2024 The QElectroTech Team
 	This file is part of QElectroTech.
 
 	QElectroTech is free software: you can redistribute it and/or modify
@@ -22,8 +22,10 @@
 #include "diagramposition.h"
 #include "math.h"
 #include "qetapp.h"
+#include "qetversion.h"
 #include "titleblocktemplate.h"
 #include "titleblocktemplaterenderer.h"
+
 
 #include <QLocale>
 #include <QPainter>
@@ -108,15 +110,15 @@ DiagramContext BorderTitleBlock::titleblockInformation() const
 
 /**
 	@brief BorderTitleBlock::titleBlockRectForQPainter
-	@return The title block rect to use with the QPainter in the method draw.
-	The returned rect is alway horizontal
-	(like displayed at the bottom of rect) only the top left change of pos
-	according to the edge where the title block need to be displayed.
+	@return The title block rect to use with the QPainter in the draw method.
+	The returned rect is always horizontal
+	(as displayed at the bottom of rect) only the top left change of pos
+	according to the edge where the title block needs to be displayed.
 	Rect according to edge:
 	Bottom : top left is at the bottom left edge of the diagram rect.
 	Right : top left is at the bottom right of diagram rect.
-	Befor use this rect you need to rotate the QPainter by -90°
-	for snap the rect at the right edge of diagram.
+	Before using this rect you need to rotate the QPainter by -90°
+	to snap the rect at the right edge of diagram.
 */
 QRectF BorderTitleBlock::titleBlockRectForQPainter() const
 {
@@ -309,23 +311,26 @@ TitleBlockProperties BorderTitleBlock::exportTitleBlock()
 	@brief BorderTitleBlock::importTitleBlock
 	@param ip the new properties of titleblock
 */
-void BorderTitleBlock::importTitleBlock(const TitleBlockProperties &ip) {
-	setAuthor(ip.author);
-	setDate(ip.date);
-	setTitle(ip.title);
-	setFileName(ip.filename);
-	setPlant(ip.plant);
-	setLocMach(ip.locmach);
-	setIndicerev(ip.indexrev);
-	setVersion(QET::displayedVersion);
+void BorderTitleBlock::importTitleBlock(const TitleBlockProperties &ip)
+{
+	btb_author_ = ip.author;
+	btb_date_ = ip.date;
+	btb_filename_ = ip.filename;
+	btb_plant_ = ip.plant;
+	btb_locmach_ = ip.locmach;
+	btb_indexrev_ = ip.indexrev;
+	btb_version_ = QetVersion::displayedVersion();
+	btb_auto_page_num_ = ip.auto_page_num;
+	additional_fields_ = ip.context;
+	btb_title_ = ip.title;
+
 	setFolio(ip.folio);
-	setAutoPageNum(ip.auto_page_num);
+
 	if (m_edge != ip.display_at)
 	{
 		m_edge = ip.display_at;
 		emit(displayChanged());
 	}
-	additional_fields_ = ip.context;
 
 	emit(needFolioData()); // Note: we expect additional data to be provided
 	// through setFolioData(),
@@ -481,15 +486,6 @@ void BorderTitleBlock::displayBorder(bool db) {
 	bool change = (db != display_border_);
 	display_border_  = db;
 	if (change) emit(displayChanged());
-}
-
-/**
-	@brief BorderTitleBlock::slot_setAutoPageNum
-	@param pageAutoNum :
-	Set Page (Folio) Auto Num
-*/
-void BorderTitleBlock::slot_setAutoPageNum(QString pageAutoNum) {
-	btb_auto_page_num_=std::move(pageAutoNum);
 }
 
 /**
@@ -882,35 +878,6 @@ DiagramPosition BorderTitleBlock::convertPosition(const QPointF &pos)
 }
 
 /**
-	@brief BorderTitleBlock::setAuthor
-	@param author the new value of the "Author" field
-*/
-void BorderTitleBlock::setAuthor(const QString &author) {
-	btb_author_ = author;
-}
-
-/**
-	@brief BorderTitleBlock::setDate
-	@param date the new value of the "Date" field
-*/
-void BorderTitleBlock::setDate(const QDate &date) {
-	btb_date_ = date;
-}
-
-/**
-	@brief BorderTitleBlock::setTitle
-	@param title the new value of the "Title" field
-*/
-void BorderTitleBlock::setTitle(const QString &title)
-{
-	if (btb_title_ != title)
-	{
-		btb_title_ = title;
-		emit(diagramTitleChanged(title));
-	}
-}
-
-/**
 	@brief BorderTitleBlock::setFolio
 	@param folio the new value of the "Folio" field
 */
@@ -1032,54 +999,6 @@ void BorderTitleBlock::setFolioData(
 	btb_final_folio_.replace("%total", QString::number(folio_total_));
 
 	updateDiagramContextForTitleBlock(project_properties);
-}
-
-/**
-	@brief BorderTitleBlock::setPlant
-	@param plant the new value of the "plant" field
-*/
-void BorderTitleBlock::setPlant(const QString &plant) {
-	btb_plant_ = plant;
-}
-
-/**
-	@brief BorderTitleBlock::setLocMach
-	@param locmach the new value of the "locmach" field
-*/
-void BorderTitleBlock::setLocMach(const QString &locmach) {
-	btb_locmach_ = locmach;
-}
-
-/**
-	@brief BorderTitleBlock::setIndicerev
-	@param indexrev the new value of the "indexrev" field
-*/
-void BorderTitleBlock::setIndicerev(const QString &indexrev) {
-	btb_indexrev_ = indexrev;
-}
-
-/**
-	@brief BorderTitleBlock::setFileName
-	@param filename the new value of the "filename" field
-*/
-void BorderTitleBlock::setFileName(const QString &filename) {
-	btb_filename_ = filename;
-}
-
-/**
-	@brief BorderTitleBlock::setVersion
-	@param version the new value of the "version" field
-*/
-void BorderTitleBlock::setVersion(const QString &version) {
-	btb_version_ = version;
-}
-
-/**
-	@brief BorderTitleBlock::setAutoPageNum
-	@param auto_page_num the new value of the "auto_page_num" field
-*/
-void BorderTitleBlock::setAutoPageNum(const QString &auto_page_num) {
-	btb_auto_page_num_ = auto_page_num;
 }
 
 /**

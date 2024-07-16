@@ -1,5 +1,5 @@
 /*
-	Copyright 2006-2021 The QElectroTech Team
+	Copyright 2006-2024 The QElectroTech Team
 	This file is part of QElectroTech.
 	
 	QElectroTech is free software: you can redistribute it and/or modify
@@ -32,11 +32,15 @@ class ElementPrimitiveDecorator;
 class QETElementEditor;
 class ESEventInterface;
 class QKeyEvent;
+class CustomElementGraphicPart;
 /**
 	@brief The ElementScene class
-	This class is the canvas allowing the visual edition of an electrial element.
+	This class is the canvas allowing the visual edition of an electrical element.
 	It displays the various primitives composing the drawing of the element,
 	the border due to its fixed size and its hotspot.
+
+	For add and remove item prefer use custom method addItems and removeItems instead of
+	addItem and removeItem, because these methods emit signal partAdded and partRemoved.
 */
 class ElementScene : public QGraphicsScene
 {
@@ -66,7 +70,7 @@ class ElementScene : public QGraphicsScene
 	
 		// attributes
 	private:
-		ElementData m_element_data; ///ElementData. Actualy in transition with old data storage
+		ElementData m_element_data; ///ElementData. Actually in transition with old data storage
 		QGIManager m_qgi_manager;
 		QUndoStack m_undo_stack;
 
@@ -84,6 +88,8 @@ class ElementScene : public QGraphicsScene
 
 		int m_x_grid,
 		    m_y_grid;
+
+		QPointer<CustomElementGraphicPart> m_single_selected_item;
 	
 		// methods
 	public:
@@ -124,6 +130,8 @@ class ElementScene : public QGraphicsScene
 		void cut();
 		void copy();
 		QETElementEditor* editor() const;
+		void addItems(QVector<QGraphicsItem *> items);
+		void removeItems(QVector<QGraphicsItem *> items);
 	
 	protected:
 		void mouseMoveEvent         (QGraphicsSceneMouseEvent *) override;

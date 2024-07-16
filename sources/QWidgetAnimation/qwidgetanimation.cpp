@@ -1,5 +1,5 @@
 ﻿/*
-	Copyright 2006-2021 The QElectroTech Team
+	Copyright 2006-2024 The QElectroTech Team
 	This file is part of QElectroTech.
 
 	QElectroTech is free software: you can redistribute it and/or modify
@@ -135,7 +135,7 @@ void QWidgetAnimation::show()
 */
 void QWidgetAnimation::hide()
 {
-	if (m_state == QWidgetAnimation::Hidding)
+	if (m_state == QWidgetAnimation::Hiding)
 		return;
 
 	if (m_state == Finish && m_widget->isVisible()) {
@@ -148,7 +148,7 @@ void QWidgetAnimation::hide()
 			: m_widget->height();
 	setStartValue(start_value);
 	setEndValue(0);
-	m_state = QWidgetAnimation::Hidding;
+	m_state = QWidgetAnimation::Hiding;
 	start();
 }
 

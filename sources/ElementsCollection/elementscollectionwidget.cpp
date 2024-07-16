@@ -1,5 +1,5 @@
 /*
-	Copyright 2006-2021 The QElectroTech Team
+	Copyright 2006-2024 The QElectroTech Team
 	This file is part of QElectroTech.
 
 	QElectroTech is free software: you can redistribute it and/or modify
@@ -96,7 +96,7 @@ void ElementsCollectionWidget::addProject(QETProject *project)
 		m_progress_bar->show();
 		m_tree_view->setDisabled(true);
 		QList <QETProject *> prj; prj.append(project);
-		m_model->loadCollections(false,false, prj);
+		m_model->loadCollections(false, false, false, prj);
 	}
 	else {
 		m_waiting_project.append(project);
@@ -148,26 +148,26 @@ void ElementsCollectionWidget::setUpAction()
 	m_open_dir = new QAction(QET::Icons::FolderOpen,
 				 tr("Ouvrir le dossier correspondant"), this);
 	m_edit_element = new QAction(QET::Icons::ElementEdit,
-				     tr("Éditer l'élément"), this);
+					 tr("Éditer l'élément"), this);
 	m_delete_element = new QAction(QET::Icons::ElementDelete,
-				       tr("Supprimer l'élément"), this);
+					   tr("Supprimer l'élément"), this);
 	m_delete_dir = new QAction(QET::Icons::FolderDelete,
 				   tr("Supprimer le dossier"), this);
 	m_reload = new QAction(QET::Icons::ViewRefresh,
-			       tr("Recharger les collections"), this);
+				   tr("Recharger les collections"), this);
 	m_edit_dir = new QAction(QET::Icons::FolderEdit,
 				 tr("Éditer le dossier"), this);
 	m_new_directory = new QAction(QET::Icons::FolderNew,
-				      tr("Nouveau dossier"), this);
+					  tr("Nouveau dossier"), this);
 	m_new_element = new QAction(QET::Icons::ElementNew,
-				    tr("Nouvel élément"), this);
+					tr("Nouvel élément"), this);
 	m_show_this_dir = new QAction(QET::Icons::FolderOnlyThis,
-				      tr("Afficher uniquement ce dossier"),
-				      this);
+					  tr("Afficher uniquement ce dossier"),
+					  this);
 	m_show_all_dir = new QAction(QET::Icons::FolderShowAll,
-				     tr("Afficher tous les dossiers"), this);
+					 tr("Afficher tous les dossiers"), this);
 	m_dir_propertie = new QAction(QET::Icons::FolderProperties,
-				      tr("Propriété du dossier"), this);
+					  tr("Propriété du dossier"), this);
 }
 
 /**
@@ -385,9 +385,10 @@ void ElementsCollectionWidget::deleteElement()
 
 	ElementsLocation loc(eci->collectionPath());
 	if (! (loc.isElement()
-	       && loc.exist()
-	       && loc.isFileSystem()
-	       && loc.collectionPath().startsWith("custom://")) ) return;
+		   && loc.exist()
+		   && loc.isFileSystem()
+		   && (loc.collectionPath().startsWith("company://")
+			   || loc.collectionPath().startsWith("custom://"))) ) return;
 
 	if (QET::QetMessageBox::question(
 		this,
@@ -400,8 +401,8 @@ void ElementsCollectionWidget::deleteElement()
 		if (file.remove())
 		{
 			m_model->removeRows(m_index_at_context_menu.row(),
-					    1,
-					    m_index_at_context_menu.parent());
+						1,
+						m_index_at_context_menu.parent());
 		}
 		else
 		{
@@ -428,9 +429,10 @@ void ElementsCollectionWidget::deleteDirectory()
 
 	ElementsLocation loc (eci->collectionPath());
 	if (! (loc.isDirectory()
-	       && loc.exist()
-	       && loc.isFileSystem()
-	       && loc.collectionPath().startsWith("custom://")) ) return;
+		   && loc.exist()
+		   && loc.isFileSystem()
+		   && (loc.collectionPath().startsWith("company://")
+			  || loc.collectionPath().startsWith("custom://"))) ) return;
 
 	if (QET::QetMessageBox::question(
 		this,
@@ -444,8 +446,8 @@ void ElementsCollectionWidget::deleteDirectory()
 		if (dir.removeRecursively())
 		{
 			m_model->removeRows(m_index_at_context_menu.row(),
-					    1,
-					    m_index_at_context_menu.parent());
+						1,
+						m_index_at_context_menu.parent());
 		}
 		else
 		{
@@ -585,13 +587,21 @@ void ElementsCollectionWidget::resetShowThisDir()
 
 /**
 	@brief ElementsCollectionWidget::dirProperties
-	Open an informative dialog about the curent index
+	Open an informative dialog about the current index
 */
 void ElementsCollectionWidget::dirProperties()
 {
 	ElementCollectionItem *eci = elementCollectionItemForIndex(
 				m_index_at_context_menu);
-	if (eci && eci->isDir()) {
+				//When the user right-clicks on the collection tree and
+				//selects the collection property, the collection name,
+				//file path and number of elements will be added 
+				//to the qInfo log file.
+					qInfo() <<tr("Le dossier") <<(eci->localName())
+					<<tr("contient")<<eci->elementsChild().size()
+					<<tr("éléments") <<"\n"<< "Path:"
+					<<(static_cast<FileElementCollectionItem*>(eci)->fileSystemPath());
+				if (eci && eci->isDir()) {
 		QString txt1 = tr("Le dossier %1 contient").arg(
 					eci->localName());
 		QString txt2 = tr("%n élément(s), répartie(s)",
@@ -611,7 +621,7 @@ void ElementsCollectionWidget::dirProperties()
 			this,
 			tr("Propriété du dossier %1").arg(eci->localName()),
 			txt1 + " " + txt2 + " " + txt3 + "\n\n" + txt4 + "\n" + txt5);
-	}
+		}
 }
 
 /**
@@ -631,7 +641,8 @@ void ElementsCollectionWidget::reload()
 	// Force to repaint now,
 	// else tree view will be not disabled immediately
 	m_tree_view->repaint();
-
+	m_progress_bar->setFormat(QObject::tr("chargement %p% (%v sur %m)"));
+	
 	QList <QETProject *> project_list;
 	project_list.append(m_waiting_project);
 	m_waiting_project.clear();
@@ -655,7 +666,7 @@ void ElementsCollectionWidget::reload()
 		this,
 		&ElementsCollectionWidget::loadingFinished);
 
-	m_new_model->loadCollections(true, true, project_list);
+	m_new_model->loadCollections(true, true, true, project_list);
 }
 
 /**
@@ -770,13 +781,13 @@ void ElementsCollectionWidget::search()
 	QModelIndexList match_index;
 	for (QString txt : text_list) {
 		match_index << m_model->match(m_showed_index.isValid()
-					      ? m_model->index(0,0,m_showed_index)
-					      : m_model->index(0,0),
-					      Qt::UserRole+1,
-					      QVariant(txt),
-					      -1,
-					      Qt::MatchContains
-					      | Qt::MatchRecursive);
+						  ? m_model->index(0,0,m_showed_index)
+						  : m_model->index(0,0),
+						  Qt::UserRole+1,
+						  QVariant(txt),
+						  -1,
+						  Qt::MatchContains
+						  | Qt::MatchRecursive);
 	}
 
 	for(QModelIndex index : match_index)

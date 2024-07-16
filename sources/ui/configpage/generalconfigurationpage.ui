@@ -6,15 +6,15 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>822</width>
+    <width>872</width>
     <height>411</height>
    </rect>
   </property>
-  <layout class="QGridLayout" name="gridLayout_5">
-   <item row="0" column="0">
+  <layout class="QVBoxLayout" name="verticalLayout_6">
+   <item>
     <widget class="QTabWidget" name="tabWidget">
      <property name="currentIndex">
-      <number>0</number>
+      <number>2</number>
      </property>
      <widget class="QWidget" name="tab_3">
       <attribute name="title">
@@ -240,13 +240,55 @@
            </widget>
           </item>
           <item row="2" column="0">
+           <widget class="QLabel" name="label_16">
+            <property name="text">
+             <string>Répertoire de la collection company</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="1">
+           <widget class="QComboBox" name="m_company_elmt_path_cb">
+            <item>
+             <property name="text">
+              <string>Par defaut</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Parcourir...</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item row="3" column="0">
+           <widget class="QLabel" name="label_17">
+            <property name="text">
+             <string>Répertoire des cartouches company</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="1">
+           <widget class="QComboBox" name="m_company_tbt_path_cb">
+            <item>
+             <property name="text">
+              <string>Par defaut</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Parcourir...</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item row="4" column="0">
            <widget class="QLabel" name="label_8">
             <property name="text">
              <string>Répertoire de la collection utilisateur</string>
             </property>
            </widget>
           </item>
-          <item row="2" column="1">
+          <item row="4" column="1">
            <widget class="QComboBox" name="m_custom_elmt_path_cb">
             <item>
              <property name="text">
@@ -260,7 +302,14 @@
             </item>
            </widget>
           </item>
-          <item row="3" column="1">
+          <item row="5" column="0">
+           <widget class="QLabel" name="label_10">
+            <property name="text">
+             <string>Répertoire des cartouches utilisateur</string>
+            </property>
+           </widget>
+          </item>
+          <item row="5" column="1">
            <widget class="QComboBox" name="m_custom_tbt_path_cb">
             <item>
              <property name="text">
@@ -274,17 +323,10 @@
             </item>
            </widget>
           </item>
-          <item row="4" column="1">
+          <item row="6" column="1">
            <widget class="QLabel" name="label_9">
             <property name="text">
              <string>(Recharger les collections d'éléments pour appliquer les changements)</string>
-            </property>
-           </widget>
-          </item>
-          <item row="3" column="0">
-           <widget class="QLabel" name="label_10">
-            <property name="text">
-             <string>Répertoire des cartouches utilisateur</string>
             </property>
            </widget>
           </item>
@@ -825,6 +867,63 @@ Vous pouvez spécifier ici la valeur par défaut de ce champ pour les éléments
        </item>
        <item>
         <spacer name="verticalSpacer_5">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="Editor">
+      <attribute name="title">
+       <string>Editor</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout_7">
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_1">
+         <item>
+          <widget class="QLabel" name="label_1">
+           <property name="text">
+            <string>Max. parts in Element Editor List</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="horizontalSpacer_8">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QSpinBox" name="MaxPartsElementEditorList_sb">
+           <property name="minimum">
+            <number>1</number>
+           </property>
+           <property name="maximum">
+            <number>10000</number>
+           </property>
+           <property name="value">
+            <number>200</number>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <spacer name="verticalSpacer_6">
          <property name="orientation">
           <enum>Qt::Vertical</enum>
          </property>

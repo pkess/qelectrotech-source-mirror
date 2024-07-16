@@ -1,5 +1,5 @@
 /*
-	Copyright 2006-2021 The QElectroTech Team
+	Copyright 2006-2024 The QElectroTech Team
 	This file is part of QElectroTech.
 
 	QElectroTech is free software: you can redistribute it and/or modify
@@ -73,7 +73,8 @@ class Terminal : public QGraphicsObject
 		int       conductorsCount     () const;
 		Diagram  *diagram             () const;
 		Element  *parentElement       () const;
-		QUuid uuid                    () const;
+		QUuid     uuid                () const;
+		QString   name                () const;
 
 		QList<Conductor *> conductors() const;
 		Qet::Orientation orientation() const;

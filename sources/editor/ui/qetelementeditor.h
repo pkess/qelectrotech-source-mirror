@@ -1,5 +1,5 @@
 /*
-	Copyright 2006-2021 The QElectroTech Team
+	Copyright 2006-2024 The QElectroTech Team
 	This file is part of QElectroTech.
 
 	QElectroTech is free software: you can redistribute it and/or modify
@@ -110,6 +110,7 @@ class QETElementEditor : public QMainWindow
 		void on_m_youtube_action_triggered();
 		void on_m_donate_action_triggered();
 		void on_m_about_qt_action_triggered();
+		void on_m_import_dxf_triggered();
 
 	private:
 		bool canClose();

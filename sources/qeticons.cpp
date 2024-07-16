@@ -1,5 +1,5 @@
 /*
-	Copyright 2006-2021 The QElectroTech Team
+	Copyright 2006-2024 The QElectroTech Team
 	This file is part of QElectroTech.
 	
 	QElectroTech is free software: you can redistribute it and/or modify
@@ -32,6 +32,7 @@ namespace QET {
 		QIcon Autoconnect;
 		QIcon BringForward;
 		QIcon Cancel;
+		QIcon Company;
 		QIcon Conductor;
 		QIcon ConductorEdit;
 		QIcon ConductorSettings;
@@ -204,7 +205,9 @@ namespace QET {
 		QIcon no;
 		QIcon be;
 		QIcon tr;
+		QIcon uk;
 		QIcon mn;
+		QIcon zh;
 		QIcon translation;
 		QIcon listDrawings;
 		QIcon AutoNum;
@@ -393,6 +396,8 @@ void QET::Icons::initIcons()
 	Autoconnect         .addFile(":/ico/22x22/autoconnect.png");
 	BringForward        .addFile(":/ico/22x22/bring_forward.png");
 	Cancel              .addFile(":/ico/16x16/item-cancel.png");
+	Company             .addFile(":/ico/16x16/go-company.png");
+	Company             .addFile(":/ico/22x22/go-company.png");
 	Conductor           .addFile(":/ico/16x16/conductor.png");
 	ConductorEdit       .addFile(":/ico/16x16/conductor-edit.png");
 	ConductorSettings   .addFile(":/ico/16x16/conductor-reset.png");
@@ -671,7 +676,9 @@ void QET::Icons::initIcons()
 	no                  .addFile(":/ico/24x16/no.png");
 	be                  .addFile(":/ico/24x16/be.png");
 	tr                  .addFile(":/ico/24x16/tr.png");
+	uk                  .addFile(":/ico/24x16/ua.png");
 	mn                  .addFile(":/ico/24x16/mn.png");
+	zh                  .addFile(":/ico/24x16/zh.png");
 	translation         .addFile(":/ico/22x22/applications-development-translation.png");
 	listDrawings        .addFile(":/ico/48x48/view-pim-journal.png");
 	AutoNum             .addFile(":/ico/128x128/plasmagik.png");

@@ -1,5 +1,5 @@
 ﻿/*
-	Copyright 2006-2021 The QElectroTech Team
+	Copyright 2006-2024 The QElectroTech Team
 	This file is part of QElectroTech.
 
 	QElectroTech is free software: you can redistribute it and/or modify
@@ -447,7 +447,7 @@ void SearchAndReplaceWidget::search()
 				    : QColor("#FFE0EF"));
 		ui->m_search_le->setPalette(background);
 
-			//Go to the first occurence
+			//Go to the first occurrence
 		ui->m_tree_widget->setCurrentItem(m_root_qtwi);
 		on_m_next_pb_clicked();
 	}

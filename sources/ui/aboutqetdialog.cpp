@@ -1,5 +1,5 @@
 /*
-	Copyright 2006-2021 The QElectroTech Team
+	Copyright 2006-2024 The QElectroTech Team
 	This file is part of QElectroTech.
 
 	QElectroTech is free software: you can redistribute it and/or modify
@@ -21,6 +21,7 @@
 #include "../qet.h"
 #include "../qetapp.h"
 #include "ui_aboutqetdialog.h"
+#include "../qetversion.h"
 
 #include <QDate>
 
@@ -63,17 +64,17 @@ void AboutQETDialog::setAbout()
 			tr(" Les développeurs de QElectroTech", "about tab, developers line") +
 			"<br><br>"
 			"<a href=\"https://qelectrotech.org/\">https://qelectrotech.org/</a>"
-            "<br><br>" +
-            "The program is provided AS IS with NO WARRANTY OF ANY KIND,"
-            "<br>"
-             " INCLUDING THE WARRANTY OF DESIGN, "
-            "<br>"
-             "MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.";
-            "<br>"
+			"<br><br>" +
+			"The program is provided AS IS with NO WARRANTY OF ANY KIND,"
+			"<br>"
+			" INCLUDING THE WARRANTY OF DESIGN, "
+			"<br>"
+			"MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.";
+			"<br>"
 			"<br><br>" +
 			tr("Contact : <a href=\"mailto:qet@lists.tuxfamily.org\">qet@lists.tuxfamily.org</a>", "about tab, contact line");
-           
-            
+
+
 
 	ui->m_about_label->setText(str);
 }
@@ -90,7 +91,7 @@ void AboutQETDialog::setAuthors()
 	addAuthor(ui->m_author_label, "Ronny Desmedt",      "r.desmedt@live.be",               tr("Convertisseur DXF"));
 	addAuthor(ui->m_author_label, "Raul Roda",          "raulroda8@gmail.com",             tr("Plugin Bornier"));
 	addAuthor(ui->m_author_label, "Abhishek Bansal",    "abhishek@qelectrotech.org",       tr("Développement"));
-	addAuthor(ui->m_author_label, "Simon De Backer",    "￼￼debacker@qelectrotech.org",       tr("Développement"));
+	addAuthor(ui->m_author_label, "Simon De Backer",    "debacker@qelectrotech.org",       tr("Développement"));
 	addAuthor(ui->m_author_label, "David Varley",       "David.Varley@cborn.com",          tr("Développement"));
 	addAuthor(ui->m_author_label, "Damian Caceres",     "damiancaceresmoreno@yahoo.es",    tr("Développement"));
 	addAuthor(ui->m_author_label, "Martin Marmsoler",   "martin.marmsoler@gmail.com",      tr("Développement"));
@@ -126,6 +127,12 @@ void AboutQETDialog::setTranslators()
 	addAuthor(ui->m_translators_label, "Aziz Karabudak",                            "aziz.karabudak@argevi.com",      tr("Traduction en Turc"));
 	addAuthor(ui->m_translators_label, "Emir Izmiroglu",                            "emirizmiroglu@gmail.com",        tr("Traduction en Turc"));
 	addAuthor(ui->m_translators_label, "Gábor Gubányi",                             "gubanyig@gmail.com",             tr("Traduction en hongrois"));
+	addAuthor(ui->m_translators_label, "",                                          "",                               tr("Traduction en serbe"));
+	addAuthor(ui->m_translators_label, "Yaroslav",                                  "",                               tr("Traduction en ukrainien"));
+	addAuthor(ui->m_translators_label, "JoelAs",                                    "",                               tr("Traduction en norvégien"));
+	addAuthor(ui->m_translators_label, "Yuki",                                      "yuki.atoh@gmail.com",            tr("Traduction en japonais"));
+	addAuthor(ui->m_translators_label, "Nathalie",                                  "nathalie.roussier@giz.de",       tr("Traduction en mongol"));
+	addAuthor(ui->m_translators_label, "Uroš Platiše",                              "uros.platise@energycon.eu",      tr("Traduction en slovène"));
 }
 
 /**
@@ -150,7 +157,6 @@ void AboutQETDialog::setContributors()
 	addAuthor(ui->m_contrib_label, "Arun Kishore Eswara", "eswara.arun@gmail.com",               tr("Documentation"));
 	addAuthor(ui->m_contrib_label, "René Negre",          "runsys@qelectrotech.org",             tr("Développement"));
 	addAuthor(ui->m_contrib_label, "Nuri",                "nuri@qelectrotech.org",               tr("Collection d'éléments"));
-	addAuthor(ui->m_contrib_label, "Raul Roda",           "",                                    tr("Python plugin qet-tb-generator"));
 	addAuthor(ui->m_contrib_label, "Maximilian Federle",   "",                                   tr("Paquets Snap"));
 }
 
@@ -160,15 +166,22 @@ void AboutQETDialog::setContributors()
 void AboutQETDialog::setVersion()
 {
 	QString str = "<span style=\"font-weight:bold;font-size:16pt;\">QElectroTech V "
-			+ QET::displayedVersion
+		+ QetVersion::displayedVersion()
 			+ "</span>";
 	ui->m_version_label->setText(str + MachineInfo::instance()->compilation_info());
 }
 
 void AboutQETDialog::setAnnexProject()
 {
-	addLibrary(ui->m_annex_project_label, tr("redimensionneur d'éléments", "Element scaler"),  "https://github.com/plc-user/QET_ElementScaler");
-	addLibrary(ui->m_annex_project_label, tr("Générateur d'élément lambda", "Lambda element generator"), "https://github.com/asnigma/qet_gen_element");
+	addLibrary(ui->m_annex_project_label, tr("Redimensionneur d'éléments", "Element scaler"),
+	 "https://github.com/plc-user/QET_ElementScaler");
+	addLibrary(ui->m_annex_project_label, tr("Générateur d'élément lambda", "Lambda element generator"),
+	 "https://github.com/asnigma/qet_gen_element");
+	addLibrary(ui->m_annex_project_label, tr("Convertisseur d'élément DXF", "Dxf2elmt"),
+	 "https://github.com/antonioaja/dxf2elmt");
+	addLibrary(ui->m_annex_project_label, tr("Outil de traduction d'éléments", "Qet_translate"),
+	 "https://qelectrotech.org/forum/viewtopic.php?pid=16027#p16027");
+
 }
 
 /**

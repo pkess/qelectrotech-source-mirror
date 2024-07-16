@@ -1,5 +1,5 @@
 /*
-	Copyright 2006-2021 The QElectroTech Team
+	Copyright 2006-2024 The QElectroTech Team
 	This file is part of QElectroTech.
 	
 	QElectroTech is free software: you can redistribute it and/or modify
@@ -19,43 +19,48 @@
 #define ELEMENTS_MOVER_H
 
 #include <QPointF>
+#include <QPointer>
 #include "diagramcontent.h"
 
 class ConductorTextItem;
 class Diagram;
+class QStatusBar;
+
 /**
 	This class manages the interactive movement of different items (elements,
 	conductors, text items etc...) on a particular diagram.
 
 	A movement work in 3 steps:
 	1: beginMovement    -> init a new movement
-	2: continueMovement -> continue the curent movement
-	3: endMovement      -> finish the curent movement
+	2: continueMovement -> continue the current movement
+	3: endMovement      -> finish the current movement
 
-	A movement in progress must finish befor start a new movement. We can know if
-	element mover is ready for a new movement by calling isReady().
+	A movement in progress must finish before starting a new movement. We can
+	know if element mover is ready for a new movement by calling isReady().
 */
 class ElementsMover {
-	// constructors, destructor
+		// constructors, destructor
 	public:
-	ElementsMover();
-	virtual ~ElementsMover();
+		ElementsMover();
+		virtual ~ElementsMover();
 	private:
-	ElementsMover(const ElementsMover &);
+		ElementsMover(const ElementsMover &);
 	
 	// methods
 	public:
-	bool isReady() const;
-	int  beginMovement(Diagram *, QGraphicsItem * = nullptr);
-	void continueMovement(const QPointF &);
-	void endMovement();
+		bool isReady() const;
+		int  beginMovement(Diagram *, QGraphicsItem * = nullptr);
+		void continueMovement(const QPointF &);
+		void endMovement();
 	
-	// attributes
+		// attributes
 	private:
-	bool movement_running_;
-	QPointF current_movement_;
-	Diagram *diagram_;
-	QGraphicsItem *m_movement_driver;
-	DiagramContent m_moved_content;
+		bool m_movement_running{false};
+		QPointF m_current_movement;
+		Diagram *m_diagram{nullptr};
+		QGraphicsItem *m_movement_driver{nullptr};
+		DiagramContent m_moved_content;
+		QPointer<QStatusBar> m_status_bar;
+
 };
 #endif

@@ -1,5 +1,5 @@
-﻿/*
-	Copyright 2006-2021 The QElectroTech Team
+/*
+	Copyright 2006-2024 The QElectroTech Team
 	This file is part of QElectroTech.
 	
 	QElectroTech is free software: you can redistribute it and/or modify
@@ -42,9 +42,12 @@ class GeneralConfigurationPage : public ConfigPage
 		void on_m_font_pb_clicked();
 		void on_m_dyn_text_font_pb_clicked();
 		void on_m_common_elmt_path_cb_currentIndexChanged(int index);
+		void on_m_company_elmt_path_cb_currentIndexChanged(int index);
 		void on_m_custom_elmt_path_cb_currentIndexChanged(int index);
+		void on_m_company_tbt_path_cb_currentIndexChanged(int index);
 		void on_m_custom_tbt_path_cb_currentIndexChanged(int index);
 		void on_m_indi_text_font_pb_clicked();
+		void on_MaxPartsElementEditorList_sb_valueChanged(int value);
 
 	private:
 		void fillLang();

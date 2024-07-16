@@ -1,5 +1,5 @@
 /*
-	Copyright 2006-2021 The QElectroTech Team
+	Copyright 2006-2024 The QElectroTech Team
 	This file is part of QElectroTech.
 	
 	QElectroTech is free software: you can redistribute it and/or modify
@@ -33,6 +33,7 @@ class QAction;
 class QMainWindow;
 
 #define QETAPP_COMMON_TBT_PROTOCOL "commontbt"
+#define QETAPP_COMPANY_TBT_PROTOCOL "companytbt"
 #define QETAPP_CUSTOM_TBT_PROTOCOL "customtbt"
 
 class AboutQET;
@@ -75,16 +76,20 @@ class QETApp : public QObject
 		static ElementsCollectionCache *collectionCache();
 		
 		static TitleBlockTemplatesFilesCollection *commonTitleBlockTemplatesCollection();
+		static TitleBlockTemplatesFilesCollection *companyTitleBlockTemplatesCollection();
 		static TitleBlockTemplatesFilesCollection *customTitleBlockTemplatesCollection();
 		static QList<TitleBlockTemplatesCollection *> availableTitleBlockTemplatesCollections();
 		static TitleBlockTemplatesCollection *titleBlockTemplatesCollection(const QString &);
 		
 		static QString commonElementsDir();
+		static QString companyElementsDir();
 		static QString customElementsDir();
 		static QString commonElementsDirN();
+		static QString companyElementsDirN();
 		static QString customElementsDirN();
 		static void resetCollectionsPath();
 		static QString commonTitleBlockTemplatesDir();
+		static QString companyTitleBlockTemplatesDir();
 		static QString customTitleBlockTemplatesDir();
 		static bool registerProject(QETProject *);
 		static bool unregisterProject(QETProject *);
@@ -149,6 +154,7 @@ class QETApp : public QObject
 		static QETDiagramEditor *diagramEditorForFile(const QString &);
 		static QETDiagramEditor *diagramEditorAncestorOf (const QWidget *child);
 		static QList<QETDiagramEditor *> diagramEditors();
+		static QETDiagramEditor* diagramEditor(QETProject *project);
 		static QList<QETElementEditor *> elementEditors();
 		static QList<QETElementEditor *> elementEditors(QETProject *);
 		static QList<QETTitleBlockTemplateEditor *> titleBlockTemplateEditors();
@@ -191,7 +197,7 @@ class QETApp : public QObject
 		bool every_template_reduced;
 		bool every_template_visible;
 		QSignalMapper signal_map;
-		QETArguments qet_arguments_; ///< Comand-line arguments parser
+		QETArguments qet_arguments_; ///< Command-line arguments parser
 		/**
 			@brief non_interactive_execution_
 			Whether the application will end
@@ -201,6 +207,7 @@ class QETApp : public QObject
 		QPalette initial_palette_;   ///< System color palette
 		
 		static TitleBlockTemplatesFilesCollection *m_common_tbt_collection;
+		static TitleBlockTemplatesFilesCollection *m_company_tbt_collection;
 		static TitleBlockTemplatesFilesCollection *m_custom_tbt_collection;
 		static ElementsCollectionCache *collections_cache_;
 		static QMap<uint, QETProject *> registered_projects_;
@@ -212,9 +219,13 @@ class QETApp : public QObject
 		static QString m_common_element_dir;
 		static bool m_common_element_dir_is_set;
 
+		static QString m_company_element_dir;
+		static bool m_company_element_dir_is_set;
+
 		static QString m_custom_element_dir;
 		static bool m_custom_element_dir_is_set;
 
+		static QString m_user_company_tbt_dir;
 		static QString m_user_custom_tbt_dir;
 
 	

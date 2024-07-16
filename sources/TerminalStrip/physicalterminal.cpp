@@ -1,5 +1,5 @@
 /*
-	Copyright 2006-2021 The QElectroTech Team
+	Copyright 2006-2024 The QElectroTech Team
 	This file is part of QElectroTech.
 
 	QElectroTech is free software: you can redistribute it and/or modify
@@ -108,7 +108,7 @@ void PhysicalTerminal::addTerminal(const QSharedPointer<RealTerminal> &terminal)
  * @brief removeTerminal
  * Remove @a terminal from the list of real terminal
  * @param terminal
- * @return true if sucessfully removed
+ * @return true if successfully removed
  */
 bool PhysicalTerminal::removeTerminal(const QSharedPointer<RealTerminal> &terminal)
 {

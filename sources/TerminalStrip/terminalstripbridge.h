@@ -1,5 +1,5 @@
 /*
-	Copyright 2006-2021 The QElectroTech Team
+	Copyright 2006-2024 The QElectroTech Team
 	This file is part of QElectroTech.
 
 	QElectroTech is free software: you can redistribute it and/or modify
@@ -46,6 +46,7 @@ class TerminalStripBridge
 		static QString xmlTagName() {return QStringLiteral("terminal_strip_bridge");}
 		QDomElement toXml(QDomDocument &parent_document) const;
 		void fromXml(const QDomElement &dom_element);
+		QUuid uuid() const noexcept;
 
 	private:
 		bool addTerminals(const QVector<QSharedPointer<RealTerminal>> &real_terminals);

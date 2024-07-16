@@ -16,6 +16,12 @@
     # along with QElectroTech.  If not, see <http://www.gnu.org/licenses/>.
  # Need homebrew and coreutils installed see <http://brew.sh>.
 
+ 
+#Force MacOSX12.3.sdk
+#see: https://www.downtowndougbrown.com/2023/08/how-to-create-a-qt-5-arm-intel-universal-binary-for-mac/
+
+export DEVELOPER_DIR=/Applications/Xcode_14.01.app/Contents/Developer
+
 # configuration
 APPNAME='qelectrotech'
 BUNDLE=$APPNAME.app
@@ -43,7 +49,7 @@ echo "This script :"
 echo "\t - up date the svn depot"
 echo "\t - built the application bundle,"
 echo "\t - copy over required Qt frameworks,"
-echo "\t - copy additionnal files: translations, titleblocks and elements,"
+echo "\t - copy additional files: translations, titleblocks and elements,"
 echo "\t - create image disk."
 echo
 echo "Enjoy ;-)"
@@ -70,6 +76,9 @@ echo "Run GIT:"
 #revAv=$(svnversion | cut -d : -f 2 | tr -d '[:alpha:]')
 
 # Fait une mise à jour
+git submodule init
+git submodule update
+git pull --recurse-submodules
 git pull
 #git checkout foliolist_position
 
@@ -79,60 +88,23 @@ GITCOMMIT=$(git rev-parse --short HEAD)
 A=$(git rev-list HEAD --count)
 HEAD=$(($A+473))
 
-VERSION=$(cat sources/qet.h | grep "const QString version" |  cut -d\" -f2 | cut -d\" -f1)          #Find version tag in GIT sources/qet.h
-tagName=$(cat sources/qet.h | grep displayedVersion |  cut -d\" -f2 | cut -d\" -f1)                 #Find displayedVersion tag in GIT sources/qet.h
 
-# On recupere le numero de version de l'originale 
-tagName=$(sed -n "s/const QString displayedVersion =\(.*\)/\1/p" sources/qet.h  | cut -d\" -f2 | cut -d\" -f1 )
+VERSION=$(cat sources/qetversion.cpp | grep "return QVersionNumber{"| head -n 1| awk -F "{" '{ print $2 }' | awk -F "}" '{ print $1 }' | sed -e 's/,/./g' -e 's/ //g')
+#VERSION=$(cat sources/qetversion.cpp | grep "return QVersionNumber{ 0, "| head -n 1| cut -c25-35| sed -e 's/,/./g' -e 's/ //g')   #Find major, minor, and micro version numbers in sources/qetversion.cp
 
 # Dmg de la dernière revision déjà créé
-if [ -e "build-aux/mac-osx/${APPNAME} $tagName r$HEAD.dmg" ] ; then
+if [ -e "build-aux/mac-osx/${APPNAME} $VERSION r$HEAD.dmg" ] ; then
     echo "There are not new updates, make disk image can"
     echo "take a lot of time (5 min). Can you continu?"
     echo  "[y/n]"
     read userinput
     if  [ "$userinput" == "n" ] ; then
         echo
-        echo "Process is stoped."
+        echo "Process is stopped."
         echo
         exit
     fi
 fi
-
-
-### Version tag ####################################################
-
-echo
-echo "______________________________________________________________"
-echo "Add version tag:"
-
-echo "Adding the version tag..."
-
-# On sauve l'orginale
-mkdir temp
-cp -Rf "sources/qet.h" "temp/qet.h"
-
-# On modifie l'originale avec le numero de revision du depot svn
-sed -i "" "s/const QString displayedVersion =.*/const QString displayedVersion = \"$tagName r$GITCOMMIT\";/" sources/qet.h
-
-# Apres la compilation 
-cleanVerionTag () {
-    echo
-    echo "______________________________________________________________"
-    echo "Clean version tag:"
-
-    # On remet le code source comme il etait
-    echo "Cleaning version tag..."
-
-    # On supprime le fichier modifier
-    rm -rf "sources/qet.h"
-
-    # On remet l'ancien original
-    cp -Rf "temp/qet.h" "sources/qet.h"
-
-    # On suprime l'ancienne copie
-    rm -rf "temp"
-}
 
 
 ### make install ####################################################
@@ -192,7 +164,7 @@ fi
 cp -R ${current_dir}/misc/Info.plist qelectrotech.app/Contents/
 cp -R ${current_dir}/ico/mac_icon/*.icns qelectrotech.app/Contents/Resources/
 # On rajoute le numero de version pour "cmd + i"
-/usr/libexec/PlistBuddy -c "Set :CFBundleShortVersionString $tagName r$HEAD" "qelectrotech.app/Contents/Info.plist"  # Version number
+/usr/libexec/PlistBuddy -c "Set :CFBundleShortVersionString $VERSION r$HEAD" "qelectrotech.app/Contents/Info.plist"  # Version number
 
 ### copy over frameworks ############################################
 
@@ -266,11 +238,11 @@ echo 'Preparing (removing hold files)... '
 if [ -e "/Volumes/${APPNAME}" ]; then
     hdiutil detach -quiet "/Volumes/${APPNAME}"
 fi
-if [ -e "${APPNAME} $tagName r$HEAD.dmg" ] ; then
-    rm -f "${APPNAME} $tagName r$HEAD.dmg"
+if [ -e "${APPNAME} $VERSION r$HEAD.dmg" ] ; then
+    rm -f "${APPNAME} $VERSION r$HEAD.dmg"
 fi
-if [ -e "build-aux/mac-osx/${APPNAME} $tagName r$HEAD.dmg" ] ; then
-    rm -f "build-aux/mac-osx/${APPNAME} $tagName r$HEAD.dmg"
+if [ -e "build-aux/mac-osx/${APPNAME} $VERSION r$HEAD.dmg" ] ; then
+    rm -f "build-aux/mac-osx/${APPNAME} $VERSION r$HEAD.dmg"
 fi
 if [ -e $imagedir ] ; then
     rm -rf $imagedir
@@ -293,13 +265,13 @@ strip "$imagedir/$APPBIN"
     
 # Creating a disk image from a folder
 echo 'Creating disk image... '
-hdiutil create -quiet -ov -srcfolder $imagedir -format UDBZ -volname "${APPNAME}" "${APPNAME} $tagName r$HEAD.dmg"
-hdiutil internet-enable -yes -quiet "${APPNAME} $tagName r$HEAD.dmg"
+hdiutil create -quiet -ov -srcfolder $imagedir -format UDBZ -volname "${APPNAME}" "${APPNAME} $VERSION r$HEAD.dmg"
+hdiutil internet-enable -yes -quiet "${APPNAME} $VERSION r$HEAD.dmg"
 
 # Clean up disk folder
 echo 'Cleaning up... '
-cp -Rf "${APPNAME} $tagName r$HEAD.dmg" "build-aux/mac-osx/${APPNAME} $tagName r$HEAD.dmg"
-rm -f "${APPNAME} $tagName r$HEAD.dmg"
+cp -Rf "${APPNAME} $VERSION r$HEAD.dmg" "build-aux/mac-osx/${APPNAME}-$VERSION-r$HEAD-intel_X86_64.dmg"
+rm -f "${APPNAME} $VERSION r$HEAD.dmg"
 rm -rf $imagedir
 rm -rf $BUNDLE
 
@@ -335,15 +307,15 @@ echo The disque image is in the folder \'build-aux/mac-osx\'.
 
 
 #rsync to TF DMG builds
-echo  -e "\033[1;31mWould you like to upload MacOS packages "${APPNAME}"-"$tagName"_"r$HEAD.dmg", n/Y?.\033[m"
+echo  -e "\033[1;31mWould you like to upload MacOS packages "${APPNAME}"-"$VERSION"_"r$HEAD-intel.dmg", n/Y?.\033[m"
 read a
 if [[ $a == "Y" || $a == "y" ]]; then
-cp -Rf "build-aux/mac-osx/${APPNAME} $tagName r$HEAD.dmg" /Users/laurent/MAC_OS_X/
-rsync -e ssh -av --delete-after --no-owner --no-g --chmod=g+w --progress --exclude='.DS_Store' /Users/laurent/MAC_OS_X/ scorpio810@ssh.tuxfamily.org:/home/qet/qet-repository/builds/MAC_OS_X/
+cp -Rf "build-aux/mac-osx/${APPNAME}-$VERSION-r$HEAD-intel_X86_64.dmg" /Users/laurent/MAC_OS_X/
+rsync -e ssh -av --delete-after --no-owner --no-g --chmod=g+w --progress --exclude='.DS_Store' /Users/laurent/MAC_OS_X/ server:download.qelectrotech.org/qet/builds/MAC_OS_X/intel_X86_64/
 if [ $? != 0 ]; then
 {
-echo "RSYNC ERROR: problem syncing ${APPNAME} $tagName r$HEAD.dmg"
-rsync -e ssh -av --delete-after --no-owner --no-g --chmod=g+w --progress --exclude='.DS_Store' /Users/laurent/MAC_OS_X/ scorpio810@ssh.tuxfamily.org:/home/qet/qet-repository/builds/MAC_OS_X/
+echo "RSYNC ERROR: problem syncing ${APPNAME}-$VERSION-r$HEAD-intel_X86_64.dmg"
+rsync -e ssh -av --delete-after --no-owner --no-g --chmod=g+w --progress --exclude='.DS_Store' /Users/laurent/MAC_OS_X/ server:download.qelectrotech.org/qet/builds/MAC_OS_X/intel_X86_64/
 
 } fi
 

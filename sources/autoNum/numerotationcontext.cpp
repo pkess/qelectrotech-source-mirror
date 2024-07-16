@@ -1,5 +1,5 @@
 /*
-	Copyright 2006-2021 The QElectroTech Team
+	Copyright 2006-2024 The QElectroTech Team
 	This file is part of QElectroTech.
 
 	QElectroTech is free software: you can redistribute it and/or modify
@@ -102,7 +102,7 @@ int NumerotationContext::size() const
 
 /**
 	@brief NumerotationContext::isEmpty
-	@return true if numerotation contet is empty
+	@return true if numerotation content is empty
 */
 bool NumerotationContext::isEmpty() const
 {
@@ -148,7 +148,7 @@ bool NumerotationContext::keyIsAcceptable(const QString &type) const
 
 /**
 	@brief NumerotationContext::keyIsNumber
-	@return true if type represent a number
+	@return true if type represents a number
 */
 bool NumerotationContext::keyIsNumber(const QString &type) const
 {

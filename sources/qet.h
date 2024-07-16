@@ -1,5 +1,5 @@
 /*
-	Copyright 2006-2021 The QElectroTech Team
+	Copyright 2006-2024 The QElectroTech Team
 	This file is part of QElectroTech.
 	
 	QElectroTech is free software: you can redistribute it and/or modify
@@ -28,10 +28,6 @@ class QActionGroup;
 	anywhere else within the QElectroTech application.
 */
 namespace QET {
-	/// QElectroTech version (as string, used to mark projects and elements XML documents)
-	const QString version = "0.90";
-	/// QElectroTech displayed version
-	const QString displayedVersion = "0.90-DEV";
 	QString license();
 	
 		//Describe the current state of a graphic item
@@ -79,7 +75,7 @@ namespace QET {
 	
 	/// Supported types of interactive scaling, typically for a single element primitive
 	enum ScalingMethod {
-		FreeScaling,              ///< do not interfer with the default scaling process
+		FreeScaling,              ///< do not interfere with the default scaling process
 		SnapScalingPointToGrid,   ///< snap the point used to define the new bounding rectangle to the grid
 		RoundScaleRatios          ///< adjust the scaling movement so that the induced scaling ratios are rounded
 	};
@@ -128,7 +124,7 @@ namespace QET {
 		Retry,   ///< The operation must be tried again
 		Ignore,  ///< Skip the current item
 		Erase,   ///< Erase the target content
-		Abort,   ///< abort the whole operation, ignoring the curent item
+		Abort,   ///< abort the whole operation, ignoring the current item
 		Managed, ///< the current item was handled by the Strategy object: do not treat it and continue
 		Rename   ///< the target has to be renamed
 	};
@@ -151,8 +147,9 @@ namespace QET {
 		///Enum used to specify the origin of a collection of thing (title block, element etc...)
 	enum QetCollection {
 		Common,		///< From common collection
+		Company,	///< From company collection
 		Custom,		///< From user collection
-		Embedded	///< From an embedded collection (a project for exemple)
+		Embedded	///< From an embedded collection (a project for example)
 	};
 
 	QString qetCollectionToString (const QetCollection &c);
@@ -162,7 +159,14 @@ namespace QET {
 	bool orthogonalProjection(const QPointF &, const QLineF &, QPointF * = nullptr);
 	bool attributeIsAnInteger(const QDomElement &, const QString& , int * = nullptr);
 	bool attributeIsAReal(const QDomElement &, const QString& , qreal * = nullptr);
-	QString ElementsAndConductorsSentence(int elements=0, int conductors=0, int indi_texts=0, int images=0, int shapes=0, int element_text=0, int tables_count=0);
+	QString ElementsAndConductorsSentence(int elements=0,
+										  int conductors=0,
+										  int indi_texts=0,
+										  int images=0,
+										  int shapes=0,
+										  int element_text=0,
+										  int tables_count=0,
+										  int terminal_strip_count=0);
 	QList<QDomElement> findInDomElement(const QDomElement &, const QString &);
 	QList<QDomElement> findInDomElement(const QDomElement &, const QString &, const QString &);
 	QList<QChar> forbiddenCharacters();

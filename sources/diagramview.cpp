@@ -1,5 +1,5 @@
 /*
-	Copyright 2006-2021 The QElectroTech Team
+	Copyright 2006-2024 The QElectroTech Team
 	This file is part of QElectroTech.
 
 	QElectroTech is free software: you can redistribute it and/or modify
@@ -914,7 +914,7 @@ void DiagramView::adjustSceneRect()
 	QSettings settings;
 	if (settings.value("diagrameditor/zoom-out-beyond-of-folio", false).toBool())
 	{
-			//When zoom out beyong of folio is active,
+			//When zoom out beyond of folio is active,
 			//we always adjust the scene rect to be 1/3 bigger than the wiewport
 		QRectF vpbr = mapToScene(viewport()->rect()).boundingRect();
 		vpbr.adjust(0, 0, vpbr.width()/3, vpbr.height()/3);
@@ -1219,13 +1219,18 @@ QList<QAction *> DiagramView::contextMenuActions() const
 */
 void DiagramView::contextMenuEvent(QContextMenuEvent *e)
 {
+	QGraphicsView::contextMenuEvent(e);
+	if(e->isAccepted())
+	return;
+
+
 	if (auto qgi = m_diagram->itemAt(mapToScene(e->pos()), transform()))
 	{
 		if (!qgi->isSelected()) {
 			m_diagram->clearSelection();
 		}
 
-			// At this step qgi can be deleted for exemple if qgi is a QetGraphicsHandlerItem.
+			// At this step qgi can be deleted for example if qgi is a QetGraphicsHandlerItem.
 			// When we call clearSelection the parent item of the handler
 			// is deselected and so delete all handlers, in this case,
 			// qgi become a dangling pointer.

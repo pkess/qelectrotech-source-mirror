@@ -1,5 +1,5 @@
 /*
-	Copyright 2006-2021 The QElectroTech Team
+	Copyright 2006-2024 The QElectroTech Team
 	This file is part of QElectroTech.
 	
 	QElectroTech is free software: you can redistribute it and/or modify
@@ -38,13 +38,14 @@ NamesList::~NamesList()
 
 /**
 	Ajoute un nom a la liste
-	@param lang Sigle de deux lettres representant une langue. Si cela n'est
-	pas respecte, l'insertion n'est pas effectuee.
+	@param lang Sigle de deux ou cinq lettres representant une langue. Si cela
+	n'est pas respecte, l'insertion n'est pas effectuee.
 	@param name Nom lui-meme. Ce ne doit pas etre une chaine de caractere vide.
 	Si cela n'est pas respecte, l'insertion n'est pas effectuee.
 */
 void NamesList::addName(const QString &lang, const QString &name) {
-	if (lang.length() != 2) return;
+	if ((lang.length() != 2) && (lang.length() != 5)) return;
+	if ((lang.length() == 5) && (lang[2] != '_')) return;
 	hash_names.insert(lang, name);
 }
 
@@ -137,8 +138,8 @@ void NamesList::fromXml(const QDomElement &xml_element, const QHash<QString, QSt
 	@brief NamesList::fromXml
 	Load the list of lang <-> name from an xml description.
 	xml_element must be the parent of a child element tagged "names"
-	If a couple lang <-> name already exist, they will overwrited, else
-	they will be appened.
+	If a couple lang <-> name already exist, they will overwritten, else
+	they will be appended.
 	@param xml_element : xml element to analyze
 	@param xml_options : A set of options related to XML parsing.
 	@see getXmlOptions()

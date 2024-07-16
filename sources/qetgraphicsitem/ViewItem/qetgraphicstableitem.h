@@ -1,5 +1,5 @@
 /*
-	Copyright 2006-2021 The QElectroTech Team
+	Copyright 2006-2024 The QElectroTech Team
 	This file is part of QElectroTech.
 
 	QElectroTech is free software: you can redistribute it and/or modify
@@ -34,7 +34,7 @@ class QetGraphicsHeaderItem;
 	Margins, to edit the margin between the cell and the text.
 	Text font.
 	Text alignment in the cell
-	These three parameters are not settable directly with the table but trough the model to be displayed by the table.
+	These three parameters are not settable directly with the table but through the model to be displayed by the table.
 	The table search these parameters only in the index(0,0) for all the table.
 	By consequence, set data in other index than 0,0 is useless also these parameter can't be set individually for each cell.
 	The margins is stored in the model in index Qt::UserRole+1 and for value a QString. See QETUtils::marginsFromString and  QETUtils::marginsToString
@@ -80,12 +80,12 @@ class QetGraphicsTableItem : public QetGraphicsItem
 		QString tableName() const;
 		int displayNRowOffset() const;
 		int displayedRowCount() const;
-		QetGraphicsTableItem *previousTable() const;
-		QetGraphicsTableItem *nextTable() const;
+		QPointer<QetGraphicsTableItem> previousTable() const;
+		QPointer<QetGraphicsTableItem> nextTable() const;
 		void setToMinimumHeight();
 		void initLink();
 		QUuid uuid() const {return m_uuid;}
-		int minimumRowHeigth() const;
+		int minimumRowHeight() const;
 
 		QDomElement toXml(QDomDocument &dom_document) const;
 		void fromXml(const QDomElement &dom_element);
@@ -141,9 +141,8 @@ class QetGraphicsTableItem : public QetGraphicsItem
 		QetGraphicsHandlerItem m_handler_item;
 		QetGraphicsHeaderItem *m_header_item = nullptr;
 
-		QetGraphicsTableItem
-		*m_previous_table = nullptr,
-		*m_next_table = nullptr;
+		QPointer<QetGraphicsTableItem> m_previous_table,
+		m_next_table;
 
 		QString m_name;
 		QUuid

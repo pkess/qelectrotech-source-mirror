@@ -1,5 +1,5 @@
 /*
-	Copyright 2006-2021 The QElectroTech Team
+	Copyright 2006-2024 The QElectroTech Team
 	This file is part of QElectroTech.
 
 	QElectroTech is free software: you can redistribute it and/or modify
@@ -19,8 +19,8 @@
 
 #include "../ElementsCollection/elementslocation.h"
 #include "../editor/graphicspart/partline.h"
-#include "../qet.h"
 #include "../qetapp.h"
+#include "../qetversion.h"
 
 #include <QAbstractTextDocumentLayout>
 #include <QDomElement>
@@ -153,19 +153,16 @@ bool ElementPictureFactory::build(const ElementsLocation &location,
 {
 	QDomElement dom = location.xml();
 
-		//Check if the curent version can read the xml description
-	if (dom.hasAttribute("version"))
+		//Check if the current version can read the xml description
+	const auto elmt_version = QetVersion::fromXmlAttribute(dom);
+	if (!elmt_version.isNull()
+		&& QetVersion::currentVersion() < elmt_version)
 	{
-		bool conv_ok;
-		qreal element_version = dom.attribute("version").toDouble(&conv_ok);
-		if (conv_ok && QET::version.toDouble() < element_version)
-		{
-			std::cerr << qPrintable(
-			QObject::tr("Avertissement : l'élément "
-			" a été enregistré avec une version"
-			" ultérieure de QElectroTech.")
-			) << std::endl;
-		}
+		std::cerr << qPrintable(
+						 QObject::tr("Avertissement : l'élément "
+									 " a été enregistré avec une version"
+									 " ultérieure de QElectroTech.")
+						 ) << std::endl;
 	}
 
 		//This attributes must be present and valid
@@ -252,7 +249,7 @@ bool ElementPictureFactory::build(const ElementsLocation &location,
 
 void ElementPictureFactory::parseElement(const QDomElement &dom, QPainter &painter, primitives &prim) const
 {
-	     if (dom.tagName() == "line")    (parseLine   (dom, painter, prim));
+		 if (dom.tagName() == "line")    (parseLine   (dom, painter, prim));
 	else if (dom.tagName() == "rect")    (parseRect   (dom, painter, prim));
 	else if (dom.tagName() == "ellipse") (parseEllipse(dom, painter, prim));
 	else if (dom.tagName() == "circle")  (parseCircle (dom, painter, prim));
@@ -292,7 +289,7 @@ void ElementPictureFactory::parseLine(const QDomElement &dom, QPainter &painter,
 	qreal line_length(line.length());
 	qreal pen_width = painter.pen().widthF();
 
-		//Check if we must to draw extremity
+		//Check if we must draw extremity
 	bool draw_1st_end, draw_2nd_end;
 	qreal reduced_line_length = line_length - (length1 * PartLine::requiredLengthForEndType(first_end));
 	draw_1st_end = first_end && reduced_line_length >= 0;
@@ -322,7 +319,7 @@ void ElementPictureFactory::parseLine(const QDomElement &dom, QPainter &painter,
 			start_point = four_points1[0];
 		}
 
-			//Adjust the begining according to the width of the pen
+			//Adjust the beginning according to the width of the pen
 		if (pen_width && (first_end == Qet::Simple || first_end == Qet::Circle)) {
 			start_point = QLineF(start_point, point2).pointAt(pen_width / 2.0 / line_length);
 		}
@@ -511,7 +508,7 @@ void ElementPictureFactory::parseText(const QDomElement &dom, QPainter &painter,
 
 	QColor text_color(dom.attribute("color", "#000000"));
 
-		//Instanciate a QTextDocument (like the QGraphicsTextItem class)
+		//Instantiate a QTextDocument (like the QGraphicsTextItem class)
 		//for generate the graphics rendering of the text
 	QTextDocument text_document;
 	text_document.setDefaultFont(font_);

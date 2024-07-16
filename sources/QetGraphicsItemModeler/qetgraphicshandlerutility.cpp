@@ -1,5 +1,5 @@
 /*
-	Copyright 2006-2021 The QElectroTech Team
+	Copyright 2006-2024 The QElectroTech Team
 	This file is part of QElectroTech.
 
 	QElectroTech is free software: you can redistribute it and/or modify
@@ -93,7 +93,7 @@ QVector<QPointF> QetGraphicsHandlerUtility::pointsForArc(const QRectF &rect,
 	@brief QetGraphicsHandlerUtility::rectForPosAtIndex
 	Return a rectangle after modification
 	of the point 'pos' at index 'index' of original rectangle 'old_rect'.
-	@param old_rect - the rectangle befor modification
+	@param old_rect - the rectangle before modification
 	@param pos - the new position of a key point
 	@param index - the index of the key point to modifie
 	@see QetGraphicsHandlerUtility::pointsForRect to know
@@ -126,7 +126,7 @@ QRectF QetGraphicsHandlerUtility::rectForPosAtIndex(const QRectF &old_rect,
 	Return a rectangle after modification of the point 'pos'
 	at index 'index' of original rectangle 'old_rect'.
 	the opposite edge is modified inversely (like a mirror)
-	@param old_rect : the rectangle befor modification
+	@param old_rect : the rectangle before modification
 	@param pos : the new position of a key point
 	@param index : the index of the key point to modifie
 	@see QetGraphicsHandlerUtility::pointsForRect to know
@@ -195,41 +195,10 @@ QRectF QetGraphicsHandlerUtility::mirrorRectForPosAtIndex(
  */
 QRectF QetGraphicsHandlerUtility::rectForArc(const QRectF &rect, qreal start_angle, qreal span_angle)
 {
-	auto point = pointsForArc (rect, start_angle, span_angle);
-	auto end_angle =start_angle + span_angle;
-	auto normalized_end_angle = end_angle;
-	if (normalized_end_angle > 360)
-		normalized_end_angle -= 360;
-
-	QPointF top_left;
-	if ((start_angle <= 180 && normalized_end_angle >= 180) ||
-		(end_angle > 360 && normalized_end_angle >= 180)) {
-		top_left.setX(rect.left());
-	} else {
-		top_left.setX(std::min(point[0].x(), point[1].x()));
-	}
-	if ((start_angle <= 90 && end_angle >= 90) ||
-		(start_angle > 90 && end_angle > 360 && normalized_end_angle >= 90)) {
-		top_left.setY(rect.top());
-	} else {
-		top_left.setY(std::min(point[0].y(), point[1].y()));
-	}
-
-
-	QPointF bottom_right;
-	if (end_angle >= 360) {
-		bottom_right.setX(rect.right());
-	} else {
-		bottom_right.setX(std::max(point[0].x(), point[1].x()));
-	}
-	if ((start_angle <= 270 && end_angle >= 270) ||
-		(end_angle > 360 && normalized_end_angle >= 270)) {
-		bottom_right.setY(rect.bottom());
-	} else {
-		bottom_right.setY(std::max(point[0].y(), point[1].y()));
-	}
-
-	return QRectF(top_left, bottom_right);
+	QPainterPath path;
+	path.arcMoveTo(rect, start_angle);
+	path.arcTo(rect, start_angle, span_angle);
+	return path.boundingRect();
 }
 
 /**

@@ -1,19 +1,19 @@
 /*
-        Copyright 2006-2021 The QElectroTech Team
-        This file is part of QElectroTech.
+	Copyright 2006-2024 The QElectroTech Team
+	This file is part of QElectroTech.
 
-        QElectroTech is free software: you can redistribute it and/or modify
-        it under the terms of the GNU General Public License as published by
-        the Free Software Foundation, either version 2 of the License, or
-        (at your option) any later version.
+	QElectroTech is free software: you can redistribute it and/or modify
+	it under the terms of the GNU General Public License as published by
+	the Free Software Foundation, either version 2 of the License, or
+	(at your option) any later version.
 
-        QElectroTech is distributed in the hope that it will be useful,
-        but WITHOUT ANY WARRANTY; without even the implied warranty of
-        MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-        GNU General Public License for more details.
+	QElectroTech is distributed in the hope that it will be useful,
+	but WITHOUT ANY WARRANTY; without even the implied warranty of
+	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+	GNU General Public License for more details.
 
-        You should have received a copy of the GNU General Public License
-        along with QElectroTech.  If not, see <http://www.gnu.org/licenses/>.
+	You should have received a copy of the GNU General Public License
+	along with QElectroTech.  If not, see <http://www.gnu.org/licenses/>.
 */
 #include "terminaleditor.h"
 #include "ui_terminaleditor.h"
@@ -60,7 +60,7 @@ void TerminalEditor::updateForm()
 	ui->m_x_dsb->setValue(m_part->property("x").toReal());
 	ui->m_y_dsb->setValue(m_part->property("y").toReal());
 	ui->m_orientation_cb->setCurrentIndex(ui->m_orientation_cb->findData(m_part->property("orientation")));
-	ui->m_name_le->setText(m_part->name());
+	ui->m_name_le->setText(m_part->terminalName());
 	ui->m_type_cb->setCurrentIndex(ui->m_orientation_cb->findData(m_part->terminalType()));
 
 	activeConnections(true);
@@ -114,9 +114,9 @@ CustomElementPart *TerminalEditor::currentPart() const
  */
 void TerminalEditor::init()
 {
-    ui->m_orientation_cb->addItem(QET::Icons::North, tr("Nord"),  Qet::North);
-    ui->m_orientation_cb->addItem(QET::Icons::East,  tr("Est"),   Qet::East);
-    ui->m_orientation_cb->addItem(QET::Icons::South, tr("Sud"),   Qet::South);
+	ui->m_orientation_cb->addItem(QET::Icons::North, tr("Nord"),  Qet::North);
+	ui->m_orientation_cb->addItem(QET::Icons::East,  tr("Est"),   Qet::East);
+	ui->m_orientation_cb->addItem(QET::Icons::South, tr("Sud"),   Qet::South);
 	ui->m_orientation_cb->addItem(QET::Icons::West,  tr("Ouest"), Qet::West);
 
 	ui->m_type_cb->addItem(tr("Générique"),         TerminalData::Generic);
@@ -181,9 +181,9 @@ void TerminalEditor::nameEdited()
 	m_locked = true;
 	QString name_(ui->m_name_le->text());
 
-	if (m_part->name() != name_)
+	if (m_part->terminalName() != name_)
 	{
-		auto undo = new QPropertyUndoCommand(m_part, "name", m_part->property("name"), name_);
+		auto undo = new QPropertyUndoCommand(m_part, "terminal_name", m_part->property("terminal_name"), name_);
 		undo->setText(tr("Modifier le nom du terminal"));
 		undoStack().push(undo);
 	}
@@ -219,9 +219,9 @@ void TerminalEditor::activeConnections(bool active)
 {
 	if (active) {
 		m_editor_connections << connect(ui->m_x_dsb, QOverload<qreal>::of(&QDoubleSpinBox::valueChanged),
-										this, &TerminalEditor::posEdited);
+										[this]() { TerminalEditor::posEdited(); ui->m_x_dsb->setFocus();} ) ;
 		m_editor_connections << connect(ui->m_y_dsb, QOverload<qreal>::of(&QDoubleSpinBox::valueChanged),
-										this, &TerminalEditor::posEdited);
+										[this]() { TerminalEditor::posEdited(); ui->m_y_dsb->setFocus(); } ) ;
 		m_editor_connections << connect(ui->m_orientation_cb,  QOverload<int>::of(&QComboBox::activated),
 										this, &TerminalEditor::orientationEdited);
 		m_editor_connections << connect(ui->m_name_le, &QLineEdit::editingFinished,

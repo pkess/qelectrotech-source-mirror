@@ -51,6 +51,7 @@
         <file>ico/16x16/endline-triangle.png</file>
         <file>ico/16x16/folder-new.png</file>
         <file>ico/16x16/folder.png</file>
+        <file>ico/16x16/go-company.png</file>
         <file>ico/16x16/go-down.png</file>
         <file>ico/16x16/go-home.png</file>
         <file>ico/16x16/go-up.png</file>
@@ -131,6 +132,7 @@
         <file>ico/22x22/folder-delete.png</file>
         <file>ico/22x22/folder-edit.png</file>
         <file>ico/22x22/folder-new.png</file>
+        <file>ico/22x22/go-company.png</file>
         <file>ico/22x22/go-down.png</file>
         <file>ico/22x22/go-home.png</file>
         <file>ico/22x22/go-up.png</file>
@@ -735,5 +737,6 @@
         <file>ico/22x22/color/color-11-gray-08-slategray.png</file>
         <file>ico/22x22/color/color-11-gray-09-darkslategray.png</file>
         <file>ico/22x22/color/color-11-gray-10-black.png</file>
+        <file>ico/24x16/zh.png</file>
     </qresource>
 </RCC>

@@ -1,5 +1,5 @@
 /*
-	Copyright 2006-2021 The QElectroTech Team
+	Copyright 2006-2024 The QElectroTech Team
 	This file is part of QElectroTech.
 
 	QElectroTech is free software: you can redistribute it and/or modify
@@ -17,7 +17,7 @@
 */
 #ifndef DIAGRAM_CONTEXT_H
 #define DIAGRAM_CONTEXT_H
-#include "pugixml/pugixml.hpp"
+#include "pugixml/src/pugixml.hpp"
 
 #include <QDomElement>
 #include <QHash>
@@ -28,8 +28,8 @@
 /**
 	This class represents a diagram context, i.e. the data (a list of key/value
 	pairs) of a diagram at a given time. It is notably used by titleblock
-   templates to fetch the informations they need to do their rendering, or
-   element for retrieve information about itself
+	templates to fetch the informations they need to do their rendering, or
+	element for retrieve information about itself
 */
 
 /**
@@ -39,7 +39,7 @@
  * designation                    -> exhaustive comment used to explain what the element does.
  * description                    -> exhaustive description used to explain what the element does.
  * plant                          -> the plant assigned to the element
- * comment                        -> a little comment wich can be displayed in the folio
+ * comment                        -> a little comment which can be displayed in the folio
  * manufacturer                   -> the manufacturer of the element
  * manufacturer_reference         -> the manufacturer reference of the element
  * quantity                       -> quantity of the element

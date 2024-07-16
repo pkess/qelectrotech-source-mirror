@@ -1,5 +1,5 @@
 /*
-	Copyright 2006-2021 The QElectroTech Team
+	Copyright 2006-2024 The QElectroTech Team
 	This file is part of QElectroTech.
 
 	QElectroTech is free software: you can redistribute it and/or modify
@@ -569,7 +569,7 @@ bool StyleEditor::isStyleEditable(QList<CustomElementPart *> cep_list)
 	QStringList str;
 	str << "arc" << "ellipse" << "line" << "polygon" << "rect";
 
-    for (CustomElementPart *cep: cep_list)
+	for (CustomElementPart *cep: cep_list)
 		if (!str.contains(cep -> xmlName()))
 			return false;
 

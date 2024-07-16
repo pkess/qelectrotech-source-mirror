@@ -1,5 +1,5 @@
 /*
-	Copyright 2006-2021 The QElectroTech Team
+	Copyright 2006-2024 The QElectroTech Team
 	This file is part of QElectroTech.
 
 	QElectroTech is free software: you can redistribute it and/or modify
@@ -30,15 +30,15 @@ class QAbstractItemModel;
 */
 class ModelIndexCommand : public QUndoCommand
 {
-    public:
+	public:
 		ModelIndexCommand(QAbstractItemModel *model, const QModelIndex &index, QUndoCommand *parent = nullptr);
 		void setData(const QVariant &value, int role = Qt::DisplayRole);
 
 		virtual void redo() override;
 		virtual void undo() override;
 
-    private:
-        QPointer<QAbstractItemModel> m_model;
+	private:
+		QPointer<QAbstractItemModel> m_model;
 		QModelIndex m_index;
 		QVariant m_old_value,
 				 m_new_value;

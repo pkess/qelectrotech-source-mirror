@@ -1,5 +1,5 @@
 /*
-	Copyright 2006-2021 The QElectroTech Team
+	Copyright 2006-2024 The QElectroTech Team
 	This file is part of QElectroTech.
 
 	QElectroTech is free software: you can redistribute it and/or modify
@@ -31,7 +31,7 @@
 PartRectangle::PartRectangle(QETElementEditor *editor, QGraphicsItem *parent) :
 	CustomElementGraphicPart(editor, parent)
 {
-    m_rot=0;
+	m_rot=0;
 }
 
 /**
@@ -201,7 +201,7 @@ QRectF PartRectangle::sceneGeometricRect() const
 */
 QPointF PartRectangle::sceneTopLeft() const
 {
-    return(mapToScene(rect().topLeft()));
+	return(mapToScene(rect().topLeft()));
 }
 
 /**
@@ -305,32 +305,12 @@ void PartRectangle::mouseReleaseEvent(QGraphicsSceneMouseEvent *event)
 */
 QVariant PartRectangle::itemChange(QGraphicsItem::GraphicsItemChange change, const QVariant &value)
 {
-	if (change == ItemSelectedHasChanged && scene())
-	{
-		if (value.toBool() == true)
-		{
-				//When item is selected, he must to be up to date whene the selection in the scene change, for display or not the handler,
-				//according to the number of selected items.
-			connect(scene(), &QGraphicsScene::selectionChanged, this, &PartRectangle::sceneSelectionChanged);
-
-			if (scene()->selectedItems().size() == 1)
-				addHandler();
-		}
-		else
-		{
-			disconnect(scene(), &QGraphicsScene::selectionChanged, this, &PartRectangle::sceneSelectionChanged);
-			removeHandler();
-		}
-	}
-	else if (change == ItemPositionHasChanged)
+	if (change == ItemPositionHasChanged)
 	{
 		adjusteHandlerPos();
 	}
 	else if (change == ItemSceneChange)
 	{
-		if(scene())
-			disconnect(scene(), &QGraphicsScene::selectionChanged, this, &PartRectangle::sceneSelectionChanged);
-
 		setSelected(false); //This item is removed from scene, then we deselect this, and so, the handlers is also removed.
 	}
 
@@ -519,18 +499,6 @@ void PartRectangle::handlerMouseReleaseEvent(QetGraphicsHandlerItem *qghi, QGrap
 
 	elementScene()->undoStack().push(undo);
 	m_vector_index = -1;
-}
-
-/**
-	@brief PartRectangle::sceneSelectionChanged
-	When the scene selection change, if there are several primitive selected, we remove the handler of this item
-*/
-void PartRectangle::sceneSelectionChanged()
-{
-	if (this->isSelected() && scene()->selectedItems().size() == 1)
-		addHandler();
-	else
-		removeHandler();
 }
 
 /**

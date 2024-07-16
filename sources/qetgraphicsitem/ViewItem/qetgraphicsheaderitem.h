@@ -1,5 +1,5 @@
 /*
-	Copyright 2006-2021 The QElectroTech Team
+	Copyright 2006-2024 The QElectroTech Team
 	This file is part of QElectroTech.
 
 	QElectroTech is free software: you can redistribute it and/or modify
@@ -32,7 +32,7 @@ class QAbstractItemModel;
 	Margins, to edit the margin between the cell and the text.
 	Text font.
 	Text alignment in the cell
-	These three parameters are not settable directly with the header but trough the model to be displayed by the header.
+	These three parameters are not settable directly with the header but through the model to be displayed by the header.
 	Header search these parameters only in the section 0 for cell of header.
 	By consequence, set data in other section is useless also these parameter can't be set individually for each cell.
 	The margins is stored in the model in index Qt::UserRole+1 and for value a QString. See QETUtils::marginsFromString and  QETUtils::marginsToString

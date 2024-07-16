@@ -1,5 +1,5 @@
 /*
-	Copyright 2006-2021 The QElectroTech Team
+	Copyright 2006-2024 The QElectroTech Team
 	This file is part of QElectroTech.
 
 	QElectroTech is free software: you can redistribute it and/or modify
@@ -87,16 +87,16 @@ void ArcEditor::setUpChangeConnections()
 #if TODO_LIST
 #pragma message("@TODO implement position changes!")
 #endif
-    // TODO: implement position changes!
-    //m_change_connections << connect(part, &PartArc::)
+	// TODO: implement position changes!
+	//m_change_connections << connect(part, &PartArc::)
 }
 
 void ArcEditor::disconnectChangeConnections()
 {
-    for (QMetaObject::Connection c : m_change_connections) {
+	for (QMetaObject::Connection c : m_change_connections) {
 	disconnect(c);
-    }
-    m_change_connections.clear();
+	}
+	m_change_connections.clear();
 }
 
 /**
@@ -143,7 +143,7 @@ bool ArcEditor::setParts(QList <CustomElementPart *> parts)
 
 /**
 	@brief ArcEditor::currentPart
-	@return the curent edited part, or 0 if there is no edited part
+	@return the current edited part, or 0 if there is no edited part
 */
 CustomElementPart *ArcEditor::currentPart() const
 {

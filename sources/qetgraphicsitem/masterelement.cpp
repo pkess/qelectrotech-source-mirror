@@ -1,5 +1,5 @@
 /*
-	Copyright 2006-2021 The QElectroTech Team
+	Copyright 2006-2024 The QElectroTech Team
 	This file is part of QElectroTech.
 
 	QElectroTech is free software: you can redistribute it and/or modify
@@ -86,7 +86,7 @@ void MasterElement::unlinkAllElements()
 
 /**
 	@brief MasterElement::unlinkElement
-	Unlink the given elmt in parametre
+	Unlink the given element in parameter
 	@param elmt element to unlink from this
 */
 void MasterElement::unlinkElement(Element *elmt)
@@ -159,7 +159,7 @@ void MasterElement::xrefPropertiesChanged()
 	If Xref item is deleted or already not used (nullptr) return true;
 	Else return false if Xref item is used
 	NOTICE : Xref can display nothing but not be deleted so far.
-	For exemple, if Xref is display has cross, only power contact are linked and
+	For example, if Xref is display has cross, only power contact are linked and
 	option show power contact is disable, the cross isn't draw.
 	@return
 */

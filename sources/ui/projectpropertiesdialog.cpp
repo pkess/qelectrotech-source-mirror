@@ -1,5 +1,5 @@
 /*
-	Copyright 2006-2021 The QElectroTech Team
+	Copyright 2006-2024 The QElectroTech Team
 	This file is part of QElectroTech.
 
 	QElectroTech is free software: you can redistribute it and/or modify
@@ -20,6 +20,7 @@
 #include "../configdialog.h"
 #include "configpage/configpages.h"
 #include "configpage/projectconfigpages.h"
+#include "../TerminalStrip/ui/ConfigPage/terminalstripprojectconfigpage.h"
 
 #include <QObject>
 
@@ -29,18 +30,23 @@
 	@param project : project to edit properties
 	@param parent : parent widget of this dialog
 */
-ProjectPropertiesDialog::ProjectPropertiesDialog(QETProject *project, QWidget *parent) {
-	NewDiagramPage *newDiagramPage = new NewDiagramPage(project,parent,this);
-	ProjectAutoNumConfigPage *projectAutoNumConfigPage = new ProjectAutoNumConfigPage (project);
+ProjectPropertiesDialog::ProjectPropertiesDialog(QETProject *project, QWidget *parent)
+{
 	m_properties_dialog = new ConfigDialog (parent);
 	m_properties_dialog -> setWindowTitle(QObject::tr("Propriétés du projet", "window title"));
 	m_properties_dialog -> addPage(new ProjectMainConfigPage(project));
+
+	NewDiagramPage *newDiagramPage = new NewDiagramPage(project,parent,this);
 	m_properties_dialog -> addPage(newDiagramPage);
+
+	ProjectAutoNumConfigPage *projectAutoNumConfigPage = new ProjectAutoNumConfigPage (project);
 	m_properties_dialog -> addPage(projectAutoNumConfigPage);
+
+	m_properties_dialog->addPage(new TerminalStripProjectConfigPage { project, parent });
+
 	connect(projectAutoNumConfigPage,SIGNAL(setAutoNum(QString)),newDiagramPage,SLOT(setFolioAutonum(QString)));
 	connect(projectAutoNumConfigPage,SIGNAL(saveCurrentTbp()),newDiagramPage,SLOT(saveCurrentTbp()));
 	connect(projectAutoNumConfigPage,SIGNAL(loadSavedTbp()),newDiagramPage,SLOT(loadSavedTbp()));
-	m_properties_dialog->setMinimumHeight(690);
 }
 
 /**

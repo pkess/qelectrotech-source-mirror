@@ -1,5 +1,5 @@
 /*
-	Copyright 2006-2021 The QElectroTech Team
+	Copyright 2006-2024 The QElectroTech Team
 	This file is part of QElectroTech.
 
 	QElectroTech is free software: you can redistribute it and/or modify
@@ -84,6 +84,39 @@ XmlElementCollection::XmlElementCollection(QETProject *project) :
 		0x006C,
 		0x0065,
 		0x0072};
+	const QChar ukrainian_data[20] = {
+		0x0406,
+		0x043c,
+		0x043f,
+		0x043e,
+		0x0440,
+		0x0442,
+		0x043e,
+		0x0432,
+		0x0430,
+		0x043d,
+		0x0456,
+		0x0020,
+		0x0435,
+		0x043b,
+		0x0435,
+		0x043c,
+		0x0435,
+		0x043d,
+		0x0442,
+		0x0438};
+	const QChar japanese_data[10] = {
+		0x30A4,
+		0x30F3,
+		0x30D0,
+		0x30FC,
+		0x30C8,
+		0x3055,
+		0x308C,
+		0x305F,
+		0x8981,
+		0x7D20};
+
 	names.addName("fr", "Éléments importés");
 	names.addName("en", "Imported elements");
 	names.addName("de", "Importierte elemente");
@@ -100,8 +133,9 @@ XmlElementCollection::XmlElementCollection(QETProject *project) :
 	names.addName("ro", "Elemente importate");
 	names.addName("tr", QString(turkish_data, 12));
 	names.addName("da", "Importerede elementer");
-	names.addName("hr", "Uvezeni elementi");
 	names.addName("sl", "Uvoženi elementi");
+	names.addName("ja", QString(japanese_data, 10));
+	names.addName("uk", QString(ukrainian_data, 20));
 #else
 #	if TODO_LIST
 #		pragma message("@TODO remove code for QT 6 or later")
@@ -120,8 +154,8 @@ XmlElementCollection::XmlElementCollection(QETProject *project) :
 	names.addName("ca", "Elements importats");
 	names.addName("ro", "Elemente importate");
 	names.addName("da", "Importerede elementer");
-	names.addName("hr", "Uvezeni elementi");
 	names.addName("sl", "Uvoženi elementi");
+	names.addName("uk", "Імпортовані елементи");
 #endif
 
 	import.appendChild(names.toXml(m_dom_document));
@@ -160,7 +194,7 @@ QDomElement XmlElementCollection::root() const
 
 /**
 	@brief XmlElementCollection::importCategory
-	@return The QDomElement import (the begining of a xml collection) or
+	@return The QDomElement import (the beginning of an xml collection) or
 	a null QDomElement if doesn't exist.
 */
 QDomElement XmlElementCollection::importCategory() const
@@ -511,7 +545,7 @@ QString XmlElementCollection::addElement(ElementsLocation &location)
 
 /**
 	@brief XmlElementCollection::addElementDefinition
-	Add the élément defintion xml_definition
+	Add the element definition xml_definition
 	in the directory at path dir_path with the name elmt_name.
 	@param dir_path :
 	the path of the directory where we must add the element.
@@ -624,13 +658,13 @@ bool XmlElementCollection::exist(const QString &path) const
 
 /**
 	@brief XmlElementCollection::createDir
-	Create a child directorie at path path with the name name.
+	Create a child directory at path path with the name name.
 	Emit directorieAdded if success.
 	@param path : path of parent diectorie
 	@param name : name of the directori to create.
-	@param name_list : translation of the directorie name.
+	@param name_list : translation of the directory name.
 	@return true if creation success,
-	if directorie already exist return true.
+	if directory already exists, return true.
 */
 bool XmlElementCollection::createDir(const QString& path,
 				     const QString& name,
@@ -644,7 +678,7 @@ bool XmlElementCollection::createDir(const QString& path,
 
 	QDomElement parent_dir = directory(path);
 	if (parent_dir.isNull()) {
-		qDebug() << "XmlElementCollection::createDir : directorie at path doesn't exist";
+		qDebug() << "XmlElementCollection::createDir : directory at path doesn't exist";
 		return false;
 	}
 
@@ -663,7 +697,7 @@ bool XmlElementCollection::createDir(const QString& path,
 	@brief XmlElementCollection::removeDir
 	Remove the directory at path path.
 	@param path
-	@return true if successfuly removed and emit directoryRemoved(QString),
+	@return true if successfully removed and emit directoryRemoved(QString),
 	else false.
 */
 bool XmlElementCollection::removeDir(const QString& path)
@@ -682,7 +716,7 @@ bool XmlElementCollection::removeDir(const QString& path)
 	Return all locations stored in dom_element (element and directory).
 	If dom_element is null, return all location owned by this collection
 	dom_element must be a child of this collection.
-	@param dom_element : dom_element where we must to search location.
+	@param dom_element : dom_element where we must search location.
 	@param childs = if true return all childs location of dom_element,
 	if false, only return the direct childs location of dom_element.
 	@return
@@ -867,7 +901,7 @@ ElementsLocation XmlElementCollection::copyDirectory(
 		QDomNode other_collection_node = source.projectCollection()->child(source.collectionPath(false)).cloneNode(deep_copy);
 
 		//We don't make a deep copy,
-		// but we must to get the local names of the copied directory
+		// but we must get the local names of the copied directory
 		if (!deep_copy) {
 			QDomNode names = source.projectCollection()->child(source.collectionPath(false)).namedItem("names");
 			if (!names.isNull() && names.isElement())

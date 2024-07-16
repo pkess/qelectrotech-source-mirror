@@ -1,5 +1,5 @@
 /*
-	Copyright 2006-2021 The QElectroTech Team
+	Copyright 2006-2024 The QElectroTech Team
 	This file is part of QElectroTech.
 
 	QElectroTech is free software: you can redistribute it and/or modify
@@ -20,6 +20,8 @@
 #include "../diagram.h"
 #include "../qeticons.h"
 #include "../qetproject.h"
+#include "../qetversion.h"
+
 #include "ui_projectprintwindow.h"
 
 #if QT_VERSION < QT_VERSION_CHECK(6, 0, 0) // ### Qt 6: remove
@@ -38,7 +40,7 @@
 
 /**
  * @brief ProjectPrintWindow::ProjectPrintWindow
- * Use this static function to properly lauch the print dialog.
+ * Use this static function to properly launch the print dialog.
  * @param project : project to print
  * @param format : native format to print in physical printer, or pdf format to export in pdf
  * @param parent : parent widget
@@ -84,7 +86,7 @@ void ProjectPrintWindow::launchDialog(QETProject *project, QPrinter::OutputForma
 		if (!file_name.endsWith(".pdf")) {
 			file_name.append(".pdf");
 		}
-		printer_->setCreator(QString("QElectroTech %1").arg(QET::displayedVersion));
+		printer_->setCreator(QString("QElectroTech %1").arg(QetVersion::displayedVersion()));
 		printer_->setOutputFileName(file_name);
 		printer_->setOutputFormat(QPrinter::PdfFormat);
 	}
@@ -96,11 +98,11 @@ void ProjectPrintWindow::launchDialog(QETProject *project, QPrinter::OutputForma
 QString ProjectPrintWindow::docName(QETProject *project)
 {
 	QString doc_name;
-    if (!project->filePath().isEmpty()) {
-        doc_name = QFileInfo(project->filePath()).baseName();
-    } else if (!project->title().isEmpty()) {
-        doc_name = project->title();
-        doc_name = QET::stringToFileName(doc_name);
+	if (!project->filePath().isEmpty()) {
+		doc_name = QFileInfo(project->filePath()).baseName();
+	} else if (!project->title().isEmpty()) {
+		doc_name = project->title();
+		doc_name = QET::stringToFileName(doc_name);
 	}
 
 	if (doc_name.isEmpty()) {
@@ -242,7 +244,7 @@ void ProjectPrintWindow::printDiagram(Diagram *diagram, bool fit_page, QPainter 
 			qgi->setFlag(QGraphicsItem::ItemIsFocusable, false);
 		}
 	}
-		//Disable intercation
+		//Disable interaction
 	for (auto view : diagram->views()) {
 		view->setInteractive(false);
 	}
@@ -636,7 +638,7 @@ void ProjectPrintWindow::savePageSetupForCurrentPrinter()
 
 /**
  * @brief ProjectPrintWindow::saveReloadDiagramParameters
- * Save or restor the parameter of @diagram
+ * Save or restore the parameter of @diagram
  * @param diagram
  * @param options
  * @param save
@@ -667,7 +669,7 @@ QList<Diagram *> ProjectPrintWindow::selectedDiagram() const
 
 void ProjectPrintWindow::exportToPDF()
 {
-    auto file_name = QFileDialog::getSaveFileName(this, tr("Exporter sous : "), m_printer->outputFileName(), tr("Fichier (*.pdf)"));
+	auto file_name = QFileDialog::getSaveFileName(this, tr("Exporter sous : "), m_printer->outputFileName(), tr("Fichier (*.pdf)"));
 	if (file_name.isEmpty()) {
 		return;
 	}

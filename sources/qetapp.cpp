@@ -1,5 +1,5 @@
 /*
-	Copyright 2006-2021 The QElectroTech Team
+	Copyright 2006-2024 The QElectroTech Team
 	This file is part of QElectroTech.
 
 	QElectroTech is free software: you can redistribute it and/or modify
@@ -36,6 +36,8 @@
 #include "ui/aboutqetdialog.h"
 #include "ui/configpage/generalconfigurationpage.h"
 #include "machine_info.h"
+#include "TerminalStrip/ui/terminalstripeditorwindow.h"
+#include "qetversion.h"
 
 #include <cstdlib>
 #include <iostream>
@@ -62,6 +64,7 @@ QString QETApp::config_dir = QString();
 
 QString QETApp::lang_dir = QString();
 TitleBlockTemplatesFilesCollection *QETApp::m_common_tbt_collection;
+TitleBlockTemplatesFilesCollection *QETApp::m_company_tbt_collection;
 TitleBlockTemplatesFilesCollection *QETApp::m_custom_tbt_collection;
 ElementsCollectionCache *QETApp::collections_cache_ = nullptr;
 QMap<uint, QETProject *> QETApp::registered_projects_ = QMap<uint, QETProject *>();
@@ -73,10 +76,16 @@ TitleBlockTemplate *QETApp::default_titleblock_template_ = nullptr;
 QString QETApp::m_common_element_dir = QString();
 bool QETApp::m_common_element_dir_is_set = false;
 
+QString QETApp::m_company_element_dir = QString();
+bool QETApp::m_company_element_dir_is_set = false;
+
 QString QETApp::m_custom_element_dir = QString();
 bool QETApp::m_custom_element_dir_is_set = false;
 
+QString QETApp::m_user_company_tbt_dir = QString();
+
 QString QETApp::m_user_custom_tbt_dir = QString();
+
 QETApp *QETApp::m_qetapp = nullptr;
 
 bool lang_is_set = false;
@@ -153,12 +162,15 @@ QETApp::~QETApp()
 
 	if (m_custom_tbt_collection)
 		delete m_custom_tbt_collection;
+	if (m_company_tbt_collection)
+		delete m_company_tbt_collection;
 	if (m_common_tbt_collection)
 		delete m_common_tbt_collection;
 
 	ElementFactory::dropInstance();
 	ElementPictureFactory::dropInstance();
 	MachineInfo::dropInstance();
+	TerminalStripEditorWindow::dropInstance();
 }
 
 
@@ -431,6 +443,27 @@ TitleBlockTemplatesFilesCollection *QETApp::commonTitleBlockTemplatesCollection(
 }
 
 /**
+	@brief QETApp::companyTitleBlockTemplatesCollection
+	@return the company's title block templates collection,
+	i.e. the one managed by the admin
+*/
+TitleBlockTemplatesFilesCollection *QETApp::companyTitleBlockTemplatesCollection()
+{
+	if (!m_company_tbt_collection) {
+		m_company_tbt_collection =
+				new TitleBlockTemplatesFilesCollection(
+					QETApp::companyTitleBlockTemplatesDir());
+		m_company_tbt_collection -> setTitle(
+					tr("Cartouches company",
+					   "title of the company's \
+					title block templates collection"));
+		m_company_tbt_collection -> setProtocol(QETAPP_COMPANY_TBT_PROTOCOL);
+		m_company_tbt_collection -> setCollection(QET::QetCollection::Company);
+	}
+	return(m_company_tbt_collection);
+}
+
+/**
 	@brief QETApp::customTitleBlockTemplatesCollection
 	@return the custom title block templates collection,
 	i.e. the one managed by the end user
@@ -452,7 +485,7 @@ TitleBlockTemplatesFilesCollection *QETApp::customTitleBlockTemplatesCollection(
 
 /**
 	@brief QETApp::availableTitleBlockTemplatesCollections
-	@return the list of all available title block tempaltes collections,
+	@return the list of all available title block templates collections,
 	beginning with the common and custom ones, plus the projects-embedded ones.
 */
 QList<TitleBlockTemplatesCollection *> QETApp::availableTitleBlockTemplatesCollections()
@@ -460,6 +493,7 @@ QList<TitleBlockTemplatesCollection *> QETApp::availableTitleBlockTemplatesColle
 	QList<TitleBlockTemplatesCollection *> collections_list;
 
 	collections_list << commonTitleBlockTemplatesCollection();
+	collections_list << companyTitleBlockTemplatesCollection();
 	collections_list << customTitleBlockTemplatesCollection();
 
 	foreach(QETProject *opened_project, registered_projects_) {
@@ -479,6 +513,8 @@ TitleBlockTemplatesCollection *QETApp::titleBlockTemplatesCollection(
 		const QString &protocol) {
 	if (protocol == QETAPP_COMMON_TBT_PROTOCOL) {
 		return(m_common_tbt_collection);
+	} else if (protocol == QETAPP_COMPANY_TBT_PROTOCOL) {
+		return(m_company_tbt_collection);
 	} else if (protocol == QETAPP_CUSTOM_TBT_PROTOCOL) {
 		return(m_custom_tbt_collection);
 	} else {
@@ -554,7 +590,8 @@ QString QETApp::commonElementsDir()
 
 /**
 	@brief QETApp::customElementsDir
-	@return the dir path of user elements collection ened by a "/" separator
+	@return the dir path of user elements collection appended with a
+	"/" separator
 */
 QString QETApp::customElementsDir()
 {
@@ -589,6 +626,43 @@ QString QETApp::customElementsDir()
 }
 
 /**
+	@brief QETApp::companyElementsDir
+	@return the dir path of company elements collection appended with a
+	"/" separator
+*/
+QString QETApp::companyElementsDir()
+{
+	if (m_company_element_dir_is_set)
+	{
+		return m_company_element_dir;
+	}
+	else
+	{
+		m_company_element_dir_is_set = true;
+
+		QSettings settings;
+		QString path = settings.value(
+						   "elements-collections/company-collection-path",
+						   "default").toString();
+		if (path != "default" && !path.isEmpty())
+		{
+			QDir dir(path);
+			if (dir.exists())
+			{
+				m_company_element_dir = path;
+				if(!m_company_element_dir.endsWith("/")) {
+					m_company_element_dir.append("/");
+				}
+				return m_company_element_dir;
+			}
+		}
+
+		m_company_element_dir = configDir() + "elements-company/";
+		return m_company_element_dir;
+	}
+}
+
+/**
 	@brief QETApp::commonElementsDirN
 	like QString QETApp::commonElementsDir but without "/" at the end
 	@return QString path
@@ -596,6 +670,18 @@ QString QETApp::customElementsDir()
 QString QETApp::commonElementsDirN()
 {
 	QString path = commonElementsDir();
+	if (path.endsWith("/")) path.remove(path.length()-1, 1);
+	return path;
+}
+
+/**
+	@brief QETApp::companyElementsDirN
+	like QString QETApp::companyElementsDir but without "/" at the end
+	@return QString path
+*/
+QString QETApp::companyElementsDirN()
+{
+	QString path = companyElementsDir();
 	if (path.endsWith("/")) path.remove(path.length()-1, 1);
 	return path;
 }
@@ -623,8 +709,13 @@ void QETApp::resetCollectionsPath()
 	m_common_element_dir.clear();
 	m_common_element_dir_is_set = false;
 
+	m_company_element_dir.clear();
+	m_company_element_dir_is_set = false;
+
 	m_custom_element_dir.clear();
 	m_custom_element_dir_is_set = false;
+
+	m_user_company_tbt_dir.clear();
 
 	m_user_custom_tbt_dir.clear();
 }
@@ -657,6 +748,39 @@ QString QETApp::commonTitleBlockTemplatesDir()
 			   + "/" + QUOTE(QET_COMMON_TBT_PATH));
 	#endif
 #endif
+}
+
+/**
+	@brief QETApp::companyTitleBlockTemplatesDir
+	@return the path of the directory containing the company title block
+	templates collection.
+*/
+QString QETApp::companyTitleBlockTemplatesDir()
+{
+		if (m_user_company_tbt_dir.isEmpty())
+	{
+			QSettings settings;
+			QString path = settings.value(
+						"elements-collections/company-tbt-path",
+						"default").toString();
+			if (path != "default" && !path.isEmpty())
+			{
+				QDir dir(path);
+				if (dir.exists())
+				{
+					m_user_company_tbt_dir = path;
+					return m_user_company_tbt_dir;
+				}
+			}
+		else {
+			m_user_company_tbt_dir = "default";
+		}
+	}
+	else if (m_user_company_tbt_dir != "default") {
+		return m_user_company_tbt_dir;
+	}
+
+	return(configDir() + "titleblocks-company/");
 }
 
 /**
@@ -754,10 +878,16 @@ QString QETApp::realPath(const QString &sym_path) {
 	QString directory;
 	if (sym_path.startsWith("common://")) {
 		directory = commonElementsDir();
+	} else if (sym_path.startsWith("company://")) {
+		directory = companyElementsDir();
+	} else if (sym_path.startsWith("company://")) {
+		directory = companyElementsDir();
 	} else if (sym_path.startsWith("custom://")) {
 		directory = customElementsDir();
 	} else if (sym_path.startsWith(QETAPP_COMMON_TBT_PROTOCOL "://")) {
 		directory = commonTitleBlockTemplatesDir();
+	} else if (sym_path.startsWith(QETAPP_COMPANY_TBT_PROTOCOL "://")) {
+		directory = companyTitleBlockTemplatesDir();
 	} else if (sym_path.startsWith(QETAPP_CUSTOM_TBT_PROTOCOL "://")) {
 		directory = customTitleBlockTemplatesDir();
 	} else return(QString());
@@ -786,6 +916,7 @@ QString QETApp::symbolicPath(const QString &real_path) {
 	// get the common and custom folders
 	// recupere les dossier common et custom
 	QString commond = commonElementsDir();
+	QString companyd = companyElementsDir();
 	QString customd = customElementsDir();
 	QString chemin;
 	// analyzes the file path passed in parameter
@@ -794,6 +925,10 @@ QString QETApp::symbolicPath(const QString &real_path) {
 		chemin = "common://"
 				+ real_path.right(
 					real_path.length() - commond.length());
+	} else if (real_path.startsWith(companyd)) {
+		chemin = "company://"
+				+ real_path.right(
+					real_path.length() - companyd.length());
 	} else if (real_path.startsWith(customd)) {
 		chemin = "custom://"
 				+ real_path.right(
@@ -905,7 +1040,7 @@ void QETApp::overrideCommonElementsDir(const QString &new_ced) {
 /**
 	@brief QETApp::overrideCommonTitleBlockTemplatesDir
 	Define the path of the directory containing the common title block
-	tempaltes collection.
+	templates collection.
 	@param new_ctbtd
 */
 void QETApp::overrideCommonTitleBlockTemplatesDir(const QString &new_ctbtd) {
@@ -1129,6 +1264,27 @@ QFont QETApp::indiTextsItemFont(qreal size)
 QList<QETDiagramEditor *> QETApp::diagramEditors()
 {
 	return(QETApp::instance() -> detectWindows<QETDiagramEditor>());
+}
+
+/**
+ * @brief QETApp::diagramEditor
+ * @param project
+ * @return The diagram editor of @a project or nullptr.
+ */
+QETDiagramEditor *QETApp::diagramEditor(QETProject *project)
+{
+	for (const auto &editor : QETApp::instance()->detectWindows<QETDiagramEditor>())
+	{
+		for (const auto &project_view : editor->openedProjects())
+		{
+			if (project_view->project() == project)
+			{
+				return editor;
+			}
+		}
+	}
+
+	return nullptr;
 }
 
 /**
@@ -1892,6 +2048,14 @@ void QETApp::initConfiguration()
 	if (!custom_elements_dir.exists())
 		custom_elements_dir.mkpath(QETApp::customElementsDir());
 
+	QDir company_elements_dir(QETApp::companyElementsDir());
+	if (!company_elements_dir.exists())
+		company_elements_dir.mkpath(QETApp::companyElementsDir());
+
+	QDir company_tbt_dir(QETApp::companyTitleBlockTemplatesDir());
+	if (!company_tbt_dir.exists())
+		company_tbt_dir.mkpath(QETApp::companyTitleBlockTemplatesDir());
+
 	QDir custom_tbt_dir(QETApp::customTitleBlockTemplatesDir());
 	if (!custom_tbt_dir.exists())
 		custom_tbt_dir.mkpath(QETApp::customTitleBlockTemplatesDir());
@@ -2121,8 +2285,8 @@ void QETApp::checkBackupFiles()
 	{
 		for (QETProject *project : registeredProjects().values())
 		{
-			/* We must to adjust with the flag
-			 * QUrl::StripTrailingSlash to compar a path formated
+			/* We must adjust with the flag
+			 * QUrl::StripTrailingSlash to compare a path formatted
 			 * like the path returned by KAutoSaveFile
 			 */
 			const QString path = QUrl::fromLocalFile(
@@ -2166,7 +2330,7 @@ void QETApp::checkBackupFiles()
 					 )
 			== QMessageBox::Ok)
 	{
-		//If there is opened editors, we find those who are visible
+		//If there are open editors, find those that are visible
 		if (diagramEditors().count())
 		{
 			diagramEditors().first()->setVisible(true);
@@ -2290,7 +2454,7 @@ void QETApp::printHelp()
 */
 void QETApp::printVersion()
 {
-	std::cout << qPrintable(QET::displayedVersion) << std::endl;
+	std::cout << qPrintable(QetVersion::displayedVersion()) << std::endl;
 }
 
 /**

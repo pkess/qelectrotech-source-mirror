@@ -1,5 +1,5 @@
 /*
-	Copyright 2006-2021 The QElectroTech Team
+	Copyright 2006-2024 The QElectroTech Team
 	This file is part of QElectroTech.
 
 	QElectroTech is free software: you can redistribute it and/or modify
@@ -32,7 +32,8 @@ class ProjectPropertiesDialog : public QObject {
 		enum Page {
 			Main    = 0,
 			Diagram = 1,
-			Autonum = 2
+			Autonum = 2,
+			TerminalStrip = 3
 		};
 
 		ProjectPropertiesDialog(QETProject *project, QWidget *parent = nullptr);

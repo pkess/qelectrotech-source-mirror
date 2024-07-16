@@ -1,5 +1,5 @@
 /*
-	Copyright 2006-2021 The QElectroTech Team
+	Copyright 2006-2024 The QElectroTech Team
 	This file is part of QElectroTech.
 	
 	QElectroTech is free software: you can redistribute it and/or modify
@@ -62,6 +62,7 @@ class ExportPropertiesWidget : public QWidget {
 	QCheckBox *draw_border;
 	QCheckBox *draw_titleblock;
 	QCheckBox *draw_terminals;
+	QCheckBox *draw_bg_transparent;
 	QCheckBox *draw_colored_conductors;
 	QRadioButton *export_border;
 	QRadioButton *export_elements;

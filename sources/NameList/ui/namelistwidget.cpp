@@ -1,5 +1,5 @@
 /*
-	Copyright 2006-2021 The QElectroTech Team
+	Copyright 2006-2024 The QElectroTech Team
 	This file is part of QElectroTech.
 	
 	QElectroTech is free software: you can redistribute it and/or modify
@@ -146,7 +146,7 @@ void NameListWidget::setClipboardValue(QHash<QString, QString> value)
 
 /**
 	@brief NameListWidget::clean
-	Clean the lists of names by removing the emtpy lines
+	Clean the lists of names by removing the empty lines
 */
 void NameListWidget::clean()
 {

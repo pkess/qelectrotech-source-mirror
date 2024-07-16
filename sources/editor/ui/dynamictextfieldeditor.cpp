@@ -1,5 +1,5 @@
 /*
-	Copyright 2006-2021 The QElectroTech Team
+	Copyright 2006-2024 The QElectroTech Team
 	This file is part of QElectroTech.
 	
 	QElectroTech is free software: you can redistribute it and/or modify
@@ -31,7 +31,6 @@
 #include <QColorDialog>
 #include <QGraphicsItem>
 #include <QPointer>
-#include <assert.h>
 
 DynamicTextFieldEditor::DynamicTextFieldEditor(QETElementEditor *editor,
 											   PartDynamicTextField *text_field,
@@ -64,7 +63,8 @@ DynamicTextFieldEditor::~DynamicTextFieldEditor()
 	@param part
 	@return true if part can be edited by this widget
 */
-bool DynamicTextFieldEditor::setPart(CustomElementPart *part) {
+bool DynamicTextFieldEditor::setPart(CustomElementPart *part)
+{
 	disconnectConnections();
 
 	QGraphicsItem *qgi = part -> toItem();
@@ -82,24 +82,24 @@ bool DynamicTextFieldEditor::setPart(CustomElementPart *part) {
 	return true;
 }
 
-bool DynamicTextFieldEditor::setParts(QList <CustomElementPart *> parts) {
-	if (parts.isEmpty()) {
+bool DynamicTextFieldEditor::setParts(QList <CustomElementPart *> parts)
+{
+	if (parts.isEmpty())
+	{
 		m_parts.clear();
-		if (m_text_field) {
-			disconnectConnections();
-		}
+		disconnectConnections();
 		m_text_field = nullptr;
+
 		return true;
 	}
 
-	if (PartDynamicTextField *part = static_cast<PartDynamicTextField *>(parts.first())) {
-		if (m_text_field) {
-			disconnectConnections();
-		}
-
+	if (PartDynamicTextField *part = static_cast<PartDynamicTextField *>(parts.first()))
+	{
+		disconnectConnections();
 		m_text_field = part;
 		m_parts.clear();
 		m_parts.append(part);
+
 		for (int i=1; i < parts.length(); i++)
 			m_parts.append(static_cast<PartDynamicTextField*>(parts[i]));
 
@@ -183,38 +183,28 @@ void DynamicTextFieldEditor::setupWidget()
 
 void DynamicTextFieldEditor::setUpConnections()
 {
-	assert(m_connection_list.isEmpty());
+	disconnectConnections();
+
 	//Setup the connection
-	m_connection_list << connect(m_text_field.data(), &PartDynamicTextField::colorChanged,
-		[this](){this -> updateForm();});
-	m_connection_list << connect(m_text_field.data(), &PartDynamicTextField::fontChanged,
-		[this](){this -> updateForm();});
-	m_connection_list << connect(m_text_field.data(), &PartDynamicTextField::taggChanged,
-		[this](){this -> updateForm();});
-	m_connection_list << connect(m_text_field.data(), &PartDynamicTextField::textFromChanged,
-		[this](){this -> updateForm();});
-	m_connection_list << connect(m_text_field.data(), &PartDynamicTextField::textChanged,
-		[this](){this -> updateForm();});
-	m_connection_list << connect(m_text_field.data(), &PartDynamicTextField::infoNameChanged,
-		[this](){this -> updateForm();});
-	m_connection_list << connect(m_text_field.data(), &PartDynamicTextField::rotationChanged,
-		[this](){this -> updateForm();});
-	m_connection_list << connect(m_text_field.data(), &PartDynamicTextField::frameChanged,
-		[this](){this -> updateForm();});
-	m_connection_list << connect(m_text_field.data(), &PartDynamicTextField::textWidthChanged,
-		[this](){this -> updateForm();});
-	m_connection_list << connect(m_text_field.data(), &PartDynamicTextField::compositeTextChanged,
-		[this](){this -> updateForm();});
-	m_connection_list << connect(m_text_field.data(), &PartDynamicTextField::keepVisualRotationChanged,
-		[this](){this -> updateForm();});
+	m_connection_list << connect(m_text_field.data(), &PartDynamicTextField::colorChanged, this, [=](){this -> updateForm();});
+	m_connection_list << connect(m_text_field.data(), &PartDynamicTextField::fontChanged, this, [=](){this -> updateForm();});
+	m_connection_list << connect(m_text_field.data(), &PartDynamicTextField::taggChanged, this, [=](){this -> updateForm();});
+	m_connection_list << connect(m_text_field.data(), &PartDynamicTextField::textFromChanged, this, [=](){this -> updateForm();});
+	m_connection_list << connect(m_text_field.data(), &PartDynamicTextField::textChanged, this, [=](){this -> updateForm();});
+	m_connection_list << connect(m_text_field.data(), &PartDynamicTextField::infoNameChanged, this, [=](){this -> updateForm();});
+	m_connection_list << connect(m_text_field.data(), &PartDynamicTextField::rotationChanged, this, [=](){this -> updateForm();});
+	m_connection_list << connect(m_text_field.data(), &PartDynamicTextField::frameChanged, this, [=](){this -> updateForm();});
+	m_connection_list << connect(m_text_field.data(), &PartDynamicTextField::textWidthChanged, this, [=](){this -> updateForm();});
+	m_connection_list << connect(m_text_field.data(), &PartDynamicTextField::compositeTextChanged,this, [=](){this -> updateForm();});
+	m_connection_list << connect(m_text_field.data(), &PartDynamicTextField::keepVisualRotationChanged, this, [=](){this -> updateForm();});
 }
 
 void DynamicTextFieldEditor::disconnectConnections()
 {
-	//Remove previous connection
+		//Remove previous connection
 	if(!m_connection_list.isEmpty())
-		for(const QMetaObject::Connection& con : m_connection_list) {
-			disconnect(con);
+		for(const auto &connection : m_connection_list) {
+			disconnect(connection);
 		}
 	m_connection_list.clear();
 }
@@ -236,7 +226,7 @@ void DynamicTextFieldEditor::fillInfoComboBox()
 	else {
 		strl = QETInformation::elementInfoKeys();
 	}
-		//We use a QMap because the keys of the map are sorted, then no matter the curent local,
+		//We use a QMap because the keys of the map are sorted, then no matter the current local,
 		//the value of the combo box are always alphabetically sorted
 	QMap <QString, QString> info_map;
 	for(const QString& str : strl)

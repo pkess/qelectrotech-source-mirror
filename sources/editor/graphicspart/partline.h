@@ -1,5 +1,5 @@
 /*
-	Copyright 2006-2021 The QElectroTech Team
+	Copyright 2006-2024 The QElectroTech Team
 	This file is part of QElectroTech.
 	
 	QElectroTech is free software: you can redistribute it and/or modify
@@ -97,6 +97,9 @@ class PartLine : public CustomElementGraphicPart
 		void setRotation(qreal angle);
 		qreal rotation() const;
 
+		void addHandler() override;
+		void removeHandler() override;
+
 	protected:
 		QVariant itemChange(GraphicsItemChange change, const QVariant &value) override;
 		bool sceneEventFilter(QGraphicsItem *watched, QEvent *event) override;
@@ -106,10 +109,6 @@ class PartLine : public CustomElementGraphicPart
 		void handlerMousePressEvent   (QetGraphicsHandlerItem *qghi, QGraphicsSceneMouseEvent *event);
 		void handlerMouseMoveEvent    (QetGraphicsHandlerItem *qghi, QGraphicsSceneMouseEvent *event);
 		void handlerMouseReleaseEvent (QetGraphicsHandlerItem *qghi, QGraphicsSceneMouseEvent *event);
-		void sceneSelectionChanged ();
-		
-		void addHandler();
-		void removeHandler();
 		
 		QPainterPath path() const;
 		QRectF firstEndCircleRect() const;
@@ -126,6 +125,6 @@ class PartLine : public CustomElementGraphicPart
 		int m_vector_index = -1;
 		QPropertyUndoCommand *m_undo_command;
 		QVector<QetGraphicsHandlerItem *> m_handler_vector;
-        qreal m_rot;
+		qreal m_rot;
 };
 #endif

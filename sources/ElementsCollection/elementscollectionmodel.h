@@ -1,5 +1,5 @@
 /*
-	Copyright 2006-2021 The QElectroTech Team
+	Copyright 2006-2024 The QElectroTech Team
 	This file is part of QElectroTech.
 
 	QElectroTech is free software: you can redistribute it and/or modify
@@ -42,9 +42,10 @@ class ElementsCollectionModel : public QStandardItemModel
 		bool canDropMimeData(const QMimeData *data, Qt::DropAction action, int row, int column, const QModelIndex &parent) const override;
 		bool dropMimeData(const QMimeData *data, Qt::DropAction action, int row, int column, const QModelIndex &parent) override;
 
-		void loadCollections(bool common_collection, bool custom_collection, QList<QETProject *> projects);
+		void loadCollections(bool common_collection, bool company_collection, bool custom_collection, QList<QETProject *> projects);
 
 		void addCommonCollection(bool set_data = true);
+		void addCompanyCollection(bool set_data = true);
 		void addCustomCollection(bool set_data = true);
 		void addLocation(const ElementsLocation& location);
 

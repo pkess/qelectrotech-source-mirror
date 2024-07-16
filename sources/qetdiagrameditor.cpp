@@ -1,5 +1,5 @@
 /*
-	Copyright 2006-2021 The QElectroTech Team
+	Copyright 2006-2024 The QElectroTech Team
 	This file is part of QElectroTech.
 
 	QElectroTech is free software: you can redistribute it and/or modify
@@ -44,6 +44,7 @@
 #include "diagram.h"
 #include "TerminalStrip/ui/terminalstripeditorwindow.h"
 #include "ui/diagrameditorhandlersizewidget.h"
+#include "TerminalStrip/ui/addterminalstripitemdialog.h"
 
 #ifdef BUILD_WITHOUT_KF5
 #else
@@ -446,12 +447,11 @@ void QETDiagramEditor::setUpActions()
 	{
 		if (auto project = this->currentProject())
 		{
-			auto tsew {new TerminalStripEditorWindow{project, this}};
-			tsew->show();
+			TerminalStripEditorWindow::instance(project, this)->show();
 		}
 	});
 
-		//Lauch the plugin of terminal generator
+		//Launch the plugin of terminal generator
 	m_project_terminalBloc = new QAction(QET::Icons::TerminalStrip, tr("Lancer le plugin de création de borniers"), this);
 	connect(m_project_terminalBloc, &QAction::triggered, this, &QETDiagramEditor::generateTerminalBlock);
 
@@ -548,6 +548,7 @@ void QETDiagramEditor::setUpActions()
 	open_file    ->setShortcut(QKeySequence::Open);
 	m_close_file ->setShortcut(QKeySequence::Close);
 	m_save_file    ->setShortcut(QKeySequence::Save);
+	m_save_file_as  ->setShortcut(tr("Ctrl+Shift+S"));
 
 	new_file     ->setStatusTip( tr("Crée un nouveau projet", "status bar tip") );
 	open_file    ->setStatusTip( tr("Ouvre un projet existant", "status bar tip") );
@@ -664,6 +665,7 @@ void QETDiagramEditor::setUpActions()
 	QAction *add_rectangle = m_add_item_actions_group.addAction(QET::Icons::PartRectangle, tr("Ajouter un rectangle"));
 	QAction *add_ellipse   = m_add_item_actions_group.addAction(QET::Icons::PartEllipse,   tr("Ajouter une ellipse"));
 	QAction *add_polyline  = m_add_item_actions_group.addAction(QET::Icons::PartPolygon,   tr("Ajouter une polyligne"));
+	QAction *add_terminal_strip = m_add_item_actions_group.addAction(QET::Icons::TerminalStrip, tr("Ajouter un plan de bornes"));
 
 	add_text     ->setStatusTip(tr("Ajoute un champ de texte sur le folio actuel"));
 	add_image    ->setStatusTip(tr("Ajoute une image sur le folio actuel"));
@@ -671,17 +673,22 @@ void QETDiagramEditor::setUpActions()
 	add_rectangle->setStatusTip(tr("Ajoute un rectangle sur le folio actuel"));
 	add_ellipse  ->setStatusTip(tr("Ajoute une ellipse sur le folio actuel"));
 	add_polyline ->setStatusTip(tr("Ajoute une polyligne sur le folio actuel"));
+	add_terminal_strip->setStatusTip(tr("Ajoute un plan de bornier sur le folio actuel"));
 
-	add_text     ->setData("text");
-	add_image    ->setData("image");
-	add_line     ->setData("line");
-	add_rectangle->setData("rectangle");
-	add_ellipse  ->setData("ellipse");
-	add_polyline ->setData("polyline");
+	add_text     ->setData(QStringLiteral("text"));
+	add_image    ->setData(QStringLiteral("image"));
+	add_line     ->setData(QStringLiteral("line"));
+	add_rectangle->setData(QStringLiteral("rectangle"));
+	add_ellipse  ->setData(QStringLiteral("ellipse"));
+	add_polyline ->setData(QStringLiteral("polyline"));
+	add_terminal_strip->setData(QStringLiteral("terminal_strip"));
 
-	for(QAction *action : m_add_item_actions_group.actions()) {
-		action->setCheckable(true);
-	}
+	add_text->setCheckable(true);
+	add_line->setCheckable(true);
+	add_rectangle->setCheckable(true);
+	add_ellipse->setCheckable(true);
+	add_polyline->setCheckable(true);
+
 	connect(&m_add_item_actions_group, &QActionGroup::triggered, this, &QETDiagramEditor::addItemGroupTriggered);
 
 		//Depth action
@@ -1390,7 +1397,7 @@ void QETDiagramEditor::selectGroupTriggered(QAction *action)
 
 /**
 	@brief QETDiagramEditor::addItemGroupTriggered
-	This slot is called when an item must be added to the curent diagram,
+	This slot is called when an item must be added to the current diagram,
 	this slot use the DVEventInterface to add item
 	@param action : Action that describe the item to add.
 */
@@ -1423,14 +1430,23 @@ void QETDiagramEditor::addItemGroupTriggered(QAction *action)
 		if (deai->isNull())
 		{
 			delete deai;
-			action->setChecked(false);
 			return;
 		}
 		else
 			diagram_event = deai;
 	}
 	else if (value == "text")
+	{
 		diagram_event = new DiagramEventAddText(d);
+	}
+	else if (value == QLatin1String("terminal_strip"))
+	{
+		const auto diagram_view{currentDiagramView()};
+		if (diagram_view)
+		{
+			AddTerminalStripItemDialog::openDialog(diagram_view->diagram(), this);
+		}
+	}
 
 	if (diagram_event)
 	{
@@ -1530,6 +1546,7 @@ void QETDiagramEditor::slot_updateActions()
 	m_add_item_actions_group.       setEnabled(editable_project);
 	m_row_column_actions_group.     setEnabled(editable_project);
 	m_grey_background->             setEnabled(opened_diagram);
+	m_draw_grid->                   setEnabled(opened_diagram);
 
 		//Project menu
 	m_project_edit_properties     -> setEnabled(opened_project);
@@ -1541,6 +1558,8 @@ void QETDiagramEditor::slot_updateActions()
 	m_csv_export                  -> setEnabled(editable_project);
 	m_project_export_conductor_num-> setEnabled(opened_project);
 	m_terminal_strip_dialog       -> setEnabled(editable_project);
+	m_export_project_db           -> setEnabled(editable_project);
+	m_project_terminalBloc        -> setEnabled(editable_project);
 
 
 	slot_updateUndoStack();
@@ -1809,7 +1828,7 @@ void QETDiagramEditor::addProjectView(ProjectView *project_view)
 	sub_window -> setWindowIcon(project_view -> windowIcon());
 	sub_window -> systemMenu() -> clear();
 
-	//By defaut QMdiSubWindow have a QAction "close" with shortcut QKeySequence::Close
+	//By default QMdiSubWindow have a QAction "close" with shortcut QKeySequence::Close
 	//But the QAction m_close_file of this class have the same shortcut too.
 	//We remove the shortcut of the QAction of QMdiSubWindow for avoid conflic
 	for(QAction *act : sub_window->actions())
@@ -2062,7 +2081,7 @@ void QETDiagramEditor::projectWasClosed(ProjectView *project_view)
 		undo_group.removeStack(project -> undoStack());
 		QETApp::unregisterProject(project);
 	}
-	//When project is closed, a lot of signal are emited, notably if there is an item selected in a diagram.
+	//When project is closed, a lot of signal are emitted, notably if there is an item selected in a diagram.
 	//In some special case, since signal/slot connection can be direct or queued, some signal are handled after QObject is deleted, and crash qet
 	//notably in the function Diagram::elements when she call items() (I don't know exactly why).
 	//set nullptr to "m_selection_properties_editor->setDiagram()" fix this crash
@@ -2359,12 +2378,12 @@ void QETDiagramEditor::generateTerminalBlock()
 		success = process->startDetached(QDir::homePath() + "/qet_tb_generator.exe", {("")});
 	}
 
-#elif  defined(Q_OS_MAC)
+#elif  defined(Q_OS_MACOS)
 	if (openedProjects().count()){
-		success = process->startDetached("/Library/Frameworks/Python.framework/Versions/3.9/bin/qet_tb_generator", {(QETDiagramEditor::currentProjectView()->project()->filePath())});
+		success = process->startDetached("/Library/Frameworks/Python.framework/Versions/3.11/bin/qet_tb_generator", {(QETDiagramEditor::currentProjectView()->project()->filePath())});
 	}
 	else  {
-		success = process->startDetached("/Library/Frameworks/Python.framework/Versions/3.9/bin/qet_tb_generator", {("")});
+		success = process->startDetached("/Library/Frameworks/Python.framework/Versions/3.11/bin/qet_tb_generator", {("")});
 	}
 		if (openedProjects().count()){
 		success = process->startDetached(QDir::homePath() + "/.qet/qet_tb_generator.app", {(QETDiagramEditor::currentProjectView()->project()->filePath())});
@@ -2408,14 +2427,15 @@ void QETDiagramEditor::generateTerminalBlock()
 		"<br>"
 		" C:\\users\\XXXX\\AppData\\Local\\Programs\\Python\\Python36-32\\Scripts   "
 		"<br>");
-#elif defined(Q_OS_MAC)
+#elif defined(Q_OS_MACOS)
 	QString message=QObject::tr(
 		"To install the plugin qet_tb_generator"
 		"<br>Visit  :"
 		"<br>"
 		"<a href='https://pypi.python.org/pypi/qet-tb-generator'>qet-tb-generator</a>"
 		"<br><B><U> First install on macOSX</B></U>"
-		"<br>1. Install, if required, python 3.9 bundle only, "
+		"<br>1. Install, if required, python 3.11 bundle only, "
+		"<a href='https://www.python.org/ftp/python/3.11.2/python-3.11.2-macos11.pkg'>python-3.11.2-macos11.pkg</a>"
 		"<br>2 Run Profile.command script"
 		"<br>"
 		"because program use hardcoded PATH for localise qet-tb-generator plugin "

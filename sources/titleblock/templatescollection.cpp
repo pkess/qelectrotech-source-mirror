@@ -1,5 +1,5 @@
 /*
-	Copyright 2006-2021 The QElectroTech Team
+	Copyright 2006-2024 The QElectroTech Team
 	This file is part of QElectroTech.
 
 	QElectroTech is free software: you can redistribute it and/or modify
@@ -561,7 +561,7 @@ QString TitleBlockTemplatesFilesCollection::toFileName(const QString &template_n
 }
 
 /**
-	Handle the changes occuring on the file system.
+	Handle the changes occurring on the file system.
 	@param str Path of the directory that changed.
 */
 void TitleBlockTemplatesFilesCollection::fileSystemChanged(const QString &str) {

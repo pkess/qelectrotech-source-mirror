@@ -1,5 +1,5 @@
 /*
-	Copyright 2006-2021 The QElectroTech Team
+	Copyright 2006-2024 The QElectroTech Team
 	This file is part of QElectroTech.
 
 	QElectroTech is free software: you can redistribute it and/or modify
@@ -23,15 +23,14 @@
 #include <QKeyEvent>
 
 DiagramEventInterface::DiagramEventInterface(Diagram *diagram) :
-	m_diagram(diagram),
-	m_running(false),
-	m_abort(false)
+	QObject{diagram},
+	m_diagram{diagram}
 {
 	m_diagram -> clearSelection();
 }
 
 DiagramEventInterface::~DiagramEventInterface()
-{};
+{}
 
 void DiagramEventInterface::mouseDoubleClickEvent(QGraphicsSceneMouseEvent *event) {
 	Q_UNUSED (event);
@@ -55,7 +54,7 @@ void DiagramEventInterface::wheelEvent(QGraphicsSceneWheelEvent *event) {
 
 /**
 	@brief DiagramEventInterface::keyPressEvent
-	By default, press escape key abort the curent action
+	By default, press escape key abort the current action
 	@param event
 */
 void DiagramEventInterface::keyPressEvent(QKeyEvent *event)

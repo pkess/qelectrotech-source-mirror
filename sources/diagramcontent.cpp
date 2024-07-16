@@ -1,5 +1,5 @@
 /*
-	Copyright 2006-2021 The QElectroTech Team
+	Copyright 2006-2024 The QElectroTech Team
 	This file is part of QElectroTech.
 	
 	QElectroTech is free software: you can redistribute it and/or modify
@@ -28,6 +28,7 @@
 #include "qetgraphicsitem/independenttextitem.h"
 #include "qetgraphicsitem/qetshapeitem.h"
 #include "qetgraphicsitem/terminal.h"
+#include "TerminalStrip/GraphicsItem/terminalstripitem.h"
 
 #include <QGraphicsItem>
 
@@ -54,7 +55,7 @@ DiagramContent::DiagramContent(Diagram *diagram, bool selected) :
 		item_list = diagram->items();
 	}
 
-	for (auto item : item_list)
+	for (const auto &item : qAsConst(item_list))
 	{
 		switch (item->type())
 		{
@@ -88,6 +89,7 @@ DiagramContent::DiagramContent(Diagram *diagram, bool selected) :
 				break;
 			}
 			case QetGraphicsTableItem::Type: { m_tables << qgraphicsitem_cast<QetGraphicsTableItem *>(item); break;}
+			case TerminalStripItem::Type : {m_terminal_strip << qgraphicsitem_cast<TerminalStripItem *>(item); break;}
 		}
 	}
 		
@@ -194,13 +196,14 @@ bool DiagramContent::hasDeletableItems() const
 {
 	for(QGraphicsItem *qgi : m_selected_items)
 	{
-		if (qgi->type() == Element::Type ||
-			qgi->type() == Conductor::Type ||
-			qgi->type() == IndependentTextItem::Type ||
-			qgi->type() == QetShapeItem::Type ||
-			qgi->type() == DiagramImageItem::Type ||
-			qgi->type() == DynamicElementTextItem::Type ||
-			qgi->type() == QetGraphicsTableItem::Type)
+		if (qgi->type() == Element::Type
+			|| qgi->type() == Conductor::Type
+			|| qgi->type() == IndependentTextItem::Type
+			|| qgi->type() == QetShapeItem::Type
+			|| qgi->type() == DiagramImageItem::Type
+			|| qgi->type() == DynamicElementTextItem::Type
+			|| qgi->type() == QetGraphicsTableItem::Type
+			|| qgi->type() == TerminalStripItem::Type)
 			return true;
 		if(qgi->type() == QGraphicsItemGroup::Type)
 			if(dynamic_cast<ElementTextItemGroup *>(qgi))
@@ -240,6 +243,7 @@ void DiagramContent::clear()
 	m_texts_groups.clear();
 	m_selected_items.clear();
 	m_tables.clear();
+	m_terminal_strip.clear();
 }
 
 /**
@@ -356,7 +360,7 @@ bool DiagramContent::potentialIsManaged(QList<Conductor *> conductors)
 
 /**
 	@brief DiagramContent::hasTextEditing
-	@return true if handle a text currently in editing intercation
+	@return true if handle a text currently in editing interaction
 */
 bool DiagramContent::hasTextEditing()
 {
@@ -378,7 +382,7 @@ QList<QGraphicsItem *> DiagramContent::items(int filter) const
 {
 	QList<QGraphicsItem *> items_list;
 	
-	for(QGraphicsItem *qgi : conductors(filter)) items_list << qgi;
+	for(auto &&qgi : conductors(filter)) items_list << qgi;
 
 	if (filter & Elements)          for(auto qgi : m_elements)      items_list << qgi;
 	if (filter & TextFields)        for(auto qgi : m_text_fields)   items_list << qgi;
@@ -387,9 +391,10 @@ QList<QGraphicsItem *> DiagramContent::items(int filter) const
 	if (filter & ElementTextFields) for(auto qgi : m_element_texts) items_list << qgi;
 	if (filter & TextGroup)			for(auto qgi : m_texts_groups)  items_list << qgi;
 	if (filter & Tables)            for(auto qgi : m_tables)        items_list << qgi;
+	if (filter & TerminalStrip)     for(const auto qgi : qAsConst(m_terminal_strip)) items_list << qgi;
 
 	if (filter & SelectedOnly) {
-		for(QGraphicsItem *qgi : items_list) {
+		for(const auto &qgi : qAsConst(items_list)) {
 			if (!qgi -> isSelected()) items_list.removeOne(qgi);
 		}
 	}
@@ -415,6 +420,7 @@ int DiagramContent::count(int filter) const
 		if (filter & ElementTextFields)  for(auto deti      : m_element_texts)        { if (deti      -> isSelected()) ++ count; }
 		if (filter & TextGroup)          for(auto etig      : m_texts_groups)         { if (etig      -> isSelected()) ++ count; }
 		if (filter & Tables)             for(auto table     : m_tables)               { if (table     -> isSelected()) ++ count;  }
+		if (filter & TerminalStrip)      for(const auto &strip : qAsConst(m_terminal_strip)) {if (strip->isSelected()) ++ count;}
 	}
 	else {
 		if (filter & Elements)           count += m_elements.count();
@@ -427,6 +433,7 @@ int DiagramContent::count(int filter) const
 		if (filter & ElementTextFields)  count += m_element_texts.count();
 		if (filter & TextGroup)			 count += m_texts_groups.count();
 		if (filter & Tables)             count += m_tables.count();
+		if (filter & TerminalStrip)      count += m_terminal_strip.count();
 	}
 	return(count);
 }
@@ -436,7 +443,7 @@ int DiagramContent::count(int filter) const
 	@param filter
 	@return A string that describe the items of the diagram
 	content according to filter.
-	Exemple : X elements, Y conductors etc....
+	Example : X elements, Y conductors etc....
 */
 QString DiagramContent::sentence(int filter) const
 {
@@ -447,7 +454,7 @@ QString DiagramContent::sentence(int filter) const
 	int shapes_count	 = (filter & Shapes) ? m_shapes.count() : 0;
 	int elmt_text_count  = (filter & ElementTextFields) ? m_element_texts.count() : 0;
 	int tables_count     = (filter & Tables) ? m_tables.count() : 0;
-	
+	const int strip_count = (filter & TerminalStrip) ? m_terminal_strip.count() : 0;
 	return(
 		QET::ElementsAndConductorsSentence(
 			elements_count,
@@ -456,7 +463,8 @@ QString DiagramContent::sentence(int filter) const
 			images_count,
 			shapes_count,
 			elmt_text_count,
-			tables_count
+			tables_count,
+			strip_count
 		)
 	);
 }

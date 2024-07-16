@@ -1,5 +1,5 @@
 /*
-	Copyright 2006-2021 The QElectroTech Team
+	Copyright 2006-2024 The QElectroTech Team
 	This file is part of QElectroTech.
 	
 	QElectroTech is free software: you can redistribute it and/or modify
@@ -19,7 +19,7 @@
 #define QET_ICONS_H
 #include <QIcon>
 /**
-	This namespace is meant to delare icons used within the QElectroTech
+	This namespace is meant to declare icons used within the QElectroTech
 	application.
 */
 namespace QET {
@@ -39,6 +39,7 @@ namespace QET {
 		extern QIcon Autoconnect;
 		extern QIcon BringForward;
 		extern QIcon Cancel;
+		extern QIcon Company;
 		extern QIcon Conductor;
 		extern QIcon ConductorEdit;
 		extern QIcon ConductorSettings;
@@ -212,7 +213,9 @@ namespace QET {
 		extern QIcon no;
 		extern QIcon be;
 		extern QIcon tr;
+		extern QIcon uk;
 		extern QIcon mn;
+		extern QIcon zh;
 		extern QIcon translation;
 		extern QIcon listDrawings;
 		extern QIcon AutoNum;

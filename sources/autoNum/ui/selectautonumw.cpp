@@ -1,5 +1,5 @@
 /*
-	Copyright 2006-2021 The QElectroTech Team
+	Copyright 2006-2024 The QElectroTech Team
 	This file is part of QElectroTech.
 	
 	QElectroTech is free software: you can redistribute it and/or modify
@@ -198,7 +198,7 @@ void SelectAutonumW::on_buttonBox_clicked(QAbstractButton *button)
 	//transform button to int
 	int answer = ui -> buttonBox -> buttonRole(button);
 	switch (answer) {
-			//Reset the curent context
+			//Reset the current context
 		case QDialogButtonBox::ResetRole:
 			setContext(m_context);
 			break;
@@ -226,7 +226,7 @@ void SelectAutonumW::on_buttonBox_clicked(QAbstractButton *button)
 							   ));
 				break;
 			}
-			else
+			else if (m_edited_type == 1)
 			{
 				QMessageBox::information (
 							this,
@@ -249,6 +249,32 @@ void SelectAutonumW::on_buttonBox_clicked(QAbstractButton *button)
 
 							   "\n-Le type \"Folio\" représente le nom du folio en cours.\nLes autres champs ne sont pas utilisés.",
 							   "help dialog about the conductor autonumerotation"
+							   ));
+				break;
+			}
+			else
+			{
+				QMessageBox::information (
+							this,
+							tr("Element Autonumérotation",
+							   "title window"),
+							tr("C'est ici que vous pouvez définir la manière dont seront numérotés les nouveaux elements.\n"
+							   "-Une numérotation est composée d'une variable minimum.\n"
+							   "-Vous pouvez ajouter ou supprimer une variable de numérotation par le biais des boutons - et +.\n"
+							   "-Une variable de numérotation comprend : un type, une valeur et une incrémentation.\n"
+
+							   "\n-les types \"Chiffre 1\", \"Chiffre 01\" et \"Chiffre 001\", représentent un type numérique défini dans le champ \"Valeur\", "
+							   "qui s'incrémente à chaque nouveau conducteur de la valeur du champ \"Incrémentation\".\n"
+							   "-\"Chiffre 01\" et \"Chiffre 001\", sont respectivement représentés sur le schéma par deux et trois digits minimum.\n"
+							   "Si le chiffre défini dans le champ Valeur possède moins de digits que le type choisi,"
+							   "celui-ci sera précédé par un ou deux 0 afin de respecter son type.\n"
+
+							   "\n-Le type \"Texte\", représente un texte fixe.\nLe champ \"Incrémentation\" n'est pas utilisé.\n"
+
+							   "\n-Le type \"N° folio\" représente le n° du folio en cours.\nLes autres champs ne sont pas utilisés.\n"
+
+							   "\n-Le type \"Folio\" représente le nom du folio en cours.\nLes autres champs ne sont pas utilisés.",
+							   "help dialog about the element autonumerotation"
 							   ));
 				break;
 			}

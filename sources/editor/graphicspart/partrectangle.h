@@ -1,5 +1,5 @@
 /*
-	Copyright 2006-2021 The QElectroTech Team
+	Copyright 2006-2024 The QElectroTech Team
 	This file is part of QElectroTech.
 	
 	QElectroTech is free software: you can redistribute it and/or modify
@@ -34,7 +34,7 @@ class PartRectangle :  public CustomElementGraphicPart
 		Q_PROPERTY(QRectF rect READ rect WRITE setRect)
 		Q_PROPERTY(qreal xRadius READ XRadius WRITE setXRadius NOTIFY XRadiusChanged)
 		Q_PROPERTY(qreal yRadius READ YRadius WRITE setYRadius NOTIFY YRadiusChanged)
-        Q_PROPERTY(qreal rotation READ rotation WRITE setRotation NOTIFY rotationChanged)
+		Q_PROPERTY(qreal rotation READ rotation WRITE setRotation NOTIFY rotationChanged)
 
 		// constructors, destructor
 	public:
@@ -48,7 +48,7 @@ class PartRectangle :  public CustomElementGraphicPart
 		void rectChanged();
 		void XRadiusChanged();
 		void YRadiusChanged();
-        void rotationChanged();
+		void rotationChanged();
 	
 		// methods
 	public:
@@ -85,6 +85,9 @@ class PartRectangle :  public CustomElementGraphicPart
 		void startUserTransformation(const QRectF &) override;
 		void handleUserTransformation(const QRectF &, const QRectF &) override;
 
+		void addHandler() override;
+		void removeHandler() override;
+
 	protected:
 		void mouseReleaseEvent(QGraphicsSceneMouseEvent *event) override;
 		QVariant itemChange(GraphicsItemChange change, const QVariant &value) override;
@@ -96,10 +99,6 @@ class PartRectangle :  public CustomElementGraphicPart
 		void handlerMousePressEvent   (QetGraphicsHandlerItem *qghi, QGraphicsSceneMouseEvent *event);
 		void handlerMouseMoveEvent    (QetGraphicsHandlerItem *qghi, QGraphicsSceneMouseEvent *event);
 		void handlerMouseReleaseEvent (QetGraphicsHandlerItem *qghi, QGraphicsSceneMouseEvent *event);
-		void sceneSelectionChanged ();
-		
-		void addHandler();
-		void removeHandler();
 	
 	private:
 		QRectF m_rect,
@@ -113,6 +112,6 @@ class PartRectangle :  public CustomElementGraphicPart
 			  m_old_xRadius,
 			  m_old_yRadius;
 		bool m_modifie_radius_equaly = false;
-        qreal m_rot;
+		qreal m_rot;
 };
 #endif

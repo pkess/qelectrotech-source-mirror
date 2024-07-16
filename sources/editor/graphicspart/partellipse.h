@@ -1,5 +1,5 @@
 /*
-	Copyright 2006-2021 The QElectroTech Team
+	Copyright 2006-2024 The QElectroTech Team
 	This file is part of QElectroTech.
 	
 	QElectroTech is free software: you can redistribute it and/or modify
@@ -58,6 +58,9 @@ class PartEllipse : public  AbstractPartEllipse
 		QPainterPath shadowShape() const override;
 		void setRect(const QRectF &rect) override {AbstractPartEllipse::setRect(rect); adjusteHandlerPos();}
 
+		void addHandler() override;
+		void removeHandler() override;
+
 	protected:
 		void mouseReleaseEvent(QGraphicsSceneMouseEvent *event) override;
 		QVariant itemChange(GraphicsItemChange change, const QVariant &value) override;
@@ -69,10 +72,6 @@ class PartEllipse : public  AbstractPartEllipse
 		void handlerMousePressEvent   (QetGraphicsHandlerItem *qghi, QGraphicsSceneMouseEvent *event);
 		void handlerMouseMoveEvent    (QetGraphicsHandlerItem *qghi, QGraphicsSceneMouseEvent *event);
 		void handlerMouseReleaseEvent (QetGraphicsHandlerItem *qghi, QGraphicsSceneMouseEvent *event);
-		void sceneSelectionChanged ();
-		
-		void addHandler();
-		void removeHandler();
 
 	private:
 		QPropertyUndoCommand *m_undo_command;

@@ -1,5 +1,5 @@
 /*
-	Copyright 2006-2021 The QElectroTech Team
+	Copyright 2006-2024 The QElectroTech Team
 	This file is part of QElectroTech.
 
 	QElectroTech is free software: you can redistribute it and/or modify
@@ -156,7 +156,7 @@ void CustomElementGraphicPart::setAntialiased(const bool b)
 
 /**
 	@brief CustomElementGraphicPart::stylesToXml
-	Write the curent style to xml element.
+	Write the current style to xml element.
 	The style are stored like this:
 	name-of-style:value;name-of-style:value
 	Each style separate by ; and name-style/value are separate by :
@@ -217,8 +217,7 @@ void CustomElementGraphicPart::stylesToXml(QDomElement &qde) const
 		{HTMLYellowYellowFilling, "HTMLYellowYellow"},
 		{HTMLYellowLightYellowFilling, "HTMLYellowLightYellow"},
 		{HTMLYellowLemonChiffonFilling, "HTMLYellowLemonChiffon"},
-		{HTMLYellowLightGoldenrodYellowFilling,
-		 "HTMLYellowLightGoldenrodYellow"},
+		{HTMLYellowLightGoldenrodYellowFilling, "HTMLYellowLightGoldenrodYellow"},
 		{HTMLYellowPapayaWhipFilling, "HTMLYellowPapayaWhip"},
 		{HTMLYellowMoccasinFilling, "HTMLYellowMoccasin"},
 		{HTMLYellowPeachPuffFilling, "HTMLYellowPeachPuff"},
@@ -595,8 +594,7 @@ void CustomElementGraphicPart::stylesFromXml(const QDomElement &qde)
 				{"HTMLYellowYellow", HTMLYellowYellowFilling},
 				{"HTMLYellowLightYellow", HTMLYellowLightYellowFilling},
 				{"HTMLYellowLemonChiffon", HTMLYellowLemonChiffonFilling},
-				{"HTMLYellowLightGoldenrodYellow",
-				 HTMLYellowLightGoldenrodYellowFilling},
+				{"HTMLYellowLightGoldenrodYellow", HTMLYellowLightGoldenrodYellowFilling},
 				{"HTMLYellowPapayaWhip", HTMLYellowPapayaWhipFilling},
 				{"HTMLYellowMoccasin", HTMLYellowMoccasinFilling},
 				{"HTMLYellowPeachPuff", HTMLYellowPeachPuffFilling},
@@ -631,8 +629,7 @@ void CustomElementGraphicPart::stylesFromXml(const QDomElement &qde)
 				{"HTMLGreenChartreuse", HTMLGreenChartreuseFilling},
 				{"HTMLGreenGreenYellow", HTMLGreenGreenYellowFilling},
 				{"HTMLGreenSpringGreen", HTMLGreenSpringGreenFilling},
-				{"HTMLGreenMediumSpringGreen",
-				 HTMLGreenMediumSpringGreenFilling},
+				{"HTMLGreenMediumSpringGreen", HTMLGreenMediumSpringGreenFilling},
 				{"HTMLGreenLightGreen", HTMLGreenLightGreenFilling},
 				{"HTMLGreenPaleGreen", HTMLGreenPaleGreenFilling},
 				{"HTMLGreenDarkSeaGreen", HTMLGreenDarkSeaGreenFilling},
@@ -762,8 +759,7 @@ void CustomElementGraphicPart::stylesFromXml(const QDomElement &qde)
 				{"HTMLYellowYellow", HTMLYellowYellowColor},
 				{"HTMLYellowLightYellow", HTMLYellowLightYellowColor},
 				{"HTMLYellowLemonChiffon", HTMLYellowLemonChiffonColor},
-				{"HTMLYellowLightGoldenrodYellow",
-				 HTMLYellowLightGoldenrodYellowColor},
+				{"HTMLYellowLightGoldenrodYellow", HTMLYellowLightGoldenrodYellowColor},
 				{"HTMLYellowPapayaWhip", HTMLYellowPapayaWhipColor},
 				{"HTMLYellowMoccasin", HTMLYellowMoccasinColor},
 				{"HTMLYellowPeachPuff", HTMLYellowPeachPuffColor},
@@ -893,7 +889,7 @@ void CustomElementGraphicPart::stylesFromXml(const QDomElement &qde)
 
 /**
 	@brief CustomElementGraphicPart::resetStyles
-	Reset the curent style to default,
+	Reset the current style to default,
 	same style of default constructor
 */
 void CustomElementGraphicPart::resetStyles()

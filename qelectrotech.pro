@@ -74,7 +74,7 @@ include(sources/QWidgetAnimation/QWidgetAnimation.pri)
 
 DEFINES += QAPPLICATION_CLASS=QApplication
 DEFINES += QT_MESSAGELOGCONTEXT
-DEFINES += GIT_COMMIT_SHA="\\\"$(shell git -C \""$$_PRO_FILE_PWD_"\" rev-parse --verify HEAD)\\\""
+DEFINES += GIT_COMMIT_SHA="\\\"$(shell git -C \""$$_PRO_FILE_PWD_"\" rev-parse --verify HEAD 2>/dev/null || true)\\\""
 
 # You can make your code fail to compile if it uses deprecated APIs.
 # In order to do so, uncomment the following line.
@@ -119,14 +119,16 @@ INCLUDEPATH += sources/ui
 #               sources/NameList \
 #               sources/NameList/ui \
 #               sources/utils \
-#               sources/pugixml \
+#               pugixml \
 #               sources/dataBase \
 #               sources/dataBase/ui \
 #               sources/factory/ui \
 #               sources/print
 
 # Fichiers sources
-HEADERS += $$files(sources/*.h) $$files(sources/ui/*.h) \
+HEADERS += $$files(sources/*.h) \
+           $$files(sources/project/*.h) \
+           $$files(sources/ui/*.h) \
            $$files(sources/editor/*.h) \
            $$files(sources/titleblock/*.h) \
            $$files(sources/richtext/*.h) \
@@ -152,17 +154,23 @@ HEADERS += $$files(sources/*.h) $$files(sources/ui/*.h) \
            $$files(sources/NameList/*.h) \
            $$files(sources/NameList/ui/*.h) \
            $$files(sources/utils/*.h) \
-           $$files(sources/pugixml/*.hpp) \
+           $$files(pugixml/src/*.hpp) \
            $$files(sources/dataBase/*.h) \
            $$files(sources/dataBase/ui/*.h) \
            $$files(sources/factory/ui/*.h) \
            $$files(sources/print/*.h) \
            $$files(sources/TerminalStrip/*.h) \
            $$files(sources/TerminalStrip/ui/*.h) \
-           $$files(sources/TerminalStrip/UndoCommand/*.h)
+           $$files(sources/TerminalStrip/ui/ConfigPage/*h) \
+           $$files(sources/TerminalStrip/UndoCommand/*.h) \
+           $$files(sources/TerminalStrip/GraphicsItem/*.h) \
+           $$files(sources/TerminalStrip/GraphicsItem/properties/*.h) \
+           $$files(sources/xml/*.h) \
+           $$files(sources/dxf/*.h)
 
 SOURCES += $$files(sources/*.cpp) \
            $$files(sources/editor/*.cpp) \
+           $$files(sources/project/*.cpp) \
            $$files(sources/titleblock/*.cpp) \
            $$files(sources/richtext/*.cpp) \
            $$files(sources/ui/*.cpp) \
@@ -188,14 +196,19 @@ SOURCES += $$files(sources/*.cpp) \
            $$files(sources/NameList/*.cpp) \
            $$files(sources/NameList/ui/*.cpp) \
            $$files(sources/utils/*.cpp) \
-           $$files(sources/pugixml/*.cpp) \
+           $$files(pugixml/src/*.cpp) \
            $$files(sources/dataBase/*.cpp) \
            $$files(sources/dataBase/ui/*.cpp) \
            $$files(sources/factory/ui/*.cpp) \
            $$files(sources/print/*.cpp) \
            $$files(sources/TerminalStrip/*.cpp) \
            $$files(sources/TerminalStrip/ui/*.cpp) \
-           $$files(sources/TerminalStrip/UndoCommand/*.cpp)
+           $$files(sources/TerminalStrip/ui/ConfigPage/*cpp) \
+           $$files(sources/TerminalStrip/UndoCommand/*.cpp) \
+           $$files(sources/TerminalStrip/GraphicsItem/*.cpp) \
+           $$files(sources/TerminalStrip/GraphicsItem/properties/*.cpp) \
+           $$files(sources/xml/*.cpp) \
+           $$files(sources/dxf/*.cpp)
 
 # Needed for use promote QTreeWidget in terminalstripeditor.ui
 INCLUDEPATH += sources/TerminalStrip/ui
@@ -225,7 +238,8 @@ FORMS += $$files(sources/richtext/*.ui) \
          $$files(sources/dataBase/ui/*.ui) \
          $$files(sources/factory/ui/*.ui) \
          $$files(sources/print/*.ui) \
-         $$files(sources/TerminalStrip/ui/*.ui)
+         $$files(sources/TerminalStrip/ui/*.ui) \
+         $$files(sources/TerminalStrip/ui/ConfigPage/*.ui)
 
 UI_SOURCES_DIR = sources/ui/
 UI_HEADERS_DIR = sources/ui/
@@ -287,7 +301,7 @@ man.extra          = sh man/compress_man_pages.sh
 INSTALLS += target elements tbt lang copyright
 # Sous Unix, on installe egalement l'icone, un fichier .desktop, des fichiers mime et les pages de manuel
 unix {
-        INSTALLS += desktop mime_xml mime_desktop mime_package icons man examples appdata
+        INSTALLS += desktop mime_package icons man examples appdata
 }
 
 # Options de compilation communes a Unix et MacOS X
@@ -306,7 +320,17 @@ macx {
         # les chemins definis precedemment sont relatifs au dossier contenant le binaire executable
         DEFINES += QET_LANG_PATH_RELATIVE_TO_BINARY_PATH
         DEFINES += QET_COMMON_COLLECTION_PATH_RELATIVE_TO_BINARY_PATH
-}
+        
+
+        equals(QMAKE_TARGET.arch, x86) {
+        message( "It's x86" )
+        LIBS +=   /opt/digikam.org.x86_64/lib/libsqlite3.0.dylib
+        } 
+        equals(QMAKE_TARGET.arch, arm64) {
+        message( "It's arm64" )
+        LIBS +=   /opt/digikam.org.arm64/lib/libsqlite3.0.dylib
+        }
+      }
 
 # Compilers-specific options
 unix {

@@ -1,5 +1,5 @@
 /*
-	Copyright 2006-2021 The QElectroTech Team
+	Copyright 2006-2024 The QElectroTech Team
 	This file is part of QElectroTech.
 
 	QElectroTech is free software: you can redistribute it and/or modify
@@ -39,7 +39,7 @@ QetGraphicsHeaderItem::QetGraphicsHeaderItem(QGraphicsItem *parent) :
 	@brief QetGraphicsHeaderItem::setModel
 	Set the model presented by this item
 	Since QetGraphicsHeaderItem don't take ownership of model,
-	if item already have a model, it's your responsability to delete it.
+	if item already have a model, it's your responsibility to delete it.
 	@param model
 */
 void QetGraphicsHeaderItem::setModel(QAbstractItemModel *model)

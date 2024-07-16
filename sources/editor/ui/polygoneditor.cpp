@@ -1,5 +1,5 @@
 /*
-	Copyright 2006-2021 The QElectroTech Team
+	Copyright 2006-2024 The QElectroTech Team
 	This file is part of QElectroTech.
 
 	QElectroTech is free software: you can redistribute it and/or modify
@@ -117,7 +117,7 @@ bool PolygonEditor::setPart(CustomElementPart *new_part)
 
 /**
 	@brief PolygonEditor::currentPart
-	@return the curent edited part
+	@return the current edited part
 */
 CustomElementPart *PolygonEditor::currentPart() const
 {

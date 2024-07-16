@@ -1,5 +1,5 @@
 /*
-	Copyright 2006-2021 The QElectroTech Team
+	Copyright 2006-2024 The QElectroTech Team
 	This file is part of QElectroTech.
 
 	QElectroTech is free software: you can redistribute it and/or modify
@@ -23,7 +23,7 @@
 /**
  *Interface to use QSettings in QElectroTech
  *Prefer use this namespace instead of directly QSettings
- *It's notably usefull when some QSettings value are use in
+ *It's notably useful when some QSettings value are used in
  *different part of QElectroTech source code
  */
 namespace QetSettings

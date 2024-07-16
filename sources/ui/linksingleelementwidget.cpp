@@ -1,5 +1,5 @@
 /*
-	Copyright 2006-2021 The QElectroTech Team
+	Copyright 2006-2024 The QElectroTech Team
 	This file is part of QElectroTech.
 
 	QElectroTech is free software: you can redistribute it and/or modify
@@ -296,7 +296,7 @@ void LinkSingleElementWidget::buildTree()
 			QStringList search_list;
 			QStringList str_list;
 			
-			if (elmt->conductors().size())
+			if (!elmt->conductors().isEmpty())
 			{
 				ConductorProperties cp = elmt->conductors().first()->properties();
 				str_list << cp.text;
@@ -316,7 +316,7 @@ void LinkSingleElementWidget::buildTree()
 					search_list << str_list.last();
 			}
 			else
-				str_list << "" << "" << "";
+				str_list << "" << "" << "" << "" << "";
 			
 			if (Diagram *diag = elmt->diagram())
 			{
@@ -365,9 +365,9 @@ bool LinkSingleElementWidget::setLiveEdit(bool live_edit)
 
 /**
 	@brief LinkSingleElementWidget::availableElements
-	@return A QList with all available element
+	@return A QList with all available elements
 	to be linked with the edited element.
-	This methode take care of the combo box "find in diagram"
+	This method takes care of the "find in diagram" combo box
 */
 QVector <QPointer<Element>> LinkSingleElementWidget::availableElements()
 {
@@ -495,9 +495,9 @@ void LinkSingleElementWidget::setUpHeaderLabels()
 void LinkSingleElementWidget::diagramWasRemovedFromProject()
 {
 	// We use a timer because if the removed diagram
-	// contain the master element linked to the edited element
-	// we must to wait for this elements be unlinked,
-	// else the list of available master isn't up to date
+	// contains the master element linked to the edited element
+	// we must wait for this elements to be unlinked,
+	// or else the list of available master isn't up to date
 	QTimer::singleShot(10, this, SLOT(updateUi()));
 }
 

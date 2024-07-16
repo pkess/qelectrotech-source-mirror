@@ -1,5 +1,5 @@
 /*
-	Copyright 2006-2021 The QElectroTech Team
+	Copyright 2006-2024 The QElectroTech Team
 	This file is part of QElectroTech.
 	
 	QElectroTech is free software: you can redistribute it and/or modify
@@ -50,7 +50,6 @@ NewElementWizard::NewElementWizard(QWidget *parent, Qt::WindowFlags f) :
 	addPage(buildStep1());
 	addPage(buildStep2());
 	addPage(buildStep3());
-	setFixedSize(705, 325);
 }
 
 /**
@@ -91,6 +90,7 @@ QWizardPage *NewElementWizard::buildStep1()
 	m_model = new ElementsCollectionModel(m_tree_view);
 	m_model->hideElement();
 	m_model->addCustomCollection();
+	m_model->addCompanyCollection();
 
 	m_tree_view->setModel(m_model);
 	m_tree_view->setHeaderHidden(true);
@@ -240,7 +240,7 @@ bool NewElementWizard::validStep2()
 
 /**
 	@brief NewElementWizard::createNewElement
-	Lauch an element editor for create the new element
+	Launch an element editor to create the new element
 */
 void NewElementWizard::createNewElement()
 {

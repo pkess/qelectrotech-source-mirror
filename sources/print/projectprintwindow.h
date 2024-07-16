@@ -1,5 +1,5 @@
 /*
-	Copyright 2006-2021 The QElectroTech Team
+	Copyright 2006-2024 The QElectroTech Team
 	This file is part of QElectroTech.
 
 	QElectroTech is free software: you can redistribute it and/or modify
@@ -36,11 +36,11 @@ class QCheckBox;
 
 /**
  * @brief The ProjectPrintWindow class
- * Windows used to configur and view diagram befor print
+ * Windows used to configure and view diagram before print
  */
 class ProjectPrintWindow : public QMainWindow
 {
-    Q_OBJECT
+	Q_OBJECT
 
 	public:
 		static void launchDialog(QETProject *project, QPrinter::OutputFormat format = QPrinter::NativeFormat, QWidget *parent = nullptr);
